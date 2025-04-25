@@ -491,10 +491,28 @@ ul li{
   transform: translateY(-5px);
   transition: all 0.5s ease-in-out;
 }
+.card-05{
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.card-05-item{
+  text-align: center;
+}
+.card-05-item img{
+  display: block;
+  margin: 0 auto 10px;
+}
+.card-05-item span{
+  font-size: 16px;
+  font-weight: 600;
+  display: block;
+}
 
 /*get quation*/
 .quote-us-section{
-  padding: 300px 0;
+  padding: 80px 0px 100px;
 }
 .quote-us-content{
   position: relative;
@@ -546,8 +564,256 @@ ul li{
   padding-right: 100px;
 }
 
+
+/*cta*/
+.button-center-new a:first-child{
+  margin-right: 25px !important;
+}
+
 /*all section cales*/
 .products-section-one{
   padding: 60px 0;
   background-color: #f7f6f3;
+  
+}
+
+/*from section design*/
+.form-group {
+  margin-bottom: 1rem;
+}
+.bg-gray{
+  background-color: #f7f6f3;
+  padding:40px 20px;
+}
+.form-one{
+  padding-right: 80px;
+}
+.form-one .form-control{
+  height: 50px;
+  border: transparent;
+  padding: 0px 0px 0px 5px;
+  font-size: 14px;
+  background: transparent;
+  border-bottom: 1px solid #727272;
+  border-radius: 0;
+}
+.form-one textarea.form-control{
+  height:auto
+}
+.form-one .form-control:focus{
+  border-color: #d95404;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+
+}
+.form-one .form-group{
+  position:relative
+}
+.form-one .form-group label {
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  font-size:14px;
+  transform: translateY(-50%);
+  color:var(--secondary); 
+  transition: all 0.3s ease-in-out;
+  pointer-events: none; /* Disable pointer events on the label */
+}
+.form-one .form-group input:focus + label,
+.form-one .form-group input:not(:placeholder-shown) + label,
+.form-one .form-group textarea:focus + label,
+.form-one .form-group textarea:not(:placeholder-shown) + label,
+.form-one .form-group .form-select:focus + label,
+.form-one .form-group .form-select:not(:placeholder-shown) + label,
+.form-one .form-group input:focus ~ label,
+.form-one .form-group input:not(:placeholder-shown) ~ label,
+.form-one .form-group textarea:focus ~ label,
+.form-one .form-group textarea:not(:placeholder-shown) ~ label,
+.form-one .form-group .form-select:focus ~ label,
+.form-one .form-group .form-select:not(:placeholder-shown) ~ label {
+  top: 0;
+  font-size: 12px;
+  color: Var(--primary);
+  background: transparent;
+  padding: 0px 5px;
+  font-weight: 600;
+}
+.form-one .form-group{
+  margin-bottom: 1.2rem;
+}
+.form-one .form-group .text-danger{
+  position: absolute;
+    font-size: 11px;
+    right: 0;
+}
+.form-one .react-tel-input {
+  font-family: var(--font-mono);
+
+}
+.form-one .react-tel-input .form-control{
+  width: 100%;
+  background: transparent;
+  padding: .375rem 3.4rem;
+  border: none;
+  height: 47px;
+  border-bottom: 1px solid #727272;
+  border-radius: 0;
+  font-size: 14px;
+  font-family: var(--font-sec) !important;
+}
+.form-one .react-tel-input .flag-dropdown{
+  background-color: #f1f8fa;
+  border:1px solid transparent;
+  border-right-color:rgb(247 246 243);
+  border-bottom: 1px solid #727272;
+}
+
+.form-one .react-tel-input .selected-flag{
+  background: rgb(247 246 243);
+}
+.form-one  .react-tel-input  input:-internal-autofill-selected{
+  background: #f1f8fa !important;
+}
+
+.form-two textaera.form-control{
+  height:auto
+}
+.form-two .form-control{
+  background-color: #f1f8fa;
+}
+.form-two .form-control:focus{
+  background-color: var(--color-white);
+}
+.form-subscribe{ 
+}
+.form-subscribe .form-control{
+  height: 50px;
+}
+
+
+.form-two .react-tel-input .form-control{
+  background: #f1f8fa;
+}
+
+
+.form-subscribe .btn-outline-secondary{
+  padding: 0.768rem 1.3rem;
+    background-color: var(--color-white);
+    margin-left: 10px;
+    border-radius: 0px 5px 5px 0px;
+}
+.form-subscribe .btn-outline-secondary:hover{
+  background-color:var(--primary);
+}
+.form-subscribe .btn-outline-secondary .bi{
+  color:var(--primary)
+}
+.form-subscribe .btn-outline-secondary .bi::before{
+  font-weight: bold !important;
+}
+.form-subscribe .btn-outline-secondary:hover .bi{
+  color:var(--color-white)
+}
+
+.model-form{
+
+}
+.model-form .modal-body{
+  padding:0px
+}
+.model-form .modal-body form .form-control{
+  background-color:#f1f8fa
+}
+.text-light{
+  color: black !important;
+}
+.model-form.modal-dialog {
+  max-width: 1100px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.model-form .modal-header{
+  position: absolute;
+    border: none;
+    right: -4px;
+    z-index: 1;
+    top: -6px;
+}
+.d-flex-model{
+display:flex;
+gap:30px;
+}
+
+.d-flex-model .model-left{
+  position:relative;
+  max-width:50%;
+  flex:50%;
+  background: rgb(255,255,255);
+  background: -moz-linear-gradient(41deg, rgba(255,255,255,1) 25%, rgba(221,237,243,1) 100%);
+  background: -webkit-linear-gradient(41deg, rgba(255,255,255,1) 25%, rgba(221,237,243,1) 100%);
+  background: linear-gradient(41deg, rgba(255,255,255,1) 25%, rgba(221,237,243,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ddedf3",GradientType=1);
+  border-radius:10px
+}
+.d-flex-model .model-left img{
+  position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.d-flex-model .model-left>div{
+  position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+}
+.d-flex-model .model-rigt{
+  max-width:50%;
+  flex:50%;
+  padding: 60px 30px 60px 0px;
+}
+
+.d-flex-model .model-left h3{
+  font-size: 36px;
+    font-weight: 600;
+    margin-bottom:20px
+}
+.d-flex-model .model-left h3 span{
+  color:var(--primary)
+}
+.d-flex-model .model-left p{
+  font-size:18px
+}
+
+
+/*faq*/
+.accordion-one{
+}
+.accordion-one .accordion-header{
+}
+.accordion-one .accordion-item{
+  margin-bottom: 10px;
+  border: none;
+}
+.accordion-one .accordion-header .accordion-button{
+  padding: 1.3rem 1.5rem;
+ 
+}
+.accordion-one .accordion-header h3{
+  font-size: 16px;
+  font-weight: 600;
+  font-family: var(--font-sec) !important;
+  margin-bottom: 0;
+}
+.accordion-one  .accordion-button:not(.collapsed){
+  background: transparent;
+  color: var(--primary);
+  box-shadow: inset 0 calc(-1 * var(--bs-accordion-border-width)) 0 #7e7e7e;
+}
+
+.accordion-one .accordion-button:focus{
+  box-shadow: none !important;
+  outline: none !important;
+  border-bottom: 1px solid #7e7e7e;
 }

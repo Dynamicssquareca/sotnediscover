@@ -51,7 +51,7 @@ const ScrollToTopButton = () => {
             cy={progressBarRadius}
             r={progressBarRadius - 2} // Adjust the thickness of the progress bar
             fill="none"
-            stroke="#00a1e0" // Adjust the color of the progress bar
+            stroke="#222" // Adjust the color of the progress bar
             strokeWidth="4"
             strokeDasharray={progressBarLength}
             strokeDashoffset={progress}
@@ -62,7 +62,7 @@ const ScrollToTopButton = () => {
             cx={progressBarRadius}
             cy={progressBarRadius}
             r={progressBarRadius - 6} // Adjust the radius of the back to top circle button
-            fill="#00a1e0" // Adjust the color of the back to top circle button
+            fill="#222" // Adjust the color of the back to top circle button
             style={{ cursor: 'pointer' }}
             onClick={scrollToTop}
           />

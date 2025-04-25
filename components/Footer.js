@@ -24,7 +24,7 @@ const Footer = () => {
 
     return (
         <>
-            {/* <FooterContactForm /> */}
+            <FooterContactForm />
             <footer id="footer" className="footer">
                 <div className={`footer-top ${footerClass}`}>
                     <div className='container'>
@@ -76,7 +76,7 @@ const Footer = () => {
                 </div>
                 <div className='bottom-footer'>
                     <div className="container">
-                        <div className="copyright">© Copyright 2025 CRM Frontier, Inc. All rights reserved. Various trademarks held by their respective owners.</div>
+                        <div className="copyright">© Copyright 2025 Stonediscover UK, Inc. All rights reserved. Various trademarks held by their respective owners.</div>
                     </div>
                 </div>
             </footer>

@@ -159,7 +159,7 @@
   }
   
   .footer .footer-top .footer-links ul a:hover {
-    color: #00a1e0;
+    color: var(--primary);
   }
   
   .footer .footer-top .footer-contact p {

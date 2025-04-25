@@ -55,7 +55,7 @@ const Form = ({ onSubmit }) => {
     }
 
     // Send email using EmailJS
-    emailjs.send('service_fg00l58', 'template_ce46els', {
+    emailjs.send('service_fg00l58s', 'template_ce46elss', {
       from_name: name,
       from_email: email,
       to_name: 'YOUR_EMAIL_ADDRESS', // Replace with your own email address
@@ -74,7 +74,7 @@ const Form = ({ onSubmit }) => {
 
       // Send data to the custom API
     try {
-      const response = await fetch('https://www.minimallyyours.com/api/zohocrmforceplus', {
+      const response = await fetch('https://www.minimallyyours.com/api/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -349,9 +349,11 @@ const Form = ({ onSubmit }) => {
           .
         </label>
       </div>
-      <button className='btn btn-prime btn-full' type="submit" disabled={submitted}>
-        {submitted ? `Submitting (${redirectTimer})` : 'Request CallBack'}
+      <div className="m-t-30">
+      <button className='btn btn-three' type="submit" disabled={submitted}>
+        {submitted ? `Submitting (${redirectTimer})` : 'Get Quotes'}
       </button>
+      </div>
       {submitted && <p>Your form has been submitted!</p>}
     </form>
   );
