@@ -423,6 +423,10 @@ ul li {
 .p-b-100 {
   padding-bottom: 100px !important;
 }
+.p-d-30{
+  padding-left:2rem;
+  padding-right:2rem;
+}
 
 /*headings*/
 .heading-center {

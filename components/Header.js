@@ -26,7 +26,7 @@ const Header = () => {
     return (
         <>
             <header id="header" className={`header ${isFixed ? 'fixed header-scrolled' : ''}`}>
-                <div className="container-fluid container-xl d-flex align-items-center justify-content-between">
+                <div className="container-fluid p-d-30 d-flex align-items-center justify-content-between">
                     <a href="/" className="logo d-flex align-items-center">
                         <Image src="/stone-logo.png" alt="stone-logo" width={200} height={30} />
                     </a>
