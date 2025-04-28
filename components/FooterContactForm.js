@@ -146,7 +146,7 @@ const FooterContactForm = () => {
                             </Accordion>
                         </div>
                         <div className='text-right-row'>
-                        <a href="/" class="btn btn-four m-t-30">Read More</a>
+                        <a href="/" className="btn btn-four m-t-30">Read More</a>
                         </div>
                     </div>
                 </div>
