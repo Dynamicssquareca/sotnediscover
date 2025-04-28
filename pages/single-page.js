@@ -44,7 +44,7 @@ const SiglePage = () => {
                     
                         <div className='col-lg-6'>
                             <div className='about-us-content'>
-                                <h2>About Us</h2>
+                                <h2>About Headstones</h2>
                                 <p>Headstones are a great way to offer a lasting tribute to the lives of loved ones. They are generally made of durable materials like granite and bronze, in different shapes and sizes such as square top, check top, arc top, round top, half round top, ogee top, half ogee top and many more. Each memorial can be customized in terms of shape, color, finish, inscription, and other options to reflect the individual’s legacy.</p>
                                 <p>At Stone Discover UK, we specialize in the design, fabrication, and wholesale supply of premium headstone memorials tailored for B2B clients. Monument retailers looking for premium quality granite headstones can contact us to partner or purchase in bulk . We receive orders across the UK, with our warehouses based in Liverpool and Southampton.</p>
                                 <a href='/about-us/' className='btn btn-four m-t-30'>Read More</a>
