@@ -6,7 +6,7 @@ import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
-
+import ImageMagnifier from '@/components/ImageMagnifier';
 // import required modules
 import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
 
@@ -37,6 +37,7 @@ const SingleProduct = () => {
             <div className='product-page-wrap'>
                 <div className='contianer'>
                     <div className='container'>
+
                         <div className='col-lg-5'>
                             <div className='product-grid-left'>
                                 <Swiper
@@ -52,35 +53,26 @@ const SingleProduct = () => {
                                     className="mySwiper2"
                                 >
                                     <SwiperSlide>
-                                        <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                                        <ImageMagnifier
+                                            src="https://cdn-iicel.nitrocdn.com/kWkIcgZsMsclxAYXwZxVGNlWeSIUwOaS/assets/images/optimized/rev-d2023a6/www.stonediscover.com/wp-content/uploads/2023/03/Frame-63.png"
+                                            alt="Product 1"
+                                            zoomWidth={600}
+                                            zoomScale={2}
+                                        />
                                     </SwiperSlide>
                                     <SwiperSlide>
-                                        <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                                        <ImageMagnifier src="https://swiperjs.com/demos/images/nature-2.jpg" zoomWidth={600}
+                                            zoomScale={2} />
                                     </SwiperSlide>
                                     <SwiperSlide>
-                                        <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                                        <ImageMagnifier src="https://swiperjs.com/demos/images/nature-3.jpg" zoomWidth={600}
+                                            zoomScale={2} />
                                     </SwiperSlide>
                                     <SwiperSlide>
-                                        <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                                        <ImageMagnifier src="https://swiperjs.com/demos/images/nature-4.jpg" zoomWidth={600}
+                                            zoomScale={2} />
                                     </SwiperSlide>
-                                    <SwiperSlide>
-                                        <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-                                    </SwiperSlide>
-                                    <SwiperSlide>
-                                        <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-                                    </SwiperSlide>
-                                    <SwiperSlide>
-                                        <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-                                    </SwiperSlide>
-                                    <SwiperSlide>
-                                        <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-                                    </SwiperSlide>
-                                    <SwiperSlide>
-                                        <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-                                    </SwiperSlide>
-                                    <SwiperSlide>
-                                        <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
-                                    </SwiperSlide>
+                                    
                                 </Swiper>
                                 <Swiper
                                     onSwiper={setThumbsSwiper}
@@ -104,24 +96,7 @@ const SingleProduct = () => {
                                     <SwiperSlide>
                                         <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
                                     </SwiperSlide>
-                                    <SwiperSlide>
-                                        <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-                                    </SwiperSlide>
-                                    <SwiperSlide>
-                                        <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-                                    </SwiperSlide>
-                                    <SwiperSlide>
-                                        <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-                                    </SwiperSlide>
-                                    <SwiperSlide>
-                                        <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-                                    </SwiperSlide>
-                                    <SwiperSlide>
-                                        <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-                                    </SwiperSlide>
-                                    <SwiperSlide>
-                                        <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
-                                    </SwiperSlide>
+                                    
                                 </Swiper>
                             </div>
                         </div>
