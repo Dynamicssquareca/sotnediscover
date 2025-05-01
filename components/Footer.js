@@ -76,7 +76,7 @@ const Footer = () => {
                                 <ul>
                                     <li><i className="bi bi-chevron-right"></i> <a href="/about-us/">About us</a></li>
                                     <li><i className="bi bi-chevron-right"></i> <a href="/about-us/">Product</a></li>
-                                    <li><i className="bi bi-chevron-right"></i> <a href="/blog/">Blogs</a></li>
+                                    <li><i className="bi bi-chevron-right"></i> <a href="/">Blogs</a></li>
                                     <li><i className="bi bi-chevron-right"></i> <a href="/contact-us/">Contact Us</a></li>
                                     <li><i className="bi bi-chevron-right"></i> <a href="/terms-of-use/">Terms of service</a></li>
                                     <li><i className="bi bi-chevron-right"></i> <a href="/privacy-policy/">Privacy policy</a></li>
