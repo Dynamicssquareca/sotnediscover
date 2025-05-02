@@ -19,7 +19,7 @@ const SingleProduct = () => {
     const sliderRef = useRef(null);  // Reference to the Swiper container
     const slideRef = useRef(null);   // Reference to the current SwiperSlide
     /*accordain code*/
-    const [open, setOpen] = useState('');
+    const [open, setOpen] = useState('1');
     const [openone, setOpenone] = useState('');
     const toggle = (id) => {
         if (open === id) {
