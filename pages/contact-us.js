@@ -8,7 +8,7 @@ const ContactUs = () => {
                 <title>Contact us</title>
             </Head>
             
-            <div className='common-header-banner m-b-60'>
+            <div className='common-header-banner'>
                 <div className='container'>
                     <div className='row justify-content-center'>
                         <div className='col-lg-8'>
@@ -20,7 +20,7 @@ const ContactUs = () => {
                 </div>
             </div>
 
-            <div className='contact-main p-t-60 p-b-40'>
+            <div className='contact-main p-t-80 p-b-40'>
                 <div className='container'>
                     <div className='row'>
                         <div className='col-lg-6 align-self-center'>

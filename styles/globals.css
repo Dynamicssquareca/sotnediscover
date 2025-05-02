@@ -363,7 +363,8 @@ ul li {
   padding: 60px 0px;
 }
 .common-header-banner h1{
-font-weight:600
+font-weight:600;
+font-size:48px
 }
 /*padding and margi*/
 .m-t-20 {
@@ -1095,8 +1096,18 @@ font-weight:600
   box-shadow: 0px 0px 53px #0000000d;
   padding: 30px 60px 50px;
 }
-.addre-left{}
-.addre-left h2{}
+.addres-sec{
+  padding-top:30px
+}
+.addre-left{
+  padding-right: 40px;
+}
+.addre-left h2{
+  font-size: 36px;
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: var(--primary);
+}
 .addre-left p{}
 .add-list{
   display: flex;
@@ -1108,7 +1119,8 @@ font-weight:600
   color: var(--primary);
 }
 .inf-wigt h4{
-  font-size: 18px;
+  font-size: 16px;
+    font-weight: 600;
 }
 .inf-wigt p{}
 
@@ -1118,7 +1130,7 @@ font-weight:600
 @media (min-width: 1400px) and (max-width: 1639px) {
 }
 @media (max-width: 1400px) {
-  .hero-banner-content h1 {
+  .hero-banner-content h1,.common-header-banner h1 {
     font-size: 40px;
   }
   .hero-banner-content p {
@@ -1128,7 +1140,7 @@ font-weight:600
     padding: 50px 40px;
   }
   .about-us-content h2,
-  .heading-center h2 {
+  .heading-center h2,.addre-left h2 {
     font-size: 32px;
   }
   .hero-banner-two-head P {
@@ -1190,7 +1202,7 @@ font-weight:600
     text-align: center;
   }
   .hero-banner-content h1,
-  .hero-banner-two-head h1 {
+  .hero-banner-two-head h1,.common-header-banner h1 {
     font-size: 36px;
   }
   .hero-banner-content {
@@ -1206,7 +1218,7 @@ font-weight:600
   .about-us-content h2,
   .heading-center h2,
   .heading-center span,
-  .heading-left h2 {
+  .heading-left h2,.addre-left h2 {
     font-size: 28px;
   }
   .hero-banner-two-head {
@@ -1236,7 +1248,7 @@ font-weight:600
   .p-t-100 {
     padding-top: 30px !important;
   }
-  .p-t-40 {
+  .p-t-40,.p-t-80 {
     padding-top: 30px !important;
 }
   .single-product-details {
@@ -1246,12 +1258,15 @@ font-weight:600
   .p-b-100 {
     padding-bottom: 40px !important;
 }
+
   .partner-section {
     padding: 30px 0px 0px;
   }
   .partner-pic{
-    
   }
+  .addre-left {
+    padding-right: 0px;
+}
 }
 @media (min-width: 768px) and (max-width: 992px) {
 }
@@ -1263,6 +1278,9 @@ font-weight:600
   .sliding-row {
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
+  }
+  .common-header-banner{
+    padding:30px 0px
   }
   .card-02 {
     display: flex;
@@ -1325,5 +1343,8 @@ font-weight:600
   }
   .bg-gray {
     padding: 15px 0px;
+  }
+  .addre-right .form-one{
+    padding:15px
   }
 }
