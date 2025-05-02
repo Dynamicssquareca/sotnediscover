@@ -568,6 +568,7 @@ font-size:48px
 }
 .card-04 .card-04-item img {
   margin-bottom: 15px;
+  width:100%
 }
 .card-04 .card-04-item a:hover {
   color: var(--primary);
@@ -1123,6 +1124,51 @@ font-size:48px
     font-weight: 600;
 }
 .inf-wigt p{}
+/*productp page*/
+.cent-flex{
+  display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.product-list-left{}
+.product-list-left h3{
+  margin-bottom: 30px;
+}
+.pro-side-bar{
+  padding-left: 0;
+    list-style: none;
+}
+.pro-side-bar>li{
+  margin-bottom: 20px;
+}
+.pro-side-bar>li>ul>li{
+  margin-bottom: 10px;
+}
+.pro-side-bar>li>a,.pro-side-bar>li>ul>li>a {
+  color: var(--secondary-dark);
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+.pro-side-bar>li>a span,.child-nn>li>a span{
+  background-color: var(--primary);
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: inline-flex
+;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+
+
+
 
 @media (min-width: 1640px) and (max-width: 1920px) {
 }
