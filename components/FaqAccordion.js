@@ -37,7 +37,11 @@ const FaqAccordion = ({ faqList = [] }) => {
   
   ];
 
-  const items = faqList && faqList.length > 0 ? faqList : defaultFaqs;
+const validFaqList = faqList?.filter(
+  item => item.title?.trim() && item.description?.trim()
+);
+
+const items = validFaqList && validFaqList.length > 0 ? validFaqList : defaultFaqs;
 
   return (
     <div className="form-left">

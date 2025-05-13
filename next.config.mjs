@@ -10,7 +10,7 @@ const nextConfig = {
     NEXT_PUBLIC_PRODUCTS_API_URL:'https://stonediscoveruk-apibackend.onrender.com/api/frontend/products',
     NEXT_PUBLIC_PRODUCTS_DETAILS_API_URL:'https://stonediscoveruk-apibackend.onrender.com/api/frontend/productdetails',
     NEXT_PUBLIC_PRODUCT_CATEGORY_API_URL:'https://stonediscoveruk-apibackend.onrender.com/api/frontend/categories',
-    NEXT_PUBLIC_CATEGORY_CHILD_API_URL:'https://stonediscoveruk-apibackend.onrender.com/api/frontend/productscategory',
+    // NEXT_PUBLIC_CATEGORY_CHILD_API_URL:'https://stonediscoveruk-apibackend.onrender.com/api/frontend/productscategory',
     NEXT_PUBLIC_DETSILS_URL:'https://stonediscoveruk-apibackend.onrender.com/api/frontend/categorydetails',
     NEXT_PUBLIC_IMAGE:'https://stonediscoveruk-apibackend.onrender.com/uploads',
     NEXT_PUBLIC_BLOG_API_URL:'https://crmfoceplus-backend.onrender.com/api/frontend/blogs',
