@@ -6,7 +6,7 @@ import ScrollToTopButton from './ScrollToTopButton';
 import Image from 'next/image';
 Image
 
-const Footer = () => {
+const Footer = ({faq}) => {
     const router = useRouter();
     const { pathname } = router;
 
@@ -24,7 +24,7 @@ const Footer = () => {
 
     return (
         <>
-            <FooterContactForm />
+            <FooterContactForm faq={faq} />
             <div className='footer-subscriber m-t-80'>
                 <div className='container'>
                     <div className='row'>

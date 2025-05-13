@@ -17,7 +17,7 @@ function MyAppWithLayout({ Component, pageProps }) {
  {
     return (
       <>
-      <Layout>
+      <Layout faq={pageProps.faq}>
         <Component {...pageProps} />
       </Layout>
       </>

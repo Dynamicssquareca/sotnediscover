@@ -1,9 +1,10 @@
+
 import Image from 'next/image';
 
 const getImageUrl = (img) =>
  img ? `${process.env.NEXT_PUBLIC_IMAGE}/${img}` : '/img/webpages/product-01.jpg'
 
-const CategoryPage = ({ category, products, error }) => {
+const CategoryPage = ({ category, products,faq, error }) => {
   if (error) {
     return <p className="text-danger">{error}</p>;
   }
@@ -13,7 +14,51 @@ const CategoryPage = ({ category, products, error }) => {
   }
 
   return (
-    <div className="container py-4">
+    <>
+    
+    
+       <div className='hero-banner-two' style={{ backgroundImage: 'url("/img/banner/hero-banner-02.jpg")', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
+                <div className='container'>
+                    <div className='row'>
+                        <div className='col-lg-6 align-self-end'>
+                            <div className='hero-banner-two-head '>
+                                <h1><span>{category.title}</span></h1>
+                                <p>Trusted Tombstone Supplier for Global B2B Partners</p>
+                            </div>
+                        </div>
+                        <div className='col-lg-6'>
+                            <div className='hero-banner-two-image'>
+                                <img src="/img/banner/single-page-01.png" alt="single-page-0" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <section className='about-us-section p-t-80 p-b-40'>
+                <div className='container'>
+                    <div className='row'>
+
+                        <div className='col-lg-6'>
+                            <div className='about-us-content'>
+                                <h2>About {category.title}</h2>
+                                <p>{category.description}</p>
+                                <a href='/about-us/' className='btn btn-four m-t-30'>Read More</a>
+                            </div>
+                        </div>
+
+                        <div className='col-lg-6'>
+                            <div className='about-us-image'>
+                                <img src='/img/webpages/about-us-pic.png' alt='About Us' className='img-fluid' />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+    
+    
+     <div className="container py-4">
       <h1 className="mb-3">{category.title}</h1>
       <div dangerouslySetInnerHTML={{ __html: category.description }} />
 
@@ -42,8 +87,14 @@ const CategoryPage = ({ category, products, error }) => {
             <p className="text-muted">No products found in this category.</p>
           </div>
         )}
+       
       </div>
     </div>
+    
+    </>
+
+
+   
   );
 };
 
@@ -84,6 +135,7 @@ export const getStaticProps = async ({ params }) => {
       props: {
         category: data.category,
         products: data.products,
+         faq: data.category.faqs || null, 
       },
       revalidate: 60,
     };
@@ -93,6 +145,7 @@ export const getStaticProps = async ({ params }) => {
       props: {
         category: null,
         products: [],
+        faq: null,
         error: 'Something went wrong while loading this page.',
       },
     };
