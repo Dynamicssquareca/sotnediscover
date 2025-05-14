@@ -114,13 +114,13 @@ const Nav = () => {
           {/* <li><Link className="nav-link scrollto" href="/solutions/">Solutions</Link></li> */}
           {/* <li><a className="nav-link scrollto" href="/">Industries</a></li> */}
           {/* <li><a className="nav-link scrollto" href="/">Company</a></li> */}
-          <li className="dropdown"><a href="#"><span>Tomb Stone</span> <i className="bi bi-chevron-down"></i></a>
-            <ul>
+          <li className="dropdown"><a href="/memorials/"><span>Memorial Stones</span> </a>
+            {/* <ul>
               <li><a href="/">Links 1</a></li>
               <li><a href="/">Links 2</a></li>
               <li><a href="/">Links 4</a></li>
               <li><a href="/">Links 5</a></li>
-            </ul>
+            </ul> */}
           </li>
           <li><a className="nav-link scrollto" href="/about-us/">About Us</a></li>
           <li><a className="nav-link" href="/">Blogs</a></li> 

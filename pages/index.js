@@ -123,31 +123,31 @@ export default function Home() {
             <div className='col-lg-12'>
               <div className='card-02'>
                 <div className='card-02-item'>
-                  <a href="/single-page/">
+                  <a href="/memorials/">
                     <Image src='/img/webpages/pic-01.png' alt='About Us' className='img-fluid' width={256} height={471} />
                     <h3>Book Shaped</h3>
                   </a>
                 </div>
                 <div className='card-02-item'>
-                  <a href="/single-page/">
+                  <a href="/memorials/">
                     <Image src='/img/webpages/pic-02.png' alt='About Us' className='img-fluid' width={256} height={471} />
                     <h3>Heart Shaped</h3>
                   </a>
                 </div>
                 <div className='card-02-item'>
-                  <a href="/single-page/">
+                  <a href="/memorials/">
                     <Image src='/img/webpages/pic-03.png' alt='About Us' className='img-fluid' width={256} height={471} />
                     <h3>Headstones</h3>
                   </a>
                 </div>
                 <div className='card-02-item'>
-                  <a href="/single-page/">
+                  <a href="/memorials/">
                     <Image src='/img/webpages/pic-04.png' alt='About Us' className='img-fluid' width={256} height={471} />
                     <h3>Angels Headstone</h3>
                   </a>
                 </div>
                 <div className='card-02-item'>
-                  <a href="/single-page/">
+                  <a href="/memorials/">
                     <Image src='/img/webpages/pic-05.png' alt='About Us' className='img-fluid' width={256} height={471} />
                     <h3>Vases</h3>
                   </a>
@@ -204,7 +204,7 @@ export default function Home() {
             <div className='col-lg-2 col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
-                  <a href="/single-page/">
+                  <a href="/memorials/">
                     <Image src='/img/webpages/pic-07.jpg' alt='About Us' className='img-fluid' width={210} height={210} />
                     <h4>Bench</h4>
                   </a>
@@ -214,7 +214,7 @@ export default function Home() {
             <div className='col-lg-2 col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
-                  <a href="/single-page/">
+                  <a href="/memorials/">
                     <Image src='/img/webpages/pic-08.jpg' alt='About Us' className='img-fluid' width={210} height={210} />
                     <h4>Kerbsets</h4>
                   </a>
@@ -224,7 +224,7 @@ export default function Home() {
             <div className='col-lg-2 col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
-                  <a href="/single-page/">
+                  <a href="/memorials/">
                     <Image src='/img/webpages/pic-09.jpg' alt='About Us' className='img-fluid' width={210} height={210} />
                     <h4>Flower Vases</h4>
                   </a>
@@ -234,7 +234,7 @@ export default function Home() {
             <div className='col-lg-2 col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
-                  <a href="/single-page/">
+                  <a href="/memorials/">
                     <Image src='/img/webpages/pic-10.jpg' alt='About Us' className='img-fluid' width={210} height={210} />
                     <h4>Urns</h4>
                   </a>
@@ -244,7 +244,7 @@ export default function Home() {
             <div className='col-lg-2 col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
-                  <a href="/single-page/">
+                  <a href="/memorials/">
                     <Image src='/img/webpages/pic-11.jpg' alt='About Us' className='img-fluid' width={210} height={210} />
                     <h4>Angle Heqadstones</h4>
                   </a>
@@ -254,7 +254,7 @@ export default function Home() {
             <div className='col-lg-2  col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
-                  <a href="/single-page/">
+                  <a href="/memorials/">
                     <Image src='/img/webpages/pic-12.jpg' alt='About Us' className='img-fluid' width={210} height={210} />
                     <h4>Children Memorial</h4>
                   </a>

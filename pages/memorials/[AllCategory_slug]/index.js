@@ -411,6 +411,7 @@ export const getStaticProps = async ({ params }) => {
         faq: null,
         error: 'Something went wrong while loading this page.',
       },
+      revalidate: 60,
     };
   }
 };
