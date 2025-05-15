@@ -31,7 +31,7 @@ const CategoryPage = ({ category, products, faq, error }) => {
   };
   /*meta code*/
 
- const router = useRouter();
+  const router = useRouter();
   const { AllCategory_slug } = router.query;
 
   if (error) {
@@ -79,13 +79,13 @@ const CategoryPage = ({ category, products, faq, error }) => {
             </div>
             <div className='col-lg-6'>
               <div className='hero-banner-two-image'>
-                 <Image
-                        width={563}
-                        height={563}
-                        src={getImageUrlBanner(category.image)}
-                        alt={category.title}
-                        className="img-fluid"
-                      />
+                <Image
+                  width={563}
+                  height={563}
+                  src={getImageUrlBanner(category.image)}
+                  alt={category.title}
+                  className="img-fluid"
+                />
               </div>
             </div>
           </div>

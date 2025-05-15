@@ -34,14 +34,14 @@ const FaqAccordion = ({ faqList = [] }) => {
       title: "Can you customize memorials according to our specifications?",
       description: "Yes, customization is available based on your requirements.",
     },
-  
+
   ];
 
-const validFaqList = faqList?.filter(
-  item => item.title?.trim() && item.description?.trim()
-);
+  const validFaqList = faqList?.filter(
+    item => item.title?.trim() && item.description?.trim()
+  );
 
-const items = validFaqList && validFaqList.length > 0 ? validFaqList : defaultFaqs;
+  const items = validFaqList && validFaqList.length > 0 ? validFaqList : defaultFaqs;
 
   return (
     <div className="form-left">

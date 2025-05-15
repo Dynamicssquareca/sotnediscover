@@ -102,25 +102,25 @@ const Index = ({ categories }) => {
                     </div>
                     <div className='row g-3 sliding-row-05'>
                         {categories.length > 0 ? (
-                                categories.map((category) => (
-                                    <div className="col-lg-3 sliding-col-05" key={category.id}>
-                                        <div className="card-06">
-                                            <div className="card-06-item">
-                                                <a href={`/memorials/${category.slug}/`}>
-                                                    <Image
-                                                        src={getImageUrl(category.categoryicon)}
-                                                        alt={category.name}
-                                                        className="img-fluid"
-                                                        width={300}
-                                                        height={300}
-                                                    />
-                                                    <span>{category.title}</span>
-                                                </a>
-                                            </div>
+                            categories.map((category) => (
+                                <div className="col-lg-3 sliding-col-05" key={category.id}>
+                                    <div className="card-06">
+                                        <div className="card-06-item">
+                                            <a href={`/memorials/${category.slug}/`}>
+                                                <Image
+                                                    src={getImageUrl(category.categoryicon)}
+                                                    alt={category.name}
+                                                    className="img-fluid"
+                                                    width={300}
+                                                    height={300}
+                                                />
+                                                <span>{category.title}</span>
+                                            </a>
                                         </div>
                                     </div>
-                                ))
-                         ) : (
+                                </div>
+                            ))
+                        ) : (
                             <p>No categories available.</p>
                         )}
                     </div>
