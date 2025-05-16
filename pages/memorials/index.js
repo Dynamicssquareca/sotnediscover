@@ -75,9 +75,10 @@ const Index = ({ categories }) => {
 
                         <div className='col-lg-6'>
                             <div className='about-us-content'>
-                                <h2>About Headstones</h2>
-                                <p>Headstones are a great way to offer a lasting tribute to the lives of loved ones. They are generally made of durable materials like granite and bronze, in different shapes and sizes such as square top, check top, arc top, round top, half round top, ogee top, half ogee top and many more. Each memorial can be customized in terms of shape, color, finish, inscription, and other options to reflect the individual’s legacy.</p>
-                                <p>At Stone Discover UK, we specialize in the design, fabrication, and wholesale supply of premium headstone memorials tailored for B2B clients. Monument retailers looking for premium quality granite headstones can contact us to partner or purchase in bulk . We receive orders across the UK, with our warehouses based in Liverpool and Southampton.</p>
+                                <h2>About Memorial Stones</h2>
+                                <p>Memorial stones are a long-lasting way to honour the memory of loved ones. These are specially crafted using premium granite stones and are available in a variety of shapes and sizes. Memorial stones reflect individual stories, cultural values, and timeless remembrance.</p>
+                                <p>At Stone Discover UK, we supply a complete range of memorial stones, designed to meet diverse needs across the funeral and memorial trade. We offer a wide variety of granite monuments in colours such as Absolute Indian Black, Bahama Blue, Light Grey, Indian Aurora, and Imperial Red, among others. We also offer imported granite options, including Blue Pearl, Olive Green, and South African Impala.</p>
+                                <p>Stone Discover UK is a trusted B2B supplier of high-quality granite memorial stones for the UK trade. We work with dealers, wholesalers, memorial retailers, and local authorities to deliver premium monuments at competitive prices.</p>
                                 <a href='/about-us/' className='btn btn-four m-t-30'>Read More</a>
                             </div>
                         </div>

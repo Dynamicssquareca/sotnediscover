@@ -71,7 +71,7 @@ const FormCta = ({ onSubmit }) => {
     }
 
     // Send email using EmailJS
-    emailjs.send('service_fg00l58', 'template_ce46els', {
+    emailjs.send('service_62cljjq', 'template_pq4kco7', {
       from_name: name,
       from_email: email,
       to_name: 'YOUR_EMAIL_ADDRESS', // Replace with your own email address
@@ -79,7 +79,7 @@ const FormCta = ({ onSubmit }) => {
       company_name: company,
       message: message,
       page_url: pageUrl
-    }, 'QyvWavOKod6guRB-s')
+    }, 'W7xNQXQ68tmQ-oKz0')
       .then((response) => {
         console.log('Email sent successfully:', response);
       })
