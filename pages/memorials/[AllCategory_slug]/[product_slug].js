@@ -235,23 +235,23 @@ const ProductPage = ({ product, relatedProducts,specifications, error }) => {
             <div className='col-lg-12'>
               <div className='card-05'>
                 <div className='card-05-item'>
-                  <img src='/img/icons/icons-1.png' alt='About Us' className='img-fluid' />
+                  <Image src='/img/icons/icons-1.png' alt='About Us' width={58} height={76} className='img-fluid' />
                   <span>Quality Craftmanship</span>
                 </div>
                 <div className='card-05-item'>
-                  <img src='/img/icons/icons-2.png' alt='About Us' className='img-fluid' />
+                  <Image src='/img/icons/icons-2.png' alt='About Us' width={58} height={76} className='img-fluid' />
                   <span>Nationwide Delivery</span>
                 </div>
                 <div className='card-05-item'>
-                  <img src='/img/icons/icons-3.png' alt='About Us' className='img-fluid' />
+                  <Image src='/img/icons/icons-3.png' alt='About Us' width={58} height={76} className='img-fluid' />
                   <span>24*7 Customer Service</span>
                 </div>
                 <div className='card-05-item'>
-                  <img src='/img/icons/icons-4.png' alt='About Us' className='img-fluid' />
+                  <Image src='/img/icons/icons-4.png' alt='About Us' width={58} height={76} className='img-fluid' />
                   <span>Custom Designs</span>
                 </div>
                 <div className='card-05-item'>
-                  <img src='/img/icons/icons-5.png' alt='About Us' className='img-fluid' />
+                  <Image src='/img/icons/icons-5.png' alt='About Us' width={58} height={76} className='img-fluid' />
                   <span>Experienced Masons</span>
                 </div>
               </div>
@@ -272,7 +272,7 @@ const ProductPage = ({ product, relatedProducts,specifications, error }) => {
           <div className='row'>
             <div className='col-lg-6'>
               <div className='partner-pic'>
-                <img src='/img/webpages/partent-side-pic.jpg' alt='partent-side-pic' />
+                <Image src='/img/webpages/partent-side-pic.jpg' width={555} height={440} alt='partent-side-pic' />
               </div>
             </div>
             <div className='col-lg-6 align-self-center'>
@@ -282,7 +282,7 @@ const ProductPage = ({ product, relatedProducts,specifications, error }) => {
                     <AccordionItem>
                       <AccordionHeader targetId="1">
                         <div className="d-flex justify-content-between align-items-center w-100">
-                          <h3><img src='/img/icons/faq-icon-01.png' alt='faq-icon' />What types of memorials do you supply?</h3>
+                          <h3><Image src='/img/icons/faq-icon-01.png' alt='faq-icon' width={36} height={36} />What types of memorials do you supply?</h3>
                           {/* <span className={`icon ${open === '1' ? 'open' : 'closed'}`}>
                                                     {open === '1' ? '-' : '+'}
                                                 </span> */}
@@ -295,7 +295,7 @@ const ProductPage = ({ product, relatedProducts,specifications, error }) => {
                     <AccordionItem>
                       <AccordionHeader targetId="2">
                         <div className="d-flex justify-content-between align-items-center w-100">
-                          <h3><img src='/img/icons/faq-icon-02.png' alt='faq-icon' />Consistent Quality, Every Time</h3>
+                          <h3><Image src='/img/icons/faq-icon-02.png' alt='faq-icon' width={36} height={36} />Consistent Quality, Every Time</h3>
                           {/* <span className={`icon ${open === '1' ? 'open' : 'closed'}`}>
                                                     {open === '1' ? '-' : '+'}
                                                 </span> */}
@@ -308,7 +308,7 @@ const ProductPage = ({ product, relatedProducts,specifications, error }) => {
                     <AccordionItem>
                       <AccordionHeader targetId="3">
                         <div className="d-flex justify-content-between align-items-center w-100">
-                          <h3><img src='/img/icons/faq-icon-03.png' alt='faq-icon' />Custom Shapes & Sizes</h3>
+                          <h3><Image src='/img/icons/faq-icon-03.png' alt='faq-icon' width={36} height={36} />Custom Shapes & Sizes</h3>
                           {/* <span className={`icon ${open === '1' ? 'open' : 'closed'}`}>
                                                     {open === '1' ? '-' : '+'}
                                                 </span> */}
@@ -321,7 +321,7 @@ const ProductPage = ({ product, relatedProducts,specifications, error }) => {
                     <AccordionItem>
                       <AccordionHeader targetId="4">
                         <div className="d-flex justify-content-between align-items-center w-100">
-                          <h3><img src='/img/icons/faq-icon-04.png' alt='faq-icon' />Seamless Logistics & Delivery</h3>
+                          <h3><Image src='/img/icons/faq-icon-04.png' alt='faq-icon' width={36} height={36} />Seamless Logistics & Delivery</h3>
                           {/* <span className={`icon ${open === '1' ? 'open' : 'closed'}`}>
                                                     {open === '1' ? '-' : '+'}
                                                 </span> */}
@@ -354,7 +354,7 @@ const ProductPage = ({ product, relatedProducts,specifications, error }) => {
               <div className='card-04'>
                 <div className='card-04-item text-center'>
                   <a href="/contact-us/">
-                    <img src='/img/webpages/pic-13.jpg' alt='Absolute Black' className='img-fluid' />
+                    <Image src='/img/webpages/pic-13.jpg' alt='Absolute Black' width={210} height={210} className='img-fluid' />
                     <h4>Absolute Black</h4>
                   </a>
                 </div>
@@ -364,7 +364,7 @@ const ProductPage = ({ product, relatedProducts,specifications, error }) => {
               <div className='card-04'>
                 <div className='card-04-item text-center'>
                   <a href="/contact-us/">
-                    <img src='/img/webpages/pic-14.jpg' alt='Bahama Blue' className='img-fluid' />
+                    <Image src='/img/webpages/pic-14.jpg' alt='Bahama Blue' width={210} height={210} className='img-fluid' />
                     <h4>Bahama Blue</h4>
                   </a>
                 </div>
@@ -374,7 +374,7 @@ const ProductPage = ({ product, relatedProducts,specifications, error }) => {
               <div className='card-04'>
                 <div className='card-04-item text-center'>
                   <a href="/contact-us/">
-                    <img src='/img/webpages/pic-15.jpg' alt='Flower Vases' className='img-fluid' />
+                    <Image src='/img/webpages/pic-15.jpg' alt='Flower Vases' width={210} height={210} className='img-fluid' />
                     <h4>Flower Vases</h4>
                   </a>
                 </div>
@@ -384,7 +384,7 @@ const ProductPage = ({ product, relatedProducts,specifications, error }) => {
               <div className='card-04'>
                 <div className='card-04-item text-center'>
                   <a href="/contact-us/">
-                    <img src='/img/webpages/pic-16.jpg' alt='Imperial Red' className='img-fluid' />
+                    <Image src='/img/webpages/pic-16.jpg' alt='Imperial Red' width={210} height={210} className='img-fluid' />
                     <h4>Imperial Red</h4>
                   </a>
                 </div>
@@ -394,7 +394,7 @@ const ProductPage = ({ product, relatedProducts,specifications, error }) => {
               <div className='card-04'>
                 <div className='card-04-item text-center'>
                   <a href="/contact-us/">
-                    <img src='/img/webpages/pic-17.jpg' alt='Jurpana' className='img-fluid' />
+                    <Image src='/img/webpages/pic-17.jpg' alt='Jurpana' width={210} height={210} className='img-fluid' />
                     <h4>Jurpana</h4>
                   </a>
                 </div>
@@ -404,7 +404,7 @@ const ProductPage = ({ product, relatedProducts,specifications, error }) => {
               <div className='card-04'>
                 <div className='card-04-item text-center'>
                   <a href="/contact-us/">
-                    <img src='/img/webpages/pic-18.jpg' alt='Kuppam Green' className='img-fluid' />
+                    <Image src='/img/webpages/pic-18.jpg' alt='Kuppam Green' width={210} height={210} className='img-fluid' />
                     <h4>Kuppam Green</h4>
                   </a>
                 </div>

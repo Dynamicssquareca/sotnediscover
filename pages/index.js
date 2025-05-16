@@ -77,7 +77,7 @@ export default function Home() {
 
                 <p>Our skilled professionals ensure that each piece is thoughtfully designed and crafted with care and precision, reflecting the memory of the deceased. We also do custom designs by adding memorial flower vases and graveside ornaments to add a personal touch to the memorial.</p>
                 <p>With warehouses in Liverpool and Southampton, we ensure safe packaging and prompt delivery. Please feel free to visit our showrooms for any queries or further guidance.</p>
-                <a href='/' className='btn btn-four m-t-30'>Read More</a>
+                <a href='/about-us/' className='btn btn-four m-t-30'>Read More</a>
               </div>
             </div>
 
@@ -95,21 +95,21 @@ export default function Home() {
           <div className='row'>
             <div className='col-lg-4 d-flex'>
               <div className='card-01'>
-                <Image src='/img/icons/add-location-alt.svg' alt='Our Location' className='img-fluid' width={38} height={43} />
+                <Image src='/img/icons/add-location-alt.png' alt='Our Location' className='img-fluid' width={48} height={49} />
                 <h3>Our Location</h3>
-                <p>We are based in Liverpool and Southampton, where we maintain a large inventory of catalog items for immediate delivery. As the largest stockist of headstones in the UK, we offer a diverse selection to meet various needs. Our manufacturing facility is located in Alinagar, Chetlapotham, Telangana, Southern India.</p>
+                <p>We are based in Liverpool and Southampton, where we maintain a large inventory of catalog items for immediate delivery. As the largest stockist of headstones in the UK. Our manufacturing facility is located in Alinagar, Chetlapotham, Telangana, Southern India.</p>
               </div>
             </div>
             <div className='col-lg-4 d-flex'>
               <div className='card-01'>
-                <Image src='/img/icons/delivery-truck-speed.svg' alt='Seamless Delivery' className='img-fluid' width={38} height={43} />
+                <Image src='/img/icons/delivery-truck-speed.png' alt='Seamless Delivery' className='img-fluid' width={48} height={49} />
                 <h3>Seamless Delivery</h3>
                 <p>We keep standard catalogue items in stock for quick delivery. If you need special bespoke designs or made-to-order items, we have one of the fastest delivery times in the industry, taking just 7 to 8 weeks from our factory in India.</p>
               </div>
             </div>
             <div className='col-lg-4 d-flex'>
               <div className='card-01'>
-                <Image src='/img/icons/handyman.svg' alt='Timeless Craftsmanship' className='img-fluid' width={38} height={43} />
+                <Image src='/img/icons/handyman.png' alt='Timeless Craftsmanship' className='img-fluid' width={48} height={49} />
                 <h3>Timeless Craftsmanship</h3>
                 <p>Our factory in India is powered by skilled craftsmen who expertly create memorials in any bespoke design you need. Click here to explore the latest personalized headstone designs that we have delivered.</p>
               </div>

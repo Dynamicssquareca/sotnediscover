@@ -116,9 +116,15 @@ const CategoryPage = ({ category, products, faq, error }) => {
 
 
       <div className="container py-4">
-        <h1 className="mb-3">Our Products</h1>
-
+       
         <div className="row mt-4">
+          <div className='col-lg-12'>
+             <div className='about-us-content'>
+           <h2>Our Products</h2>
+        </div>
+       
+
+          </div>
           {Array.isArray(products) && products.length > 0 ? (
             products.map((product) => (
               <div className="col-lg-3 sliding-col-05" key={product._id}>
