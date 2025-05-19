@@ -63,7 +63,7 @@ const Index = ({ categories }) => {
                         </div>
                         <div className='col-lg-6'>
                             <div className='hero-banner-two-image'>
-                                <img src="/img/banner/single-page-01.png" alt="single-page-0" />
+                                <Image src="/img/banner/single-page-001.png" width={563} height={563} alt="single-page-0" />
                             </div>
                         </div>
                     </div>
