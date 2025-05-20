@@ -92,26 +92,7 @@ const CategoryPage = ({ category, products, faq, error }) => {
         </div>
       </div>
 
-      <section className='about-us-section p-t-80 p-b-40 p-t-40'>
-        <div className='container'>
-          <div className='row'>
-
-            <div className='col-lg-6'>
-              <div className='about-us-content'>
-                <h2>About {category.title}</h2>
-                <div dangerouslySetInnerHTML={{ __html: category.description }}>{ }</div>
-                <a href='/about-us/' className='btn btn-four m-t-30'>Read More</a>
-              </div>
-            </div>
-
-            <div className='col-lg-6'>
-              <div className='about-us-image'>
-                <img src='/img/webpages/about-us-pic.png' alt='About Us' className='img-fluid' />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+    
 
 
 
@@ -152,6 +133,27 @@ const CategoryPage = ({ category, products, faq, error }) => {
 
         </div>
       </div>
+
+        <section className='about-us-section p-t-80 p-b-40 p-t-40'>
+        <div className='container'>
+          <div className='row'>
+
+            <div className='col-lg-6'>
+              <div className='about-us-content'>
+                <h2>About {category.title}</h2>
+                <div dangerouslySetInnerHTML={{ __html: category.description }}>{ }</div>
+                <a href='/about-us/' className='btn btn-four m-t-30'>Read More</a>
+              </div>
+            </div>
+
+            <div className='col-lg-6'>
+              <div className='about-us-image'>
+                <img src='/img/webpages/about-us-pic.png' alt='About Us' className='img-fluid' />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section className='partner-section'>
         <div className='container'>
