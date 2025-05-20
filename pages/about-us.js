@@ -253,8 +253,8 @@ export default function About() {
                                 <p>Whether you’re a high-volume buyer or expanding your product line, our team is here to support your growth. We understand the B2B dynamics of the memorial industry and deliver not just products—but trust, consistency, and partnership.</p>
                             </div>
                             <div className='button-center-new text-center'>
-                                <a href='/' className='btn btn-three'>Request a Quote</a>
-                                <a href='/' className='btn btn-four'>Request Catalogue</a>
+                                <a href='/get-quote-now' className='btn btn-three'>Request a Quote</a>
+                                <a href='/catalog-download' className='btn btn-four'>Request Catalogue</a>
 
                             </div>
                         </div>

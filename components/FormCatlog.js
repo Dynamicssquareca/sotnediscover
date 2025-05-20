@@ -207,7 +207,7 @@ const FormCatlog = ({ onSubmit }) => {
   }, [redirectTimer]);
 
   return (
-    <form className="form-one" onSubmit={handleSubmit} autoComplete="off">
+    <form className="form-one" onSubmit={handleSubmit}>
       <div className="form-group">
         <input
           type="text"
@@ -215,7 +215,6 @@ const FormCatlog = ({ onSubmit }) => {
           name="name"
           placeholder=""
           value={name}
-          autoComplete="new-password"
           onChange={(e) => {
             setName(e.target.value);
             if (errors.name) {
@@ -236,7 +235,6 @@ const FormCatlog = ({ onSubmit }) => {
         <input
           type="text"
           name="website"
-          autoComplete="off"
           onChange={() => { }}
         />
       </div>
@@ -247,7 +245,6 @@ const FormCatlog = ({ onSubmit }) => {
           name="email"
           placeholder=""
           value={email}
-          autoComplete="new-password"
           onChange={(e) => {
             setEmail(e.target.value);
             if (errors.email) {
@@ -270,7 +267,6 @@ const FormCatlog = ({ onSubmit }) => {
         <PhoneInput
           country={defaultCountryCode} // Set default country code
           value={phone}
-          autoComplete="new-password"
           onChange={(value, data) => {
             setPhone(value);
             setDefaultCountryCode(data?.name || ""); // Update the default country code
@@ -307,7 +303,6 @@ const FormCatlog = ({ onSubmit }) => {
           name="companyname"
           placeholder=""
           value={company}
-          autoComplete="new-password"
           onChange={(e) => {
             setCompany(e.target.value);
             if (errors.company) {
@@ -324,7 +319,29 @@ const FormCatlog = ({ onSubmit }) => {
         <label htmlFor="name">Company Name</label>
         {errors.company && <div className="text-danger">{errors.company}</div>}
       </div>
-     
+      {/* <div className="form-group mb-4">
+        <textarea
+          className="form-control"
+          name="message"
+          placeholder=""
+          rows="4"
+          value={message}
+          onChange={(e) => {
+            setMessage(e.target.value);
+            if (errors.message) {
+              delete errors.message;
+              setErrors({ ...errors });
+            }
+          }}
+          onBlur={() => {
+            if (!message.trim()) {
+              setErrors({ ...errors, message: 'Message is required' });
+            }
+          }}
+        ></textarea>
+        <label htmlFor="name">Message</label>
+        {errors.message && <div className="text-danger">{errors.message}</div>}
+      </div> */}
       <div className="mb-3 form-check">
         <input type="checkbox" className="form-check-input" id="exampleCheck1" />
         <label className="form-check-label">

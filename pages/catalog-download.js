@@ -1,7 +1,18 @@
 import React from 'react';
 import Head from 'next/head';
 import FormCatlog from '@/components/FormCatlog';
-const ContactUs = () => {
+import { useRouter } from 'next/router';
+
+const CatalogDownload = () => {
+const router = useRouter();
+const handleFormSubmit = () => {
+        console.log('Form submitted!');
+        setTimeout(() => {
+            router.push('/files/Catalogue-Stonediscover.pdf');
+          }, 3000);
+        // Perform any additional actions needed after form submission
+      };
+    
     return (
         <>
             <Head>
@@ -29,7 +40,7 @@ const ContactUs = () => {
                      
                         <div className='col-lg-6'>
                             <div className='addre-right'>
-                                <FormCatlog />
+                                <FormCatlog onSubmit={handleFormSubmit} />
                             </div>
                         </div>
                     </div>
@@ -42,4 +53,4 @@ const ContactUs = () => {
     );
 }
 
-export default ContactUs;
+export default CatalogDownload;

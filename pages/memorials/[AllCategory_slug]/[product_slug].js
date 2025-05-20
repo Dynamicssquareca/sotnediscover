@@ -444,7 +444,7 @@ const ProductPage = ({ product, relatedProducts, specifications, error }) => {
               </div>
               <div className='button-center-new text-center'>
                 <ModelBox className='btn-three' headerText="Scale Your Store! " buttonText="Request a Quote" />
-                <ModelBox className='btn-four' headerText="Scale Your Store! " buttonText="Request Catalogue" />
+                 <a className='btn-four btn-four-cc' href="/catalog-download">Request Catalogue</a>
 
               </div>
             </div>

@@ -1,7 +1,19 @@
 import React from 'react';
 import Head from 'next/head';
 import Form from '@/components/Form';
+import { useRouter } from 'next/router';
 const ContactUs = () => {
+
+ const router = useRouter();
+    const handleFormSubmit = () => {
+        console.log('Form submitted!');
+        setTimeout(() => {
+            router.push('/thank-you');
+          }, 3000);
+        // Perform any additional actions needed after form submission
+      };
+
+
     return (
         <>
             <Head>
@@ -61,7 +73,7 @@ const ContactUs = () => {
                         </div>
                         <div className='col-lg-6'>
                             <div className='addre-right'>
-                                <Form />
+                                <Form onSubmit={handleFormSubmit} />
                             </div>
                         </div>
                     </div>
