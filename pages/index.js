@@ -18,7 +18,7 @@ export default function Home() {
           src="/img/banner/hero-banner-three.png"
           alt="Hero Banner"
           fill
-          style={{ objectFit: 'cover', objectPosition: 'center bottom' }}
+          style={{ objectFit: 'cover', objectPosition: 'bottom' }}
           priority
           className='desh-top'
         />

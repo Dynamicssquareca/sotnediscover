@@ -300,7 +300,7 @@ ul li {
 .hero-banner-one {
 padding: 30px 0px 0px 0px;
     position: relative;
-   height: calc(90vh - 20px);
+   height: calc(100vh - 20px);
 }
 .hero-banner-content {
   /* -webkit-backdrop-filter: blur(25px);
@@ -1182,7 +1182,9 @@ gap:2px
   }
 
  .desh-top{
-    display:block
+    display:block;
+    height:auto !important;
+    top: initial !important;
   }
   .mobile-top{
     display:none
@@ -1212,7 +1214,7 @@ gap:2px
 }
 @media (max-width: 1440px) {
   .hero-banner-one{
-    padding: 10px 40px 140px;
+    padding: 60px 40px 140px;
   }
   .hero-banner-content h1,.common-header-banner h1 {
     font-size: 40px;
