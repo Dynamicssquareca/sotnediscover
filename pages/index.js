@@ -132,7 +132,7 @@ export default function Home() {
             <div className='col-lg-12'>
               <div className='card-02'>
                 <div className='card-02-item'>
-                  <a href="/memorials/">
+                  <a href="/memorials/book-headstones/">
                     <Image src='/img/webpages/pic-01.png' alt='Book Headstone' className='img-fluid' width={256} height={471} />
                     <h3>Book Headstone</h3>
                   </a>
@@ -255,7 +255,7 @@ export default function Home() {
                 <div className='card-04-item text-center'>
                   <a href="/memorials/">
                     <Image src='/img/webpages/pic-11.jpg' alt='About Us' className='img-fluid' width={210} height={210} />
-                    <h4>Angle Heqadstones</h4>
+                    <h4>Angle Headstone</h4>
                   </a>
                 </div>
               </div>
