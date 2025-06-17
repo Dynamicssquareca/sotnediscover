@@ -531,7 +531,7 @@ font-size:48px
   transition: all 0.5s ease-in-out;
 }
 .card-02-item a:hover h3 {
-  color: var(--color-primary) !important;
+  color: #000000 !important;
   transform: translateY(-15px);
 }
 .card-02-item a:hover {
