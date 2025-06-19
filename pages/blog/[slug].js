@@ -94,6 +94,7 @@ const BlogPost = ({ post, relatedPosts, relatedHeading, categories, error }) => 
               : `${process.env.NEXT_PUBLIC_SITE_URL}img/banner/home-main-banner.png`
           }
         />
+             <meta name="robots" content="noindex, nofollow" />
       </Head>
 
 

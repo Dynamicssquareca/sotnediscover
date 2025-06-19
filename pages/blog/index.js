@@ -62,6 +62,7 @@ const BlogIndex = ({ posts, categories }) => {
           name="description"
           content="Explore the best Salesforce CRM blogs on CRM Frontier  for expert tips, insights, and strategies to optimize your CRM experience."
         />
+             <meta name="robots" content="noindex, nofollow" />
         <link rel="canonical" href={canonicalUrl} />
       </Head>
 

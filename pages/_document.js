@@ -4,27 +4,27 @@ export default function Document() {
     <Html lang="en">
       <Head>
         <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32" />
-          <link rel="icon" type="image/png" href="/favicon.png" sizes="192x192" />
+        <link rel="icon" type="image/png" href="/favicon.png" sizes="192x192" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"></link>
-        <link rel="preconnect" href="https://fonts.googleapis.com"  />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
         <meta name="robots" content="noindex, nofollow" />
-        {/* <meta name="google-site-verification" content="5ew9dq7KIWCUeL8wUVSWwyGqJgg0takYOwYrroSLUMg" />
+        <meta name="google-site-verification" content="5ew9dq7KIWCUeL8wUVSWwyGqJgg0takYOwYrroSLUMg" />
+        {/* <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=G-H0L8BSTQ7R`}
+        />
         <script
-            async
-            src={`https://www.googletagmanager.com/gtag/js?id=G-LFT71NHJVD`}
-          />
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-               window.dataLayer = window.dataLayer || [];   
-               function gtag(){dataLayer.push(arguments);}   
-               gtag('js', new Date());   
-               gtag('config', 'G-3DM14XSK8W');
+          dangerouslySetInnerHTML={{
+            __html: `
+               window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-H0L8BSTQ7R');
               `,
-            }}
-          /> */}
+          }}
+        /> */}
         {/* End Google Analytics tracking code */}
       </Head>
       <body>
