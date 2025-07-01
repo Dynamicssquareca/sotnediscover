@@ -262,7 +262,7 @@ const Index = ({ categories }) => {
                         <div className='col-lg-2 col-md-4 sliding-col'>
                             <div className='card-04'>
                                 <div className='card-04-item text-center'>
-                                    <a href="/">
+                                    <a href="/contact-us/">
                                         <img src='/img/webpages/pic-07.jpg' alt='About Us' className='img-fluid' />
                                         <h4>Bench</h4>
                                     </a>
@@ -272,7 +272,7 @@ const Index = ({ categories }) => {
                         <div className='col-lg-2 col-md-4 sliding-col'>
                             <div className='card-04'>
                                 <div className='card-04-item text-center'>
-                                    <a href="/">
+                                    <a href="/contact-us/">
                                         <img src='/img/webpages/pic-08.jpg' alt='About Us' className='img-fluid' />
                                         <h4>Kerbsets</h4>
                                     </a>
@@ -282,7 +282,7 @@ const Index = ({ categories }) => {
                         <div className='col-lg-2 col-md-4 sliding-col'>
                             <div className='card-04'>
                                 <div className='card-04-item text-center'>
-                                    <a href="/">
+                                    <a href="/contact-us/">
                                         <img src='/img/webpages/pic-09.jpg' alt='About Us' className='img-fluid' />
                                         <h4>Flower Vases</h4>
                                     </a>
@@ -292,7 +292,7 @@ const Index = ({ categories }) => {
                         <div className='col-lg-2 col-md-4 sliding-col'>
                             <div className='card-04'>
                                 <div className='card-04-item text-center'>
-                                    <a href="/">
+                                    <a href="/contact-us/">
                                         <img src='/img/webpages/pic-10.jpg' alt='About Us' className='img-fluid' />
                                         <h4>Urns</h4>
                                     </a>
@@ -312,7 +312,7 @@ const Index = ({ categories }) => {
                         <div className='col-lg-2  col-md-4 sliding-col'>
                             <div className='card-04'>
                                 <div className='card-04-item text-center'>
-                                    <a href="/">
+                                    <a href="/contact-us/">
                                         <img src='/img/webpages/pic-12.jpg' alt='About Us' className='img-fluid' />
                                         <h4>Children Memorial</h4>
                                     </a>
