@@ -170,7 +170,7 @@ export default function Home() {
                   </a>
                 </div>
                 <div className='card-02-item'>
-                  <a href="/memorials/angel-headstones/">
+                  <a href="/memorials/angel-headstone/">
                     <Image src='/img/webpages/pic-04.png' alt='Angels Headstone' className='img-fluid' width={256} height={471} />
                     <h3>Angels Headstone</h3>
                   </a>
