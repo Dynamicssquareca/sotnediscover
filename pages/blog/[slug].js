@@ -19,7 +19,10 @@ const BlogPost = ({ post, relatedPosts, relatedHeading, categories, error }) => 
   }
   if (!post) return <p>Post not found</p>;
 
-  const canonicalUrl = `${process.env.NEXT_PUBLIC_SITE_URL}blog/${post.slug}/`;
+  // const canonicalUrl = `${process.env.NEXT_PUBLIC_SITE_URL}blog/${post.slug}/`;
+  const canonicalUrl = post.slug
+  ? `${process.env.NEXT_PUBLIC_SITE_URL}blog/${post.slug}/`
+  : `${process.env.NEXT_PUBLIC_SITE_URL}blog/`;
 
   const getImageUrl = (img) => {
     if (!img) return '';
@@ -298,29 +301,82 @@ export async function getStaticPaths() {
     const paths = posts.map(post => ({
       params: { slug: post.slug }
     }));
-    return { paths, fallback: true };
+     // fallback: 'blocking' ensures page waits for data before rendering (better SEO)
+    return { paths, fallback: 'blocking' };
   } catch (err) {
     console.error(err);
-    return { paths: [], fallback: true };
+    return { paths: [], fallback: 'blocking' };
   }
 }
 
+// export async function getStaticProps({ params }) {
+//   const { slug } = params;
+//   const blogApi = process.env.NEXT_PUBLIC_BLOG_API_URL;
+//   const categoryApi = process.env.NEXT_PUBLIC_CATEGORY_API_URL;
+//   try {
+//     const postRes = await fetch(`${blogApi}/${slug}`);
+//     if (!postRes.ok) throw new Error('Failed to fetch post');
+//     const post = await postRes.json();
+
+//     const allRes = await fetch(blogApi);
+//     let allPosts = [];
+//     if (allRes.ok) {
+//       allPosts = await allRes.json();
+//     }
+//     const sameCategoryPosts = allPosts.filter(
+//       p => p.category._id === post.category._id && p._id !== post._id
+//     );
+//     let relatedPosts = [];
+//     let relatedHeading = '';
+//     if (sameCategoryPosts.length > 0) {
+//       relatedHeading = 'Related Posts';
+//       relatedPosts = sameCategoryPosts.slice(0, 3);
+//     } else {
+//       relatedHeading = 'Random Posts';
+//       const randomPosts = allPosts.filter(p => p._id !== post._id);
+//       relatedPosts = randomPosts.slice(0, 3);
+//     }
+
+//     const catRes = await fetch(categoryApi);
+//     let categories = [];
+//     if (catRes.ok) {
+//       categories = await catRes.json();
+//     }
+
+//     return { props: { post, relatedPosts, relatedHeading, categories }, revalidate: 60 };
+//   } catch (err) {
+//     console.error(err);
+//     return { props: { post: null, error: true, relatedPosts: [], categories: [] }, revalidate: 60 };
+//   }
+// }
+
+// export default BlogPost;
 export async function getStaticProps({ params }) {
   const { slug } = params;
   const blogApi = process.env.NEXT_PUBLIC_BLOG_API_URL;
   const categoryApi = process.env.NEXT_PUBLIC_CATEGORY_API_URL;
-  try {
-    const postRes = await fetch(`${blogApi}/${slug}`);
-    if (!postRes.ok) throw new Error('Failed to fetch post');
-    const post = await postRes.json();
 
+  try {
+    // Fetch the post by slug
+    const postRes = await fetch(`${blogApi}/${slug}`);
+    if (!postRes.ok) {
+      return { notFound: true }; // Return 404 if post doesn't exist
+    }
+    const post = await postRes.json();
+    if (!post || Object.keys(post).length === 0) {
+      return { notFound: true };
+    }
+
+    // Fetch all posts
     const allRes = await fetch(blogApi);
     let allPosts = [];
     if (allRes.ok) {
       allPosts = await allRes.json();
     }
+
+    // Determine related posts
     const sameCategoryPosts = allPosts.filter(
-      p => p.category._id === post.category._id && p._id !== post._id
+      p => p.category?._id === post.category?._id && p._id !== post._id
     );
     let relatedPosts = [];
     let relatedHeading = '';
@@ -329,21 +385,23 @@ export async function getStaticProps({ params }) {
       relatedPosts = sameCategoryPosts.slice(0, 3);
     } else {
       relatedHeading = 'Random Posts';
-      const randomPosts = allPosts.filter(p => p._id !== post._id);
-      relatedPosts = randomPosts.slice(0, 3);
+      relatedPosts = allPosts.filter(p => p._id !== post._id).slice(0, 3);
     }
 
-    // Fetch categories for the sidebar
+    // Fetch categories
     const catRes = await fetch(categoryApi);
     let categories = [];
     if (catRes.ok) {
       categories = await catRes.json();
     }
 
-    return { props: { post, relatedPosts, relatedHeading, categories }, revalidate: 60 };
+    return {
+      props: { post, relatedPosts, relatedHeading, categories },
+      revalidate: 60
+    };
   } catch (err) {
     console.error(err);
-    return { props: { post: null, error: true, relatedPosts: [], categories: [] }, revalidate: 60 };
+    return { notFound: true }; // Return 404 if there’s an error
   }
 }
 
