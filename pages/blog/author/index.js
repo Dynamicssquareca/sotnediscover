@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 const AuthorIndex = ({ authors }) => {
-  const canonicalUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/blog/author`;
+  const canonicalUrl = `${process.env.NEXT_PUBLIC_SITE_URL}blog/author`;
 
   return (
     <>

@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 const CategoryPage = ({ category, posts }) => {
   if (!category) return <p>Category not found</p>;
-  const canonicalUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/blog/category/${category.slug || category.title.toLowerCase().replace(/\s+/g, '-')}`;
+  const canonicalUrl = `${process.env.NEXT_PUBLIC_SITE_URL}blog/category/${category.slug || category.title.toLowerCase().replace(/\s+/g, '-')}/`;
 
   const buildImageUrl = (baseUrl, img) => {
     if (!img) return '';
@@ -22,9 +22,12 @@ const CategoryPage = ({ category, posts }) => {
   return (
     <>
       <Head>
-        <title>{category.title} - Categories - My App</title>
+       <title>{category.metaTitle || category.title}</title>
+        <meta name="description" content={category.metaDescription || category.excerpt || ''} />
         <link rel="canonical" href={canonicalUrl} />
-        <meta name="robots" content="noindex, nofollow" />
+        {category.metaKeywords && <meta name="keywords" content={category.metaKeywords} />}
+        <meta property="og:title" content={category.metaTitle || category.title} />
+        <meta property="og:description" content={category.metaDescription || category.excerpt || ''} />
       </Head>
       <div className="container pb-80">
       <div className='row'>

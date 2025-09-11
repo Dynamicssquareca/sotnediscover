@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 const CategoryIndex = ({ categories }) => {
-  const canonicalUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/blog/category`;
+  const canonicalUrl = `${process.env.NEXT_PUBLIC_SITE_URL}blog/category`;
   const buildImageUrl = (baseUrl, img) => {
     if (!img) return '';
     if (img.startsWith('http')) return img;
@@ -16,9 +16,14 @@ const CategoryIndex = ({ categories }) => {
   return (
     <>
       <Head>
-        <title>Categories - My App</title>
+        {/* <title>Categories - My App</title>
+        <link rel="canonical" href={canonicalUrl} /> */}
+        <title>Categories</title>
+        <meta name="description" content={categories.metaDescription || categories.excerpt || ''} />
         <link rel="canonical" href={canonicalUrl} />
-        <meta name="robots" content="noindex, nofollow" />
+        {categories.metaKeywords && <meta name="keywords" content={categories.metaKeywords} />}
+        <meta property="og:title" content={categories.metaTitle || categories.title} />
+        <meta property="og:description" content={categories.metaDescription || categories.excerpt || ''} />
       </Head>
       <div className="container pb-80">
         <div className='row'>
@@ -65,10 +70,10 @@ export async function getStaticProps() {
     if (res.ok) {
       categories = await res.json();
     }
-    return { props: { categories }, revalidate: 10 };
+    return { props: { categories }, revalidate: 60 };
   } catch (err) {
     console.error(err);
-    return { props: { categories: [] }, revalidate: 10 };
+    return { props: { categories: [] }, revalidate: 60 };
   }
 }
 

@@ -1,6 +1,6 @@
 {
     "redirects": [
-      { "source": "/solutions/marketing-cloud/", "destination": "/solutions/salesforce-marketing-cloud/", "statusCode": 308 }
+      { "source": "/memorials/angel-headstones/", "destination": "/memorials/angel-headstone/", "statusCode": 301 }
     ]
   }
   

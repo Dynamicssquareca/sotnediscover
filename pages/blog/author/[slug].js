@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 const AuthorPage = ({ author, posts }) => {
   if (!author) return <p>Author not found</p>;
-  const canonicalUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/blog/author/${author.slug}`;
+  const canonicalUrl = `${process.env.NEXT_PUBLIC_SITE_URL}blog/author/${author.slug}`;
   const buildImageUrl = (baseUrl, img) => {
     if (!img) return '';
     if (img.startsWith('http')) return img;
