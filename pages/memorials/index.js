@@ -157,9 +157,9 @@ const Index = ({ categories }) => {
                         </div>
                     </div>
                     <div className='row'>
-                        <div className='col-lg-6'>
+                        <div className='col-lg-6 align-self-center'>
                             <div className='partner-pic'>
-                                <img src='/img/webpages/partent-side-pic.jpg' alt='partent-side-pic' />
+                                <img src='/img/webpages/headstones-pic.png' alt='partent-side-pic' />
                             </div>
                         </div>
                         <div className='col-lg-6 align-self-center'>

@@ -6,14 +6,14 @@ import ScrollToTopButton from './ScrollToTopButton';
 import Image from 'next/image';
 Image
 
-const Footer = ({faq}) => {
+const Footer = ({ faq }) => {
     const router = useRouter();
     const { pathname } = router;
 
     // Define classes based on different routes
     let footerClass = '';
 
-    if (pathname === '/contact-us' || pathname === '/about-us' || pathname === '/thank-you' || pathname=== '/get-quote-now' || pathname=== '/catalog-download') {
+    if (pathname === '/contact-us' || pathname === '/about-us' || pathname === '/thank-you' || pathname === '/get-quote-now' || pathname === '/catalog-download') {
         footerClass = 'footer-pad';
     }
     // } else if (pathname === '/page2') {
@@ -85,12 +85,16 @@ const Footer = ({faq}) => {
                             <div className="col-lg-2 col-6 footer-links">
                                 <h4>Our Products</h4>
                                 <ul>
-                                    <li><i className="bi bi-chevron-right"></i> <a href="/">Tombstones</a></li>
-                                    <li><i className="bi bi-chevron-right"></i> <a href="/">Granite</a></li>
-                                    <li><i className="bi bi-chevron-right"></i> <a href="/">Marble</a></li>
-                                    <li><i className="bi bi-chevron-right"></i> <a href="/">Sandstone</a></li>
-                                    <li><i className="bi bi-chevron-right"></i> <a href="/">Limestone</a></li>
-                                    <li><i className="bi bi-chevron-right"></i> <a href="/">Quartz</a></li>
+                                    <li><i className="bi bi-chevron-right"></i> <a href="/memorials/angel-headstone/">Angel Headstone</a></li>
+                                    <li><i className="bi bi-chevron-right"></i> <a href="/memorials/headstones/">Headstones</a></li>
+                                    <li><i className="bi bi-chevron-right"></i> <a href="/memorials/kerb-sets/">Memorial Kerb Sets</a></li>
+                                    <li><i className="bi bi-chevron-right"></i> <a href="/memorials/benches/">Memorial Benches</a></li>
+                                    <li><i className="bi bi-chevron-right"></i> <a href="/memorials/childrens-headstones/">Childrens Headstones</a></li>
+                                    <li><i className="bi bi-chevron-right"></i> <a href="/memorials/heart-headstones/">Heart Headstones</a></li>
+                                    <li><i className="bi bi-chevron-right"></i> <a href="/memorials/vases/">Memorial Vases</a></li>
+                                    <li><i className="bi bi-chevron-right"></i> <a href="/memorials/book-headstones/">Book Headstones</a></li>
+                                    <li><i className="bi bi-chevron-right"></i> <a href="/memorials/plaques/">Memorial Plaques</a></li>
+                                    <li><i className="bi bi-chevron-right"></i> <a href="/memorials/urns/">Memorial Urns</a></li>
                                 </ul>
 
                             </div>
