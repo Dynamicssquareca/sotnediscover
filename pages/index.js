@@ -95,7 +95,7 @@ export default function Home() {
 
                 <p>Our skilled professionals ensure that each piece is thoughtfully designed and crafted with care and precision, reflecting the memory of the deceased. We also do custom designs by adding memorial flower vases and graveside ornaments to add a personal touch to the memorial.</p>
                 <p>With warehouses in Liverpool and Southampton, we ensure safe packaging and prompt delivery. Please feel free to visit our showrooms for any queries or further guidance.</p>
-                <a href='/about-us/' className='btn btn-four m-t-30'>Read More</a>
+                <a href='/about-us/' className='btn btn-four m-t-30' aria-label='Read more about Stone Discover'>Read More</a>
               </div>
             </div>
 
