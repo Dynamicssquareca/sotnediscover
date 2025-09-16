@@ -151,13 +151,13 @@ export default function Home() {
               <div className='card-02'>
                 <div className='card-02-item'>
                   <a href="/memorials/book-headstones/">
-                    <Image src='/img/webpages/pic-01.png' alt='Book Headstone' className='img-fluid' width={256} height={471} />
+                    <Image src='/img/webpages/pic-01.png' alt='' className='img-fluid' width={256} height={471} />
                     <h3>Book Headstone</h3>
                   </a>
                 </div>
                 <div className='card-02-item'>
                   <a href="/memorials/heart-headstones/">
-                    <Image src='/img/webpages/pic-02.png' alt='Heart Headstone' className='img-fluid' width={256} height={471} />
+                    <Image src='/img/webpages/pic-02.png' alt='Balck Granite Heart Headstone' className='img-fluid' width={256} height={471} />
                     <h3>Heart Headstone</h3>
                   </a>
                 </div>
