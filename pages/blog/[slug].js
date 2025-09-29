@@ -20,7 +20,7 @@ const BlogPost = ({ post, relatedPosts, relatedHeading, categories, error }) => 
   if (!post) return <p>Post not found</p>;
 
   // const canonicalUrl = `${process.env.NEXT_PUBLIC_SITE_URL}blog/${post.slug}/`;
-  const canonicalUrl = post.slug
+  const canonicalUrl = post?.slug
   ? `${process.env.NEXT_PUBLIC_SITE_URL}blog/${post.slug}/`
   : `${process.env.NEXT_PUBLIC_SITE_URL}blog/`;
 
