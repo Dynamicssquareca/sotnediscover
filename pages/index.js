@@ -57,10 +57,8 @@ export default function Home() {
             <div className="row align-items-center justify-content-center">
               <div className="col-lg-9 text-center">
                 <div className="hero-banner-content">
-                  <h1>UK's Trusted Wholesale Memorial Headstones Supplier</h1>
-                  <p>
-                    We specialize in creating premium quality memorial headstones and gravestones using the finest granite
-                  </p>
+                  <h1>Trusted Wholesale Granite Headstones Supplier</h1>
+                  <p>A Leading Granite Monuments Manufacturer and Exporter from India </p>
                   <div className="hero-banner-btn">
                     <ModelBox className="btn-three" headerText="Scale Your Store!" buttonText="Get Quote Now" />
                     {/* <ModelBox className="btn-transparent" headerText="Scale Your Store!" buttonText="Request Catalogue" /> */}
@@ -95,7 +93,7 @@ export default function Home() {
 
                 <p>Our skilled professionals ensure that each piece is thoughtfully designed and crafted with care and precision, reflecting the memory of the deceased. We also do custom designs by adding memorial flower vases and graveside ornaments to add a personal touch to the memorial.</p>
                 <p>With warehouses in Liverpool and Southampton, we ensure safe packaging and prompt delivery. Please feel free to visit our showrooms for any queries or further guidance.</p>
-                <a href='/about-us/' className='btn btn-four m-t-30' >Read More<span class="sr-only">about Stone Discover</span></a>
+                <a href='/about-us/' className='btn btn-four m-t-30' >Read More<span className="sr-only">about Stone Discover</span></a>
               </div>
             </div>
 
