@@ -63,13 +63,13 @@ export default function Home() {
               <div className='col-lg-12'>
                 <div className='over-img'>
                   <Image
-                  src="/img/banner/Granite-Headstones-Monuments.png"
-                  alt="Hero Banner"
-                  width={1024}
-                  height={368}
-                  className='mobile-new'
-                  priority
-                />
+                    src="/img/banner/Granite-Headstones-Monuments.png"
+                    alt="Hero Banner"
+                    width={1024}
+                    height={368}
+                    className='mobile-new'
+                    priority
+                  />
                 </div>
 
               </div>
@@ -78,7 +78,7 @@ export default function Home() {
         </div>
       </div>
 
-      
+
 
       <section className='about-us-section p-b-40'>
         <div className='container'>
@@ -116,7 +116,7 @@ export default function Home() {
       </section>
 
 
-     
+
       <section className='products-section-one m-p-02'>
         <div className='container'>
           <div className='row'>
@@ -129,14 +129,14 @@ export default function Home() {
           </div>
           <div className='row'>
             <div className='col-lg-12'>
-             
+
               <div className='card-02a'>
-                 <HomeSlider />
+                <HomeSlider />
               </div>
             </div>
           </div>
         </div>
-        <div className='container'>
+        <div className='container  p-t-80'>
           <div className='row justify-content-center'>
             <div className='col-lg-9'>
               <div className='heading-center p-b-40'>
@@ -189,22 +189,26 @@ export default function Home() {
                 <Image src='/img/webpages/pic-06.png' alt='About Us' className='img-fluid' width={553} height={545} />
               </div>
             </div>
-            <div className='col-lg-6 d-flex'>
-              <div className='card-03'>
-                <ul>
-                  <li className='m-b-20'>
-                    <h3 className='m-b-20'>Memorial Wholesaler</h3>
-                    <p>We supply memorials to monument suppliers, wholesalers, and fabricators throughout the UK. As the largest stockist of granite headstones in the country, we are known for our reliable delivery service and exceptional quality.</p>
-                  </li>
-                  <li className='m-b-20'>
-                    <h3 className='m-b-20'>Premium Granite Colors</h3>
-                    <p>We offer a variety of premium granite colors, including Absolute Indian Black, Bahama Blue, Indian Aurora, Indian Impala, Imperial Red, Light Grey Granite, and many more. Imported varieties such as Black Pearl, Olive Green, and South African Impala are also available for bespoke designs.</p>
+            <div className='col-lg-6 align-self-center'>
+              <div className='about-us-content'>
+                <h2>Why Us</h2>
+                <p>Stone Discover is the largest manufacturer and supplier of premium quality natural stones since 1984. We offer a complete range of natural stones in various forms, including tombstones, monuments, gravestones, memorials, grave markers and headstones.</p>
+                <ul className='my-flex-item'>
+                  <li>
+                    <div><i className="bi bi-check-lg"></i> <span>Quick Turnaround Time</span></div>
                   </li>
                   <li>
-                    <h3 className='m-b-20'>Bespoke Designs</h3>
-                    <p>We are able to produce monuments of any custom dimensions, finishes, and engraving options to meet your local market needs. We can also replicate the design in a variety of granite colors depending on availability and preference.</p>
+                    <div><i className="bi bi-check-lg"></i> <span>Order inspection before dispatch</span></div>
                   </li>
+                  <li>
+                    <div><i className="bi bi-check-lg"></i> <span>Bulk Order Advantage</span></div>
+                  </li>
+                  <li>
+                    <div><i className="bi bi-check-lg"></i> <span>Dedicated Support</span></div>
+                  </li>
+
                 </ul>
+
               </div>
             </div>
 
@@ -213,74 +217,33 @@ export default function Home() {
 
       </section>
 
-      <section className='p-b-100 m-p-04'>
+
+      <section>
         <div className='container'>
           <div className='row justify-content-center'>
             <div className='col-lg-9'>
               <div className='heading-center p-b-40'>
-                <h2 className='m-b-30'>Memorial Collection <span>Crafted</span> for All</h2>
-                <p>We offer a wide range of expertly crafted memorial designs to suit every need and occasion. From classic headstones and kerbsets to elegant bench and heart memorials, our collection also includes vases, urns, angel tributes, and dedicated children’s memorials. Each piece is made with care, precision, and a deep respect for the memories it honors. Contact us directly for competitive quotes and tailored solutions.</p>
+                <h2 className='m-b-30'>Timeless <span>Craftsmanship Across</span> Borders</h2>
+                <p>Whether you’re a high-volume buyer or expanding your product line, our team is here to support your growth. We understand the B2B dynamics of the memorial industry and deliver not just products—but trust, consistency, and partnership.</p>
               </div>
             </div>
           </div>
-          <div className='row g-2 sliding-row'>
-            <div className='col-lg-2 col-md-4 sliding-col'>
-              <div className='card-04'>
-                <div className='card-04-item text-center'>
-                  <a href="/memorials/benches/">
-                    <img src='/img/webpages/pic-07.jpg' alt='About Us' className='img-fluid' />
-                    <h4>Bench</h4>
-                  </a>
+          <div className='row'>
+            <div className='col-lg-12'>
+              <div className="d-flex align-items-start">
+                <div className="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                  <button className="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</button>
+                  <button className="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</button>
+                  <button className="nav-link" id="v-pills-disabled-tab" data-bs-toggle="pill" data-bs-target="#v-pills-disabled" type="button" role="tab" aria-controls="v-pills-disabled" aria-selected="false" disabled>Disabled</button>
+                  <button className="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</button>
+                  <button className="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</button>
                 </div>
-              </div>
-            </div>
-            <div className='col-lg-2 col-md-4 sliding-col'>
-              <div className='card-04'>
-                <div className='card-04-item text-center'>
-                  <a href="/memorials/kerb-sets/">
-                    <img src='/img/webpages/pic-08.jpg' alt='About Us' className='img-fluid' />
-                    <h4>Kerbsets</h4>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className='col-lg-2 col-md-4 sliding-col'>
-              <div className='card-04'>
-                <div className='card-04-item text-center'>
-                  <a href="/memorials/vases/">
-                    <img src='/img/webpages/pic-09.jpg' alt='About Us' className='img-fluid' />
-                    <h4>Flower Vases</h4>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className='col-lg-2 col-md-4 sliding-col'>
-              <div className='card-04'>
-                <div className='card-04-item text-center'>
-                  <a href="/memorials/urns/">
-                    <img src='/img/webpages/pic-10.jpg' alt='About Us' className='img-fluid' />
-                    <h4>Urns</h4>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className='col-lg-2 col-md-4 sliding-col'>
-              <div className='card-04'>
-                <div className='card-04-item text-center'>
-                  <a href="/memorials/angel-headstone/">
-                    <img src='/img/webpages/pic-11.jpg' alt='About Us' className='img-fluid' />
-                    <h4>Angle Headstones</h4>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className='col-lg-2  col-md-4 sliding-col'>
-              <div className='card-04'>
-                <div className='card-04-item text-center'>
-                  <a href="/memorials/childrens-headstones/">
-                    <img src='/img/webpages/pic-12.jpg' alt='About Us' className='img-fluid' />
-                    <h4>Children Memorial</h4>
-                  </a>
+                <div className="tab-content" id="v-pills-tabContent">
+                  <div className="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" tabindex="0">...</div>
+                  <div className="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab" tabindex="0">1</div>
+                  <div className="tab-pane fade" id="v-pills-disabled" role="tabpanel" aria-labelledby="v-pills-disabled-tab" tabindex="0">2</div>
+                  <div className="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab" tabindex="0">3</div>
+                  <div className="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab" tabindex="0">4</div>
                 </div>
               </div>
             </div>
@@ -288,7 +251,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* <section className='p-t-80'>
+
+
+      <section className='p-t-80'>
         <div className='container'>
           <div className='row justify-content-center'>
             <div className='col-lg-9'>
@@ -304,62 +269,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section> */}
-      <section className='p-b-30'>
-        <div className='container'>
-          <div className='row justify-content-center'>
-            <div className='col-lg-9'>
-              <div className='heading-center p-b-40'>
-                <h2 className='m-b-30'>Why Choose Us?</h2>
-                <p>Whether you’re a high-volume buyer or expanding your product line, our team is here to support your growth. We understand the B2B dynamics of the memorial industry and deliver not just products—but trust, consistency, and partnership.</p>
-              </div>
-
-            </div>
-          </div>
-
-          <div className='row'>
-            <div className='col-lg-12'>
-              <div className='card-05'>
-                <div className='card-05-item'>
-                  <Image src='/img/icons/icons-1.png' alt='About Us' className='img-fluid' width={58} height={76} />
-                  <span>Quality Craftmanship</span>
-                </div>
-                <div className='card-05-item'>
-                  <Image src='/img/icons/icons-2.png' alt='About Us' className='img-fluid' width={58} height={76} />
-                  <span>Nationwide Delivery</span>
-                </div>
-                <div className='card-05-item'>
-                  <Image src='/img/icons/icons-3.png' alt='About Us' className='img-fluid' width={58} height={76} />
-                  <span>24*7 Customer Service</span>
-                </div>
-                <div className='card-05-item'>
-                  <Image src='/img/icons/icons-4.png' alt='About Us' className='img-fluid' width={58} height={76} />
-                  <span>Custom Designs</span>
-                </div>
-                <div className='card-05-item'>
-                  <Image src='/img/icons/icons-5.png' alt='About Us' className='img-fluid' width={58} height={76} />
-                  <span>Experienced Masons</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </section>
-
-      {/* <section className='faq'>
-        <div className='container'>
-          <div className='row justify-content-center'>
-            <div className='col-lg-9'>
-              <div className='heading-center p-b-40'>
-                <h2 className='m-b-30'>Frequently Asked <span>Questions</span></h2>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </section> */}
-
-
 
     </>
   );

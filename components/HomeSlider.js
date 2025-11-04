@@ -83,17 +83,21 @@ export default function HomeSlider() {
 
                 .mm-swiper .swiper-button-next,
   .mm-swiper .swiper-button-prev {
-    width: 68px;
-    height: 68px;
-    background: rgba(0,0,0,0.05);
+    width: 58px;
+    height: 58px;
+    background: rgb(0 0 0 / 33%);
     border-radius: 50%;
+    color: #d95404;
   }
     .mm-swiper .swiper-button-disabled {
-    opacity: 0.35 !important;
-    cursor: not-allowed !important;
-    pointer-events: none !important; /* prevents accidental click */
-    background: rgba(0,0,0,0.1);
+  opacity: 1 !important;
+    pointer-events: all;
+    cursor: pointer;
   }
+    .mm-swiper .swiper-button-prev:after, .swiper-button-next:after {
+    font-size: 26px;
+    font-weight: 600;
+}
                 `}
             </style>
         </>
