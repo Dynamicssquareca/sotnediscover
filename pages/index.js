@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import Head from 'next/head';
 import ModelBox from '@/components/ModelBox';
 import Image from 'next/image';
+import HomeSlider from '@/components/HomeSlider';
 export default function Home() {
 
 
@@ -121,44 +122,16 @@ export default function Home() {
           <div className='row'>
             <div className='col-lg-12 text-center'>
               <div className='heading-center p-b-40'>
-                <h2 className='m-b-20'>Any <span> Design</span>, Size, Color</h2>
+                <h2 className='m-b-20'>Journey of<span> Natural Stone</span>, from Mines to your Doorstep!</h2>
 
               </div>
             </div>
           </div>
           <div className='row'>
             <div className='col-lg-12'>
-              <div className='card-02'>
-                <div className='card-02-item'>
-                  <a href="/memorials/book-headstones/">
-                    <Image src='/img/webpages/pic-01.png' alt='Balck Granite Book Headstone' className='img-fluid' width={256} height={471} />
-                    <h3>Book Headstone</h3>
-                  </a>
-                </div>
-                <div className='card-02-item'>
-                  <a href="/memorials/heart-headstones/">
-                    <Image src='/img/webpages/pic-02.png' alt='Balck Granite Heart Headstone' className='img-fluid' width={256} height={471} />
-                    <h3>Heart Headstone</h3>
-                  </a>
-                </div>
-                <div className='card-02-item'>
-                  <a href="/memorials/headstones/">
-                    <Image src='/img/webpages/pic-03.png' alt='Balck Granite Headstones' className='img-fluid' width={256} height={471} />
-                    <h3>Headstones</h3>
-                  </a>
-                </div>
-                <div className='card-02-item'>
-                  <a href="/memorials/angel-headstone/">
-                    <Image src='/img/webpages/pic-04.png' alt='Balck Granite Angels Headstone' className='img-fluid' width={256} height={471} />
-                    <h3>Angels Headstone</h3>
-                  </a>
-                </div>
-                <div className='card-02-item'>
-                  <a href="/memorials/vases/">
-                    <Image src='/img/webpages/pic-05.png' alt='Balck Granite Vases' className='img-fluid' width={256} height={471} />
-                    <h3>Vases</h3>
-                  </a>
-                </div>
+             
+              <div className='card-02a'>
+                 <HomeSlider />
               </div>
             </div>
           </div>

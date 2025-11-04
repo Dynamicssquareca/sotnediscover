@@ -1728,6 +1728,16 @@ padding-right: 20px;
     font-weight: 600;
     font-size: 14px;
 }
+.card-02a{
+
+}
+.container .card-02a {
+  /* From container's left padding to viewport right */
+  width: calc(50vw + 50% - (var(--bs-gutter-x, 1.5rem) / 2));
+  margin-left: calc((var(--bs-gutter-x, 1.5rem)) / -2);
+  overflow: visible; /* so Swiper pills/ shadows can show outside */
+}
+
 /*media screen*/
 @media (max-width: 991px) {
     .blog-lates-card-one {
