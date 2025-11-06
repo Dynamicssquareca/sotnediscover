@@ -1,0 +1,220 @@
+{
+  "tabs": [
+    {
+      "id": "uk",
+      "label": "UK/Ireland",
+      "cards": [
+        {
+          "title": "Angel Headstone",
+          "img": "/img/webpages/Angel-headstone.png",
+          "href": "#"
+        },
+        {
+          "title": "Plaques",
+          "img": "/img/webpages/Plaque.png",
+          "href": "#"
+        },
+        {
+          "title": "Kerb Sets/ Kerb Surround",
+          "img": "/img/webpages/Kerb-set.png",
+          "href": "#"
+        },
+        {
+          "title": "Headstone",
+          "img": "/img/webpages/headstone.png",
+          "href": "#"
+        },
+        {
+          "title": "Book Shaped Headstone",
+          "img": "/img/webpages/Bookshape-headstone.png",
+          "href": "#"
+        },
+        {
+          "title": "Heart Shaped Headstone",
+          "img": "/img/webpages/Heartshape-headstone.png",
+          "href": "#"
+        }
+      ]
+    },
+    {
+      "id": "us",
+      "label": "USA/Canada",
+      "cards": [
+        {
+          "title": "Upright Headstone",
+          "img": "/img/webpages/usa-01.png",
+          "href": "#"
+        },
+        {
+          "title": "Slant Headstone",
+          "img": "/img/webpages/usa-02.png",
+          "href": "#"
+        },
+        {
+          "title": "Flat Grave Marker",
+          "img": "/img/webpages/usa-03.png",
+          "href": "#"
+        },
+        {
+          "title": "Memorial Bench",
+          "img": "/img/webpages/usa-04.png",
+          "href": "#"
+        },
+        {
+          "title": "Vases",
+          "img": "/img/webpages/usa-05.png",
+          "href": "#"
+        },
+        {
+          "title": "Vases",
+          "img": "/img/webpages/usa-06.png",
+          "href": "#"
+        }
+      ]
+    },
+    {
+      "id": "fr",
+      "label": "France",
+      "cards": [
+        {
+          "title": "Funeral Plaques",
+          "img": "/img/webpages/franch-01.png",
+          "href": "#"
+        },
+        {
+          "title": "Funerary monuments",
+          "img": "/img/webpages/franch-02.png",
+          "href": "#"
+        },
+        {
+          "title": "Funeral cross monuments",
+          "img": "/img/webpages/franch-03.png",
+          "href": "#"
+        },
+        {
+          "title": "Muslims tombstone",
+          "img": "/img/webpages/franch-04.png",
+          "href": "#"
+        },
+        {
+          "title": "Funeral Urns",
+          "img": "/img/webpages/franch-05.png",
+          "href": "#"
+        },
+        {
+          "title": "Cinerary Monuments",
+          "img": "/img/webpages/franch-06.png",
+          "href": "#"
+        }
+      ]
+    },
+    {
+      "id": "de",
+      "label": "Germany",
+      "cards": [
+        {
+          "title": "Angel Gravestone",
+          "img": "/img/webpages/germany-01.png",
+          "href": "#"
+        },
+        {
+          "title": "Urns Gravestone",
+          "img": "/img/webpages/germany-02.png",
+          "href": "#"
+        },
+        {
+          "title": "Magma Single Gravestone",
+          "img": "/img/webpages/germany-03.png",
+          "href": "#"
+        },
+        {
+          "title": "Magma Double Gravestone",
+          "img": "/img/webpages/germany-04.png",
+          "href": "#"
+        },
+        {
+          "title": "Pillow gravestone",
+          "img": "/img/webpages/germany-05.png",
+          "href": "#"
+        },
+        {
+          "title": "Cover Plates For Graves",
+          "img": "/img/webpages/germany-06.png",
+          "href": "#"
+        }
+      ]
+    },
+    {
+      "id": "au",
+      "label": "Australia",
+      "cards": [
+        {
+          "title": "Full Lenth Memorial",
+          "img": "/img/webpages/australia-01.png",
+          "href": "#"
+        },
+        {
+          "title": "Cross Headstones",
+          "img": "/img/webpages/australia-02.png",
+          "href": "#"
+        },
+        {
+          "title": "Plaques",
+          "img": "/img/webpages/australia-03.png",
+          "href": "#"
+        },
+        {
+          "title": "Book Shape Headstone",
+          "img": "/img/webpages/australia-04.png",
+          "href": "#"
+        },
+        {
+          "title": "Double Veneer monuments",
+          "img": "/img/webpages/australia-05.png",
+          "href": "#"
+        },
+        {
+          "title": "Signle Gravestone",
+          "img": "/img/webpages/australia-06.png",
+          "href": "#"
+        }
+      ]
+    },
+    {
+      "id": "nz",
+      "label": "New Zealand",
+      "cards": [
+        {
+          "title": "Headstone",
+          "img": "/img/webpages/newzealand-01.png",
+          "href": "#"
+        },
+        {
+          "title": "Plaques",
+          "img": "/img/webpages/newzealand-02.png",
+          "href": "#"
+        },
+        {
+          "title": "Angel Headstone",
+          "img": "/img/webpages/newzealand-03.png",
+          "href": "#"
+        },
+        {
+          "title": "Full Cover Grave",
+          "img": "/img/webpages/newzealand-04.png",
+          "href": "#"
+        },
+        {
+          "title": "Double Plot Grave",
+          "img": "/img/webpages/newzealand-05.png",
+          "href": "#"
+        },
+        {
+          "title": "Book Desk",
+          "img": "/img/webpages/newzealand-06.png",
+          "href": "#"
+        }
+      ]
+    }
+  ]
+}
