@@ -32,7 +32,7 @@ const Footer = ({ faq }) => {
                             <div className='subsc-head'>
                                 <div className='sub-it'>
                                     <p>Sales and Support:</p>
-                                    <span>+44 161 394 1594</span>
+                                    <span>+1 (858) 293-5368</span>
                                 </div>
                                 <div className='sub-it'>
                                     <p>Or Mail us at:</p>

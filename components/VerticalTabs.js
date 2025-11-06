@@ -24,7 +24,7 @@ export default function VerticalTabs() {
     <>
       <Row>
         {/* Left Tabs */}
-        <Col md="3" className="mb-3 mb-md-0">
+        <Col md="3" className="mb-md-0 g-0">
           <Nav pills vertical>
             <NavItem>
               <NavLink
@@ -66,44 +66,44 @@ export default function VerticalTabs() {
         </Col>
 
         {/* Right Content */}
-        <Col md="9">
-          <TabContent activeTab={activeTab}>
+        <Col md="9" className="g-0">
+          <TabContent activeTab={activeTab} className="bg-grays">
             <TabPane tabId="1">
                 <div class="my-row">
                     <div class="cards cards-new">
                         <a href="#">
                             <img src="/img/webpages/Angel-headstone.png" alt="Angel-headstone" />
+                            <div className="info-sec"><h3>Angel Headstone</h3></div>
+                        </a>
+                    </div>
+                    <div class="cards cards-new">
+                        <a href="#">
+                            <img src="/img/webpages/Angel-headstone.png" alt="Plaques" />
+                            <div className="info-sec"><h3>Plaques</h3></div>
+                        </a>
+                    </div>
+                    <div class="cards cards-new">
+                        <a href="#">
+                            <img src="/img/webpages/Angel-headstone.png" alt="Kerb Sets/ Kerb Surround" />
+                            <div className="info-sec"><h3>Kerb Sets/ Kerb Surround</h3></div>
+                        </a>
+                    </div>
+                    <div class="cards cards-new">
+                        <a href="#">
+                            <img src="/img/webpages/Angel-headstone.png" alt="Headstone" />
                             <div className="info-sec"><h3>Headstone</h3></div>
                         </a>
                     </div>
                     <div class="cards cards-new">
                         <a href="#">
-                            <img src="/img/webpages/Angel-headstone.png" alt="Angel-headstone" />
-                            <div className="info-sec"><h3>Headstone</h3></div>
+                            <img src="/img/webpages/Angel-headstone.png" alt="Book Shaped Headstone" />
+                            <div className="info-sec"><h3>Book Shaped Headstone</h3></div>
                         </a>
                     </div>
                     <div class="cards cards-new">
                         <a href="#">
-                            <img src="/img/webpages/Angel-headstone.png" alt="Angel-headstone" />
-                            <div className="info-sec"><h3>Headstone</h3></div>
-                        </a>
-                    </div>
-                    <div class="cards cards-new">
-                        <a href="#">
-                            <img src="/img/webpages/Angel-headstone.png" alt="Angel-headstone" />
-                            <div className="info-sec"><h3>Headstone</h3></div>
-                        </a>
-                    </div>
-                    <div class="cards cards-new">
-                        <a href="#">
-                            <img src="/img/webpages/Angel-headstone.png" alt="Angel-headstone" />
-                            <div className="info-sec"><h3>Headstone</h3></div>
-                        </a>
-                    </div>
-                    <div class="cards cards-new">
-                        <a href="#">
-                            <img src="/img/webpages/Angel-headstone.png" alt="Angel-headstone" />
-                            <div className="info-sec"><h3>Headstone</h3></div>
+                            <img src="/img/webpages/Angel-headstone.png" alt="Heart Shaped Headstone" />
+                            <div className="info-sec"><h3>Heart Shaped Headstone</h3></div>
                         </a>
                     </div>
                 </div>
@@ -190,9 +190,26 @@ export default function VerticalTabs() {
 }
   .info-sec {
     position: absolute;
-    bottom: 0;
-    padding: 0px 0px 20px 20px;
+    bottom: -8px;
+    padding: 0px 0px 0px 0px;
 }
+    .bg-grays{
+    background-color: #fbf8f4;
+    padding: 20px;
+    }
+    .nav-pills .nav-link{
+    color: #000;
+    font-size: 14px;
+        font-weight: 600;
+    padding: 15px 20px;
+    border-radius: 0;
+    margin-bottom: 0;
+    
+    }
+    .nav-pills .nav-link.active,.nav-pills .nav-link:hover{
+    background-color: #fbf8f4;
+     color: #000;
+    }
       `}</style>
     </>
   );

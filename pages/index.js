@@ -64,13 +64,13 @@ export default function Home() {
               <div className='col-lg-12'>
                 <div className='over-img'>
                   <Image
-                  src="/img/banner/Granite-Headstones-Monuments.png"
-                  alt="Hero Banner"
-                  width={1024}
-                  height={368}
-                  className='mobile-new'
-                  priority
-                />
+                    src="/img/banner/Granite-Headstones-Monuments.png"
+                    alt="Hero Banner"
+                    width={1024}
+                    height={368}
+                    className='mobile-new'
+                    priority
+                  />
                 </div>
 
               </div>
@@ -79,7 +79,7 @@ export default function Home() {
         </div>
       </div>
 
-      
+
 
       <section className='about-us-section p-b-40'>
         <div className='container'>
@@ -117,7 +117,7 @@ export default function Home() {
       </section>
 
 
-     
+
       <section className='products-section-one m-p-02'>
         <div className='container'>
           <div className='row'>
@@ -130,9 +130,9 @@ export default function Home() {
           </div>
           <div className='row'>
             <div className='col-lg-12'>
-             
+
               <div className='card-02a'>
-                 <HomeSlider />
+                <HomeSlider />
               </div>
             </div>
           </div>
@@ -196,7 +196,7 @@ export default function Home() {
                 <p>Stone Discover is the largest manufacturer and supplier of premium quality natural stones since 1984. We offer a complete range of natural stones in various forms, including tombstones, monuments, gravestones, memorials, grave markers and headstones.</p>
                 <ul className='my-flex-item'>
                   <li>
-                   <div><i className="bi bi-check-lg"></i> <span>Quick Turnaround Time</span></div>
+                    <div><i className="bi bi-check-lg"></i> <span>Quick Turnaround Time</span></div>
                   </li>
                   <li>
                     <div><i className="bi bi-check-lg"></i> <span>Order inspection before dispatch</span></div>
@@ -205,11 +205,11 @@ export default function Home() {
                     <div><i className="bi bi-check-lg"></i> <span>Bulk Order Advantage</span></div>
                   </li>
                   <li>
-                   <div><i className="bi bi-check-lg"></i> <span>Dedicated Support</span></div>
+                    <div><i className="bi bi-check-lg"></i> <span>Dedicated Support</span></div>
                   </li>
-                  
+
                 </ul>
-                
+
               </div>
             </div>
 
@@ -237,9 +237,9 @@ export default function Home() {
         </div>
       </section>
 
-     
 
-      <section className='p-t-80'>
+
+      <section className='new-bg'>
         <div className='container'>
           <div className='row justify-content-center'>
             <div className='col-lg-9'>
@@ -248,9 +248,68 @@ export default function Home() {
                 <p>Whether you’re a high-volume buyer or expanding your product line, our team is here to support your growth. We understand the B2B dynamics of the memorial industry and deliver not just products—but trust, consistency, and partnership.</p>
               </div>
               <div className='button-center-new text-center'>
-                <a href='/' className='btn btn-three'>Request a Quote</a>
-                <a href='/' className='btn btn-four'>Request Catalogue</a>
+                <a href='/get-quote-now/' className='btn btn-three'>Request a Quote</a>
+                <a href='/catalog-download/' className='btn btn-four'>Request Catalogue</a>
 
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className='p-t-80'>
+        <div className='container'>
+          <div className='row justify-content-center'>
+            <div className='col-lg-9'>
+              <div className='heading-center p-b-40'>
+                <h2 className='m-b-30'>Delivering <span>Excellence Across</span> Borders</h2>
+              </div>
+            </div>
+          </div>
+          <div className='row'>
+            <div className='col-lg-12'>
+              <div class="map-container grow">
+                <span><img decoding="async" src="img/webpages/world-01.png" alt="world-map" /></span><div class="point canada tippy" title="Canada" hover-tooltip="Canada" tooltip-position="top"></div><div class="point usa tippy" title="USA" hover-tooltip="USA" tooltip-position="top"></div><div class="point uk tippy" title="UK" hover-tooltip="UK" tooltip-position="top"></div><div class="point netherlands tippy" title="Netherlands" hover-tooltip="Netherlands" tooltip-position="top"></div><div class="point india tippy" title="India" hover-tooltip="India" tooltip-position="top"></div><div class="point australia tippy" title="Australia" hover-tooltip="Australia" tooltip-position="top"></div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div className='container'>
+          <div className='row justify-content-center'>
+            <div className='col-lg-9'>
+              <div className='heading-center p-b-40'>
+                <h2 className='m-b-30'>Recent <span>Export</span></h2>
+              </div>
+            </div>
+          </div>
+          <div className='row'>
+            <div className='col-lg-12'>
+              <div class="grid">
+                <figure class="card-001">
+                  <img loading="lazy" src="/img/webpages/p-1.jpg" alt="Polished headstones batch" />
+                </figure>
+                <figure class="card-001">
+                  <img loading="lazy" src="/img/webpages/p-2.jpg" alt="Cross monument on base" />
+                </figure>
+                <figure class="card-001">
+                  <img loading="lazy" src="/img/webpages/p-3.jpg" alt="Black granite memorials" />
+                </figure>
+                <figure class="card-001">
+                  <img loading="lazy" src="/img/webpages/p-4.jpg" alt="Granite tomb covers" />
+                </figure>
+                <figure class="card-001">
+                  <img loading="lazy" src="/img/webpages/p-5.jpg" alt="Shield shaped memorial wrapped" />
+                </figure>
+                <figure class="card-001">
+                  <img loading="lazy" src="/img/webpages/p-6.jpg" alt="Pallets wrapped for shipping" />
+                </figure>
+                <figure class="card-001">
+                  <img loading="lazy" src="/img/webpages/p-7.png" alt="Crated slabs ready to export" />
+                </figure>
+                <figure class="card-001">
+                  <img loading="lazy" src="/img/webpages/p-8.png" alt="Cartons prepared for dispatch" />
+                </figure>
               </div>
             </div>
           </div>
