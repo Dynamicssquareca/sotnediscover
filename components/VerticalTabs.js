@@ -147,6 +147,7 @@ export default function VerticalTabs() {
      color: #000;
     }
      
+     
       `}</style>
     </>
   );
