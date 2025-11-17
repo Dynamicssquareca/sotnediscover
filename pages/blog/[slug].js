@@ -5,9 +5,25 @@ import Link from 'next/link';
 import Image from 'next/image';
 import parse from 'html-react-parser';
 
-function formatDate(dateStr) {
-  const date = new Date(dateStr);
-  return date.toLocaleDateString('en-GB', { day: '2-digit', month: '2-digit', year: 'numeric' });
+function dateFromObjectId(id) {
+  if (!id || typeof id !== 'string' || id.length < 8) return null;
+  try {
+    const seconds = parseInt(id.substring(0, 8), 16);
+    return new Date(seconds * 1000);
+  } catch {
+    return null;
+  }
+}
+
+function formatDateSafe(dateOrString, { fallback = '-' } = {}) {
+  if (!dateOrString) return fallback;
+  const d = dateOrString instanceof Date ? dateOrString : new Date(dateOrString);
+  if (Number.isNaN(d.getTime())) return fallback;
+  return d.toLocaleDateString('en-GB', {
+    day: '2-digit',
+    month: '2-digit',
+    year: 'numeric',
+  });
 }
 
 const BlogPost = ({ post, relatedPosts, relatedHeading, categories, error }) => {
@@ -21,8 +37,8 @@ const BlogPost = ({ post, relatedPosts, relatedHeading, categories, error }) => 
 
   // const canonicalUrl = `${process.env.NEXT_PUBLIC_SITE_URL}blog/${post.slug}/`;
   const canonicalUrl = post?.slug
-  ? `${process.env.NEXT_PUBLIC_SITE_URL}blog/${post.slug}/`
-  : `${process.env.NEXT_PUBLIC_SITE_URL}blog/`;
+    ? `${process.env.NEXT_PUBLIC_SITE_URL}blog/${post.slug}/`
+    : `${process.env.NEXT_PUBLIC_SITE_URL}blog/`;
 
   const getImageUrl = (img) => {
     if (!img) return '';
@@ -79,6 +95,15 @@ const BlogPost = ({ post, relatedPosts, relatedHeading, categories, error }) => 
     }
   };
 
+  useEffect(() => {
+  console.log('--- post object (render) ---');
+  console.log(post); // inspect keys
+  console.log('post keys:', Object.keys(post || {}));
+  console.log('createdAt raw:', post?.createdAt, 'typeof:', typeof post?.createdAt);
+  console.log('updatedAt raw:', post?.updatedAt, 'typeof:', typeof post?.updatedAt);
+  console.log('_id raw:', post?._id, 'typeof:', typeof post?._id);
+  console.log('new Date(createdAt):', new Date(post?.createdAt).toString());
+}, [post]);
 
   return (
     <>
@@ -137,7 +162,8 @@ const BlogPost = ({ post, relatedPosts, relatedHeading, categories, error }) => 
                         By <Link href={`/blog/author/${post.author.slug || post.author._id}`}>{post.author.name}</Link>
                       </span>
                       <span className="mx-2">|</span>
-                      <span>{formatDate(post.createdAt)}</span>
+                      <span>{formatDateSafe(post?.createdAt || post?.updatedAt || dateFromObjectId(post?._id))}</span>
+
                     </div>
                     <div className="mb-4 post-sharing">
                       <span>Share: </span>
@@ -276,7 +302,7 @@ const BlogPost = ({ post, relatedPosts, relatedHeading, categories, error }) => 
                           <Link href={`/blog/author/${rp.author.slug || rp.author._id}`}>{rp.author.name}</Link>
                         </span>
                         <span className="mx-2">|</span>
-                        <span>{formatDate(rp.createdAt)}</span>
+                       <span>{formatDateSafe(rp?.createdAt || rp?.updatedAt || dateFromObjectId(rp?._id))}</span>
                         <span className="mx-2">|</span>
                         <span>{rp.readtimes || ' '}m Reading</span>
                       </div>
@@ -284,7 +310,11 @@ const BlogPost = ({ post, relatedPosts, relatedHeading, categories, error }) => 
                         <h5 className="card-title">{rp.title}</h5>
                       </Link>
                       <p className="card-text">
-                        {rp.excerpt.slice(0, 50) + '...' || rp.content.replace(/<[^>]+>/g, '').slice(0, 50) + '...'}
+                        {
+                          (rp.excerpt?.slice(0, 50) ||
+                            rp.content?.replace(/<[^>]+>/g, '').slice(0, 50)
+                          ) + '...'
+                        }
                       </p>
                       <Link href={`/blog/${rp.slug}`}>Read More</Link>
                     </div>
@@ -309,7 +339,7 @@ export async function getStaticPaths() {
     const paths = posts.map(post => ({
       params: { slug: post.slug }
     }));
-     // fallback: 'blocking' ensures page waits for data before rendering (better SEO)
+    // fallback: 'blocking' ensures page waits for data before rendering (better SEO)
     return { paths, fallback: 'blocking' };
   } catch (err) {
     console.error(err);
@@ -375,6 +405,11 @@ export async function getStaticProps({ params }) {
       return { notFound: true };
     }
 
+    // ✅ add here
+if (!post.createdAt) {
+  post.createdAt = post.updatedAt || (post._id ? dateFromObjectId(post._id)?.toISOString() : undefined);
+}
+
     // Fetch all posts
     const allRes = await fetch(blogApi);
     let allPosts = [];
@@ -395,6 +430,7 @@ export async function getStaticProps({ params }) {
       relatedHeading = 'Random Posts';
       relatedPosts = allPosts.filter(p => p._id !== post._id).slice(0, 3);
     }
+    
 
     // Fetch categories
     const catRes = await fetch(categoryApi);
@@ -411,6 +447,7 @@ export async function getStaticProps({ params }) {
     console.error(err);
     return { notFound: true }; // Return 404 if there’s an error
   }
+  
 }
 
 export default BlogPost;

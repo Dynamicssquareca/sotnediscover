@@ -117,16 +117,16 @@ const Nav = () => {
           {/* <li><Link className="nav-link scrollto" href="/solutions/">Solutions</Link></li> */}
           {/* <li><a className="nav-link scrollto" href="/">Industries</a></li> */}
           {/* <li><a className="nav-link scrollto" href="/">Company</a></li> */}
-          <li className="dropdown"><a href="/memorials/"><span>Memorial Stones</span> <i className="bi bi-chevron-down"></i></a>
+          <li className="dropdown"><a href="/tombstones-monuments/"><span>Tombstones</span> <i className="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="/memorials/angel-headstone/">Angel Headstone</a></li>
-              <li><a href="/memorials/headstones/">Headstones</a></li>
-              <li><a href="/memorials/kerb-sets/">Kerb Sets</a></li>
-              <li><a href="/memorials/benches/">Memorial Benches</a></li>
-              <li><a href="/memorials/childrens-headstones/">Childrens Headstones</a></li>
-              <li><a href="/memorials/heart-headstones/">Heart Headstones</a></li>
-              <li><a href="/memorials/vases/">Vases</a></li>
-              <li><a href="/memorials/urns/">urns</a></li>
+              <li><a href="/tombstones-monuments/angel-headstone/">Angel Headstone</a></li>
+              <li><a href="/tombstones-monuments/headstones/">Headstones</a></li>
+              <li><a href="/tombstones-monuments/kerb-sets/">Kerb Sets</a></li>
+              <li><a href="/tombstones-monuments/benches/">Memorial Benches</a></li>
+              <li><a href="/tombstones-monuments/childrens-headstones/">Childrens Headstones</a></li>
+              <li><a href="/tombstones-monuments/heart-headstones/">Heart Headstones</a></li>
+              <li><a href="/tombstones-monuments/vases/">Vases</a></li>
+              <li><a href="/tombstones-monuments/urns/">urns</a></li>
             </ul>
           </li>
           <li><a className="nav-link scrollto" href="/about-us/">About Us</a></li>
@@ -199,7 +199,7 @@ const Nav = () => {
                 {/* <DropdownComponent id="servicesDropdown" label="Drop Down" items={servicesItems} />
                 <DropdownComponent id="solutionsDropdown" label="Drop Down" items={solutionsItems} /> */}
                 {/* <DropdownComponent label="Resources" items={resourceItems} /> */}
-                <li><a className="nav-link scrollto" href="/memorials/">Memorial Stones</a></li>
+                <li><a className="nav-link scrollto" href="/tombstones-monuments/">Tombstones</a></li>
                 <li><a className="nav-link scrollto" href="/about-us/">About US</a></li>
                 <li><a className="nav-link" href="/blog/">Blogs</a></li>
                 {/* <Dropdown nav isOpen={dropdownOpen} toggle={toggles}>

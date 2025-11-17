@@ -39,7 +39,7 @@ const ProductPage = ({ product, relatedProducts, specifications, error }) => {
       setOpenone(id);
     }
   };
-  const canonicalUrl = `${process.env.NEXT_PUBLIC_SITE_URL}memorials/${product.category.slug}/${product.slug}/`;
+  const canonicalUrl = `${process.env.NEXT_PUBLIC_SITE_URL}tombstones-monuments/${product.category.slug}/${product.slug}/`;
   const CanImageUrl = (img) => {
     if (!img) return '';
     if (img.startsWith('http')) return img;
@@ -77,8 +77,8 @@ const ProductPage = ({ product, relatedProducts, specifications, error }) => {
           <div className='col-lg-12'>
             <nav aria-label="breadcrumb">
               <ol className="breadcrumb">
-                <li className="breadcrumb-item"><a href="/memorials/">Memorial Stones</a></li>
-                <li className="breadcrumb-item"><a href={`/memorials/${product.category.slug}/`}>{product.category.title}</a></li>
+                <li className="breadcrumb-item"><a href="/tombstones-monuments/">Memorial Stones</a></li>
+                <li className="breadcrumb-item"><a href={`/tombstones-monuments/${product.category.slug}/`}>{product.category.title}</a></li>
                 <li className="breadcrumb-item active" aria-current="page">{product.Title || product.title}</li>
               </ol>
             </nav>
@@ -202,7 +202,7 @@ const ProductPage = ({ product, relatedProducts, specifications, error }) => {
 
                   <div className='card-04'>
                     <div className='card-04-item text-center'>
-                      <a href={`/memorials/${product.category.slug}/${rel.slug}`}>
+                      <a href={`/tombstones-monuments/${product.category.slug}/${rel.slug}`}>
                         <Image
                           src={getImageUrl(rel.images?.[0])}
                           alt={rel.title}
@@ -482,7 +482,7 @@ const ProductPage = ({ product, relatedProducts, specifications, error }) => {
           {relatedProducts?.length > 0 ? (
             relatedProducts.map((rel) => (
               <div className="col-md-3" key={rel._id}>
-                <a href={`/memorials/${rel.categorySlug}/${rel.slug}`}>
+                <a href={`/tombstones-monuments/${rel.categorySlug}/${rel.slug}`}>
                   <Image
                     src={getImageUrl(rel.images?.[0])}
                     alt={rel.title}

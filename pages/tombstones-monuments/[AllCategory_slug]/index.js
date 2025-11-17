@@ -42,7 +42,7 @@ const CategoryPage = ({ category, products, faq, error }) => {
     return <p className="text-warning">Category not found.</p>;
   }
 
-  const canonicalUrl = `${process.env.NEXT_PUBLIC_SITE_URL}memorials/${category.slug}/`;
+  const canonicalUrl = `${process.env.NEXT_PUBLIC_SITE_URL}tombstones-monuments/${category.slug}/`;
   const CanImageUrl = (img) => {
     if (!img) return '';
     if (img.startsWith('http')) return img;
@@ -112,7 +112,7 @@ const CategoryPage = ({ category, products, faq, error }) => {
               <div className="col-lg-3 sliding-col-05" key={product._id}>
                 <div className="card-06">
                   <div className="card-06-item">
-                    <a href={`/memorials/${category.slug}/${product.slug}`}>
+                    <a href={`/tombstones-monuments/${category.slug}/${product.slug}`}>
                       <Image
                         width={300}
                         height={200}
@@ -271,7 +271,7 @@ const CategoryPage = ({ category, products, faq, error }) => {
             <div className='col-lg-2 col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
-                  <a href="/memorials/benches/">
+                  <a href="/tombstones-monuments/benches/">
                     <img src='/img/webpages/pic-07.jpg' alt='About Us' className='img-fluid' />
                     <h4>Bench</h4>
                   </a>
@@ -281,7 +281,7 @@ const CategoryPage = ({ category, products, faq, error }) => {
             <div className='col-lg-2 col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
-                  <a href="/memorials/kerb-sets/">
+                  <a href="/tombstones-monuments/kerb-sets/">
                     <img src='/img/webpages/pic-08.jpg' alt='About Us' className='img-fluid' />
                     <h4>Kerbsets</h4>
                   </a>
@@ -291,7 +291,7 @@ const CategoryPage = ({ category, products, faq, error }) => {
             <div className='col-lg-2 col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
-                  <a href="/memorials/vases/">
+                  <a href="/tombstones-monuments/vases/">
                     <img src='/img/webpages/pic-09.jpg' alt='About Us' className='img-fluid' />
                     <h4>Flower Vases</h4>
                   </a>
@@ -301,7 +301,7 @@ const CategoryPage = ({ category, products, faq, error }) => {
             <div className='col-lg-2 col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
-                  <a href="/memorials/urns/">
+                  <a href="/tombstones-monuments/urns/">
                     <img src='/img/webpages/pic-10.jpg' alt='About Us' className='img-fluid' />
                     <h4>Urns</h4>
                   </a>
@@ -311,7 +311,7 @@ const CategoryPage = ({ category, products, faq, error }) => {
             <div className='col-lg-2 col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
-                  <a href="/memorials/angel-headstone/">
+                  <a href="/tombstones-monuments/angel-headstone/">
                     <img src='/img/webpages/pic-11.jpg' alt='About Us' className='img-fluid' />
                     <h4>Angle Headstones</h4>
                   </a>
@@ -321,7 +321,7 @@ const CategoryPage = ({ category, products, faq, error }) => {
             <div className='col-lg-2  col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
-                  <a href="/memorials/childrens-headstones/">
+                  <a href="/tombstones-monuments/childrens-headstones/">
                     <img src='/img/webpages/pic-12.jpg' alt='About Us' className='img-fluid' />
                     <h4>Children Memorial</h4>
                   </a>

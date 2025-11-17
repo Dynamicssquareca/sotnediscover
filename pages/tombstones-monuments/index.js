@@ -52,12 +52,12 @@ const Index = ({ categories }) => {
                     name="description"
                     content="Stone Discover UK supplies high-quality memorial stones at wholesale prices. Trusted by funeral homes and retailers across the UK. Contact us today!"
                 />
-                <link rel="canonical" href="https://www.stonediscover.co.uk/memorials/" />
+                <link rel="canonical" href="https://www.stonediscover.co.uk/tombstones-monuments/" />
                 <meta property="og:locale" content="US" />
                 <meta property="og:type" content="website" />
                 <meta property="og:title" content="UK’s Trusted Supplier of Memorial Stones | Stone Discover UK" />
                 <meta property="og:description" content="Stone Discover UK supplies high-quality memorial stones at wholesale prices. Trusted by funeral homes and retailers across the UK. Contact us today!" />
-                <meta property="og:url" content="https://www.stonediscover.co.uk/memorials/" />
+                <meta property="og:url" content="https://www.stonediscover.co.uk/tombstones-monuments/" />
                 <meta property="og:site_name" content="Stone Discover UK" />
                 <meta property="og:image" content="https://www.stonediscover.co.uk/img/stone-og-inne.jpeg" />
                 <meta property="og:image:width" content="200" />
@@ -103,7 +103,7 @@ const Index = ({ categories }) => {
                                 <div className="col-lg-3 sliding-col-05" key={category.id}>
                                     <div className="card-06">
                                         <div className="card-06-item">
-                                            <a href={`/memorials/${category.slug}/`}>
+                                            <a href={`/tombstones-monuments/${category.slug}/`}>
                                                 <Image
                                                     src={getImageUrl(category.categoryicon)}
                                                     alt={category.name}
