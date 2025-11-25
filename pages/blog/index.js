@@ -26,30 +26,58 @@ function formatDateSafe(dateOrString, { fallback = 'Date unknown' } = {}) {
 }
 // -----------------------
 
+// --- New: lightweight summarizer to keep page-data small ---
+function summarizePost(p) {
+  return {
+    _id: p._id,
+    slug: p.slug,
+    title: p.title,
+    excerpt:
+      p.excerpt || (p.content ? p.content.replace(/<[^>]+>/g, '').slice(0, 150) + (p.content && p.content.length > 150 ? '...' : '') : ''),
+    banner: p.bannerThumbnail || p.banner || null,
+    metaimage: p.metaimage || null,
+    author: {
+      _id: p.author?._id,
+      name: p.author?.name || 'Unknown',
+      slug: p.author?.slug,
+      profilePic: p.author?.profilePic || null,
+    },
+    createdAt: p.createdAt || p.updatedAt || (p._id ? dateFromObjectId(p._id)?.toISOString() : undefined),
+    readtimes: p.readtimes || '',
+  };
+}
+
+const PLACEHOLDER = `${process.env.NEXT_PUBLIC_SITE_URL || ''}img/default-thumb.jpg`;
+
 const BlogIndex = ({ posts, categories }) => {
   // "All" is default; visiblePostsCount controls "Load More"
-  const [selectedCategory, setSelectedCategory] = useState("all");
+  const [selectedCategory, setSelectedCategory] = useState('all');
   const [visiblePostsCount, setVisiblePostsCount] = useState(6);
 
   // Hero: first post; Most Recent: rest of posts (filtered if category selected)
   const latestPost = posts.length > 0 ? posts[0] : null;
+
   const filteredPosts =
-    selectedCategory === "all"
-      ? posts.length > 1 ? posts.slice(1) : []
-      : posts.filter(post => post.category && post.category._id === selectedCategory);
+    selectedCategory === 'all'
+      ? posts.length > 1
+        ? posts.slice(1)
+        : []
+      : posts.filter((post) => post.category && post.category._id === selectedCategory);
+
   const visiblePosts = filteredPosts.slice(0, visiblePostsCount);
 
+  // Build image URL but return a safe placeholder when missing
   const buildImageUrl = (baseUrl, img) => {
-    if (!img) return '';
+    if (!img) return PLACEHOLDER;
+    if (typeof img !== 'string') return PLACEHOLDER;
     if (img.startsWith('http')) return img;
+    if (!baseUrl) return img.startsWith('/') ? img : `/${img}`;
     return `${baseUrl.replace(/\/$/, '')}/${img.replace(/^\//, '')}`;
   };
 
-  const getImageUrl = (img) =>
-    buildImageUrl(process.env.NEXT_PUBLIC_BLOG_API_Image, img);
+  const getImageUrl = (img) => buildImageUrl(process.env.NEXT_PUBLIC_BLOG_API_Image, img);
 
-  const getProfileImageUrl = (img) =>
-    buildImageUrl(process.env.NEXT_PUBLIC_BLOG_API_Image_profilePics, img);
+  const getProfileImageUrl = (img) => buildImageUrl(process.env.NEXT_PUBLIC_BLOG_API_Image_profilePics, img);
 
   const getExcerpt = (post) => {
     if (post.excerpt) return post.excerpt;
@@ -60,15 +88,15 @@ const BlogIndex = ({ posts, categories }) => {
     return '';
   };
 
-  const getAuthorName = (post) =>
-    post.author && post.author.name ? post.author.name : 'Unknown';
+  const getAuthorName = (post) => (post.author && post.author.name ? post.author.name : 'Unknown');
 
   // Helper function to limit the title to a specific character count (default 50)
   const limitTitle = (title, limit = 50) => {
+    if (!title) return '';
     return title.length > limit ? title.substring(0, limit) + '...' : title;
   };
 
-  const canonicalUrl = `${process.env.NEXT_PUBLIC_SITE_URL}blog/`;
+  const canonicalUrl = `${process.env.NEXT_PUBLIC_SITE_URL || ''}blog/`;
 
   return (
     <>
@@ -96,42 +124,45 @@ const BlogIndex = ({ posts, categories }) => {
                 )}
                 {latestPost && (
                   <div className="pic-poster-blog mt-3">
-                    <a href={`/blog/author/${latestPost.author.slug || latestPost.author._id}`}>
+                    <a href={`/blog/author/${latestPost.author?.slug || latestPost.author?._id}`}>
                       <Image
                         width={64}
                         height={64}
                         src={
-                          latestPost.author.profilePic
+                          latestPost.author?.profilePic
                             ? getProfileImageUrl(latestPost.author.profilePic)
                             : '/img/icons/user-avt.png'
                         }
                         alt="user avatar"
-                        className='rounded-circle'
+                        className="rounded-circle"
                       />
                     </a>
                     <div className="av-info">
-                      <div className="av-name"><a href={`/blog/author/${latestPost.author.slug || latestPost.author._id}`}>{getAuthorName(latestPost)}</a></div>
+                      <div className="av-name">
+                        <a href={`/blog/author/${latestPost.author?.slug || latestPost.author?._id}`}>{getAuthorName(latestPost)}</a>
+                      </div>
                       <div className="av-date">
-                        {formatDateSafe(latestPost?.createdAt || latestPost?.updatedAt || dateFromObjectId(latestPost?._id))} <span className='m-22'>|</span> {latestPost.readtimes || 'read time'}
+                        {formatDateSafe(latestPost?.createdAt || latestPost?.updatedAt || dateFromObjectId(latestPost?._id))}{' '}
+                        <span className="m-22">|</span> {latestPost.readtimes || 'read time'}
                       </div>
                     </div>
                   </div>
                 )}
               </div>
-              <div className='new-imag'>
+              <div className="new-imag">
                 {latestPost && (
                   <a href={`/blog/${latestPost.slug}`}>
                     <Image
                       src={
                         latestPost.metaimage
                           ? getImageUrl(latestPost.metaimage)
-                          : `${process.env.NEXT_PUBLIC_SITE_URL}img/sdie-pop.png`
+                          : `${process.env.NEXT_PUBLIC_SITE_URL || ''}img/sdie-pop.png`
                       }
                       alt={latestPost.title}
                       className="img-fluid"
                       width={1200}
                       height={628}
-                      priority
+                      priority // keep priority only on hero image
                     />
                   </a>
                 )}
@@ -153,9 +184,9 @@ const BlogIndex = ({ posts, categories }) => {
           </div>
           <div className="row">
             {visiblePosts.length ? (
-              visiblePosts.map(post => (
-                <div key={post.slug} className='col-lg-4'>
-                  <div className='card-blog-02'>
+              visiblePosts.map((post) => (
+                <div key={post.slug} className="col-lg-4">
+                  <div className="card-blog-02">
                     <div className="card-title">
                       <Link href={`/blog/${post.slug}`}>
                         {post.banner && (
@@ -164,19 +195,20 @@ const BlogIndex = ({ posts, categories }) => {
                         <h3>{post.title}</h3>
                       </Link>
                     </div>
-                    <div className='card-post-ava'>
-                      <Link href={`/blog/author/${post.author.slug || post.author._id}`}>
+                    <div className="card-post-ava">
+                      <Link href={`/blog/author/${post.author?.slug || post.author?._id}`}>
                         <Image
                           width={44}
                           height={44}
-                          src={post.author.profilePic ? getProfileImageUrl(post.author.profilePic) : '/img/icons/user-avt.png'}
+                          src={post.author?.profilePic ? getProfileImageUrl(post.author.profilePic) : '/img/icons/user-avt.png'}
                           alt="user avatar"
-                          className='rounded-circle'
+                          className="rounded-circle"
                         />
-                        <div className='av-info'>
-                          <div className='av-name-a'>{post.author && post.author.name ? post.author.name : 'Unknown'}</div>
-                          <div className='av-date-b'>
-                            {formatDateSafe(post?.createdAt || post?.updatedAt || dateFromObjectId(post?._id))} <span>|</span> {post.readtimes || ''}
+                        <div className="av-info">
+                          <div className="av-name-a">{post.author && post.author.name ? post.author.name : 'Unknown'}</div>
+                          <div className="av-date-b">
+                            {formatDateSafe(post?.createdAt || post?.updatedAt || dateFromObjectId(post?._id))} <span>|</span>{' '}
+                            {post.readtimes || ''}
                           </div>
                         </div>
                       </Link>
@@ -207,18 +239,15 @@ export async function getStaticProps() {
   try {
     const [blogRes, categoryRes] = await Promise.all([fetch(blogApi), fetch(categoryApi)]);
     if (!blogRes.ok) throw new Error('Failed to fetch posts');
-    let posts = await blogRes.json();
 
-    // Normalize posts' createdAt (prefer createdAt > updatedAt > derived from _id)
-    posts = (posts || []).map(p => {
-      if (!p.createdAt) {
-        p.createdAt = p.updatedAt || (p._id ? dateFromObjectId(p._id)?.toISOString() : undefined);
-      }
-      return p;
-    });
+    let postsRaw = await blogRes.json();
+    postsRaw = Array.isArray(postsRaw) ? postsRaw : [];
+
+    // Summarize posts server-side to reduce page-data size
+    const postsSummarized = postsRaw.map((p) => summarizePost(p));
 
     // Sort posts by createdAt (newest first). If createdAt still missing, fallback to updatedAt or _id time.
-    posts.sort((a, b) => {
+    postsSummarized.sort((a, b) => {
       const aDate = new Date(a.createdAt || a.updatedAt || (a._id ? dateFromObjectId(a._id) : null));
       const bDate = new Date(b.createdAt || b.updatedAt || (b._id ? dateFromObjectId(b._id) : null));
       return bDate - aDate;
@@ -228,7 +257,12 @@ export async function getStaticProps() {
     if (categoryRes.ok) {
       categories = await categoryRes.json();
     }
-    return { props: { posts, categories }, revalidate: 60 };
+
+    // Keep only the first N posts for the index payload to keep the page small.
+    const indexLimit = 12; // configurable: choose small number to keep page-data light
+    const postsForIndex = postsSummarized.slice(0, indexLimit);
+
+    return { props: { posts: postsForIndex, categories }, revalidate: 60 };
   } catch (err) {
     console.error('Error fetching data:', err);
     return { props: { posts: [], categories: [] }, revalidate: 60 };
