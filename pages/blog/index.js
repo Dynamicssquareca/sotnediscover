@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -49,24 +48,27 @@ function summarizePost(p) {
 
 const PLACEHOLDER = `${process.env.NEXT_PUBLIC_SITE_URL || ''}img/default-thumb.jpg`;
 
-const BlogIndex = ({ posts, categories }) => {
-  // "All" is default; visiblePostsCount controls "Load More"
+const BlogIndex = ({ posts: initialPosts, categories }) => {
+  // server-provided summarized posts (initial batch)
+  const [posts, setPosts] = useState(initialPosts || []);
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const [visiblePostsCount, setVisiblePostsCount] = useState(6);
+  const [visiblePostsCount, setVisiblePostsCount] = useState(6); // how many "most recent" cards to show initial
+  const [loadingMore, setLoadingMore] = useState(false);
+  const [allLoaded, setAllLoaded] = useState(false);
+  const [loadError, setLoadError] = useState(null);
 
-  // Hero: first post; Most Recent: rest of posts (filtered if category selected)
   const latestPost = posts.length > 0 ? posts[0] : null;
 
+  // Filtering: when a category selected we filter across the whole currently-loaded posts
   const filteredPosts =
     selectedCategory === 'all'
       ? posts.length > 1
-        ? posts.slice(1)
+        ? posts.slice(1) // keep first as hero
         : []
-      : posts.filter((post) => post.category && post.category._id === selectedCategory);
+      : (posts.filter((post) => post.category && post.category._id === selectedCategory) || []);
 
   const visiblePosts = filteredPosts.slice(0, visiblePostsCount);
 
-  // Build image URL but return a safe placeholder when missing
   const buildImageUrl = (baseUrl, img) => {
     if (!img) return PLACEHOLDER;
     if (typeof img !== 'string') return PLACEHOLDER;
@@ -76,27 +78,78 @@ const BlogIndex = ({ posts, categories }) => {
   };
 
   const getImageUrl = (img) => buildImageUrl(process.env.NEXT_PUBLIC_BLOG_API_Image, img);
-
   const getProfileImageUrl = (img) => buildImageUrl(process.env.NEXT_PUBLIC_BLOG_API_Image_profilePics, img);
-
-  const getExcerpt = (post) => {
-    if (post.excerpt) return post.excerpt;
-    if (post.content) {
-      const plainText = post.content.replace(/<[^>]+>/g, '');
-      return plainText.slice(0, 150) + (plainText.length > 150 ? '...' : '');
-    }
-    return '';
-  };
-
   const getAuthorName = (post) => (post.author && post.author.name ? post.author.name : 'Unknown');
 
-  // Helper function to limit the title to a specific character count (default 50)
   const limitTitle = (title, limit = 50) => {
     if (!title) return '';
     return title.length > limit ? title.substring(0, limit) + '...' : title;
   };
 
   const canonicalUrl = `${process.env.NEXT_PUBLIC_SITE_URL || ''}blog/`;
+
+  // ---- Load more handler (client-side) ----
+  async function handleLoadMore() {
+    if (loadingMore || allLoaded) return;
+    setLoadingMore(true);
+    setLoadError(null);
+
+    try {
+      const blogApi = process.env.NEXT_PUBLIC_BLOG_API_URL;
+      const alreadyHave = posts.length; // number of posts we already have
+      const batchSize = 12; // how many to fetch per click (tweakable)
+
+      // Preferred: request the next batch using skip/limit (if API supports it)
+      const urlWithQuery = `${blogApi}${blogApi.includes('?') ? '&' : '?'}skip=${alreadyHave}&limit=${batchSize}`;
+
+      let res = await fetch(urlWithQuery);
+      // If API doesn't support skip/limit it may respond 400/404 or return full list.
+      if (!res.ok) {
+        // fallback: fetch full list and slice client-side
+        const fallbackRes = await fetch(blogApi);
+        if (!fallbackRes.ok) throw new Error('Failed to fetch more posts');
+        const allRaw = await fallbackRes.json();
+        // filter out duplicates by _id/slug and append new ones
+        const newRaw = Array.isArray(allRaw) ? allRaw : [];
+        const summarized = newRaw.map((p) => summarizePost(p));
+        // remove already-present ids
+        const existingIds = new Set(posts.map((p) => p._id || p.slug));
+        const newSumm = summarized.filter((p) => !existingIds.has(p._id || p.slug));
+        if (newSumm.length === 0) {
+          setAllLoaded(true);
+        } else {
+          setPosts((prev) => [...prev, ...newSumm]);
+        }
+      } else {
+        // response ok: expect either complete objects or summarized objects
+        const data = await res.json();
+        const arr = Array.isArray(data) ? data : [];
+        const summarized = arr.map((p) => {
+          // if this looks already summarized (has title and _id) keep; otherwise summarize
+          if (p._id && p.title && p.slug && (p.excerpt || p.metaimage)) return p;
+          return summarizePost(p);
+        });
+
+        if (summarized.length === 0) {
+          setAllLoaded(true);
+        } else {
+          // avoid duplicates
+          const existingIds = new Set(posts.map((p) => p._id || p.slug));
+          const uniqueNew = summarized.filter((p) => !existingIds.has(p._id || p.slug));
+          if (uniqueNew.length === 0) {
+            setAllLoaded(true);
+          } else {
+            setPosts((prev) => [...prev, ...uniqueNew]);
+          }
+        }
+      }
+    } catch (err) {
+      console.error('Load more error:', err);
+      setLoadError('Could not load more posts. Try again.');
+    } finally {
+      setLoadingMore(false);
+    }
+  }
 
   return (
     <>
@@ -182,10 +235,11 @@ const BlogIndex = ({ posts, categories }) => {
               </div>
             </div>
           </div>
+
           <div className="row">
             {visiblePosts.length ? (
               visiblePosts.map((post) => (
-                <div key={post.slug} className="col-lg-4">
+                <div key={post.slug} className="col-lg-4 d-flex">
                   <div className="card-blog-02">
                     <div className="card-title">
                       <Link href={`/blog/${post.slug}`}>
@@ -220,13 +274,31 @@ const BlogIndex = ({ posts, categories }) => {
               <p>No posts found for this category.</p>
             )}
           </div>
-          {filteredPosts.length > visiblePostsCount && (
-            <div className="text-center">
-              <button className="btn btn-primary" onClick={() => setVisiblePostsCount(visiblePostsCount + 3)}>
-                Load More
+
+          {/* Load more UI */}
+          <div className="text-center" style={{ marginTop: 24 }}>
+            {loadError && <div style={{ color: 'red', marginBottom: 8 }}>{loadError}</div>}
+
+            {!allLoaded ? (
+              <button
+                className="btn btn-primary"
+                onClick={() => {
+                  // If we still have more posts in the currently-loaded list, just increase visible count
+                  if (filteredPosts.length > visiblePostsCount) {
+                    setVisiblePostsCount((v) => v + 3);
+                    return;
+                  }
+                  // Otherwise fetch more from server
+                  handleLoadMore();
+                }}
+                disabled={loadingMore}
+              >
+                {loadingMore ? 'Loading...' : 'Load More'}
               </button>
-            </div>
-          )}
+            ) : (
+              <div>All posts loaded</div>
+            )}
+          </div>
         </div>
       </section>
     </>
@@ -246,7 +318,7 @@ export async function getStaticProps() {
     // Summarize posts server-side to reduce page-data size
     const postsSummarized = postsRaw.map((p) => summarizePost(p));
 
-    // Sort posts by createdAt (newest first). If createdAt still missing, fallback to updatedAt or _id time.
+    // Sort posts by createdAt (newest first).
     postsSummarized.sort((a, b) => {
       const aDate = new Date(a.createdAt || a.updatedAt || (a._id ? dateFromObjectId(a._id) : null));
       const bDate = new Date(b.createdAt || b.updatedAt || (b._id ? dateFromObjectId(b._id) : null));
