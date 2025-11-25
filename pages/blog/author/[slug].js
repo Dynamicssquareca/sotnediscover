@@ -1,11 +1,14 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import Image from 'next/image';
+// pages/blog/author/[slug].js
+
+import React, { useState } from "react";
+import { useRouter } from "next/router";
+import Head from "next/head";
+import Link from "next/link";
+import Image from "next/image";
 
 // ---- date helpers ----
 function dateFromObjectId(id) {
-  if (!id || typeof id !== 'string' || id.length < 8) return null;
+  if (!id || typeof id !== "string" || id.length < 8) return null;
   try {
     const seconds = parseInt(id.substring(0, 8), 16);
     return new Date(seconds * 1000);
@@ -14,22 +17,40 @@ function dateFromObjectId(id) {
   }
 }
 
-function formatDateSafe(dateOrString, { fallback = 'Date unknown' } = {}) {
+function formatDateSafe(dateOrString, { fallback = "Date unknown" } = {}) {
   if (!dateOrString) return fallback;
   const d = dateOrString instanceof Date ? dateOrString : new Date(dateOrString);
   if (Number.isNaN(d.getTime())) return fallback;
-  return d.toLocaleDateString('en-GB', { day: '2-digit', month: '2-digit', year: 'numeric' });
+  return d.toLocaleDateString("en-GB", {
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric",
+  });
 }
 // -----------------------
 
-const AuthorPage = ({ author, posts }) => {
+export default function AuthorPage({ author, posts = [] }) {
+  const router = useRouter();
+
+  // fallback BLOCKING = no flash, no missing data
+  if (router.isFallback) {
+    return (
+      <div className="container text-center py-5">
+        <div className="spinner-border" role="status"></div>
+        <p className="mt-3">Loading Author...</p>
+      </div>
+    );
+  }
+
   if (!author) return <p>Author not found</p>;
-  const canonicalUrl = `${process.env.NEXT_PUBLIC_SITE_URL}blog/author/${author.slug}`;
+
+  const canonicalUrl = `${process.env.NEXT_PUBLIC_SITE_URL}blog/author/${author.slug}/`;
 
   const buildImageUrl = (baseUrl, img) => {
-    if (!img) return '';
-    if (img.startsWith('http')) return img;
-    return `${baseUrl.replace(/\/$/, '')}/${img.replace(/^\//, '')}`;
+    if (!img) return "";
+    if (img.startsWith("http")) return img;
+    if (!baseUrl) return img;
+    return `${baseUrl.replace(/\/$/, "")}/${img.replace(/^\//, "")}`;
   };
 
   const getImageUrl = (img) =>
@@ -38,6 +59,29 @@ const AuthorPage = ({ author, posts }) => {
   const getProfileImageUrl = (img) =>
     buildImageUrl(process.env.NEXT_PUBLIC_BLOG_API_Image_profilePics, img);
 
+  // -----------------------------
+  // LOAD MORE LOGIC
+  // -----------------------------
+  const INITIAL_LOAD = 9;
+  const LOAD_MORE_COUNT = 6;
+
+  const [visibleCount, setVisibleCount] = useState(INITIAL_LOAD);
+  const [loading, setLoading] = useState(false);
+
+  const visiblePosts = posts.slice(0, visibleCount);
+
+  const handleLoadMore = () => {
+    setLoading(true);
+    setTimeout(() => {
+      setVisibleCount((prev) => prev + LOAD_MORE_COUNT);
+      setLoading(false);
+    }, 700);
+  };
+
+  const hasMore = visibleCount < posts.length;
+
+  // -----------------------------
+
   return (
     <>
       <Head>
@@ -45,28 +89,39 @@ const AuthorPage = ({ author, posts }) => {
         <link rel="canonical" href={canonicalUrl} />
         <meta name="robots" content="noindex, nofollow" />
       </Head>
+
       <div className="container pb-80">
-        <div className='row'>
-          <div className='col-lg-12'>
+        {/* Breadcrumb */}
+        <div className="row">
+          <div className="col-lg-12">
             <div className="breadcrumb-list">
               <ol className="breadcrumb">
-                <li className="breadcrumb-item"><Link href="/">Home</Link></li>
-                <li className="breadcrumb-item"><a href="/blog">Blog</a></li>
-                <li className="breadcrumb-item"><a href="/blog/author">Authors</a></li>
-                <li className="breadcrumb-item active" aria-current="page">{author.name}</li>
+                <li className="breadcrumb-item">
+                  <Link href="/">Home</Link>
+                </li>
+                <li className="breadcrumb-item">
+                  <Link href="/blog">Blog</Link>
+                </li>
+                <li className="breadcrumb-item">
+                  <Link href="/blog/author">Authors</Link>
+                </li>
+                <li className="breadcrumb-item active" aria-current="page">
+                  {author.name}
+                </li>
               </ol>
             </div>
           </div>
         </div>
 
+        {/* Author Header */}
         <div className="row pd-90">
           <div className="col-md-2">
-            <div className='auther-inner'>
+            <div className="auther-inner">
               <Image
                 src={
                   author.profilePic
-                    ? `${process.env.NEXT_PUBLIC_BLOG_API_Image_profilePics.replace(/\/$/, '')}/${author.profilePic.replace(/^\//, '')}`
-                    : '/img/icons/user-avt.png'
+                    ? getProfileImageUrl(author.profilePic)
+                    : "/img/icons/user-avt.png"
                 }
                 width={100}
                 height={100}
@@ -75,110 +130,173 @@ const AuthorPage = ({ author, posts }) => {
               />
             </div>
           </div>
+
           <div className="col-md-10">
-            <div className='common-titles'>
+            <div className="common-titles">
               <h1>{author.name}</h1>
               <p>{author.aboutus}</p>
             </div>
           </div>
         </div>
 
-        <div className='common-title-two'> <h2>Posts by {author.name}</h2></div>
+        <div className="common-title-two">
+          <h2>Posts by {author.name}</h2>
+        </div>
 
+        {/* Posts */}
         {posts.length === 0 ? (
           <p>No posts found for this author.</p>
         ) : (
-          <div className="row">
-            {posts.map(post => (
-              <div key={post.slug} className='col-lg-4'>
-                <div className='card-blog-02'>
-                  <div className="card-title">
-                    <Link href={`/blog/${post.slug}`}>
-                      {post.banner && (
-                        <Image src={getImageUrl(post.banner)} alt={post.title} className="img-fluid" width={400} height={300} />
-                      )}
-                      <h3>{post.title}</h3>
-                    </Link>
-                  </div>
-                  <div className='card-post-ava'>
-                    <Link href={`/blog/author/${post.author.slug || post.author._id}`}>
-                      <Image
-                        width={44}
-                        height={44}
-                        src={post.author?.profilePic ? getProfileImageUrl(post.author.profilePic) : '/img/icons/user-avt.png'}
-                        alt="user avatar"
-                        className='rounded-circle'
-                      />
-                      <div className='av-info'>
-                        <div className='av-name-a'>{post.author?.name || 'Unknown'}</div>
-                        <div className='av-date-b'>
-                          {formatDateSafe(post?.createdAt || post?.updatedAt || dateFromObjectId(post?._id))}
-                          <span> | </span>
-                          {post.readtimes || ''}
-                          <span>min</span>
-                        </div>
+          <>
+            <div className="row">
+              {visiblePosts.map((post) => {
+                const postAuthor = post.author || {};
+                const slug =
+                  postAuthor.slug || postAuthor._id || "unknown-author";
+
+                return (
+                  <div key={post.slug} className="col-lg-4 col-md-6 col-sm-12">
+                    <div className="card-blog-02">
+                      <div className="card-title">
+                        <Link href={`/blog/${post.slug}`}>
+                          {post.banner && (
+                            <Image
+                              src={getImageUrl(post.banner)}
+                              alt={post.title}
+                              width={400}
+                              height={300}
+                              className="img-fluid"
+                            />
+                          )}
+                          <h3>{post.title}</h3>
+                        </Link>
                       </div>
-                    </Link>
+
+                      <div className="card-post-ava">
+                        <Link href={`/blog/author/${slug}`}>
+                          <Image
+                            width={44}
+                            height={44}
+                            src={
+                              postAuthor.profilePic
+                                ? getProfileImageUrl(postAuthor.profilePic)
+                                : "/img/icons/user-avt.png"
+                            }
+                            alt="user avatar"
+                            className="rounded-circle"
+                          />
+
+                          <div className="av-info">
+                            <div className="av-name-a">
+                              {postAuthor.name || "Unknown"}
+                            </div>
+
+                            <div className="av-date-b">
+                              {formatDateSafe(
+                                post.createdAt ||
+                                  post.updatedAt ||
+                                  dateFromObjectId(post?._id)
+                              )}
+                              <span> | </span>
+                              {post.readtimes || "0"} min
+                            </div>
+                          </div>
+                        </Link>
+                      </div>
+                    </div>
                   </div>
-                </div>
+                );
+              })}
+            </div>
+
+            {/* Load More */}
+            {hasMore && (
+              <div className="text-center mt-4">
+                {loading ? (
+                  <div className="spinner-border" role="status">
+                    <span className="visually-hidden">Loading...</span>
+                  </div>
+                ) : (
+                  <button
+                    onClick={handleLoadMore}
+                    className="btn btn-primary px-4 py-2"
+                  >
+                    Load More
+                  </button>
+                )}
               </div>
-            ))}
-          </div>
+            )}
+          </>
         )}
       </div>
     </>
   );
-};
+}
 
+/* ---------------------------------------------------
+   STATIC PATHS (BLOCKING FIX)
+----------------------------------------------------- */
 export async function getStaticPaths() {
-  const authorApi = process.env.NEXT_PUBLIC_AUTHOR_API_URL;
+  const api = process.env.NEXT_PUBLIC_AUTHOR_API_URL;
+
   try {
-    const res = await fetch(authorApi);
-    let authors = [];
-    if (res.ok) {
-      authors = await res.json();
-    }
-    const paths = (authors || []).map(author => ({
-      params: { slug: author.slug }
+    const res = await fetch(api);
+    const authors = res.ok ? await res.json() : [];
+
+    const paths = authors.map((a) => ({
+      params: { slug: a.slug },
     }));
-    return { paths, fallback: true };
-  } catch (err) {
-    console.error(err);
-    return { paths: [], fallback: true };
+
+    return {
+      paths,
+      fallback: "blocking", // BEST FIX — no flash, no 404
+    };
+  } catch (e) {
+    return { paths: [], fallback: "blocking" };
   }
 }
 
 export async function getStaticProps({ params }) {
   const { slug } = params;
+
   const authorApi = process.env.NEXT_PUBLIC_AUTHOR_API_URL;
   const blogApi = process.env.NEXT_PUBLIC_BLOG_API_URL;
+
   try {
+    // Authors
     const resAuthors = await fetch(authorApi);
     const authors = resAuthors.ok ? await resAuthors.json() : [];
-    const author = (authors || []).find(a => a.slug === slug) || null;
+    const author = authors.find((a) => a.slug === slug) || null;
+
     if (!author) return { notFound: true };
 
+    // Posts
     const resPosts = await fetch(blogApi);
     let posts = resPosts.ok ? await resPosts.json() : [];
 
     // Filter posts by author
-    let filteredPosts = (posts || []).filter(
-      post => post.author && (post.author.slug === slug || post.author._id === author._id)
+    posts = posts.filter(
+      (p) =>
+        p.author &&
+        (p.author.slug === slug || p.author._id === author._id)
     );
 
-    // Normalize createdAt for each post (createdAt > updatedAt > derived from _id)
-    filteredPosts = filteredPosts.map(p => {
+    // Ensure createdAt exists
+    posts = posts.map((p) => {
       if (!p.createdAt) {
-        p.createdAt = p.updatedAt || (p._id ? dateFromObjectId(p._id)?.toISOString() : undefined);
+        p.createdAt =
+          p.updatedAt ||
+          dateFromObjectId(p._id)?.toISOString() ||
+          null;
       }
       return p;
     });
 
-    return { props: { author, posts: filteredPosts }, revalidate: 10 };
-  } catch (err) {
-    console.error(err);
+    return {
+      props: { author, posts },
+      revalidate: 10,
+    };
+  } catch (e) {
     return { props: { author: null, posts: [] }, revalidate: 10 };
   }
 }
-
-export default AuthorPage;
