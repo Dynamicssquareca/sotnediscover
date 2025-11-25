@@ -32,7 +32,6 @@ function formatDateSafe(dateOrString, { fallback = "Date unknown" } = {}) {
 export default function AuthorPage({ author, posts = [] }) {
   const router = useRouter();
 
-  // fallback BLOCKING = no flash, no missing data
   if (router.isFallback) {
     return (
       <div className="container text-center py-5">
@@ -194,7 +193,6 @@ export default function AuthorPage({ author, posts = [] }) {
                             <div className="av-date-b">
                               {formatDateSafe(
                                 post.createdAt ||
-                                  post.updatedAt ||
                                   dateFromObjectId(post?._id)
                               )}
                               <span> | </span>
@@ -234,7 +232,7 @@ export default function AuthorPage({ author, posts = [] }) {
 }
 
 /* ---------------------------------------------------
-   STATIC PATHS (BLOCKING FIX)
+   STATIC PATHS
 ----------------------------------------------------- */
 export async function getStaticPaths() {
   const api = process.env.NEXT_PUBLIC_AUTHOR_API_URL;
@@ -249,13 +247,16 @@ export async function getStaticPaths() {
 
     return {
       paths,
-      fallback: "blocking", // BEST FIX — no flash, no 404
+      fallback: "blocking",
     };
   } catch (e) {
     return { paths: [], fallback: "blocking" };
   }
 }
 
+/* ---------------------------------------------------
+   STATIC PROPS — OPTIMIZED (NO LARGE PAYLOAD)
+----------------------------------------------------- */
 export async function getStaticProps({ params }) {
   const { slug } = params;
 
@@ -274,23 +275,29 @@ export async function getStaticProps({ params }) {
     const resPosts = await fetch(blogApi);
     let posts = resPosts.ok ? await resPosts.json() : [];
 
-    // Filter posts by author
-    posts = posts.filter(
-      (p) =>
-        p.author &&
-        (p.author.slug === slug || p.author._id === author._id)
-    );
-
-    // Ensure createdAt exists
-    posts = posts.map((p) => {
-      if (!p.createdAt) {
-        p.createdAt =
+    // Filter and **minimize payload**
+    posts = posts
+      .filter(
+        (p) =>
+          p.author &&
+          (p.author.slug === slug || p.author._id === author._id)
+      )
+      .map((p) => ({
+        slug: p.slug,
+        title: p.title,
+        banner: p.banner,
+        createdAt:
+          p.createdAt ||
           p.updatedAt ||
           dateFromObjectId(p._id)?.toISOString() ||
-          null;
-      }
-      return p;
-    });
+          null,
+        readtimes: p.readtimes || 0,
+        author: {
+          name: p.author.name,
+          slug: p.author.slug,
+          profilePic: p.author.profilePic,
+        },
+      }));
 
     return {
       props: { author, posts },

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
@@ -43,7 +43,7 @@ const CategoryPage = ({ category, posts }) => {
   const getProfileImageUrl = (img) =>
     buildImageUrl(process.env.NEXT_PUBLIC_BLOG_API_Image_profilePics, img);
 
-  // ---------- Load More Logic ----------
+  // ---------- Load More ----------
   const INITIAL_COUNT = 9;
   const LOAD_MORE_COUNT = 6;
 
@@ -59,6 +59,8 @@ const CategoryPage = ({ category, posts }) => {
   };
   // -------------------------------------
 
+  
+
   return (
     <>
       <Head>
@@ -71,33 +73,16 @@ const CategoryPage = ({ category, posts }) => {
         {category.metaKeywords && (
           <meta name="keywords" content={category.metaKeywords} />
         )}
-        <meta property="og:title" content={category.metaTitle || category.title} />
-        <meta
-          property="og:description"
-          content={category.metaDescription || category.excerpt || ""}
-        />
       </Head>
 
       <div className="container pb-80">
-        <div className="row">
-          <div className="col-lg-12">
-            <div className="breadcrumb-list">
-              <ol className="breadcrumb">
-                <li className="breadcrumb-item">
-                  <Link href="/">Home</Link>
-                </li>
-                <li className="breadcrumb-item">
-                  <a href="/blog">Blog</a>
-                </li>
-                <li className="breadcrumb-item">
-                  <a href="/blog/category">Categories</a>
-                </li>
-                <li className="breadcrumb-item active" aria-current="page">
-                  {category.title}
-                </li>
-              </ol>
-            </div>
-          </div>
+        <div className="breadcrumb-list">
+          <ol className="breadcrumb">
+            <li className="breadcrumb-item"><Link href="/">Home</Link></li>
+            <li className="breadcrumb-item"><a href="/blog">Blog</a></li>
+            <li className="breadcrumb-item"><a href="/blog/category">Categories</a></li>
+            <li className="breadcrumb-item active">{category.title}</li>
+          </ol>
         </div>
 
         <div className="common-title">
@@ -129,9 +114,7 @@ const CategoryPage = ({ category, posts }) => {
 
                     <div className="card-post-ava">
                       <Link
-                        href={`/blog/author/${
-                          post.author.slug || post.author._id
-                        }`}
+                        href={`/blog/author/${post.author.slug || post.author._id}`}
                       >
                         <Image
                           width={44}
@@ -165,7 +148,6 @@ const CategoryPage = ({ category, posts }) => {
               ))}
             </div>
 
-            {/* ---------- Load More Button ---------- */}
             {visibleCount < posts.length && (
               <div className="text-center mt-4">
                 {loading ? (
@@ -184,6 +166,11 @@ const CategoryPage = ({ category, posts }) => {
   );
 };
 
+// -----------------------------------------------------
+// FIX: REDUCE PAGE-DATA SIZE
+// Remove large fields from posts BEFORE returning props
+// -----------------------------------------------------
+
 export async function getStaticPaths() {
   const categoryApi = process.env.NEXT_PUBLIC_CATEGORY_API_URL;
 
@@ -195,17 +182,20 @@ export async function getStaticPaths() {
       params: { slug: cat.slug },
     }));
 
-    return { paths, fallback: true };
+    return { paths, fallback: "blocking" };
   } catch (err) {
     console.error(err);
-    return { paths: [], fallback: true };
+    return { paths: [], fallback: "blocking" };
   }
 }
 
 export async function getStaticProps({ params }) {
   const { slug } = params;
+
   const categoryApi = process.env.NEXT_PUBLIC_CATEGORY_API_URL;
-  const blogApi = process.env.NEXT_PUBLIC_BLOG_API_URL;
+
+  const filteredPostsApi =
+    `${process.env.NEXT_PUBLIC_BLOG_API_URL}?categorySlug=${slug}`;
 
   try {
     const resCat = await fetch(categoryApi);
@@ -214,24 +204,26 @@ export async function getStaticProps({ params }) {
     const category = categories.find((c) => c.slug === slug) || null;
     if (!category) return { notFound: true };
 
-    const resPosts = await fetch(blogApi);
-    const posts = resPosts.ok ? await resPosts.json() : [];
+    const resPosts = await fetch(filteredPostsApi);
+    const postsRaw = resPosts.ok ? await resPosts.json() : [];
 
-    let filteredPosts = posts.filter(
-      (post) => post.category && post.category._id === category._id
-    );
-
-    filteredPosts = filteredPosts.map((p) => {
-      if (!p.createdAt) {
-        p.createdAt =
-          p.updatedAt ||
-          (p._id ? dateFromObjectId(p._id)?.toISOString() : undefined);
-      }
-      return p;
-    });
+    // ⭐ STRIP HEAVY FIELDS HERE
+    const posts = postsRaw.map((p) => ({
+      _id: p._id,
+      slug: p.slug,
+      title: p.title,
+      banner: p.banner || "",
+      readtimes: p.readtimes || "",
+      createdAt: p.createdAt || p.updatedAt || null,
+      author: {
+        name: p.author?.name || "",
+        slug: p.author?.slug || "",
+        profilePic: p.author?.profilePic || "",
+      },
+    }));
 
     return {
-      props: { category, posts: filteredPosts },
+      props: { category, posts },
       revalidate: 10,
     };
   } catch (err) {
