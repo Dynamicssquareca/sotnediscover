@@ -61,7 +61,7 @@ const FormCatlog = ({ onSubmit }) => {
     }
 
     // Send email using EmailJS
-    emailjs.send('service_62cljjq', 'template_pq4kco7', {
+    emailjs.send('service_0sef4e8', 'template_6tpy24w', {
       from_name: name,
       from_email: email,
       to_name: 'YOUR_EMAIL_ADDRESS', // Replace with your own email address
@@ -69,7 +69,7 @@ const FormCatlog = ({ onSubmit }) => {
       company_name: company,
       message: message,
       page_url: pageUrl
-    }, 'W7xNQXQ68tmQ-oKz0')
+    }, 'QdpKtlPffeNGkiv2C')
       .then((response) => {
         console.log('Email sent successfully:', response);
       })
