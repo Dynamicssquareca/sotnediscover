@@ -45,8 +45,8 @@ function trimPostForList(p) {
     title: p.title,
     // Short excerpt: prefer explicit excerpt else fallback to stripped content
     excerpt:
-      (p.excerpt && (p.excerpt.length > 220 ? p.excerpt.slice(0, 220) + '...' : p.excerpt)) ||
-      (p.content ? (p.content.replace(/<[^>]+>/g, '').slice(0, 220) + '...') : ''),
+      (p.excerpt && (p.excerpt.length > 120 ? p.excerpt.slice(0, 120) + '...' : p.excerpt)) ||
+      (p.content ? (p.content.replace(/<[^>]+>/g, '').slice(0, 120) + '...') : ''),
     banner: p.banner, // small thumb field is ideal — adjust if available
     readtimes: p.readtimes,
     createdAt: p.createdAt || p.updatedAt || (p._id ? dateFromObjectId(p._id)?.toISOString() : undefined),
