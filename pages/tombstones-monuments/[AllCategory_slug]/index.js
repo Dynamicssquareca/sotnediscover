@@ -58,7 +58,7 @@ const CategoryPage = ({ category, products, faq, error }) => {
         {category.metaKeywords && <meta name="keywords" content={category.metaKeywords} />}
         <meta property="og:title" content={category.metaTitle || category.title} />
         <meta property="og:description" content={category.metaDescription || category.excerpt || ''} />
-         <meta property="og:site_name" content="Stone Discover UK" />
+        <meta property="og:site_name" content="Stone Discover UK" />
         <meta
           property="og:image"
           content={
@@ -108,24 +108,27 @@ const CategoryPage = ({ category, products, faq, error }) => {
 
           </div>
           {Array.isArray(products) && products.length > 0 ? (
-            products.map((product) => (
-              <div className="col-lg-3 sliding-col-05" key={product._id}>
-                <div className="card-06">
-                  <div className="card-06-item">
-                    <a href={`/tombstones-monuments/${category.slug}/${product.slug}`}>
-                      <Image
-                        width={300}
-                        height={200}
-                        src={getImageUrl(product.images?.[0])}
-                        alt={product.title}
-                        className="img-fluid"
-                      />
-                      <span>{product.title}</span>
-                    </a>
+            products
+              .slice() // prevents mutation
+              .sort((a, b) => a.title.localeCompare(b.title)) // A → Z alphabetical
+              .map((product) => (
+                <div className="col-lg-3 sliding-col-05" key={product._id}>
+                  <div className="card-06">
+                    <div className="card-06-item">
+                      <a href={`/tombstones-monuments/${category.slug}/${product.slug}`}>
+                        <Image
+                          width={300}
+                          height={200}
+                          src={getImageUrl(product.images?.[0])}
+                          alt={product.title}
+                          className="img-fluid"
+                        />
+                        <span>{product.title}</span>
+                      </a>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))
+              ))
           ) : (
             <div className="col-12">
               <p className="text-muted">No products found in this category.</p>

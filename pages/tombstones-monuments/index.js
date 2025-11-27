@@ -99,7 +99,7 @@ const Index = ({ categories }) => {
                     </div>
                     <div className='row g-3 sliding-row-05'>
                         {categories.length > 0 ? (
-                            categories.map((category) => (
+                            categories.slice().sort((a, b) => a.title.localeCompare(b.title)).map((category) => (
                                 <div className="col-lg-3 sliding-col-05" key={category.id}>
                                     <div className="card-06">
                                         <div className="card-06-item">

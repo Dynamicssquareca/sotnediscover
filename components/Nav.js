@@ -119,14 +119,14 @@ const Nav = () => {
           {/* <li><a className="nav-link scrollto" href="/">Company</a></li> */}
           <li className="dropdown"><a href="/tombstones-monuments/"><span>Tombstones</span> <i className="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="/tombstones-monuments/angel-headstone/">Angel Headstone</a></li>
-              <li><a href="/tombstones-monuments/headstones/">Headstones</a></li>
+              <li><a href="/tombstones-monuments/angel/">Angel Headstone</a></li>
+              <li><a href="/tombstones-monuments/book/">Book Headstones</a></li>
+              <li><a href="/tombstones-monuments/columbarium/">Columbarium</a></li>
+              <li><a href="/tombstones-monuments/flat/">Flat Marker</a></li>
+              <li><a href="/tombstones-monuments/headstones/">Granite Headstones</a></li>
+              <li><a href="/tombstones-monuments/vases/">Headstone Vases</a></li>
               <li><a href="/tombstones-monuments/kerb-sets/">Kerb Sets</a></li>
-              <li><a href="/tombstones-monuments/benches/">Memorial Benches</a></li>
-              <li><a href="/tombstones-monuments/childrens-headstones/">Childrens Headstones</a></li>
-              <li><a href="/tombstones-monuments/heart-headstones/">Heart Headstones</a></li>
-              <li><a href="/tombstones-monuments/vases/">Vases</a></li>
-              <li><a href="/tombstones-monuments/urns/">urns</a></li>
+              <li><a href="/tombstones-monuments/bench/">Memorial Bench</a></li>
             </ul>
           </li>
           <li><a className="nav-link scrollto" href="/about-us/">About Us</a></li>
