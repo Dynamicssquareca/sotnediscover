@@ -196,7 +196,7 @@ const BlogIndex = ({ posts: initialPosts, categories }) => {
                       </div>
                       <div className="av-date">
                         {formatDateSafe(latestPost?.createdAt || latestPost?.updatedAt || dateFromObjectId(latestPost?._id))}{' '}
-                        <span className="m-22">|</span> {latestPost.readtimes || 'read time'}
+                        <span className="m-22">|</span> {latestPost.readtimes || 'read time'} min
                       </div>
                     </div>
                   </div>
@@ -262,7 +262,7 @@ const BlogIndex = ({ posts: initialPosts, categories }) => {
                           <div className="av-name-a">{post.author && post.author.name ? post.author.name : 'Unknown'}</div>
                           <div className="av-date-b">
                             {formatDateSafe(post?.createdAt || post?.updatedAt || dateFromObjectId(post?._id))} <span>|</span>{' '}
-                            {post.readtimes || ''}
+                            {post.readtimes || ''} min
                           </div>
                         </div>
                       </Link>

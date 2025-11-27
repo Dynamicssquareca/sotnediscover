@@ -332,7 +332,7 @@ const BlogPost = ({ post, relatedPosts, relatedHeading, categories, error }) => 
                         <span className="mx-2">|</span>
                         <span>{formatDateSafe(rp?.createdAt || rp?.updatedAt || dateFromObjectId(rp?._id))}</span>
                         <span className="mx-2">|</span>
-                        <span>{rp.readtimes || ' '}m Reading</span>
+                        <span>{rp.readtimes || ' '} min</span>
                       </div>
                       <Link href={`/blog/${rp.slug}`}>
                         <h5 className="card-title">{rp.title}</h5>
