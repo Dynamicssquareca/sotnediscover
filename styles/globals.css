@@ -584,6 +584,7 @@ font-size:48px
   display: flex;
   gap: 20px;
   justify-content: space-evenly;
+  flex-wrap:wrap
 }
 .card-05-item {
   text-align: center;
