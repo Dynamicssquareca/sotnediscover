@@ -60,28 +60,31 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className='row'>
-              <div className='col-lg-12'>
-                <div className='over-img'>
-                  <Image
-                    src="/img/banner/Granite-Headstones-Monuments.png"
-                    alt="Hero Banner"
-                    width={1024}
-                    height={368}
-                    className='mobile-new'
-                    priority
-                  />
-                </div>
+          </div>
+        </div>
+      </div>
 
-              </div>
+      <div className='container'>
+        <div className='row'>
+          <div className='col-lg-12'>
+            <div className='over-img'>
+              <Image
+                src="/img/banner/Granite-Headstones-Monuments.png"
+                alt="Hero Banner"
+                width={1024}
+                height={368}
+                className='mobile-new'
+                priority
+              />
             </div>
+
           </div>
         </div>
       </div>
 
 
 
-      <section className='about-us-section p-b-40'>
+      <section className='about-us-section about-us-section-h p-b-40 p-t-60'>
         <div className='container'>
           <div className='row'>
             <div className='col-lg-6 align-self-center'>
@@ -268,8 +271,8 @@ export default function Home() {
           </div>
           <div className='row'>
             <div className='col-lg-12'>
-              <div class="map-container grow">
-                <span><img decoding="async" src="img/webpages/world-01.png" alt="world-map" /></span><div class="point canada tippy" title="Canada" hover-tooltip="Canada" tooltip-position="top"></div><div class="point usa tippy" title="USA" hover-tooltip="USA" tooltip-position="top"></div><div class="point uk tippy" title="UK" hover-tooltip="UK" tooltip-position="top"></div><div class="point netherlands tippy" title="Netherlands" hover-tooltip="Netherlands" tooltip-position="top"></div><div class="point india tippy" title="India" hover-tooltip="India" tooltip-position="top"></div><div class="point australia tippy" title="Australia" hover-tooltip="Australia" tooltip-position="top"></div></div>
+              <div className="map-container grow">
+                <span><img decoding="async" src="img/webpages/world-01.png" alt="world-map" /></span><div className="point canada tippy" title="Canada" hover-tooltip="Canada" tooltip-position="top"></div><div className="point usa tippy" title="USA" hover-tooltip="USA" tooltip-position="top"></div><div className="point uk tippy" title="UK" hover-tooltip="UK" tooltip-position="top"></div><div className="point netherlands tippy" title="Netherlands" hover-tooltip="Netherlands" tooltip-position="top"></div><div className="point india tippy" title="India" hover-tooltip="India" tooltip-position="top"></div><div className="point australia tippy" title="Australia" hover-tooltip="Australia" tooltip-position="top"></div></div>
             </div>
           </div>
         </div>
@@ -285,29 +288,29 @@ export default function Home() {
           </div>
           <div className='row'>
             <div className='col-lg-12'>
-              <div class="grid">
-                <figure class="card-001">
+              <div className="grid">
+                <figure className="card-001">
                   <img loading="lazy" src="/img/webpages/p-1.jpg" alt="Polished headstones batch" />
                 </figure>
-                <figure class="card-001">
+                <figure className="card-001">
                   <img loading="lazy" src="/img/webpages/p-2.jpg" alt="Cross monument on base" />
                 </figure>
-                <figure class="card-001">
+                <figure className="card-001">
                   <img loading="lazy" src="/img/webpages/p-3.jpg" alt="Black granite memorials" />
                 </figure>
-                <figure class="card-001">
+                <figure className="card-001">
                   <img loading="lazy" src="/img/webpages/p-4.jpg" alt="Granite tomb covers" />
                 </figure>
-                <figure class="card-001">
+                <figure className="card-001">
                   <img loading="lazy" src="/img/webpages/p-5.jpg" alt="Shield shaped memorial wrapped" />
                 </figure>
-                <figure class="card-001">
+                <figure className="card-001">
                   <img loading="lazy" src="/img/webpages/p-6.jpg" alt="Pallets wrapped for shipping" />
                 </figure>
-                <figure class="card-001">
+                <figure className="card-001">
                   <img loading="lazy" src="/img/webpages/p-7.png" alt="Crated slabs ready to export" />
                 </figure>
-                <figure class="card-001">
+                <figure className="card-001">
                   <img loading="lazy" src="/img/webpages/p-8.png" alt="Cartons prepared for dispatch" />
                 </figure>
               </div>

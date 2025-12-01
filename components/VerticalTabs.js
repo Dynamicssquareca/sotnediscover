@@ -29,7 +29,7 @@ export default function VerticalTabs() {
     <>
       <Row>
         {/* Left Tabs */}
-        <Col md="3" className="mb-md-0 g-0">
+        <Col md="3" className="mb-md-0 g-0 horz-nav-tab-ull">
           <Nav pills vertical>
             {tabsData.map((tab) => (
               <NavItem key={tab.id}>

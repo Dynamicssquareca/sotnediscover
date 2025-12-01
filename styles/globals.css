@@ -1709,6 +1709,7 @@ gap:2px
 .over-img{
   position: relative;
   text-align: center;
+  margin-top: -440px;
 }
 .d-flex-grd{
   display: flex;
@@ -1902,6 +1903,9 @@ list-style: none;
 .card-001{
   margin-bottom:0px
 }
+.over-img{
+
+}
 @media (max-width: 1100px){.grid{grid-template-columns:repeat(3,1fr)}}
 @media (max-width: 820px){.grid{grid-template-columns:repeat(2,1fr)}}
 @media (max-width: 520px){.grid{grid-template-columns:1fr}}
@@ -1944,12 +1948,24 @@ list-style: none;
 @media (min-width: 1500px){
 
 }
-@media (max-width: 1440px) {
-  .hero-banner-one{
-    padding: 20px 40px 140px;
+@media (max-width: 1400px) {
+  .about-us-section{
+
   }
+  .desh-top {
+    height: 500px !important;
+}
+  .hero-banner-one{
+    padding: 40px 40px 140px;
+  }
+  .over-img {
+    margin-top: -544px;
+}
+.about-us-section.about-us-section-h {
+        margin-top: -120px;
+    }
   .hero-banner-content h1,.common-header-banner h1 {
-    font-size: 40px;
+    font-size: 46px;
     margin-bottom:15px
   }
   .hero-banner-content p {
@@ -1970,10 +1986,25 @@ list-style: none;
   .subsc-head .sub-it span {
     font-size: 16px;
   }
+   .desh-top {
+    height: 500px !important;
+}
+  .hero-banner-one{
+    padding: 30px 40px 100px;
+  }
+  .over-img {
+    margin-top: -544px;
+}
+.about-us-section.about-us-section-h {
+        margin-top: -240px;
+    }
 }
 @media (min-width: 993px) and (max-width: 1200px) {
 }
 @media (max-width: 992px) {
+  .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
   .quote-us-content p {
     font-size: 24px;
     padding: 0px 20px;
@@ -2122,6 +2153,7 @@ list-style: none;
 .about-us-content h2,.about-us-content{
   margin-bottom: 20px;
 }
+
 }
 @media (min-width: 768px) and (max-width: 992px) {
 }
@@ -2152,8 +2184,8 @@ list-style: none;
     padding-bottom: 15px;
   }
   .card-02-item {
-    flex: 0 0 45%;
-    max-width: 45%;
+    flex: 0 0 90%;
+    max-width: 90%;
   }
   .card-02-item h3 {
     font-size: 16px;
@@ -2179,7 +2211,7 @@ list-style: none;
     max-width: 45%;
   }
   .hero-banner-content {
-    padding: 20px;
+    padding: 0px;
   }
   .hero-banner-content p {
     font-size: 14px;
@@ -2221,10 +2253,10 @@ list-style: none;
          border: 1px solid #000 !important;
           color: #000 !important;
   }
- .desh-top{
+ /* .desh-top{
     
      display:none
-  }
+  } */
   .mobile-top{
    display:block
   }
@@ -2248,6 +2280,51 @@ list-style: none;
   .card-04 .card-04-item a h4 {
     font-size: 14px;
 }
+.over-img {
+                margin-top: 30px;
+    }
+        .desh-top {
+        height: 400px !important;
+    }
+        .about-us-section.about-us-section-h {
+        margin-top: 0;
+    }
+    .desh-top {
+       display:none
+    }
+    .hero-banner-one{
+      background: #6e512f;
+        height: auto;
+    }
+    .d-flex-grd {
+    flex-wrap: wrap;
+}
+.about-us-content h2, .about-us-content {
+        margin-top: 40px;
+    }
+    .horz-nav-tab-ull ul{
+      display: flex;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+        justify-content: normal;
+        padding-bottom: 10px;
+        width: 100%;
+        margin-bottom: 15px;
+        flex-direction: inherit !important;
+    }
+    .my-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+.about-us-image {
+        margin-top: 40px;
+    }
+    .button-center-new {
+    flex-wrap: wrap;
+}
+    
 }
 
 
