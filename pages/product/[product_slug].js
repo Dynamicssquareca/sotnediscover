@@ -78,7 +78,13 @@ const ProductPage = ({ product, relatedProducts, specifications, error }) => {
           <div className='col-lg-12'>
             <nav aria-label="breadcrumb">
               <ol className="breadcrumb">
-                <li className="breadcrumb-item"><a href={`/${product.category.slug}/`}>{product.category. title}</a></li>
+                <li className="breadcrumb-item">
+                  {product?.subcategory ? (
+                    <a href={`/${product.category.slug}/${product.subcategory.slug}/`}>{product.subcategory.title}</a>
+                  ) : (
+                    <span>Uncategorized</span>
+                  )}
+                </li>
                 <li className="breadcrumb-item active" aria-current="page">{product.Title || product.title}</li>
               </ol>
             </nav>
@@ -202,7 +208,7 @@ const ProductPage = ({ product, relatedProducts, specifications, error }) => {
 
                   <div className='card-04'>
                     <div className='card-04-item text-center'>
-                      <a href={`/tombstones-monuments/${product.category.slug}/${rel.slug}`}>
+                      <a href={`/product/${rel.slug}`}>
                         <Image
                           src={getImageUrl(rel.images?.[0])}
                           alt={rel.title}
