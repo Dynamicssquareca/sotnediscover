@@ -105,8 +105,8 @@ const Index = ({ categories }) => {
                     <div className='row'>
                         <div className='col-lg-6 align-self-end'>
                             <div className='hero-banner-two-head '>
-                                <h1>Memorial <span> Stones</span></h1>
-                                <p>The UK’s Trusted Partner for Quality Memorial Stones</p>
+                                <h1>Tombstones <span> Stones</span></h1>
+                                <p>The USA Trusted Partner for Quality Tombstones Stones</p>
                             </div>
                         </div>
                         <div className='col-lg-6'>
@@ -159,7 +159,7 @@ const Index = ({ categories }) => {
 
                         <div className='col-lg-6'>
                             <div className='about-us-content'>
-                                <h2>About Memorial Stones</h2>
+                                <h2>About Tombstones Monuments</h2>
                                 <p>Memorial stones are a long-lasting way to honour the memory of loved ones. These are specially crafted using premium granite stones and are available in a variety of shapes and sizes. Memorial stones reflect individual stories, cultural values, and timeless remembrance.</p>
                                 <p>At Stone Discover UK, we supply a complete range of memorial stones, designed to meet diverse needs across the funeral and memorial trade. We offer a wide variety of granite monuments in colours such as Absolute Indian Black, Bahama Blue, Light Grey, Indian Aurora, and Imperial Red, among others. We also offer imported granite options, including Blue Pearl, Olive Green, and South African Impala.</p>
                                 <p>Stone Discover UK is a trusted B2B supplier of high-quality granite memorial stones for the UK trade. We work with dealers, wholesalers, memorial retailers, and local authorities to deliver premium monuments at competitive prices.</p>
