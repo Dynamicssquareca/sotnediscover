@@ -13,6 +13,7 @@ import { Accordion, AccordionBody, AccordionHeader, AccordionItem, } from 'react
 import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
 import ModelBox from '@/components/ModelBox';
 
+
 const getImageUrl = (img) =>
   img ? `${process.env.NEXT_PUBLIC_IMAGE}/${img}` : '/img/webpages/product-01.jpg';
 
@@ -39,7 +40,7 @@ const ProductPage = ({ product, relatedProducts, specifications, error }) => {
       setOpenone(id);
     }
   };
-  const canonicalUrl = `${process.env.NEXT_PUBLIC_SITE_URL}tombstones-monuments/${product.category.slug}/${product.slug}/`;
+  const canonicalUrl = `${process.env.NEXT_PUBLIC_SITE_URL}product/${product.slug}/`;
   const CanImageUrl = (img) => {
     if (!img) return '';
     if (img.startsWith('http')) return img;
@@ -77,8 +78,7 @@ const ProductPage = ({ product, relatedProducts, specifications, error }) => {
           <div className='col-lg-12'>
             <nav aria-label="breadcrumb">
               <ol className="breadcrumb">
-                <li className="breadcrumb-item"><a href="/tombstones-monuments/">Memorial Stones</a></li>
-                <li className="breadcrumb-item"><a href={`/tombstones-monuments/${product.category.slug}/`}>{product.category.title}</a></li>
+                <li className="breadcrumb-item"><a href={`/${product.category.slug}/`}>{product.category. title}</a></li>
                 <li className="breadcrumb-item active" aria-current="page">{product.Title || product.title}</li>
               </ol>
             </nav>

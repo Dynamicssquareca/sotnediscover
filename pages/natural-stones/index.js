@@ -13,13 +13,13 @@ export const getStaticProps = async () => {
         const categoriesRaw = await res.json()
 
         // categoriesRaw is expected to be an array of category objects.
-        // Find the parent category with slug 'tombstones-monuments'
+        // Find the parent category with slug 'natural-stones'
         let parentCategory = null;
         if (Array.isArray(categoriesRaw)) {
             parentCategory = categoriesRaw.find(
                 (c) =>
-                    (typeof c.slug === 'string' && c.slug === 'tombstones-monuments') ||
-                    (typeof c.title === 'string' && c.title.toLowerCase().includes('tombstone'))
+                    (typeof c.slug === 'string' && c.slug === 'natural-stones') ||
+                    (typeof c.title === 'string' && c.title.toLowerCase().includes('natural'))
             );
         } else if (categoriesRaw && typeof categoriesRaw === 'object') {
             // in case API returned an object with data/results
@@ -27,8 +27,8 @@ export const getStaticProps = async () => {
             if (Array.isArray(arr)) {
                 parentCategory = arr.find(
                     (c) =>
-                        (typeof c.slug === 'string' && c.slug === 'tombstones-monuments') ||
-                        (typeof c.title === 'string' && c.title.toLowerCase().includes('tombstone'))
+                        (typeof c.slug === 'string' && c.slug === 'natural-stones') ||
+                        (typeof c.title === 'string' && c.title.toLowerCase().includes('natural'))
                 );
             }
         }
@@ -82,12 +82,12 @@ const Index = ({ categories }) => {
                     name="description"
                     content="Stone Discover UK supplies high-quality memorial stones at wholesale prices. Trusted by funeral homes and retailers across the UK. Contact us today!"
                 />
-                <link rel="canonical" href="https://www.stonediscover.co.uk/tombstones-monuments/" />
+                <link rel="canonical" href="https://www.stonediscover.co.uk/natural-stones/" />
                 <meta property="og:locale" content="US" />
                 <meta property="og:type" content="website" />
                 <meta property="og:title" content="UK’s Trusted Supplier of Memorial Stones | Stone Discover UK" />
                 <meta property="og:description" content="Stone Discover UK supplies high-quality memorial stones at wholesale prices. Trusted by funeral homes and retailers across the UK. Contact us today!" />
-                <meta property="og:url" content="https://www.stonediscover.co.uk/tombstones-monuments/" />
+                <meta property="og:url" content="https://www.stonediscover.co.uk/natural-stones/" />
                 <meta property="og:site_name" content="Stone Discover UK" />
                 <meta property="og:image" content="https://www.stonediscover.co.uk/img/stone-og-inne.jpeg" />
                 <meta property="og:image:width" content="200" />
@@ -133,7 +133,7 @@ const Index = ({ categories }) => {
                                 <div className="col-lg-3 sliding-col-05" key={category.id}>
                                     <div className="card-06">
                                         <div className="card-06-item">
-                                            <a href={`/tombstones-monuments/${category.slug}/`}>
+                                            <a href={`/natural-stones/${category.slug}/`}>
                                                 <Image
                                                     src={getImageUrl(category.image)}
                                                     alt={category.title}
