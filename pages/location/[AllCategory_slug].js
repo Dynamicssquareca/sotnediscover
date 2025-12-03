@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Head from 'next/head';
 import { Accordion, AccordionBody, AccordionHeader, AccordionItem } from 'reactstrap';
 import Image from 'next/image';
 import ModelBox from '@/components/ModelBox';
 import { useRouter } from 'next/router';
+import FooterContactFormHome from '@/components/FooterContactFormHome';
 
 const getImageUrl = (img) =>
   img ? `${process.env.NEXT_PUBLIC_IMAGE}/${img}` : '/img/webpages/product-01.jpg';
@@ -11,39 +12,61 @@ const getImageUrl = (img) =>
 const getImageUrlBanner = (img) =>
   img ? `${process.env.NEXT_PUBLIC_IMAGE}/${img}` : '/img/webpages/product-01.jpg';
 
-const CategoryPage = ({ category, products, faq, error }) => {
+const CategoryPage = ({ category, subcategory, products = [], faq, error, siblingsProducts = [] }) => {
   if (error) {
     return <p className="text-danger">{error}</p>;
   }
-
-  if (!category) {
+  if (!category && !subcategory) {
     return <p className="text-warning">Category not found.</p>;
   }
 
-  /*accordian code*/
+  /* accordion code */
   const [open, setOpen] = useState('1');
   const toggle = (id) => {
-    if (open === id) {
-      setOpen();
-    } else {
-      setOpen(id);
+    setOpen(open === id ? undefined : id);
+  };
+
+  // Read More -> scroll & open behaviour
+  const descRef = useRef(null);
+  const handleReadMore = (e) => {
+    e && e.preventDefault();
+    setOpen('desc');
+    if (descRef.current) {
+      setTimeout(() => {
+        descRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        // adjust for fixed header if needed:
+        // window.scrollBy(0, -80);
+      }, 50);
     }
   };
-  /*meta code*/
 
   const router = useRouter();
   const { AllCategory_slug } = router.query;
 
-  // (kept your duplicate checks as-is)
-  if (error) {
-    return <p className="text-danger">{error}</p>;
-  }
+  // Prefer subcategory content if subcategory exists, otherwise fall back to category
+  const primary = subcategory || category || {};
 
-  if (!category) {
-    return <p className="text-warning">Category not found.</p>;
-  }
+  const displayDescription =
+    (primary.description && primary.description.trim() && primary.description) ||
+    (primary.extdescription && primary.extdescription.trim() && primary.extdescription) ||
+    (primary.extdesc && primary.extdesc.trim() && primary.extdesc) ||
+    '';
 
-  const canonicalUrl = `${process.env.NEXT_PUBLIC_SITE_URL}location/${category.slug}/`;
+  const displayShortDesc = (primary.shortdescription && primary.shortdescription) || '';
+
+  const displayHeroImage = primary.image || primary.featuredimage || '';
+
+  // FAQs: prefer subcategory -> category -> passed faq prop -> []
+  const displayFaqs =
+    (Array.isArray(subcategory?.faqs) && subcategory.faqs.length > 0
+      ? subcategory.faqs
+      : Array.isArray(category?.faqs) && category.faqs.length > 0
+        ? category.faqs
+        : Array.isArray(faq) && faq.length > 0
+          ? faq
+          : []);
+
+  const canonicalUrl = `${process.env.NEXT_PUBLIC_SITE_URL}location/${(primary.slug || category?.slug || '').replace(/^\//, '')}/`;
   const CanImageUrl = (img) => {
     if (!img) return '';
     if (img.startsWith('http')) return img;
@@ -53,51 +76,33 @@ const CategoryPage = ({ category, products, faq, error }) => {
   return (
     <>
       <Head>
-        <title>{category.metaTitle || category.title}</title>
-        <meta name="description" content={category.metaDescription || category.excerpt || ''} />
+        <title>{primary.metaTitle || primary.title || category?.title}</title>
+        <meta name="description" content={primary.metaDescription || primary.excerpt || ''} />
         <link rel="canonical" href={canonicalUrl} />
-        {category.metaKeywords && <meta name="keywords" content={category.metaKeywords} />}
-        <meta property="og:title" content={category.metaTitle || category.title} />
-        <meta property="og:description" content={category.metaDescription || category.excerpt || ''} />
+        {primary.metaKeywords && <meta name="keywords" content={primary.metaKeywords} />}
+        <meta property="og:title" content={primary.metaTitle || primary.title || category?.title} />
+        <meta property="og:description" content={primary.metaDescription || primary.excerpt || ''} />
         <meta property="og:site_name" content="Stone Discover UK" />
         <meta
           property="og:image"
           content={
-            category.featuredimage
-              ? CanImageUrl(category.featuredimage)
+            primary.featuredimage
+              ? CanImageUrl(primary.featuredimage)
               : `${process.env.NEXT_PUBLIC_SITE_URL}img/stone-og-inne.jpeg`
           }
         />
       </Head>
 
       <div
-        className="hero-banner-two"
-        style={{
-          backgroundImage: 'url("/img/banner/hero-banner-02.jpg")',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-        }}
-      >
+        className="hero-banner-twso">
         <div className="container">
           <div className="row">
             <div className="col-lg-6 align-self-end">
-              <div className="hero-banner-two-head ">
+              <div className="hero-banner-two-head-cust">
                 <h1>
-                  <span>{category.title}</span>
+                  <span>{primary.title || category?.title}</span>
                 </h1>
-                <p>{category.shortdescription}</p>
-              </div>
-            </div>
-            <div className="col-lg-6">
-              <div className="hero-banner-two-image">
-                <Image
-                  width={563}
-                  height={563}
-                  src={getImageUrlBanner(category.image)}
-                  alt={category.title}
-                  className="img-fluid"
-                />
+                <p>{displayShortDesc}</p>
               </div>
             </div>
           </div>
@@ -112,10 +117,10 @@ const CategoryPage = ({ category, products, faq, error }) => {
             </div>
           </div>
 
-          {Array.isArray(products) && products.length > 0 ? (
-            products
-              .slice() // prevents mutation
-              .sort((a, b) => a.title.localeCompare(b.title)) // A → Z alphabetical
+          {Array.isArray(siblingsProducts) && siblingsProducts.length > 0 ? (
+            siblingsProducts
+              .slice()
+              .sort((a, b) => (a.title || '').localeCompare(b.title || ''))
               .map((product) => (
                 <div className="col-lg-3 sliding-col-05" key={product._id || product.id || product.slug}>
                   <div className="card-06">
@@ -124,7 +129,7 @@ const CategoryPage = ({ category, products, faq, error }) => {
                         <Image
                           width={300}
                           height={200}
-                          src={getImageUrl(product.images?.[0])}
+                          src={getImageUrl(product.images?.[0] || product.featuredimage)}
                           alt={product.title}
                           className="img-fluid"
                         />
@@ -147,11 +152,15 @@ const CategoryPage = ({ category, products, faq, error }) => {
           <div className="row">
             <div className="col-lg-6">
               <div className="about-us-content">
-                <h2>About {category.title}</h2>
-                <div dangerouslySetInnerHTML={{ __html: category.description }}>{}</div>
-                <a href="/about-us/" className="btn btn-four m-t-30">
+                <h2>About {primary.title || category?.title}</h2>
+
+                {displayDescription ? (
+                  <div dangerouslySetInnerHTML={{ __html: displayDescription }} />
+                ) : null}
+
+                <button onClick={handleReadMore} className="btn btn-four m-t-30">
                   Read More
-                </a>
+                </button>
               </div>
             </div>
 
@@ -164,32 +173,66 @@ const CategoryPage = ({ category, products, faq, error }) => {
         </div>
       </section>
 
-      <section className="partner-section">
+      {/* Full Description target */}
+      <section className="p-t-20 p-b-40" ref={descRef}>
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
               <div className="heading-left p-b-20">
-                <h2 className="m-b-30">Why Partner with Us?</h2>
+                <h2 className="m-b-30">Full Description</h2>
               </div>
             </div>
           </div>
+
           <div className="row">
-            <div className="col-lg-6 align-self-center">
-              <div className="partner-pic">
-                <img src="/img/webpages/headstones-pic.png" alt="partent-side-pic" />
+            <div className="col-lg-12">
+              <div className="accordion-one accordion-one-product">
+                <Accordion open={open} toggle={toggle}>
+                  <AccordionItem>
+                    <AccordionHeader targetId="desc">
+                      <div className="d-flex justify-content-between align-items-center w-100">
+                        <h3>About {primary.title || category?.title} — Details</h3>
+                      </div>
+                    </AccordionHeader>
+                    <AccordionBody accordionId="desc">
+                      {displayDescription ? (
+                        <div dangerouslySetInnerHTML={{ __html: displayDescription }} />
+                      ) : (
+                        <p>No additional details available.</p>
+                      )}
+                    </AccordionBody>
+                  </AccordionItem>
+                </Accordion>
               </div>
             </div>
-            <div className="col-lg-6 align-self-center">
-              <div className="form-left">
-                <div className="accordion-one accordion-one-product">
+          </div>
+        </div>
+      </section>
+
+      {/* Partner section (unchanged) */}
+      <section className='partner-section'>
+        <div className='container'>
+          <div className='row'>
+            <div className='col-lg-12'>
+              <div className='heading-left p-b-20'>
+                <h2 className='m-b-30'>Why Partner with Us?</h2>
+              </div>
+            </div>
+          </div>
+          <div className='row'>
+            <div className='col-lg-6 align-self-center'>
+              <div className='partner-pic'>
+                <img src='/img/webpages/headstones-pic.png' alt='partent-side-pic' />
+              </div>
+            </div>
+            <div className='col-lg-6 align-self-center'>
+              <div className='form-left'>
+                <div className='accordion-one accordion-one-product'>
                   <Accordion open={open} toggle={toggle}>
                     <AccordionItem>
                       <AccordionHeader targetId="1">
                         <div className="d-flex justify-content-between align-items-center w-100">
-                          <h3>
-                            <img src="/img/icons/faq-icon-01.png" alt="faq-icon" />
-                            Direct Manufacturer Advantage
-                          </h3>
+                          <h3><img src='/img/icons/faq-icon-01.png' alt='faq-icon' />Direct Manufacturer Advantage</h3>
                         </div>
                       </AccordionHeader>
                       <AccordionBody accordionId="1">
@@ -201,31 +244,21 @@ const CategoryPage = ({ category, products, faq, error }) => {
                         </ul>
                       </AccordionBody>
                     </AccordionItem>
-
                     <AccordionItem>
                       <AccordionHeader targetId="2">
                         <div className="d-flex justify-content-between align-items-center w-100">
-                          <h3>
-                            <img src="/img/icons/faq-icon-02.png" alt="faq-icon" />
-                            Consistent Quality, Every Time
-                          </h3>
+                          <h3><img src='/img/icons/faq-icon-02.png' alt='faq-icon' />Consistent Quality, Every Time</h3>
                         </div>
                       </AccordionHeader>
                       <AccordionBody accordionId="2">
-                        <p>
-                          Our tombstones are crafted from premium-grade Indian granite, renowned for its durability and timeless appeal. Every piece is
-                          quality-checked to ensure consistent finishing, accurate dimensions, and enduring aesthetics.
-                        </p>
+                        <p>Our tombstones are crafted from premium-grade Indian granite, renowned for its durability and timeless appeal. Every piece is quality-checked to ensure consistent finishing, accurate dimensions, and enduring aesthetics.</p>
+
                       </AccordionBody>
                     </AccordionItem>
-
                     <AccordionItem>
                       <AccordionHeader targetId="3">
                         <div className="d-flex justify-content-between align-items-center w-100">
-                          <h3>
-                            <img src="/img/icons/faq-icon-03.png" alt="faq-icon" />
-                            Bespoke Designs
-                          </h3>
+                          <h3><img src='/img/icons/faq-icon-03.png' alt='faq-icon' />Bespoke Designs</h3>
                         </div>
                       </AccordionHeader>
                       <AccordionBody accordionId="3">
@@ -240,14 +273,10 @@ const CategoryPage = ({ category, products, faq, error }) => {
                         </ul>
                       </AccordionBody>
                     </AccordionItem>
-
                     <AccordionItem>
                       <AccordionHeader targetId="4">
                         <div className="d-flex justify-content-between align-items-center w-100">
-                          <h3>
-                            <img src="/img/icons/faq-icon-04.png" alt="faq-icon" />
-                            Seamless Logistics & Delivery
-                          </h3>
+                          <h3><img src='/img/icons/faq-icon-04.png' alt='faq-icon' />Seamless Logistics & Delivery</h3>
                         </div>
                       </AccordionHeader>
                       <AccordionBody accordionId="4">
@@ -259,6 +288,8 @@ const CategoryPage = ({ category, products, faq, error }) => {
                         </ul>
                       </AccordionBody>
                     </AccordionItem>
+
+
                   </Accordion>
                 </div>
               </div>
@@ -266,166 +297,72 @@ const CategoryPage = ({ category, products, faq, error }) => {
           </div>
         </div>
       </section>
+      <section className='p-t-60'>
+                <div className='container'>
+                    <div className='row justify-content-center'>
+                        <div className='col-lg-9'>
+                            <div className='heading-center p-b-40'>
+                                <h2 className='m-b-30'>Join Hands with a Reliable <span>Tombstone Supplier</span></h2>
+                                <p>Whether you’re a high-volume buyer or expanding your product line, our team is here to support your growth. We understand the B2B dynamics of the memorial industry and deliver not just products—but trust, consistency, and partnership.</p>
+                            </div>
+                            <div className='button-center-new text-center'>
+                                <ModelBox className='btn-three' headerText="Scale Your Store! " buttonText="Request a Quote" />
+                                <a className='btn-four btn-four-cc' href="/catalog-download">Request Catalogue</a>
 
-      <section className="p-b-100 p-t-80 m-p-07">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-9">
-              <div className="heading-center p-b-40">
-                <h2 className="m-b-30">
-                  Memorial Collection <span>Crafted</span> for All
-                </h2>
-                <p>
-                  We offer a wide range of expertly crafted memorial designs to suit every need and occasion. From classic headstones and kerbsets to elegant bench and
-                  heart memorials, our collection also includes vases, urns, angel tributes, and dedicated children’s memorials. Each piece is made with care, precision,
-                  and a deep respect for the memories it honors. Contact us directly for competitive quotes and tailored solutions.
-                </p>
-              </div>
-            </div>
-          </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-          <div className="row g-2 sliding-row">
-            <div className="col-lg-2 col-md-4 sliding-col">
-              <div className="card-04">
-                <div className="card-04-item text-center">
-                  <a href="/tombstones-monuments/benches/">
-                    <img src="/img/webpages/pic-07.jpg" alt="About Us" className="img-fluid" />
-                    <h4>Bench</h4>
-                  </a>
-                </div>
-              </div>
-            </div>
 
-            <div className="col-lg-2 col-md-4 sliding-col">
-              <div className="card-04">
-                <div className="card-04-item text-center">
-                  <a href="/tombstones-monuments/kerb-sets/">
-                    <img src="/img/webpages/pic-08.jpg" alt="About Us" className="img-fluid" />
-                    <h4>Kerbsets</h4>
-                  </a>
-                </div>
-              </div>
-            </div>
+            <section className='p-b-30 p-t-80'>
+                <div className='container'>
+                    <div className='row justify-content-center'>
+                        <div className='col-lg-9'>
+                            <div className='heading-center p-b-40'>
+                                <h2 className='m-b-30'>Why Choose Us?</h2>
+                                <p>Whether you’re a high-volume buyer or expanding your product line, our team is here to support your growth. We understand the B2B dynamics of the memorial industry and deliver not just products—but trust, consistency, and partnership.</p>
+                            </div>
 
-            <div className="col-lg-2 col-md-4 sliding-col">
-              <div className="card-04">
-                <div className="card-04-item text-center">
-                  <a href="/tombstones-monuments/vases/">
-                    <img src="/img/webpages/pic-09.jpg" alt="About Us" className="img-fluid" />
-                    <h4>Flower Vases</h4>
-                  </a>
-                </div>
-              </div>
-            </div>
+                        </div>
+                    </div>
 
-            <div className="col-lg-2 col-md-4 sliding-col">
-              <div className="card-04">
-                <div className="card-04-item text-center">
-                  <a href="/tombstones-monuments/urns/">
-                    <img src="/img/webpages/pic-10.jpg" alt="About Us" className="img-fluid" />
-                    <h4>Urns</h4>
-                  </a>
+                    <div className='row'>
+                        <div className='col-lg-12'>
+                            <div className='card-05'>
+                                <div className='card-05-item'>
+                                    <img src='/img/icons/icons-1.png' alt='About Us' className='img-fluid' />
+                                    <span>Quality Craftmanship</span>
+                                </div>
+                                <div className='card-05-item'>
+                                    <img src='/img/icons/icons-2.png' alt='About Us' className='img-fluid' />
+                                    <span>Nationwide Delivery</span>
+                                </div>
+                                <div className='card-05-item'>
+                                    <img src='/img/icons/icons-3.png' alt='About Us' className='img-fluid' />
+                                    <span>24*7 Customer Service</span>
+                                </div>
+                                <div className='card-05-item'>
+                                    <img src='/img/icons/icons-4.png' alt='About Us' className='img-fluid' />
+                                    <span>Custom Designs</span>
+                                </div>
+                                <div className='card-05-item'>
+                                    <img src='/img/icons/icons-5.png' alt='About Us' className='img-fluid' />
+                                    <span>Experienced Masons</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
+            </section>
 
-            <div className="col-lg-2 col-md-4 sliding-col">
-              <div className="card-04">
-                <div className="card-04-item text-center">
-                  <a href="/tombstones-monuments/angel-headstone/">
-                    <img src="/img/webpages/pic-11.jpg" alt="About Us" className="img-fluid" />
-                    <h4>Angle Headstones</h4>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-2  col-md-4 sliding-col">
-              <div className="card-04">
-                <div className="card-04-item text-center">
-                  <a href="/tombstones-monuments/childrens-headstones/">
-                    <img src="/img/webpages/pic-12.jpg" alt="About Us" className="img-fluid" />
-                    <h4>Children Memorial</h4>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="p-t-20 ">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-9">
-              <div className="heading-center p-b-40">
-                <h2 className="m-b-30">Join Hands with a Reliable <span>Tombstone Supplier</span></h2>
-                <p>
-                  Whether you’re a high-volume buyer or expanding your product line, our team is here to support your growth. We understand the B2B dynamics of the
-                  memorial industry and deliver not just products—but trust, consistency, and partnership.
-                </p>
-              </div>
-              <div className="button-center-new text-center">
-                <ModelBox className="btn-three" headerText="Scale Your Store! " buttonText="Request a Quote" />
-                <a className="btn-four btn-four-cc" href="/catalog-download">
-                  Request Catalogue
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="p-b-30 p-t-80 m-p-09">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-9">
-              <div className="heading-center p-b-40">
-                <h2 className="m-b-30">Why Choose Us?</h2>
-                <p>
-                  Whether you’re a high-volume buyer or expanding your product line, our team is here to support your growth. We understand the B2B dynamics of the memorial
-                  industry and deliver not just products—but trust, consistency, and partnership.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="row">
-            <div className="col-lg-12">
-              <div className="card-05">
-                <div className="card-05-item">
-                  <img src="/img/icons/icons-1.png" alt="About Us" className="img-fluid" />
-                  <span>Quality Craftmanship</span>
-                </div>
-                <div className="card-05-item">
-                  <img src="/img/icons/icons-2.png" alt="About Us" className="img-fluid" />
-                  <span>Nationwide Delivery</span>
-                </div>
-                <div className="card-05-item">
-                  <img src="/img/icons/icons-3.png" alt="About Us" className="img-fluid" />
-                  <span>24*7 Customer Service</span>
-                </div>
-                <div className="card-05-item">
-                  <img src="/img/icons/icons-4.png" alt="About Us" className="img-fluid" />
-                  <span>Custom Designs</span>
-                </div>
-                <div className="card-05-item">
-                  <img src="/img/icons/icons-5.png" alt="About Us" className="img-fluid" />
-                  <span>Experienced Masons</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* pass computed displayFaqs to FooterContactFormHome */}
+      <FooterContactFormHome faqList={displayFaqs} />
     </>
   );
 };
 
-/**
- * getStaticPaths
- * - uses NEXT_PUBLIC_PRODUCT_CATEGORY_API_URL env var if present, otherwise falls back
- */
 export const getStaticPaths = async () => {
   try {
     const categoriesUrl =
@@ -443,8 +380,8 @@ export const getStaticPaths = async () => {
 
     const paths = Array.isArray(data)
       ? data.map((cat) => ({
-          params: { AllCategory_slug: cat.slug },
-        }))
+        params: { AllCategory_slug: cat.slug },
+      }))
       : [];
 
     return {
@@ -460,11 +397,6 @@ export const getStaticPaths = async () => {
   }
 };
 
-/**
- * getStaticProps
- * - uses NEXT_PUBLIC_CATEGORY_CHILD_API_URL env var if present, otherwise falls back
- *   to https://stonediscoverusaapi.onrender.com/api/frontend/productscategory/<slug>
- */
 export const getStaticProps = async ({ params }) => {
   try {
     const detailsBase =
@@ -478,41 +410,58 @@ export const getStaticProps = async ({ params }) => {
     if (res.status === 404) {
       return { notFound: true };
     }
-
     if (!res.ok) {
       throw new Error(`Failed fetching category details: ${res.status}`);
     }
 
     const data = await res.json();
 
-    // Support both shapes: { category: {...}, products: [...] } and direct category object
-    if (!data || (!data.category && !data.products && !data.subcategories && !data.slug)) {
+    if (!data || (!data.category && !data.products && !data.siblingsProducts && !data.subcategory && !data.slug)) {
       return { notFound: true };
     }
 
-    if (data && data.slug && !data.category) {
-      // response is the category itself
-      const categoryObj = data;
-      const products = data.products || [];
-      return {
-        props: {
-          category: categoryObj,
-          products,
-          faq: categoryObj.faqs || null,
-        },
-        revalidate: 60,
-      };
+    // determine category and subcategory regardless of shape
+    let category = null;
+    let subcategory = null;
+    let products = [];
+    let siblingsProducts = [];
+
+    // If API returned top-level "category" and "subcategory"
+    if (data.category) {
+      category = data.category;
+      // some responses include subcategory at top-level or nested
+      subcategory = data.subcategory || data.category.subcategory || null;
+      products = data.products || [];
+      siblingsProducts = data.siblingsProducts || data.siblings || [];
+    } else if (data.slug && !data.category) {
+      // data is the category object itself (maybe includes products and subcategory)
+      category = data;
+      subcategory = data.subcategory || null;
+      products = data.products || [];
+      siblingsProducts = data.siblingsProducts || data.siblings || [];
+    } else if (data.subcategory) {
+      // fallback: top-level subcategory with parent category provided in data.category or data.categoryId
+      subcategory = data.subcategory;
+      category = data.category || null;
+      products = data.products || [];
+      siblingsProducts = data.siblingsProducts || data.siblings || [];
+    } else {
+      // last fallback: data is something else, map fields defensively
+      category = data.category || data;
+      subcategory = data.subcategory || null;
+      products = data.products || [];
+      siblingsProducts = data.siblingsProducts || data.siblings || [];
     }
 
-    const category = data.category || data;
-    const products = data.products || [];
-    const faq = (category && category.faqs) || null;
+    const faq = (subcategory && subcategory.faqs) || (category && category.faqs) || null;
 
     return {
       props: {
         category,
+        subcategory,
         products,
         faq,
+        siblingsProducts,
       },
       revalidate: 60,
     };
@@ -521,14 +470,15 @@ export const getStaticProps = async ({ params }) => {
     return {
       props: {
         category: null,
+        subcategory: null,
         products: [],
         faq: null,
+        siblingsProducts: [],
         error: 'Something went wrong while loading this page.',
       },
       revalidate: 60,
     };
   }
 };
-
 
 export default CategoryPage;

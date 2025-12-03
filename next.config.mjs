@@ -5,7 +5,7 @@ const nextConfig = {
   trailingSlash: true,
   output: "standalone",
   env: {
-    NEXT_PUBLIC_SITE_URL:'https://www.stonediscover.co.uk/',
+    NEXT_PUBLIC_SITE_URL:'https://www.stonediscover.com/',
     NEXT_PUBLIC_MAIN_API_URL:'https://stonediscoverusaapi.onrender.com/api/frontend',
     NEXT_PUBLIC_PRODUCTS_API_URL:'https://stonediscoverusaapi.onrender.com/api/frontend/products',
     NEXT_PUBLIC_PRODUCTS_DETAILS_API_URL:'https://stonediscoverusaapi.onrender.com/api/frontend/productdetails',
@@ -24,6 +24,12 @@ const nextConfig = {
   images: {
     formats: ["image/avif", "image/webp"],
     remotePatterns: [
+      {
+        protocol: "https",  
+        hostname: "stonediscover.com",
+        port: "",
+        pathname: "/**",
+      },
       {
         protocol: "https",  
         hostname: "stonediscoverusaapi.onrender.com",

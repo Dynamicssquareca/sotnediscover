@@ -12,7 +12,10 @@ const FooterContactForm = ({faq}) => {
     // Define the pathname of the page where you want to hide the component
     const hiddenPagePaths = ['/contact-us', '/thank-you','/get-quote-now','/catalog-download'];
 
-    const hideTombstonePages = router.asPath.startsWith('/tombstones-monuments');
+    const hideTombstonePages =
+  router.asPath.startsWith('/tombstones-monuments') ||
+    router.asPath.startsWith('/location') ||
+  router.asPath.startsWith('/natural-stones');
 
     // Check for exact match pages OR tombstone category pages
   const shouldHide =
