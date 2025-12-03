@@ -40,30 +40,75 @@ const ProductPage = ({ product, relatedProducts, specifications, error }) => {
       setOpenone(id);
     }
   };
-  const canonicalUrl = `${process.env.NEXT_PUBLIC_SITE_URL}product/${product.slug}/`;
-  const CanImageUrl = (img) => {
-    if (!img) return '';
-    if (img.startsWith('http')) return img;
-    return `${process.env.NEXT_PUBLIC_IMAGE.replace(/\/$/, '')}/${img.replace(/^\//, '')}`;
+  // --- helpers (place above return) ---
+  const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || '').replace(/\/$/, '') + '/';
+  const pagePath = `product/${product.slug}/`;
+
+  const canonicalUrl = `${siteUrl}${pagePath}`;
+
+  const metaTitle =
+    product?.metaTitle ||
+    product?.title ||
+    'UK’s Trusted Supplier of Memorial Stones | Stone Discover UK';
+
+  const metaDescription =
+    product?.metaDescription ||
+    product?.excerpt ||
+    product?.shortdescription ||
+    'Stone Discover UK supplies high-quality memorial stones at wholesale prices.';
+
+  // image selection
+  const metaImage =
+    (product?.featuredimage && getImageUrl(product.featuredimage)) ||
+    (product?.image && getImageUrl(product.image)) ||
+    'https://www.stonediscover.com/img/stone-og-inne.jpeg';
+
+  // *** BEST PRACTICE: Always provide fallback dimensions ***
+  const metaImageWidth = '1200';
+  const metaImageHeight = '630';
+
+  // get mime type correctly
+  const getImageMimeType = (img = '') => {
+    const clean = img.split('?')[0].split('#')[0];
+    const ext = clean.split('.').pop().toLowerCase();
+    if (['png', 'jpg', 'jpeg', 'webp', 'gif'].includes(ext)) {
+      return `image/${ext === 'jpg' ? 'jpeg' : ext}`;
+    }
+    return 'image/jpeg';
   };
+
+  const metaImageType = getImageMimeType(metaImage);
+
+  // --- JSX head block ---
   return (
     <>
       <Head>
-        <title>{product.metaTitle || product.title}</title>
-        <meta name="description" content={product.metaDescription || product.excerpt || ''} />
+        <title>{metaTitle}</title>
+        <meta name="description" content={metaDescription} />
         <link rel="canonical" href={canonicalUrl} />
-        {product.metaKeywords && <meta name="keywords" content={product.metaKeywords} />}
-        <meta property="og:title" content={product.metaTitle || product.title} />
-        <meta property="og:description" content={product.metaDescription || product.excerpt || ''} />
-        <meta property="og:site_name" content="Stone Discover UK" />
-        <meta
-          property="og:image"
-          content={
-            product.featuredimage
-              ? CanImageUrl(product.featuredimage)
-              : `${process.env.NEXT_PUBLIC_SITE_URL}img/stone-og-inne.jpeg`
-          }
-        />
+
+        {/* Keywords */}
+        {product?.metaKeywords && <meta name="keywords" content={product.metaKeywords} />}
+
+        {/* OG */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={metaTitle} />
+        <meta property="og:description" content={metaDescription} />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:image" content={metaImage} />
+        <meta property="og:image:width" content={metaImageWidth} />
+        <meta property="og:image:height" content={metaImageHeight} />
+        <meta property="og:image:type" content={metaImageType} />
+        <meta property="og:site_name" content="Stone Discover" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@StoneDiscover" />
+        <meta name="twitter:title" content={metaTitle} />
+        <meta name="twitter:description" content={metaDescription} />
+        <meta name="twitter:image" content={metaImage} />
+
+        {/* Schema */}
         {product.schema &&
           product.schema.map((scriptContent, index) => (
             <script
