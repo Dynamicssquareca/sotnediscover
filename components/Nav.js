@@ -120,7 +120,7 @@ const Nav = () => {
           <li className="dropdown"><a href="/tombstones-monuments/"><span>Tombstones</span> <i className="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="/tombstones-monuments/angel/">Angel Headstone</a></li>
-              <li><a href="/tombstones-monuments/book/">Book Headstones</a></li>
+              <li><a href="/tombstones-monuments/upright/">Upright Headstones</a></li>
               <li><a href="/tombstones-monuments/columbarium/">Columbarium</a></li>
               <li><a href="/tombstones-monuments/flat/">Flat Marker</a></li>
               <li><a href="/tombstones-monuments/headstones/">Granite Headstones</a></li>

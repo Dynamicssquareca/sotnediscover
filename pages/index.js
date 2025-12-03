@@ -127,7 +127,7 @@ export default function Home() {
             <div className='col-lg-12 text-center'>
               <div className='heading-center p-b-40'>
                 <h2 className='m-b-20'>Journey of<span> Natural Stone</span>, from Mines to your Doorstep!</h2>
-
+                <p>At Stone Discover India, the journey of natural stones begins deep within the earth, where skilled miners extract high-quality stones from mines located in various parts of India. These raw stones are then transported to quarries, where they are carefully extracted in large blocks, ensuring their integrity and quality.</p>
               </div>
             </div>
           </div>

@@ -81,7 +81,7 @@ const ProductPage = ({ product, relatedProducts, specifications, error }) => {
   const metaImageType = getImageMimeType(metaImage);
 
 
-    // FAQs: prefer subcategory -> category -> passed faq prop -> []
+  // FAQs: prefer subcategory -> category -> passed faq prop -> []
   const displayFaqs =
     (Array.isArray(product?.faqs) && product.faqs.length > 0
       ? product.faqs
@@ -291,13 +291,13 @@ const ProductPage = ({ product, relatedProducts, specifications, error }) => {
 
 
 
-      <section className='p-b-100 p-t-100 m-p-07'>
+      <section className='p-b-30 p-t-60 m-p-07'>
         <div className='container'>
           <div className='row justify-content-center'>
             <div className='col-lg-9'>
               <div className='heading-center p-b-40'>
-                <h2 className='m-b-30'>Why Choose Us?</h2>
-                <p>Whether you’re a high-volume buyer or expanding your product line, our team is here to support your growth. We understand the B2B dynamics of the memorial industry and deliver not just products—but trust, consistency, and partnership.</p>
+                <h2 className='m-b-30'>Pillars of Strength</h2>
+
               </div>
 
             </div>
@@ -307,24 +307,29 @@ const ProductPage = ({ product, relatedProducts, specifications, error }) => {
             <div className='col-lg-12'>
               <div className='card-05'>
                 <div className='card-05-item'>
-                  <Image src='/img/icons/icons-1.png' alt='About Us' width={58} height={76} className='img-fluid' />
-                  <span>Quality Craftmanship</span>
+                  <Image src='/img/icons/about-pi-01.png' alt='About Us' className='img-fluid' width={48} height={48} />
+                  <span>Finest Quality Stones</span>
+                  <p>We ensure that each tombstone is crafted with great attention to detail</p>
                 </div>
                 <div className='card-05-item'>
-                  <Image src='/img/icons/icons-2.png' alt='About Us' width={58} height={76} className='img-fluid' />
-                  <span>Nationwide Delivery</span>
+                  <Image src='/img/icons/about-pi-02.png' alt='About Us' className='img-fluid' width={48} height={48} />
+                  <span>Competitive Prices</span>
+                  <p>Get Quality Tombstones at the Best Rates!</p>
                 </div>
                 <div className='card-05-item'>
-                  <Image src='/img/icons/icons-3.png' alt='About Us' width={58} height={76} className='img-fluid' />
-                  <span>24*7 Customer Service</span>
+                  <Image src='/img/icons/about-pi-03.png' alt='About Us' className='img-fluid' width={48} height={48} />
+                  <span>On-time Delivery</span>
+                  <p>Ensuring Your Tombstones Arrive When You Need Them!</p>
                 </div>
                 <div className='card-05-item'>
-                  <Image src='/img/icons/icons-4.png' alt='About Us' width={58} height={76} className='img-fluid' />
-                  <span>Custom Designs</span>
+                  <Image src='/img/icons/about-pi-04.png' alt='About Us' className='img-fluid' width={48} height={48} />
+                  <span>Bulk Order</span>
+                  <p>Streamline Your Business with Our Premium Tombstones!</p>
                 </div>
                 <div className='card-05-item'>
-                  <Image src='/img/icons/icons-5.png' alt='About Us' width={58} height={76} className='img-fluid' />
-                  <span>Experienced Masons</span>
+                  <Image src='/img/icons/about-pi-05.png' alt='About Us' className='img-fluid' width={48} height={48} />
+                  <span>Shipping Worldwide</span>
+                  <p>Delivering Quality Tombstones Everywhere!</p>
                 </div>
               </div>
             </div>
@@ -524,7 +529,7 @@ const ProductPage = ({ product, relatedProducts, specifications, error }) => {
         </div>
       </section>
 
-                           <FooterContactFormHome faqList={displayFaqs} />
+      <FooterContactFormHome faqList={displayFaqs} />
 
 
 

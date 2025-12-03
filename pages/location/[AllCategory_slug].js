@@ -298,64 +298,69 @@ const CategoryPage = ({ category, subcategory, products = [], faq, error, siblin
         </div>
       </section>
       <section className='p-t-60'>
-                <div className='container'>
-                    <div className='row justify-content-center'>
-                        <div className='col-lg-9'>
-                            <div className='heading-center p-b-40'>
-                                <h2 className='m-b-30'>Join Hands with a Reliable <span>Tombstone Supplier</span></h2>
-                                <p>Whether you’re a high-volume buyer or expanding your product line, our team is here to support your growth. We understand the B2B dynamics of the memorial industry and deliver not just products—but trust, consistency, and partnership.</p>
-                            </div>
-                            <div className='button-center-new text-center'>
-                                <ModelBox className='btn-three' headerText="Scale Your Store! " buttonText="Request a Quote" />
-                                <a className='btn-four btn-four-cc' href="/catalog-download">Request Catalogue</a>
+        <div className='container'>
+          <div className='row justify-content-center'>
+            <div className='col-lg-9'>
+              <div className='heading-center p-b-40'>
+                <h2 className='m-b-30'>Join Hands with a Reliable <span>Tombstone Supplier</span></h2>
+                <p>Whether you’re a high-volume buyer or expanding your product line, our team is here to support your growth. We understand the B2B dynamics of the memorial industry and deliver not just products—but trust, consistency, and partnership.</p>
+              </div>
+              <div className='button-center-new text-center'>
+                <ModelBox className='btn-three' headerText="Scale Your Store! " buttonText="Request a Quote" />
+                <a className='btn-four btn-four-cc' href="/catalog-download">Request Catalogue</a>
 
-                            </div>
-                        </div>
-                    </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section className='p-b-30 p-t-60 m-p-07'>
+        <div className='container'>
+          <div className='row justify-content-center'>
+            <div className='col-lg-9'>
+              <div className='heading-center p-b-40'>
+                <h2 className='m-b-30'>Pillars of Strength</h2>
+
+              </div>
+
+            </div>
+          </div>
+
+          <div className='row'>
+            <div className='col-lg-12'>
+              <div className='card-05'>
+                <div className='card-05-item'>
+                  <Image src='/img/icons/about-pi-01.png' alt='About Us' className='img-fluid' width={48} height={48} />
+                  <span>Finest Quality Stones</span>
+                  <p>We ensure that each tombstone is crafted with great attention to detail</p>
                 </div>
-            </section>
-
-
-            <section className='p-b-30 p-t-80'>
-                <div className='container'>
-                    <div className='row justify-content-center'>
-                        <div className='col-lg-9'>
-                            <div className='heading-center p-b-40'>
-                                <h2 className='m-b-30'>Why Choose Us?</h2>
-                                <p>Whether you’re a high-volume buyer or expanding your product line, our team is here to support your growth. We understand the B2B dynamics of the memorial industry and deliver not just products—but trust, consistency, and partnership.</p>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div className='row'>
-                        <div className='col-lg-12'>
-                            <div className='card-05'>
-                                <div className='card-05-item'>
-                                    <img src='/img/icons/icons-1.png' alt='About Us' className='img-fluid' />
-                                    <span>Quality Craftmanship</span>
-                                </div>
-                                <div className='card-05-item'>
-                                    <img src='/img/icons/icons-2.png' alt='About Us' className='img-fluid' />
-                                    <span>Nationwide Delivery</span>
-                                </div>
-                                <div className='card-05-item'>
-                                    <img src='/img/icons/icons-3.png' alt='About Us' className='img-fluid' />
-                                    <span>24*7 Customer Service</span>
-                                </div>
-                                <div className='card-05-item'>
-                                    <img src='/img/icons/icons-4.png' alt='About Us' className='img-fluid' />
-                                    <span>Custom Designs</span>
-                                </div>
-                                <div className='card-05-item'>
-                                    <img src='/img/icons/icons-5.png' alt='About Us' className='img-fluid' />
-                                    <span>Experienced Masons</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div className='card-05-item'>
+                  <Image src='/img/icons/about-pi-02.png' alt='About Us' className='img-fluid' width={48} height={48} />
+                  <span>Competitive Prices</span>
+                  <p>Get Quality Tombstones at the Best Rates!</p>
                 </div>
-            </section>
+                <div className='card-05-item'>
+                  <Image src='/img/icons/about-pi-03.png' alt='About Us' className='img-fluid' width={48} height={48} />
+                  <span>On-time Delivery</span>
+                  <p>Ensuring Your Tombstones Arrive When You Need Them!</p>
+                </div>
+                <div className='card-05-item'>
+                  <Image src='/img/icons/about-pi-04.png' alt='About Us' className='img-fluid' width={48} height={48} />
+                  <span>Bulk Order</span>
+                  <p>Streamline Your Business with Our Premium Tombstones!</p>
+                </div>
+                <div className='card-05-item'>
+                  <Image src='/img/icons/about-pi-05.png' alt='About Us' className='img-fluid' width={48} height={48} />
+                  <span>Shipping Worldwide</span>
+                  <p>Delivering Quality Tombstones Everywhere!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* pass computed displayFaqs to FooterContactFormHome */}
       <FooterContactFormHome faqList={displayFaqs} />

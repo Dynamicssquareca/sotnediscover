@@ -60,23 +60,40 @@ const ContactUs = () => {
                                 <h2>Get in touch with us</h2>
                                 <p>Get in touch with us using the form below. We're excited to assist you with all your tiles and stone needs!</p>
                                 <div className='addres-sec'>
-                                    {/* <div className='add-list'>
+                                    <div className='add-list'>
                                         <div className='icons-l'>
                                             <i className="bi bi-house-fill"></i>
                                         </div>
                                         <div className='inf-wigt'>
-                                            <h4>Visit A Office</h4>
-                                            <p>1545 Capital Dr. Suite 100
-                                                Carrollton Tx-75006</p>
+                                            <h4>Office</h4>
+                                            <p>1116, JMD Megapolis, Sector 48, Gurugram, Haryana 122018</p>
                                         </div>
-                                    </div> */}
+                                    </div>
+                                    <div className='add-list'>
+                                        <div className='icons-l'>
+                                            <i className="bi bi-building-fill"></i>
+                                        </div>
+                                        <div className='inf-wigt'>
+                                            <h4>Factory</h4>
+                                            <p>SY.No.33, Alinagar, Chetlapotham Village, Jinaram-Mandal, Sangareddy, Telangana 502319</p>
+                                        </div>
+                                    </div>
+                                    <div className='add-list'>
+                                        <div className='icons-l'>
+                                            <i className="bi bi-person-plus-fill"></i>
+                                        </div>
+                                        <div className='inf-wigt'>
+                                            <h4>Customer Support & Sales(India):</h4>
+                                            <p><a href="tel:919667584700">+91 966 758 4700</a></p>
+                                        </div>
+                                    </div>
                                     <div className='add-list'>
                                         <div className='icons-l'>
                                             <i className="bi bi-person-lines-fill"></i>
                                         </div>
                                         <div className='inf-wigt'>
-                                            <h4>Phone Number</h4>
-                                            <p>+44 161 394 1594</p>
+                                            <h4>Customer Support & Sales(USA):</h4>
+                                            <p><a href="tel:18582935368">+1 858 293 5368</a></p>
                                         </div>
                                     </div>
                                     <div className='add-list'>
@@ -85,7 +102,7 @@ const ContactUs = () => {
                                         </div>
                                         <div className='inf-wigt'>
                                             <h4>Email Us</h4>
-                                            <p>info@stonediscover.com</p>
+                                            <p><a href="mailto:info@stonediscover.com">info@stonediscover.com</a></p>
                                         </div>
                                     </div>
                                 </div>
