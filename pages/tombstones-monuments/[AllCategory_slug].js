@@ -48,11 +48,10 @@ const CategoryPage = ({ category, subcategory, products = [], faq, error }) => {
   const primary = subcategory || category || {};
 
   const displayDescription =
-    (primary.description && primary.description.trim() && primary.description) ||
-    (primary.extdescription && primary.extdescription.trim() && primary.extdescription) ||
-    (primary.extdesc && primary.extdesc.trim() && primary.extdesc) ||
-    '';
+    (primary.description && primary.description.trim() && primary.description) || '';
 
+
+  const displayExtaDesc = (primary.extdescription && primary.extdescription) || '';
   const displayShortDesc = (primary.shortdescription && primary.shortdescription) || '';
 
   const displayHeroImage = primary.image || primary.featuredimage || '';
@@ -188,8 +187,8 @@ const CategoryPage = ({ category, subcategory, products = [], faq, error }) => {
               <div className="about-us-content">
                 <h2>About {primary.title || category?.title}</h2>
 
-                {displayDescription ? (
-                  <div dangerouslySetInnerHTML={{ __html: displayDescription }} />
+                {displayExtaDesc ? (
+                  <div dangerouslySetInnerHTML={{ __html: displayExtaDesc }} />
                 ) : null}
 
                 <button onClick={handleReadMore} className="btn btn-four m-t-30">
@@ -223,11 +222,7 @@ const CategoryPage = ({ category, subcategory, products = [], faq, error }) => {
               <div className="accordion-one accordion-one-product">
                 <Accordion open={open} toggle={toggle}>
                   <AccordionItem>
-                    <AccordionHeader targetId="desc">
-                      <div className="d-flex justify-content-between align-items-center w-100">
-                        <h3>About {primary.title || category?.title} — Details</h3>
-                      </div>
-                    </AccordionHeader>
+                    
                     <AccordionBody accordionId="desc">
                       {displayDescription ? (
                         <div dangerouslySetInnerHTML={{ __html: displayDescription }} />
@@ -235,6 +230,11 @@ const CategoryPage = ({ category, subcategory, products = [], faq, error }) => {
                         <p>No additional details available.</p>
                       )}
                     </AccordionBody>
+                    {/* <AccordionHeader targetId="desc">
+                      <div className="d-flex justify-content-between align-items-center w-100">
+                        <h3>About {primary.title || category?.title} — Details</h3>
+                      </div>
+                    </AccordionHeader> */}
                   </AccordionItem>
                 </Accordion>
               </div>
