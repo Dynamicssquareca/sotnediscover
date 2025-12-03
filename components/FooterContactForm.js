@@ -15,6 +15,7 @@ const FooterContactForm = ({faq}) => {
     const hideTombstonePages =
   router.asPath.startsWith('/tombstones-monuments') ||
     router.asPath.startsWith('/location') ||
+     router.asPath.startsWith('/product') ||
   router.asPath.startsWith('/natural-stones');
 
     // Check for exact match pages OR tombstone category pages

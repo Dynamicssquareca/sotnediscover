@@ -12,6 +12,7 @@ import { Accordion, AccordionBody, AccordionHeader, AccordionItem, } from 'react
 // import required modules
 import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
 import ModelBox from '@/components/ModelBox';
+import FooterContactFormHome from '@/components/FooterContactFormHome';
 
 
 const getImageUrl = (img) =>
@@ -78,6 +79,17 @@ const ProductPage = ({ product, relatedProducts, specifications, error }) => {
   };
 
   const metaImageType = getImageMimeType(metaImage);
+
+
+    // FAQs: prefer subcategory -> category -> passed faq prop -> []
+  const displayFaqs =
+    (Array.isArray(product?.faqs) && product.faqs.length > 0
+      ? product.faqs
+      : Array.isArray(product?.faqs) && product.faqs.length > 0
+        ? product.faqs
+        : Array.isArray(faq) && faq.length > 0
+          ? faq
+          : []);
 
   // --- JSX head block ---
   return (
@@ -512,7 +524,7 @@ const ProductPage = ({ product, relatedProducts, specifications, error }) => {
         </div>
       </section>
 
-
+                           <FooterContactFormHome faqList={displayFaqs} />
 
 
 
