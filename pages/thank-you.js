@@ -9,7 +9,7 @@ const ThankYou = () => {
                     name="description"
                     content=""
                 />
-            <link rel="canonical" href="https://www.crmfrontier.com/thank-you/" />
+            <link rel="canonical" href="https://www.stonediscover.com//thank-you/" />
         </Head>
 
         <section className="hero">

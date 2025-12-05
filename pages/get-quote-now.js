@@ -5,7 +5,12 @@ const ContactUs = () => {
     return (
         <>
             <Head>
-                <title>Get A Quote</title>
+                 <title>Get A Quote | Stone Discover</title>
+                <meta
+                    name="description"
+                    content=""
+                />
+                <link rel="canonical" href="https://www.stonediscover.com/get-quote-now/" />
             </Head>
 
             <div className='common-header-banner'>
@@ -23,7 +28,7 @@ const ContactUs = () => {
             <div className='contact-main p-t-80 p-b-40'>
                 <div className='container'>
                     <div className='row justify-content-center'>
-                     
+
                         <div className='col-lg-6'>
                             <div className='addre-right'>
                                 <Form />

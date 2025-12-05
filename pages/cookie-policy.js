@@ -1,10 +1,12 @@
 import React from 'react';
-
+import Head from 'next/head';
 const CookiePolicy = () => {
   return (
-    <div>
-      
-    </div>
+     <div>
+            <Head>
+                <title>CookiePolicy</title>
+            </Head>
+        </div>
   );
 }
 

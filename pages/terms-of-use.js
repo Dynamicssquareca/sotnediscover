@@ -4,7 +4,12 @@ const TermsOfUse = () => {
     return (
         <>
         <Head>
-            <title></title>
+            <title>Terms of Use | Stone Discover</title>
+            <meta
+                    name="description"
+                    content=""
+                />
+                <link rel="canonical" href="https://www.stonediscover.com/terms-of-use/" />
         </Head>
         <div className='common-header-banner'>
             <div className='container'>
