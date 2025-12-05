@@ -17,27 +17,28 @@ export default function About() {
     return (
         <>
             <Head>
-                <title>About Stone Discover UK : Memorial Headstones Supplier in UK</title>
+                <title>About Us | Stone Discover India</title>
                 <meta
                     name="description"
-                    content="Stone Discover UK is a reliable supplier of wholesale memorial headstones, serving funeral homes and retailers across the UK with quality granite products."
+                    content="Learn about Stone Discover India, our mission, values, and dedication to delivering premium headstones solutions across India and worldwide."
                 />
                 <link rel="canonical" href="https://www.stonediscover.com/about-us/" />
                 <meta property="og:locale" content="US" />
                 <meta property="og:type" content="website" />
-                <meta property="og:title" content="About Stone Discover UK : Memorial Headstones Supplier in UK" />
-                <meta property="og:description" content="Stone Discover UK is a reliable supplier of wholesale memorial headstones, serving funeral homes and retailers across the UK with quality granite products." />
+                <meta property="og:title" content=" About Us | Stone Discover India" />
+                <meta property="og:description" content=" Learn about Stone Discover India, our mission, values, and dedication to delivering premium headstones solutions across India and worldwide." />
                 <meta property="og:url" content="https://www.stonediscover.com/about-us/" />
-                <meta property="og:site_name" content="Stone Discover UK" />
+                <meta property="og:site_name" content="Stone Discover" />
                 <meta property="og:image" content="https://www.stonediscover.com/img/stone-home-o.jpeg" />
                 <meta property="og:image:width" content="200" />
                 <meta property="og:image:height" content="200" />
                 <meta property="og:image:type" content="image/jpeg" />
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:site" content="@Stone Discover UK" />
-                <meta name="twitter:title" content="About Stone Discover UK : Memorial Headstones Supplier in UK" />
-                <meta name="twitter:description" content="Stone Discover UK is a reliable supplier of wholesale memorial headstones, serving funeral homes and retailers across the UK with quality granite products." />
+                <meta name="twitter:site" content="@Stone Discover" />
+                <meta name="twitter:title" content=" About Us | Stone Discover India" />
+                <meta name="twitter:description" content=" Learn about Stone Discover India, our mission, values, and dedication to delivering premium headstones solutions across India and worldwide." />
                 <meta name="twitter:image" content="https://www.stonediscover.com/img/stone-home-o.jpeg" />
+
             </Head>
 
             <div className='common-header-banner'>
@@ -200,7 +201,7 @@ export default function About() {
                         <div className='col-lg-9'>
                             <div className='heading-center p-b-40'>
                                 <h2 className='m-b-30'>Pillars of Strength</h2>
-                                
+
                             </div>
 
                         </div>

@@ -4,40 +4,41 @@ import Form from '@/components/Form';
 import { useRouter } from 'next/router';
 const ContactUs = () => {
 
- const router = useRouter();
+    const router = useRouter();
     const handleFormSubmit = () => {
         console.log('Form submitted!');
         setTimeout(() => {
             router.push('/thank-you');
-          }, 3000);
+        }, 3000);
         // Perform any additional actions needed after form submission
-      };
+    };
 
 
     return (
         <>
             <Head>
-                <title>Contact Stone Discover UK: Memorial Headstones Supplier in UK</title>
+                <title>Contact Us | Stone Discover India</title>
                 <meta
                     name="description"
-                    content="Contact Stone Discover UK for premium wholesale memorial headstones. Trusted by UK funeral homes and retailers for quality and custom options."
+                    content="Get in touch with Stone Discover India. Contact our team for inquiries, quotes, or support, we’re here to help with all your stone requirements."
                 />
-                <link rel="canonical" href="https://www.stonediscover.co.uk/contact-us/" />
+                <link rel="canonical" href="https://www.stonediscover.com/contact-us/" />
                 <meta property="og:locale" content="US" />
                 <meta property="og:type" content="website" />
-                <meta property="og:title" content="Contact Stone Discover UK: Memorial Headstones Supplier in UK" />
-                <meta property="og:description" content="Contact Stone Discover UK for premium wholesale memorial headstones. Trusted by UK funeral homes and retailers for quality and custom options." />
-                <meta property="og:url" content="https://www.stonediscover.co.uk/contact-us/" />
-                <meta property="og:site_name" content="Stone Discover UK" />
-                <meta property="og:image" content="https://www.stonediscover.co.uk/img/stone-home-o.jpeg" />
+                <meta property="og:title" content=" Contact Us | Stone Discover India " />
+                <meta property="og:description" content=" Get in touch with Stone Discover India. Contact our team for inquiries, quotes, or support—we’re here to help with all your stone requirements." />
+                <meta property="og:url" content="https://www.stonediscover.com/contact-us/" />
+                <meta property="og:site_name" content="Stone Discover" />
+                <meta property="og:image" content="https://www.stonediscover.com/img/stone-home-o.jpeg" />
                 <meta property="og:image:width" content="200" />
                 <meta property="og:image:height" content="200" />
                 <meta property="og:image:type" content="image/jpeg" />
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:site" content="@Stone Discover UK" />
-                <meta name="twitter:title" content="Contact Stone Discover UK: Memorial Headstones Supplier in UK" />
-                <meta name="twitter:description" content="Contact Stone Discover UK for premium wholesale memorial headstones. Trusted by UK funeral homes and retailers for quality and custom options." />
-                <meta name="twitter:image" content="https://www.stonediscover.co.uk/img/stone-home-o.jpeg" />
+                <meta name="twitter:site" content="@Stone Discover" />
+                <meta name="twitter:title" content=" Contact Us | Stone Discover India " />
+                <meta name="twitter:description" content=" Get in touch with Stone Discover India. Contact our team for inquiries, quotes, or support—we’re here to help with all your stone requirements." />
+                <meta name="twitter:image" content="https://www.stonediscover.com/img/stone-home-o.jpeg" />
+
             </Head>
 
             <div className='common-header-banner'>

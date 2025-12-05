@@ -2208,7 +2208,7 @@ ul li {
 @media (max-width: 767px) {
   .card-05{
     flex-wrap:wrap
-  }
+  } 
   .hero {
     padding: 40px 0 40px;
   }

@@ -12,27 +12,28 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Wholesale Memorial Headstones in the UK | Stone Discover UK</title>
+        <title>Wholesale Granite Headstone Monuments | Stone Discover India</title>
         <meta
           name="description"
-          content="Buy high-quality memorial headstones at wholesale prices in the UK. Ideal for funeral homes, stone retailers, and fabricators. Contact Stone Discover UK today."
+          content="Trusted granite headstones & monuments supplier from India. Order in bulk and save 20% on wholesale memorials with worldwide delivery. Contact us Today!"
         />
-        <link rel="canonical" href="https://www.stonediscover.co.uk/" />
+        <link rel="canonical" href="https://www.stonediscover.com/" />
         <meta property="og:locale" content="US" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Wholesale Memorial Headstones in the UK | Stone Discover UK" />
-        <meta property="og:description" content="Buy high-quality memorial headstones at wholesale prices in the UK. Ideal for funeral homes, stone retailers, and fabricators. Contact Stone Discover UK today." />
-        <meta property="og:url" content="https://www.stonediscover.co.uk/" />
-        <meta property="og:site_name" content="Stone Discover UK" />
-        <meta property="og:image" content="https://www.stonediscover.co.uk/img/stone-home-o.jpeg" />
+        <meta property="og:title" content=" Wholesale Granite Headstone Monuments | Stone Discover India " />
+        <meta property="og:description" content=" Trusted granite headstones & monuments supplier from India. Order in bulk and save 20% on wholesale memorials with worldwide delivery. Contact us Today!" />
+        <meta property="og:url" content="https://www.stonediscover.com/" />
+        <meta property="og:site_name" content="Stone Discover" />
+        <meta property="og:image" content="https://www.stonediscover.com/img/stone-home-o.jpeg" />
         <meta property="og:image:width" content="200" />
         <meta property="og:image:height" content="200" />
         <meta property="og:image:type" content="image/jpeg" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@Stone Discover UK" />
-        <meta name="twitter:title" content="Wholesale Memorial Headstones in the UK | Stone Discover UK" />
-        <meta name="twitter:description" content="Buy high-quality memorial headstones at wholesale prices in the UK. Ideal for funeral homes, stone retailers, and fabricators. Contact Stone Discover UK today." />
-        <meta name="twitter:image" content="https://www.stonediscover.co.uk/img/stone-home-o.jpeg" />
+        <meta name="twitter:site" content="@Stone Discover" />
+        <meta name="twitter:title" content=" Wholesale Granite Headstone Monuments | Stone Discover India " />
+        <meta name="twitter:description" content=" Trusted granite headstones & monuments supplier from India. Order in bulk and save 20% on wholesale memorials with worldwide delivery. Contact us Today!" />
+        <meta name="twitter:image" content="https://www.stonediscover.com/img/stone-home-o.jpeg" />
+
       </Head>
 
       <div className="hero-banner-one">

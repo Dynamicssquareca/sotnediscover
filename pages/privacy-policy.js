@@ -5,12 +5,27 @@ const PrivacyPolicy = () => {
     return (
         <>
             <Head>
-                 <title>Privacy Policy | Stone Discover</title>
+                <title> Privacy Policy | Stone Discover India</title>
                 <meta
                     name="description"
-                    content=""
+                    content=" Read the Privacy Policy of Stone Discover India to understand how we collect, use, and protect your personal information."
                 />
-                <link rel="canonical" href="https://www.stonediscover.com/privacy-policy/" />
+                <link rel="canonical" href="  https://www.stonediscover.com/privacy-policy/" />
+                <meta property="og:locale" content="US" />
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content=" Privacy Policy | Stone Discover India" />
+                <meta property="og:description" content=" Read the Privacy Policy of Stone Discover India to understand how we collect, use, and protect your personal information." />
+                <meta property="og:url" content="  https://www.stonediscover.com/privacy-policy/" />
+                <meta property="og:site_name" content="Stone Discover" />
+                <meta property="og:image" content="https://www.stonediscover.com/img/stone-home-o.jpeg" />
+                <meta property="og:image:width" content="200" />
+                <meta property="og:image:height" content="200" />
+                <meta property="og:image:type" content="image/jpeg" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:site" content="@Stone Discover" />
+                <meta name="twitter:title" content=" Privacy Policy | Stone Discover India" />
+                <meta name="twitter:description" content=" Read the Privacy Policy of Stone Discover India to understand how we collect, use, and protect your personal information." />
+                <meta name="twitter:image" content="https://www.stonediscover.com/img/stone-home-o.jpeg" />
             </Head>
             <div className='common-header-banner'>
                 <div className='container'>

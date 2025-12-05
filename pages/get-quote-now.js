@@ -5,12 +5,28 @@ const ContactUs = () => {
     return (
         <>
             <Head>
-                 <title>Get A Quote | Stone Discover</title>
+                <title>Get a Quote | Stone Discover India</title>
                 <meta
                     name="description"
-                    content=""
+                    content="Request a quote from Stone Discover India. Share your required details and our team will provide a customized price estimate."
                 />
-                <link rel="canonical" href="https://www.stonediscover.com/get-quote-now/" />
+                <link rel="canonical" href=" https://www.stonediscover.com/get-quote-now/" />
+                <meta property="og:locale" content="US" />
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content=" Get a Quote | Stone Discover India" />
+                <meta property="og:description" content=" Request a quote from Stone Discover India. Share your required details and our team will provide a customized price estimate." />
+                <meta property="og:url" content=" https://www.stonediscover.com/get-quote-now/" />
+                <meta property="og:site_name" content="Stone Discover" />
+                <meta property="og:image" content="https://www.stonediscover.com/img/stone-home-o.jpeg" />
+                <meta property="og:image:width" content="200" />
+                <meta property="og:image:height" content="200" />
+                <meta property="og:image:type" content="image/jpeg" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:site" content="@Stone Discover" />
+                <meta name="twitter:title" content=" Get a Quote | Stone Discover India" />
+                <meta name="twitter:description" content=" Request a quote from Stone Discover India. Share your required details and our team will provide a customized price estimate." />
+                <meta name="twitter:image" content="https://www.stonediscover.com/img/stone-home-o.jpeg" />
+
             </Head>
 
             <div className='common-header-banner'>
