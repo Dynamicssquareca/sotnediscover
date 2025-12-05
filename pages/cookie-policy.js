@@ -5,6 +5,11 @@ const CookiePolicy = () => {
      <div>
             <Head>
                 <title>CookiePolicy</title>
+                <meta
+                    name="description"
+                    content=""
+                />
+                <link rel="canonical" href="https://www.stonediscover.com/get-quote-now/" />
             </Head>
         </div>
   );
