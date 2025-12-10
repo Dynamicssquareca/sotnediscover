@@ -27,7 +27,7 @@ const FormCatlog = ({ onSubmit }) => {
 
 
   const fetchCountryCodeByIP = () => {
-    fetch(`https://api.ipdata.co?api-key=c87ef34a2d0cd830649eec9a8b2395698490a7baaf414bf95516a3b8`)//https://api.ipdata.co?api-key=c87ef34a2d0cd830649eec9a8b2395698490a7baaf414bf95516a3b8
+    fetch(`https://api.ipdata.co?api-key=07c39c94d973d348f2a1464acc646afa33d92a79438c49a27dca02a0`)//https://api.ipdata.co?api-key=c87ef34a2d0cd830649eec9a8b2395698490a7baaf414bf95516a3b8
       .then(response => {
         if (!response.ok) {
           throw new Error('Failed to fetch IP information');
