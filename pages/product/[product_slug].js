@@ -162,7 +162,7 @@ const ProductPage = ({ product, relatedProducts, specifications, error }) => {
                   zoomScale={2} sliderRef={sliderRef} />
 
               </div> */}
-              <div className='product-pic'>
+              <div className='product-pic' style={{position:'sticky',top:'100px'}}>
                  <Image src={getImageUrl(product.images?.[0])} alt={product.title}
                  width={600} height={600} priority
                   />
