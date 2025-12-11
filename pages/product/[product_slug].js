@@ -157,11 +157,15 @@ const ProductPage = ({ product, relatedProducts, specifications, error }) => {
 
 
             <div className='col-lg-5'>
-              <div className='product-pic' ref={sliderRef}>
+              {/* <div className='product-pic' ref={sliderRef}>
                 <ImageMagnifier src={getImageUrl(product.images?.[0])} alt={product.title}
                   zoomScale={2} sliderRef={sliderRef} />
 
-
+              </div> */}
+              <div className='product-pic'>
+                 <Image src={getImageUrl(product.images?.[0])} alt={product.title}
+                 width={600} height={600} priority
+                  />
               </div>
             </div>
             <div className='col-lg-7'>
