@@ -2349,6 +2349,7 @@ ul li {
   }
   .d-flex-grd {
     flex-wrap: wrap;
+ flex-direction: column;
   }
   .about-us-content h2,
   .about-us-content {
