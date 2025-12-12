@@ -80,7 +80,7 @@ const FormCatlog = ({ onSubmit }) => {
 
     // Send data to the custom API
     try {
-      const response = await fetch('https://www.minimallyyours.com/api/zohostonediscoverusa/', {
+      const response = await fetch('https://www.minimallyyours.com/api/zohostonediscoverusa', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -68,7 +68,7 @@ export default function SubscribeForm() {
   
     try {
       // Send data to the external API
-      const apiResponse = await fetch('https://www.minimallyyours.com/api/zohostonediscoverusa/', {
+      const apiResponse = await fetch('https://www.minimallyyours.com/api/zohostonediscoverusa', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

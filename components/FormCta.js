@@ -89,7 +89,7 @@ const FormCta = ({ onSubmit }) => {
 
     // Send data to the custom API
     try {
-      const response = await fetch('https://www.minimallyyours.com/api/zohostonediscoverusa/', {
+      const response = await fetch('https://www.minimallyyours.com/api/zohostonediscoverusa', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -241,6 +241,7 @@ const FormCta = ({ onSubmit }) => {
         />
         <label htmlFor="name">Full Name</label>
         {errors.name && <div className="text-danger">{errors.name}</div>}
+        <input type="hidden" name="currentPageUrl" value={pageUrl} />
       </div>
       <div style={{ display: 'none' }}>
         <input

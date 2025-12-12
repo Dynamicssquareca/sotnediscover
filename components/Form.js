@@ -80,7 +80,7 @@ const Form = ({ onSubmit }) => {
 
     // Send data to the custom API
     try {
-      const response = await fetch('https://www.minimallyyours.com/api/zohostonediscoverusa/', {
+      const response = await fetch('https://www.minimallyyours.com/api/zohostonediscoverusa', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -229,6 +229,7 @@ const Form = ({ onSubmit }) => {
             }
           }}
         />
+        <input type="hidden" name="currentPageUrl" value={pageUrl} />
         <label htmlFor="name">Full Name</label>
         {errors.name && <div className="text-danger">{errors.name}</div>}
       </div>
@@ -264,6 +265,7 @@ const Form = ({ onSubmit }) => {
         />
         <label htmlFor="name">Company Email</label>
         {errors.email && <div className="text-danger">{errors.email}</div>}
+        <input type="hidden" name="currentPageUrl" value={pageUrl} />
       </div>
       <div className="form-group">
         <PhoneInput
