@@ -1,11 +1,17 @@
+# *
 User-agent: *
 Allow: /
+
 Disallow: /blog/tag/
 Disallow: /blog/category/
 Disallow: /blog/category/*
+Disallow: /blog/author/
+Disallow: /blog/author/*
+Disallow: /blog/preview/
 Disallow: /blog/preview/*
 
+# Host
+Host: https://www.stonediscover.com/
 
-
-Sitemap: https://www.stonediscover.co.uk/sitemap.xml
-
+# Sitemaps
+Sitemap: https://www.stonediscover.com/sitemap.xml
