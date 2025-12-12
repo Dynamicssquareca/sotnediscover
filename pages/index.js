@@ -156,29 +156,29 @@ export default function Home() {
             <div className='col-lg-12'>
               <div className='card-05'>
                 <div className='card-05-item'>
-                  <Image src='/img/icons/icons-1.png' alt='About Us' className='img-fluid' width={58} height={76} />
+                  <Image src='/img/icons/about-pi-01.png' alt='About Us' className='img-fluid' width={48} height={48} />
                   <span>Finest Quality Stones</span>
-                  <p>We ensure that each headstone is crafted with great attention to detail</p>
+                  <p>We ensure that each tombstone is crafted with great attention to detail</p>
                 </div>
                 <div className='card-05-item'>
-                  <Image src='/img/icons/icons-2.png' alt='About Us' className='img-fluid' width={58} height={76} />
+                  <Image src='/img/icons/about-pi-02.png' alt='About Us' className='img-fluid' width={48} height={48} />
                   <span>Competitive Prices</span>
-                  <p>Get Quality Headstones at the Best Rates!</p>
+                  <p>Get Quality Tombstones at the Best Rates!</p>
                 </div>
                 <div className='card-05-item'>
-                  <Image src='/img/icons/icons-3.png' alt='About Us' className='img-fluid' width={58} height={76} />
+                  <Image src='/img/icons/about-pi-03.png' alt='About Us' className='img-fluid' width={48} height={48} />
                   <span>On-time Delivery</span>
-                  <p>Ensuring Your Headstones Arrive When You Need Them!</p>
+                  <p>Ensuring Your Tombstones Arrive When You Need Them!</p>
                 </div>
                 <div className='card-05-item'>
-                  <Image src='/img/icons/icons-4.png' alt='About Us' className='img-fluid' width={58} height={76} />
+                  <Image src='/img/icons/about-pi-04.png' alt='About Us' className='img-fluid' width={48} height={48} />
                   <span>Bulk Order</span>
-                  <p>Streamline Your Business with Our Premium Headstones!</p>
+                  <p>Streamline Your Business with Our Premium Tombstones!</p>
                 </div>
                 <div className='card-05-item'>
-                  <Image src='/img/icons/icons-5.png' alt='About Us' className='img-fluid' width={58} height={76} />
+                  <Image src='/img/icons/about-pi-05.png' alt='About Us' className='img-fluid' width={48} height={48} />
                   <span>Shipping Worldwide</span>
-                  <p>Delivering Quality Headstones Everywhere!</p>
+                  <p>Delivering Quality Tombstones Everywhere!</p>
                 </div>
               </div>
             </div>

@@ -75,7 +75,7 @@ const Footer = ({ faq }) => {
                                 <h4>Company</h4>
                                 <ul>
                                     <li><i className="bi bi-chevron-right"></i> <a href="/about-us/">About us</a></li>
-                                    <li><i className="bi bi-chevron-right"></i> <a href="tombstones-monuments/">Tombstones</a></li>
+                                    <li><i className="bi bi-chevron-right"></i> <a href="/tombstones-monuments/">Tombstones</a></li>
                                     <li><i className="bi bi-chevron-right"></i> <a href="/blog/">Blogs</a></li>
                                     <li><i className="bi bi-chevron-right"></i> <a href="/contact-us/">Contact Us</a></li>
                                     <li><i className="bi bi-chevron-right"></i> <a href="/terms-of-use/">Terms of service</a></li>
@@ -102,8 +102,8 @@ const Footer = ({ faq }) => {
                                 <h4>Useful info</h4>
                                 <p><b>Office:</b> 1116, JMD Megapolis, Sector 48, Gurugram, Haryana 122018.</p>
                                 <p><b>Factory:</b> SY.No.33, Alinagar, Chetlapotham Village, Jinaram-Mandal, Sangareddy, Telangana 502319.</p>
-                                 <p><b>Customer Support & Sales(India):</b> <a href="tel:919667584700">+91 966 758 4700</a></p>
-                                 <p><b>Customer Support & Sales(USA):</b> <a href="tel:18582935368">+1 858 293 5368</a></p>
+                                <p><b>Customer Support & Sales(India):</b> <a href="tel:919667584700">+91 966 758 4700</a></p>
+                                <p><b>Customer Support & Sales(USA):</b> <a href="tel:18582935368">+1 858 293 5368</a></p>
                                 <p><b>Email:</b> <a href="mailto:info@stonediscover.com">info@stonediscover.com</a></p>
                                 <p><b>Working Time:</b> Mon-Sat: 8 AM - 5 PM</p>
                                 {/* <FormSubscribe /> */}
