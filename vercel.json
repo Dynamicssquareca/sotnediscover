@@ -1,7 +1,6 @@
 {
     "redirects": [
-      { "source": "/memorials/angel-headstones/", "destination": "/memorials/angel-headstone/", "statusCode": 301 },
-      { "source": "/memorials/vases-and-urns/", "destination": "/", "statusCode": 301 }
+      { "source": "", "destination": "", "statusCode": 301 }
     ]
   }
   
