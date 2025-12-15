@@ -1,6 +1,437 @@
 {
-    "redirects": [
-      { "source": "", "destination": "", "statusCode": 301 }
-    ]
-  }
-  
+  "redirects": [
+    { "source": "/", "destination": "/", "statusCode": 301 },
+
+    {
+      "source": "/headstones-in-edmonton/",
+      "destination": "/location/headstones-in-edmonton/",
+      "statusCode": 301
+    },
+    {
+      "source": "/headstone-in-quebec/",
+      "destination": "/location/headstone-in-quebec/",
+      "statusCode": 301
+    },
+    {
+      "source": "/headstone-in-winnipeg/",
+      "destination": "/location/headstone-in-winnipeg/",
+      "statusCode": 301
+    },
+    {
+      "source": "/headstone-in-hamilton/",
+      "destination": "/location/headstone-in-hamilton/",
+      "statusCode": 301
+    },
+    {
+      "source": "/headstone-in-mississauga/",
+      "destination": "/location/headstone-in-mississauga/",
+      "statusCode": 301
+    },
+    {
+      "source": "/headstones-in-vancouver/",
+      "destination": "/location/headstones-in-vancouver/",
+      "statusCode": 301
+    },
+    {
+      "source": "/headstones-in-toronto/",
+      "destination": "/location/headstones-in-toronto/",
+      "statusCode": 301
+    },
+    {
+      "source": "/headstones-in-ottawa/",
+      "destination": "/location/headstones-in-ottawa/",
+      "statusCode": 301
+    },
+    {
+      "source": "/headstones-in-montreal/",
+      "destination": "/location/headstones-in-montreal/",
+      "statusCode": 301
+    },
+    {
+      "source": "/headstones-in-calgary/",
+      "destination": "/location/headstones-in-calgary/",
+      "statusCode": 301
+    },
+
+    {
+      "source": "/memorial-grave-benches/",
+      "destination": "/tombstones-monuments/bench/",
+      "statusCode": 301
+    },
+
+    { "source": "/de/urnengraeber/", "destination": "/", "statusCode": 301 },
+    {
+      "source": "/de/grabsteine-urnengrab/",
+      "destination": "/",
+      "statusCode": 301
+    },
+    { "source": "/de/grabstein/", "destination": "/", "statusCode": 301 },
+    {
+      "source": "/fr/pierres-tombales-en-granit/",
+      "destination": "/",
+      "statusCode": 301
+    },
+
+    {
+      "source": "/granite/",
+      "destination": "/natural-stones/granite/",
+      "statusCode": 301
+    },
+    {
+      "source": "/marble/",
+      "destination": "/natural-stones/marble/",
+      "statusCode": 301
+    },
+    {
+      "source": "/porcelain/",
+      "destination": "/natural-stones/porcelain/",
+      "statusCode": 301
+    },
+    {
+      "source": "/limestone/",
+      "destination": "/natural-stones/limestone/",
+      "statusCode": 301
+    },
+    {
+      "source": "/sandstone/",
+      "destination": "/natural-stones/sandstone/",
+      "statusCode": 301
+    },
+    {
+      "source": "/quartz/",
+      "destination": "/natural-stones/quartz/",
+      "statusCode": 301
+    },
+
+    {
+      "source": "/granite-headstone-color/",
+      "destination": "/",
+      "statusCode": 301
+    },
+    { "source": "/shop/", "destination": "/", "statusCode": 301 },
+    { "source": "/slate/", "destination": "/", "statusCode": 301 },
+    { "source": "/email-get-quote/", "destination": "/", "statusCode": 301 },
+    {
+      "source": "/product-category/colors-of-granite-headstone/",
+      "destination": "/",
+      "statusCode": 301
+    },
+
+    {
+      "source": "/upright-headstone/",
+      "destination": "/tombstones-monuments/upright/",
+      "statusCode": 301
+    },
+    {
+      "source": "/slant-headstones/",
+      "destination": "/tombstones-monuments/slant/",
+      "statusCode": 301
+    },
+    {
+      "source": "/flat-headstones/",
+      "destination": "/tombstones-monuments/flat/",
+      "statusCode": 301
+    },
+    {
+      "source": "/single-headstone/",
+      "destination": "/tombstones-monuments/",
+      "statusCode": 301
+    },
+    {
+      "source": "/double-headstone/",
+      "destination": "/tombstones-monuments/",
+      "statusCode": 301
+    },
+    {
+      "source": "/husband-and-wife-headstones/",
+      "destination": "/tombstones-monuments/",
+      "statusCode": 301
+    },
+
+    {
+      "source": "/pet-grave-markers/",
+      "destination": "/tombstones-monuments/pet/",
+      "statusCode": 301
+    },
+    {
+      "source": "/plaque/",
+      "destination": "/tombstones-monuments/plaques/",
+      "statusCode": 301
+    },
+    {
+      "source": "/kerb-sets/",
+      "destination": "/tombstones-monuments/kerb-sets/",
+      "statusCode": 301
+    },
+    {
+      "source": "/headstones/",
+      "destination": "/tombstones-monuments/headstones/",
+      "statusCode": 301
+    },
+    {
+      "source": "/headstone-vases/",
+      "destination": "/tombstones-monuments/vases/",
+      "statusCode": 301
+    },
+
+    {
+      "source": "/memorial-urns/",
+      "destination": "/tombstones-monuments/urns/",
+      "statusCode": 301
+    },
+    {
+      "source": "/angel-stones/",
+      "destination": "/tombstones-monuments/angel/",
+      "statusCode": 301
+    },
+    {
+      "source": "/columbarium/",
+      "destination": "/tombstones-monuments/columbarium/",
+      "statusCode": 301
+    },
+    {
+      "source": "/book-shaped-headstones/",
+      "destination": "/tombstones-monuments/book/",
+      "statusCode": 301
+    },
+    {
+      "source": "/bevel-grave-marker/",
+      "destination": "/tombstones-monuments/bevel-markers/",
+      "statusCode": 301
+    },
+
+    {
+      "source": "/request-quote/",
+      "destination": "/get-quote-now/",
+      "statusCode": 301
+    },
+    {
+      "source": "/product-category/colors-of-granite-headstone/",
+      "destination": "/",
+      "statusCode": 301
+    },
+
+    {
+      "source": "/product/sculpted-angel-wing-heart-headstone/",
+      "destination": "/tombstones-monuments/angel/",
+      "statusCode": 301
+    },
+    {
+      "source": "/product/black-granite-carved-angel-heart/",
+      "destination": "/tombstones-monuments/angel/",
+      "statusCode": 301
+    },
+    {
+      "source": "/product/indian-aurora-statue-heart-angel/",
+      "destination": "/tombstones-monuments/angel/",
+      "statusCode": 301
+    },
+    {
+      "source": "/product/double-sculpted-angel-headstone/",
+      "destination": "/tombstones-monuments/angel/",
+      "statusCode": 301
+    },
+    {
+      "source": "/product/black-granite-weeping-angel/",
+      "destination": "/tombstones-monuments/angel/",
+      "statusCode": 301
+    },
+    {
+      "source": "/product/black-granite-upright-weeping-angel/",
+      "destination": "/tombstones-monuments/angel/",
+      "statusCode": 301
+    },
+    {
+      "source": "/product/indian-red-sculpted-angel-headstone/",
+      "destination": "/tombstones-monuments/angel/",
+      "statusCode": 301
+    },
+    {
+      "source": "/product/black-granite-kneeling-angel/",
+      "destination": "/tombstones-monuments/angel/",
+      "statusCode": 301
+    },
+    {
+      "source": "/product/blue-pearl-granite-sculpted-angel/",
+      "destination": "/tombstones-monuments/angel/",
+      "statusCode": 301
+    },
+    {
+      "source": "/product/bahama-blue-granite-sculpted-angel/",
+      "destination": "/tombstones-monuments/angel/",
+      "statusCode": 301
+    },
+    {
+      "source": "/product/bahama-blue-leaning-angel/",
+      "destination": "/tombstones-monuments/angel/",
+      "statusCode": 301
+    },
+    {
+      "source": "/product/grey-granite-praying-angel-headstone/",
+      "destination": "/tombstones-monuments/angel/",
+      "statusCode": 301
+    },
+    {
+      "source": "/product/ruby-red-granite-sculpted-angel/",
+      "destination": "/tombstones-monuments/angel/",
+      "statusCode": 301
+    },
+    {
+      "source": "/product/grey-granite-sculpted-angel-heart/",
+      "destination": "/tombstones-monuments/angel/",
+      "statusCode": 301
+    },
+    {
+      "source": "/product/gray-granite-sculpted-angel/",
+      "destination": "/tombstones-monuments/angel/",
+      "statusCode": 301
+    },
+    {
+      "source": "/product/black-granite-sculpted-angel-wings/",
+      "destination": "/tombstones-monuments/angel/",
+      "statusCode": 301
+    },
+    {
+      "source": "/product/blue-pearl-sculpted-angel-headstone/",
+      "destination": "/tombstones-monuments/angel/",
+      "statusCode": 301
+    },
+    {
+      "source": "/product/sculpted-angel-wing-embracing-heart/",
+      "destination": "/tombstones-monuments/angel/",
+      "statusCode": 301
+    },
+
+    {
+      "source": "/product/bespoke-headstones/",
+      "destination": "/tombstones-monuments/headstones/",
+      "statusCode": 301
+    },
+    {
+      "source": "/product/black-granite-companion-headstone/",
+      "destination": "/tombstones-monuments/headstones/",
+      "statusCode": 301
+    },
+    {
+      "source": "/product/cross-headstone/",
+      "destination": "/tombstones-monuments/headstones/",
+      "statusCode": 301
+    },
+    {
+      "source": "/product/single-heart-headstone/",
+      "destination": "/tombstones-monuments/headstones/",
+      "statusCode": 301
+    },
+    {
+      "source": "/product/double-heart-headstone/",
+      "destination": "/tombstones-monuments/headstones/",
+      "statusCode": 301
+    },
+    {
+      "source": "/product/single-upright-headstone/",
+      "destination": "/tombstones-monuments/headstones/",
+      "statusCode": 301
+    },
+    {
+      "source": "/product/double-upright-headstone/",
+      "destination": "/tombstones-monuments/headstones/",
+      "statusCode": 301
+    },
+    {
+      "source": "/product/single-slant-headstones/",
+      "destination": "/tombstones-monuments/headstones/",
+      "statusCode": 301
+    },
+    {
+      "source": "/product/double-slant-headstones/",
+      "destination": "/tombstones-monuments/headstones/",
+      "statusCode": 301
+    },
+    {
+      "source": "/product/single-flat-headstones/",
+      "destination": "/tombstones-monuments/headstones/",
+      "statusCode": 301
+    },
+    {
+      "source": "/product/double-flat-headstones/",
+      "destination": "/tombstones-monuments/headstones/",
+      "statusCode": 301
+    },
+
+    {
+      "source": "/product/granite-single-upright-headstones/",
+      "destination": "/tombstones-monuments/upright/",
+      "statusCode": 301
+    },
+    {
+      "source": "/product/black-granite-double-upright/",
+      "destination": "/tombstones-monuments/upright/",
+      "statusCode": 301
+    },
+    {
+      "source": "/product/red-granite-single-upright/",
+      "destination": "/tombstones-monuments/upright/",
+      "statusCode": 301
+    },
+    {
+      "source": "/product/granite-double-upright-headstones/",
+      "destination": "/tombstones-monuments/upright/",
+      "statusCode": 301
+    },
+    {
+      "source": "/product/green-granite-single-upright/",
+      "destination": "/tombstones-monuments/upright/",
+      "statusCode": 301
+    },
+    {
+      "source": "/product/green-granite-double-upright/",
+      "destination": "/tombstones-monuments/upright/",
+      "statusCode": 301
+    },
+    {
+      "source": "/product/grey-granite-single-upright/",
+      "destination": "/tombstones-monuments/upright/",
+      "statusCode": 301
+    },
+    {
+      "source": "/product/grey-granite-double-upright/",
+      "destination": "/tombstones-monuments/upright/",
+      "statusCode": 301
+    },
+    {
+      "source": "/product/blue-pearl-granite-single-upright/",
+      "destination": "/tombstones-monuments/upright/",
+      "statusCode": 301
+    },
+    {
+      "source": "/product/blue-pearl-granite-double-upright/",
+      "destination": "/tombstones-monuments/upright/",
+      "statusCode": 301
+    },
+    {
+      "source": "/product/single-heart-upright-headstone/",
+      "destination": "/tombstones-monuments/upright/",
+      "statusCode": 301
+    },
+    {
+      "source": "/product/double-heart-upright-headstone/",
+      "destination": "/tombstones-monuments/upright/",
+      "statusCode": 301
+    },
+    {
+      "source": "/product/bahama-blue-granite-single-upright/",
+      "destination": "/tombstones-monuments/upright/",
+      "statusCode": 301
+    },
+    {
+      "source": "/product/bahama-blue-granite-double-upright/",
+      "destination": "/tombstones-monuments/upright/",
+      "statusCode": 301
+    },
+    {
+      "source": "/product/viscon-white-granite-single-upright/",
+      "destination": "/tombstones-monuments/upright/",
+      "statusCode": 301
+    }
+  ]
+}

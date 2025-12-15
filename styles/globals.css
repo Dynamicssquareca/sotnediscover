@@ -239,7 +239,7 @@ ul li {
   background: rgb(14, 146, 65) !important;
 }
 .btn-three {
-  padding: 0.8rem 1.8rem !important;
+  padding: 1rem 1.8rem !important;
   font-size: 14px !important;
   font-weight: 600 !important;
   color: var(--secondary-dark) !important;
@@ -251,6 +251,7 @@ ul li {
   border-radius: 4px !important;
   border: none;
   transition: all 0.5s ease-in-out !important;
+  width: 210px;
 }
 .btn-three:hover {
   background: linear-gradient(
@@ -280,11 +281,12 @@ ul li {
   padding: 0.8rem 2.5rem !important;
   font-size: 14px !important;
   font-weight: 600 !important;
-  color: #708090 !important;
+  color: #aa7d4a !important;
   background-color: transparent !important;
   border-radius: 4px !important;
-  border: 1px solid #708090 !important;
+  border: 1px solid #aa7d4a !important;
   transition: all 0.5s ease-in-out !important;
+  line-height:normal
 }
 .btn-four:hover {
   color: var(--color-white) !important;
@@ -602,7 +604,7 @@ ul li {
   font-size: 14px;
 }
 .card-06 {
-  margin-bottom: 25px;
+  margin-bottom: 50px;
 }
 .card-06-item {
   text-align: center;
@@ -618,8 +620,8 @@ ul li {
 .card-06-item a span {
   display: block;
   margin-top: 15px;
-  color: var(--secondary);
-  font-weight: 600;
+  color: var(--primary);
+     font-weight: 700;
   transition: all 0.5s ease-in-out;
 }
 .card-06-item a:hover img {
@@ -627,7 +629,8 @@ ul li {
 }
 .card-06-item a:hover span {
   transform: translateY(5px);
-  color: var(--primary);
+
+    color: var(--secondary);
 }
 
 /*get quation*/
