@@ -58,7 +58,8 @@ const FormCta = ({ onSubmit }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+ // Disable submit button immediately
+  setSubmitted(true);
      //spam boat
      const formData = new FormData(e.target);
      if (formData.get('website')) {
@@ -66,9 +67,10 @@ const FormCta = ({ onSubmit }) => {
        return;
      }
 
-    if (!validateForm()) {
-      return;
-    }
+     if (!validateForm()) {
+    setSubmitted(false); // re-enable if validation fails
+    return;
+  }
 
     // Send email using EmailJS
     emailjs.send('service_0sef4e8', 'template_yo3rn0w', {
@@ -95,7 +97,7 @@ const FormCta = ({ onSubmit }) => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          formName: 'Main Form', // Add your form name
+          formName: 'CTA Form', // Add your form name
           name: name,
           email: email,
           phone: phone,

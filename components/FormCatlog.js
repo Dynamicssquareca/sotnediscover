@@ -50,15 +50,19 @@ const FormCatlog = ({ onSubmit }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     //spam boat
+     // Disable submit button immediately
+  setSubmitted(true);
+
     const formData = new FormData(e.target);
     if (formData.get('website')) {
       console.warn("Spam bot detected.");
       return;
     }
 
-    if (!validateForm()) {
-      return;
-    }
+     if (!validateForm()) {
+    setSubmitted(false); // re-enable if validation fails
+    return;
+  }
 
     // Send email using EmailJS
     emailjs.send('service_0sef4e8', 'template_6tpy24w', {
@@ -86,12 +90,12 @@ const FormCatlog = ({ onSubmit }) => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          formName: 'Main Form', // Add your form name
+          formName: 'Catalog Download', // Add your form name
           name: name,
           email: email,
           phone: phone,
           message: message,
-          formtag: 'Main Form', // Add the form tag
+          formtag: 'Catalog Download', // Add the form tag
           currentPageUrl: pageUrl,
           companyname: company,
           defaultCountryName: defaultCountryCode,
@@ -263,6 +267,7 @@ const FormCatlog = ({ onSubmit }) => {
         />
         <label htmlFor="name">Company Email</label>
         {errors.email && <div className="text-danger">{errors.email}</div>}
+        <input type="hidden" name="currentPageUrl" value={pageUrl} />
       </div>
       <div className="form-group">
         <PhoneInput

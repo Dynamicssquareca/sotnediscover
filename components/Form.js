@@ -50,6 +50,11 @@ const Form = ({ onSubmit }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     //spam boat
+
+    // Disable submit button immediately
+  setSubmitted(true);
+
+
     const formData = new FormData(e.target);
     if (formData.get('website')) {
       console.warn("Spam bot detected.");
@@ -57,8 +62,9 @@ const Form = ({ onSubmit }) => {
     }
 
     if (!validateForm()) {
-      return;
-    }
+    setSubmitted(false); // re-enable if validation fails
+    return;
+  }
 
     // Send email using EmailJS
     emailjs.send('service_0sef4e8', 'template_yo3rn0w', {
