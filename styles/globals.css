@@ -1743,7 +1743,7 @@ ul li {
 }
 .container .card-02a {
   /* From container's left padding to viewport right */
-  width: calc(50vw + 50% - (var(--bs-gutter-x, 1.5rem) / 2));
+  width: calc(50.3vw + 50% - (var(--bs-gutter-x, 1.5rem) / 2));
   /* margin-left: calc((var(--bs-gutter-x, 1.5rem)) / -2); */
   overflow: visible; /* so Swiper pills/ shadows can show outside */
 }
@@ -2256,7 +2256,12 @@ ul li {
   .about-us-content {
     margin-bottom: 20px;
   }
-  
+  .about-us-content-s-l{
+text-align: inherit;
+  }
+  .p-t-80 {
+    padding-top: 30px !important;
+}
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
@@ -2432,5 +2437,8 @@ ul li {
   }
   .button-center-new {
     flex-wrap: wrap;
+  }
+  .container .card-02a {
+    width: calc(50.8vw + 50% - (var(--bs-gutter-x, 1.5rem) / 2));
   }
 }

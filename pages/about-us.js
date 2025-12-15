@@ -92,78 +92,84 @@ export default function About() {
                         </div>
                     </div>
                     <div className='row g-5 p-b-40'>
-                        <div className='col-lg-6 d-flex align-self-center order-2'>
+                        <div className='col-lg-6 align-items-center'>
+                            <div className='left-card-01-img'>
+                                <Image src='/img/webpages/stone-blok-01.jpg' alt='stone-blok-01' className='img-fluid' width={555} height={246} />
+                            </div>
+                        </div>
+                        <div className='col-lg-6 d-flex align-self-center'>
                             <div className='about-us-content-s'>
                                 <h4>Selection of Blocks</h4>
                                 <p>Once the stones arrive at the quarry, blocks are selected based on their color, texture, and pattern. These blocks are then moved to state-of-the-art facilities, where the process of cutting and polishing begins.</p>
                             </div>
                         </div>
-                        <div className='col-lg-6 align-items-center order-1'>
-                            <div className='left-card-01-img'>
-                                <Image src='/img/webpages/stone-blok-01.jpg' alt='stone-blok-01' className='img-fluid' width={555} height={246} />
-                            </div>
-                        </div>
+                        
                     </div>
                     <div className='row g-5 p-b-40'>
-                        <div className='col-lg-6 d-flex align-self-center'>
+                        <div className='col-lg-6 d-flex align-self-center order-2 order-sm-2 order-md-1'>
                             <div className='about-us-content-s about-us-content-s-l'>
                                 <h4>Cutting & Polishing</h4>
                                 <p>Advanced machinery shapes the stone into the desired slabs, and skilled craftsmen hand-polish the surfaces to bring out the natural luster and beauty of the stone.</p>
                             </div>
                         </div>
-                        <div className='col-lg-6 align-items-cente'>
+                        <div className='col-lg-6 align-items-cente order-1 order-sm-1 order-md-2'>
                             <div className='left-card-01-img'>
                                 <Image src='/img/webpages/stone-blok-02.jpg' alt='stone-blok-02' className='img-fluid' width={555} height={246} />
                             </div>
                         </div>
+                        
+                        
                     </div>
                     <div className='row g-5 p-b-40'>
-                        <div className='col-lg-6 d-flex align-self-center order-2'>
+                         <div className='col-lg-6 align-items-center order-1 order-sm-1 order-md-2'>
+                            <div className='left-card-01-img'>
+                                <Image src='/img/webpages/stone-blok-03.jpg' alt='stone-blok-03' className='img-fluid' width={555} height={246} />
+                            </div>
+                        </div>
+                        <div className='col-lg-6 d-flex align-self-center order-1 order-sm-1 order-md-2'>
                             <div className='about-us-content-s'>
                                 <h4>Stone Carving & Finishing</h4>
                                 <p>Next, artisans engage in stone carving and detailed finishing to add intricate designs and customized touches. Whether it’s a sculptural masterpiece or a functional surface, each stone is meticulously worked on to match the client’s specifications.</p>
                             </div>
                         </div>
-                        <div className='col-lg-6 align-items-center order-1'>
-                            <div className='left-card-01-img'>
-                                <Image src='/img/webpages/stone-blok-03.jpg' alt='stone-blok-03' className='img-fluid' width={555} height={246} />
-                            </div>
-                        </div>
+                       
                     </div>
                     <div className='row g-5 p-b-40'>
-                        <div className='col-lg-6 d-flex align-self-center'>
+                        <div className='col-lg-6 d-flex align-self-center  order-2 order-sm-2 order-md-2'>
                             <div className='about-us-content-s about-us-content-s-l'>
                                 <h4>Customization of Monuments</h4>
                                 <p>At Stone Discover India, customization is key, offering tailored sizes, finishes, and designs to meet unique needs. Once the stones are perfectly finished, they undergo a rigorous quality check before being carefully packaged to ensure they arrive undamaged.</p>
                             </div>
                         </div>
-                        <div className='col-lg-6 align-items-center order-1'>
+                        <div className='col-lg-6 align-items-center order-1 order-sm-1 order-md-2'>
                             <div className='left-card-01-img'>
                                 <Image src='/img/webpages/stone-blok-04.jpg' alt='stone-blok-04' className='img-fluid' width={555} height={246} />
                             </div>
                         </div>
+                        
+                        
                     </div>
                     <div className='row g-5 p-b-40'>
-                        <div className='col-lg-6 d-flex align-self-center order-2'>
+                        <div className='col-lg-6 d-flex align-self-center order-2 order-sm-2 order-md-2'>
                             <div className='about-us-content-s'>
                                 <h4>Quality Assurance</h4>
                                 <p>At Stone Discover India, quality assurance is at the heart of our process of meeting the highest standards before reaching our customers. After the stones are cut, polished, and carved, they undergo a thorough inspection by our experienced quality inspectors. Each stone is carefully examined for consistency in color, texture, and finish.</p>
                             </div>
                         </div>
-                        <div className='col-lg-6 align-items-center order-1'>
+                        <div className='col-lg-6 align-items-center order-1 order-sm-1 order-md-1'>
                             <div className='left-card-01-img'>
                                 <Image src='/img/webpages/stone-blok-05.jpg' alt='stone-blok-05' className='img-fluid' width={555} height={246} />
                             </div>
                         </div>
                     </div>
                     <div className='row g-5 p-b-40'>
-                        <div className='col-lg-6 d-flex align-self-center order-1'>
+                        <div className='col-lg-6 d-flex align-self-center order-2 order-sm-2 order-md-2'>
                             <div className='about-us-content-s about-us-content-s-l'>
                                 <h4>Packaging & Shipping</h4>
                                 <p>Once approved, the stones are carefully packed with bubble wrap, and cardboard, inside the crates to avoid any damage during transit. This attention to detail during the quality assurance and packaging stages guarantees that our customers receive only the finest natural stones, ready to be delivered to their doors with confidence.</p>
                             </div>
                         </div>
-                        <div className='col-lg-6 align-items-center order-2'>
+                        <div className='col-lg-6 align-items-center order-1 order-sm-1 order-md-2'>
                             <div className='left-card-01-img'>
                                 <Image src='/img/webpages/stone-blok-06.jpg' alt='stone-blok-06' className='img-fluid' width={555} height={246} />
                             </div>

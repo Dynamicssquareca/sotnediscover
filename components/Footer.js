@@ -98,7 +98,7 @@ const Footer = ({ faq }) => {
 
 
                             </div>
-                            <div className="col-lg-4 col-md-12 footer-contact text-center text-md-start">
+                            <div className="col-lg-4 col-md-12 footer-contact  text-md-start">
                                 <h4>Useful info</h4>
                                 <p><b>Office:</b> 1116, JMD Megapolis, Sector 48, Gurugram, Haryana 122018.</p>
                                 <p><b>Factory:</b> SY.No.33, Alinagar, Chetlapotham Village, Jinaram-Mandal, Sangareddy, Telangana 502319.</p>

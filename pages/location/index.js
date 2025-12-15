@@ -209,7 +209,7 @@ const Index = ({ categories = [], categoryData = {} }) => {
                     <div className="row">
                         <div className="col-lg-6 align-self-end">
                             <div className="hero-banner-two-head-cust">
-                                <h1>{categoryData?.title ? categoryData.title + ' ' : 'Tombstones '}<span> Stones</span></h1>
+                                <h1>{categoryData?.title ? categoryData.title + ' ' : 'Tombstones '}<span></span></h1>
                                 <p>{categoryData?.shortdescription || 'The USA Trusted Partner for Quality Tombstones Stones'}</p>
                             </div>
                         </div>
@@ -222,7 +222,7 @@ const Index = ({ categories = [], categoryData = {} }) => {
                     <div className='row'>
                         <div className='col-lg-12'>
                             <div className='heading-left p-b-20'>
-                                <h2 className='m-b-30'>Our Categories</h2>
+                                <h2 className='m-b-30'>Our Locations</h2>
                             </div>
                         </div>
                     </div>
