@@ -16,6 +16,7 @@ const FormCatlog = ({ onSubmit }) => {
   const [errors, setErrors] = useState({});
   const [defaultCountryCode, setDefaultCountryCode] = useState('us');
   const [pageUrl, setPageUrl] = useState('');
+  const [loading, setLoading] = useState(false); // ✅ Add this
 
   useEffect(() => {
 
@@ -52,17 +53,22 @@ const FormCatlog = ({ onSubmit }) => {
     //spam boat
      // Disable submit button immediately
   setSubmitted(true);
+  setLoading(true);
 
     const formData = new FormData(e.target);
-    if (formData.get('website')) {
-      console.warn("Spam bot detected.");
-      return;
-    }
-
-     if (!validateForm()) {
-    setSubmitted(false); // re-enable if validation fails
+      if (formData.get('website')) {
+    console.warn("Spam bot detected.");
+    setLoading(false);
+    setSubmitted(false);
     return;
   }
+
+if (!validateForm()) {
+    setLoading(false);
+    setSubmitted(false);
+    return;
+  }
+
 
     // Send email using EmailJS
     emailjs.send('service_0sef4e8', 'template_6tpy24w', {
@@ -129,6 +135,9 @@ const FormCatlog = ({ onSubmit }) => {
 
     // Call the onSubmit function passed from the parent component
     onSubmit();
+
+      // Hide loader
+  setLoading(false);
 
     // Start the redirection timer
     setTimerId(
@@ -365,9 +374,15 @@ const FormCatlog = ({ onSubmit }) => {
         </label>
       </div>
       <div className="m-t-30">
-        <button className='btn btn-three' type="submit" disabled={submitted}>
-          {submitted ? `Submitting (${redirectTimer})` : 'Download Now'}
-        </button>
+        <button className="btn btn-three" type="submit" disabled={submitted || loading}>
+    {loading ? (
+      <span className="loader"></span>
+    ) : submitted ? (
+      `Submitting (${redirectTimer})`
+    ) : (
+      'Submit'
+    )}
+  </button>
       </div>
       {submitted && <p>Your form has been submitted!</p>}
     </form>

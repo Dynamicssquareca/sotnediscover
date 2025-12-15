@@ -16,6 +16,7 @@ const FormCta = ({ onSubmit }) => {
   const [errors, setErrors] = useState({});
   const [defaultCountryCode, setDefaultCountryCode] = useState('us');
   const [pageUrl, setPageUrl] = useState('');
+  const [loading, setLoading] = useState(false); // ✅ Add this
 
 
   useEffect(() => {
@@ -58,19 +59,23 @@ const FormCta = ({ onSubmit }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
- // Disable submit button immediately
-  setSubmitted(true);
-     //spam boat
-     const formData = new FormData(e.target);
-     if (formData.get('website')) {
-       console.warn("Spam bot detected.");
-       return;
-     }
+    // Disable submit button immediately
+    setSubmitted(true);
+     setLoading(true);
+    //spam boat
+    const formData = new FormData(e.target);
+    if (formData.get('website')) {
+      console.warn("Spam bot detected.");
+      setLoading(false);
+      setSubmitted(false);
+      return;
+    }
 
-     if (!validateForm()) {
-    setSubmitted(false); // re-enable if validation fails
-    return;
-  }
+    if (!validateForm()) {
+      setLoading(false);
+      setSubmitted(false);
+      return;
+    }
 
     // Send email using EmailJS
     emailjs.send('service_0sef4e8', 'template_yo3rn0w', {
@@ -137,6 +142,9 @@ const FormCta = ({ onSubmit }) => {
 
     // Call the onSubmit function passed from the parent component
     onSubmit();
+
+    // Hide loader
+    setLoading(false);
 
     // Start the redirection timer
     setTimerId(
@@ -372,8 +380,14 @@ const FormCta = ({ onSubmit }) => {
           .
         </label>
       </div>
-      <button className='btn btn-three' type="submit" disabled={submitted}>
-        {submitted ? `Submitting (${redirectTimer})` : 'Submit'}
+      <button className="btn btn-three" type="submit" disabled={submitted || loading}>
+        {loading ? (
+          <span className="loader"></span>
+        ) : submitted ? (
+          `Submitting (${redirectTimer})`
+        ) : (
+          'Submit'
+        )}
       </button>
       {/* {submitted && <p>Your form has been submitted!</p>} */}
     </form>

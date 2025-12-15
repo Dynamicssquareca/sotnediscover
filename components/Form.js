@@ -16,7 +16,7 @@ const Form = ({ onSubmit }) => {
   const [errors, setErrors] = useState({});
   const [defaultCountryCode, setDefaultCountryCode] = useState('us');
   const [pageUrl, setPageUrl] = useState('');
-
+  const [loading, setLoading] = useState(false); // ✅ Add this
   useEffect(() => {
 
     setPageUrl(window.location.href);
@@ -52,19 +52,23 @@ const Form = ({ onSubmit }) => {
     //spam boat
 
     // Disable submit button immediately
-  setSubmitted(true);
+    setSubmitted(true);
+    setLoading(true);
 
 
     const formData = new FormData(e.target);
     if (formData.get('website')) {
       console.warn("Spam bot detected.");
+      setLoading(false);
+      setSubmitted(false);
       return;
     }
 
     if (!validateForm()) {
-    setSubmitted(false); // re-enable if validation fails
-    return;
-  }
+      setLoading(false);
+      setSubmitted(false);
+      return;
+    }
 
     // Send email using EmailJS
     emailjs.send('service_0sef4e8', 'template_yo3rn0w', {
@@ -132,6 +136,9 @@ const Form = ({ onSubmit }) => {
     // Call the onSubmit function passed from the parent component
     onSubmit();
 
+    // Hide loader
+    setLoading(false);
+
     // Start the redirection timer
     setTimerId(
       setInterval(() => {
@@ -190,7 +197,7 @@ const Form = ({ onSubmit }) => {
   const isValidEmail = (email) => {
     // Basic email format validation
     // const emailRegex = /^[a-zA-Z0-9._%+-]+@(?!gmail.com)(?!yahoo.com)(?!hotmail.com)(?!yahoo.co.in)(?!aol.com)(?!live.com)(?!outlook.com)[a-zA-Z0-9_-]+\.[a-zA-Z0-9-.]{2,61}$/;
-     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     return emailRegex.test(email);
   };
 
@@ -369,8 +376,14 @@ const Form = ({ onSubmit }) => {
         </label>
       </div>
       <div className="m-t-30">
-        <button className='btn btn-three' type="submit" disabled={submitted}>
-          {submitted ? `Submitting (${redirectTimer})` : 'Submit'}
+        <button className="btn btn-three" type="submit" disabled={submitted || loading}>
+          {loading ? (
+            <span className="loader"></span>
+          ) : submitted ? (
+            `Submitting (${redirectTimer})`
+          ) : (
+            'Submit'
+          )}
         </button>
       </div>
       {submitted && <p>Your form has been submitted!</p>}
