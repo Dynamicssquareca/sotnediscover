@@ -1,9 +1,13 @@
+const path = require('path');
+
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
   siteUrl: "https://www.stonediscover.com",
-  generateRobotsTxt: true, // ✅ Recommended to enable, unless you create robots.txt manually
+  generateRobotsTxt: true,
   generateIndexSitemap: false,
   sitemapSize: 50000,
+  outDir: './public', // ✅ puts sitemap in /public
+  sourceDir: path.resolve(__dirname, '.next'), // ✅ ensures it finds build files
 
   exclude: [
     "/blog/preview*",
@@ -15,7 +19,6 @@ module.exports = {
   ],
 
   additionalPaths: async (config) => {
-    // ✅ Add manual URLs here
     const manualUrls = [
       "/tombstones-monuments/angel/",
       "/tombstones-monuments/bespoke/",
@@ -40,6 +43,11 @@ module.exports = {
       "/location/orlando/",
     ];
 
-    return manualUrls.map((url) => config.transform(config, url));
+    // ✅ Make sure to await or return a resolved promise
+    const results = await Promise.all(
+      manualUrls.map((url) => config.transform(config, url))
+    );
+
+    return results;
   },
 };
