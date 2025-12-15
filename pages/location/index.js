@@ -296,11 +296,11 @@ const Index = ({ categories = [], categoryData = {} }) => {
                                 {/* This accordion uses the same open/toggle logic you already have */}
                                 <Accordion open={open} toggle={toggle}>
                                     <AccordionItem>
-                                        <AccordionHeader targetId="desc">
+                                        {/* <AccordionHeader targetId="desc">
                                             <div className="d-flex justify-content-between align-items-center w-100">
                                                 <h3>Full Description</h3>
                                             </div>
-                                        </AccordionHeader>
+                                        </AccordionHeader> */}
                                         <AccordionBody accordionId="desc">
                                             {/* show extdesc then description */}
                                             {categoryData.extdesc && (
