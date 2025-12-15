@@ -1998,7 +1998,7 @@ ul li {
     margin-top: -400px;
   }
   .about-us-section.about-us-section-h {
-    margin-top: -30px;
+    margin-top: -10px;
   }
   .hero-banner-content h1,
   .common-header-banner h1 {
@@ -2044,7 +2044,16 @@ ul li {
     margin-top: -240px;
   }
 }
-@media (min-width: 993px) and (max-width: 1200px) {
+@media (min-width: 767px) and (max-width: 1200px) {
+.hero-banner-one {
+    height: calc(65vh - 75px);
+}
+    .about-us-section.about-us-section-h {
+        margin-top: -180px;
+    }
+        .over-img {
+        margin-top: -400px;
+    }
 }
 @media (max-width: 992px) {
   .grid {
