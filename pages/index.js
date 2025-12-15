@@ -36,7 +36,7 @@ export default function Home() {
 
       </Head>
 
-      <div className="hero-banner-one">
+      {/* <div className="hero-banner-one">
         <Image
           src="/img/banner/main-bg.jpg"
           alt="Hero Banner"
@@ -46,9 +46,25 @@ export default function Home() {
           className='desh-top'
         />
 
-        {/* Content over the image */}
         <div className="relative z-10">
           <div className="container">
+            <div className="row align-items-center justify-content-center">
+              <div className="col-lg-12 text-center">
+                <div className="hero-banner-content">
+                  <h1>Trusted Wholesale Granite Headstones Supplier</h1>
+                  <p>A Leading Granite Monuments Manufacturer and Exporter from India </p>
+                  <div className="hero-banner-btn">
+                    <ModelBox className="btn-three" headerText="Scale Your Store!" buttonText="Get Quote Now" />
+                    <ModelBox className="btn-transparent" headerText="Scale Your Store!" buttonText="Request Catalogue" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> */}
+      <section className='hero-banner-custom'>
+        <div className="container">
             <div className="row align-items-center justify-content-center">
               <div className="col-lg-12 text-center">
                 <div className="hero-banner-content">
@@ -62,19 +78,18 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>
-      </div>
+      </section>
 
       <div className='container'>
         <div className='row'>
           <div className='col-lg-12'>
-            <div className='over-img'>
+            <div className='over-imgaa'>
               <Image
                 src="/img/banner/Granite-Headstones-Monuments.png"
                 alt="Hero Banner"
                 width={1024}
                 height={368}
-                className='mobile-new'
+                className='mobile-newaa'
                 priority
               />
             </div>
@@ -85,7 +100,7 @@ export default function Home() {
 
 
 
-      <section className='about-us-section about-us-section-h p-b-40 p-t-60'>
+      <section className='about-us-section about-us-section-hh p-b-40 p-t-60'>
         <div className='container'>
           <div className='row'>
             <div className='col-lg-6 align-self-center'>
