@@ -1,7 +1,5 @@
 {
   "redirects": [
-    { "source": "/", "destination": "/", "statusCode": 301 },
-
     {
       "source": "/headstones-in-edmonton/",
       "destination": "/location/headstones-in-edmonton/",
