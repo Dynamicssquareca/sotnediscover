@@ -209,8 +209,8 @@ const Index = ({ categories = [], categoryData = {} }) => {
                     <div className="row">
                         <div className="col-lg-6 align-self-end">
                             <div className="hero-banner-two-head-cust">
-                                <h1>{categoryData?.title ? categoryData.title + ' ' : 'Tombstones '}<span> Stones</span></h1>
-                                <p>{categoryData?.shortdescription || 'The USA Trusted Partner for Quality Tombstones Stones'}</p>
+                                <h1>{categoryData?.title ? categoryData.title + ' ' : 'Natural Stones'}</h1>
+                                <p>{categoryData?.shortdescription || 'The USA Trusted Partner for Quality Natural Stones'}</p>
                             </div>
                         </div>
                     </div>
