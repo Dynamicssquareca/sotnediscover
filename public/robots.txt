@@ -2,6 +2,21 @@
 User-agent: *
 Allow: /
 
+Disallow: /blog/tag/
+Disallow: /blog/category/
+Disallow: /blog/category*
+Disallow: /blog/preview/
+Disallow: /blog/preview*
+Disallow: /location/
+Disallow: /location*
+Disallow: /natural-stones/
+Disallow: /natural-stones*
+Disallow: /blog/
+Disallow: /blog*
+
+
+
+
 # Host
 Host: https://www.stonediscover.com
 

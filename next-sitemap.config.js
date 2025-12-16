@@ -3,7 +3,7 @@ const path = require('path');
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
   siteUrl: "https://www.stonediscover.com",
-  generateRobotsTxt: true,
+  generateRobotsTxt: false,
   generateIndexSitemap: false,
   sitemapSize: 50000,
   outDir: './public', // ✅ puts sitemap in /public
