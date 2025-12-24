@@ -707,6 +707,7 @@ ul li {
 .products-section-one {
   padding: 60px 0;
   background-color: #f7f6f3;
+  overflow:hidden
 }
 
 /*from section design*/

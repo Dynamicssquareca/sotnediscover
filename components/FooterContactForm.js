@@ -57,14 +57,14 @@ const FooterContactForm = ({faq}) => {
 
                 </div>
             </div>
-            <div className='row bg-gray'>
-            <div className='col-lg-6 order-1 order-lg-2'>
+            <div className='row bg-gray justify-content-center'>
+            <div className='col-lg-10'>
                     <FaqAccordion faqList={faq} />
                 </div>
 
-                <div className='col-lg-6 order-2 order-lg-1'>
+                {/* <div className='col-lg-6 order-2 order-lg-1'>
                     <Form onSubmit={handleFormSubmit} />
-                </div>
+                </div> */}
                
 
             </div>
