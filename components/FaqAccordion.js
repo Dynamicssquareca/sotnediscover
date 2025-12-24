@@ -72,7 +72,7 @@ const FaqAccordion = ({ faqList = [] }) => {
         </a>
       </div> */}
       <div className="text-center" style={{paddingTop:'30px'}}>
-        <ModelBox className="btn-three" headerText="Scale Your Store!" buttonText="Get Quote Now" />
+        <ModelBox className="btn-three" headerText="Scale Your Store!" buttonText="More Enquiry" />
       </div>
     </div>
   );
