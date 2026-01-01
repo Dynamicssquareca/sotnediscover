@@ -81,7 +81,8 @@ export const getStaticProps = async () => {
                 categoryData,
                 error: null,
             },
-            revalidate: 60,
+            // revalidate: 60,
+            revalidate: false,
         }
     } catch (error) {
         console.error('Error fetching categories:', error)
