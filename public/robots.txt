@@ -4,7 +4,6 @@ Allow: /
 
 Disallow: /blog/tag/
 Disallow: /blog/category/
-Disallow: /blog/category*
 Disallow: /blog/preview/
 Disallow: /blog/preview*
 Disallow: /location/
