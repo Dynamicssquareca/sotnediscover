@@ -430,6 +430,141 @@
       "source": "/product/viscon-white-granite-single-upright/",
       "destination": "/tombstones-monuments/upright/",
       "statusCode": 301
-    }
+    },
+    {
+    "source": "/shop/",
+    "destination": "/tombstones-monuments/",
+    "statusCode": 301
+  },
+  {
+    "source": "/product-category/granite/black/",
+    "destination": "/natural-stones/granite/",
+    "statusCode": 301
+  },
+  {
+    "source": "/product-category/granite/white/",
+    "destination": "/natural-stones/granite/",
+    "statusCode": 301
+  },
+  {
+    "source": "/product-category/granite/multi-color/",
+    "destination": "/natural-stones/granite/",
+    "statusCode": 301
+  },
+  {
+    "source": "/product-category/colors-of-granite-headstone/",
+    "destination": "/blog/granite-headstone-colors/",
+    "statusCode": 301
+  },
+  {
+    "source": "/product-category/granit/",
+    "destination": "/natural-stones/granite/",
+    "statusCode": 301
+  },
+  {
+    "source": "/product-category/cobblestone/",
+    "destination": "/natural-stones/cobble/",
+    "statusCode": 301
+  },
+  {
+    "source": "/product-category/flat-headstones/",
+    "destination": "/tombstones-monuments/",
+    "statusCode": 301
+  },
+  {
+    "source": "/product-category/angel-stones/",
+    "destination": "/tombstones-monuments/",
+    "statusCode": 301
+  },
+  {
+    "source": "/product-category/granite/",
+    "destination": "/product-category/granite/",
+    "statusCode": 301
+  },
+  {
+    "source": "/product-category/headstone-vases/",
+    "destination": "/tombstones-monuments/",
+    "statusCode": 301
+  },
+  {
+    "source": "/product-category/headstones/",
+    "destination": "/tombstones-monuments/",
+    "statusCode": 301
+  },
+  {
+    "source": "/product-category/kerb-sets/",
+    "destination": "/tombstones-monuments/",
+    "statusCode": 301
+  },
+  {
+    "source": "/product-category/lime-stone/",
+    "destination": "/natural-stones/limestone/",
+    "statusCode": 301
+  },
+  {
+    "source": "/product-category/marble/",
+    "destination": "/natural-stones/marble/",
+    "statusCode": 301
+  },
+  {
+    "source": "/product-category/marble/multi-color-marble/",
+    "destination": "/natural-stones/marble/",
+    "statusCode": 301
+  },
+  {
+    "source": "/product-category/marble/white-marble/",
+    "destination": "/natural-stones/marble/",
+    "statusCode": 301
+  },
+  {
+    "source": "/product-category/memorial-benches/",
+    "destination": "/tombstones-monuments/",
+    "statusCode": 301
+  },
+  {
+    "source": "/product-category/memorial-plaque/",
+    "destination": "/tombstones-monuments/",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/page/2/",
+    "destination": "/tombstones-monuments/",
+    "statusCode": 301
+  },
+  {
+    "source": "/shop/page/3/",
+    "destination": "/tombstones-monuments/",
+    "statusCode": 301
+  },
+  {
+    "source": "/blog/memorial-quotes-for-dads-and-grandads/",
+    "destination": "/",
+    "statusCode": 301
+  },
+  {
+    "source": "/blog/what-do-you-write-on-headstone/",
+    "destination": "/",
+    "statusCode": 301
+  },
+  {
+    "source": "/blog/write-a-funeral-tribute-for-a-loved-one/",
+    "destination": "/",
+    "statusCode": 301
+  },
+  {
+    "source": "/blog/what-to-write-on-a-headstone-quotes/",
+    "destination": "/",
+    "statusCode": 301
+  },
+  {
+    "source": "/blog/quotes-for-death-anniversary/",
+    "destination": "/",
+    "statusCode": 301
+  },
+  {
+    "source": "/blog/do-to-help-people-who-are-grieving/",
+    "destination": "/",
+    "statusCode": 301
+  }
   ]
 }

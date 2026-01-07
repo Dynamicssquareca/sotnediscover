@@ -154,10 +154,10 @@ const BlogIndex = ({ posts: initialPosts, categories }) => {
   return (
     <>
       <Head>
-        <title>Wholesale Memorial Headstones Guides | Stone Discover UK</title>
+        <title>Wholesale Granite Headstones Guides | Stone Discover</title>
         <meta
           name="description"
-          content="Explore wholesale memorial headstone guides with Stone Discover UK. Resources for funeral trade, stonemasons & retailers to choose the best."
+          content="Explore wholesale Granite headstone guides with Stone Discover. Resources for funeral trade, stonemasons & retailers to choose the best."
         />
         <link rel="canonical" href={canonicalUrl} />
       </Head>
