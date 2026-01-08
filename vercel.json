@@ -106,15 +106,8 @@
       "destination": "/",
       "statusCode": 301
     },
-    { "source": "/shop/", "destination": "/", "statusCode": 301 },
     { "source": "/slate/", "destination": "/", "statusCode": 301 },
     { "source": "/email-get-quote/", "destination": "/", "statusCode": 301 },
-    {
-      "source": "/product-category/colors-of-granite-headstone/",
-      "destination": "/",
-      "statusCode": 301
-    },
-
     {
       "source": "/upright-headstone/",
       "destination": "/tombstones-monuments/upright/",
@@ -203,12 +196,6 @@
       "destination": "/get-quote-now/",
       "statusCode": 301
     },
-    {
-      "source": "/product-category/colors-of-granite-headstone/",
-      "destination": "/",
-      "statusCode": 301
-    },
-
     {
       "source": "/product/sculpted-angel-wing-heart-headstone/",
       "destination": "/tombstones-monuments/angel/",
