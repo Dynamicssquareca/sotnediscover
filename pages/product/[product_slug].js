@@ -25,7 +25,7 @@ const ProductPage = ({ product, relatedProducts, specifications, error }) => {
 
   const sliderRef = useRef(null);  // Reference to the Swiper 
   const [open, setOpen] = useState('1');
-  const [openone, setOpenone] = useState('');
+  const [openone, setOpenone] = useState('01');
   const toggle = (id) => {
     if (open === id) {
       setOpen();
