@@ -35,7 +35,7 @@ module.exports = {
       "/tombstones-monuments/pet/",
       "/tombstones-monuments/slant/",
       "/tombstones-monuments/upright/",
-      "/location/headstones-in-atlanta-georgia/",
+      "/location/atlanta/",
       "/location/brooklyn/",
       "/location/detroit/",
       "/location/los-angeles/",
