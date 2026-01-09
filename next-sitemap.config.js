@@ -35,12 +35,12 @@ module.exports = {
       "/tombstones-monuments/pet/",
       "/tombstones-monuments/slant/",
       "/tombstones-monuments/upright/",
-      "/location/atlanta/",
-      "/location/brooklyn/",
-      "/location/detroit/",
-      "/location/los-angeles/",
-      "/location/lubbock/",
-      "/location/orlando/",
+      // "/location/atlanta/",
+      // "/location/brooklyn/",
+      // "/location/detroit/",
+      // "/location/los-angeles/",
+      // "/location/lubbock/",
+      // "/location/orlando/",
     ];
 
     // ✅ Make sure to await or return a resolved promise
