@@ -5,6 +5,7 @@ const ThankYou = () => {
         <>
             <Head>
                 <title> Thank You for Getting in Touch | Stone Discover India </title>
+                <meta name='robots' content='noindex, nofollow' />
                 <meta
                     name="description"
                     content=" Thank you for getting in touch with Stone Discover India. We’ve received your message and our team will respond shortly with the information you need."
