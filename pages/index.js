@@ -68,8 +68,8 @@ export default function Home() {
             <div className="row align-items-center justify-content-center">
               <div className="col-lg-12 text-center">
                 <div className="hero-banner-content">
-                  <h1>Trusted Wholesale Granite Headstones Supplier</h1>
-                  <p>A Leading Granite Monuments Manufacturer and Exporter from India </p>
+                  <h1>Granite Headstone Monuments Manufacturer & Exporter</h1>
+                  <p>Trusted wholesale granite headstone monuments manufacturer and exporter supplying global B2B markets from India.</p>
                   <div className="hero-banner-btn">
                     <ModelBox className="btn-three" headerText="Scale Your Store!" buttonText="Get Quote Now" />
                     {/* <ModelBox className="btn-transparent" headerText="Scale Your Store!" buttonText="Request Catalogue" /> */}
@@ -106,8 +106,10 @@ export default function Home() {
             <div className='col-lg-6 align-self-center'>
               <div className='about-us-content'>
                 <h2>The legacy of <span>Stone Discover</span></h2>
-                <p>Stone Discover is the largest manufacturer and supplier of premium quality memorial granite headstones since 1984. We offer a complete range of natural stones in various forms, including headstone monuments, gravestones, memorials, and grave markers.</p>
-                <p>Our granite monuments are carefully selected, handcrafted, and sourced from quarries and factories owned by the MPG Group India, ensuring the highest quality standards. We pride ourselves on providing exceptional customer service, timely delivery, and competitive prices.</p>
+                <p>Stone Discover is a leading Indian exporter and manufacturer of premium granite memorial monuments, serving memorial dealers and retailers worldwide since 1984. We specialize exclusively in granite headstones, including upright monuments, angel memorials, vases, bench memorials, columbariums, and custom-designed memorial products.
+</p>
+                <p>All our granite monuments are carefully selected, expertly crafted, and manufactured at our own facilities in India, ensuring consistent quality and durability. With a strong focus on bulk supply, timely global delivery, and competitive B2B pricing, we are committed to building long-term partnerships across international memorial markets.
+</p>
                 <div className='d-flex-grd'>
                   <div className='grif-list'>
                     <span>38+</span>
@@ -139,11 +141,13 @@ export default function Home() {
 
       <section className='products-section-one m-p-02'>
         <div className='container'>
-          <div className='row'>
-            <div className='col-lg-12 text-center'>
+          <div className='row justify-content-center'>
+            <div className='col-lg-10 text-center'>
               <div className='heading-center p-b-40'>
-                <h2 className='m-b-20'>Journey of<span> Natural Stone</span>, from Mines to your Doorstep!</h2>
-                <p>At Stone Discover India, the journey of natural stones begins deep within the earth, where skilled miners extract high-quality stones from mines located in various parts of India. These raw stones are then transported to quarries, where they are carefully extracted in large blocks, ensuring their integrity and quality.</p>
+                <h2 className='m-b-20'>The Journey of<span> Granite Memorials,</span> From Selection to Global Supply!
+</h2>
+                <p>At Stone Discover India, the journey of every granite monument begins with the careful selection of premium granite blocks sourced from trusted quarries across India. These blocks are then transported to our dedicated manufacturing units, where they are processed, shaped, and crafted into durable memorial products designed for long-lasting remembrance.
+</p>
               </div>
             </div>
           </div>
@@ -173,27 +177,27 @@ export default function Home() {
                 <div className='card-05-item'>
                   <Image src='/img/icons/about-pi-01.png' alt='About Us' className='img-fluid' width={48} height={48} />
                   <span>Finest Quality Stones</span>
-                  <p>We ensure that each tombstone is crafted with great attention to detail</p>
+                  <p>We ensure that each headstone is crafted with great attention to detail</p>
                 </div>
                 <div className='card-05-item'>
                   <Image src='/img/icons/about-pi-02.png' alt='About Us' className='img-fluid' width={48} height={48} />
                   <span>Competitive Prices</span>
-                  <p>Get Quality Tombstones at the Best Rates!</p>
+                  <p>Get Quality headstones at the Best Rates!</p>
                 </div>
                 <div className='card-05-item'>
                   <Image src='/img/icons/about-pi-03.png' alt='About Us' className='img-fluid' width={48} height={48} />
                   <span>On-time Delivery</span>
-                  <p>Ensuring Your Tombstones Arrive When You Need Them!</p>
+                  <p>Ensuring Your tombstones Arrive When You Need Them!</p>
                 </div>
                 <div className='card-05-item'>
                   <Image src='/img/icons/about-pi-04.png' alt='About Us' className='img-fluid' width={48} height={48} />
                   <span>Bulk Order</span>
-                  <p>Streamline Your Business with Our Premium Tombstones!</p>
+                  <p>Streamline Your Business with Our Premium tombstones!</p>
                 </div>
                 <div className='card-05-item'>
                   <Image src='/img/icons/about-pi-05.png' alt='About Us' className='img-fluid' width={48} height={48} />
                   <span>Shipping Worldwide</span>
-                  <p>Delivering Quality Tombstones Everywhere!</p>
+                  <p>Delivering Quality tombstones Everywhere!</p>
                 </div>
               </div>
             </div>
@@ -211,20 +215,20 @@ export default function Home() {
             </div>
             <div className='col-lg-6 align-self-center'>
               <div className='about-us-content'>
-                <h2>Why Us</h2>
-                <p>Stone Discover is the largest manufacturer and supplier of premium quality natural stones since 1984. We offer a complete range of natural stones in various forms, including tombstones, monuments, gravestones, memorials, grave markers and headstones.</p>
+                <h2>Why Choose Stone Discover</h2>
+                <p>Stone Discover is a trusted manufacturer and global exporter of premium granite monuments since 1984. We specialize exclusively in granite headstones and memorial products, including tombstones, monuments, gravestones, grave markers, and custom headstones designs for international B2B markets.</p>
                 <ul className='my-flex-item'>
                   <li>
-                    <div><i className="bi bi-check-lg"></i> <span>Quick Turnaround Time</span></div>
+                    <div><i className="bi bi-check-lg"></i> <span>Fast Production & Turnaround Times</span></div>
                   </li>
                   <li>
-                    <div><i className="bi bi-check-lg"></i> <span>Order inspection before dispatch</span></div>
+                    <div><i className="bi bi-check-lg"></i> <span>Quality Checks Before Shipment</span></div>
                   </li>
                   <li>
-                    <div><i className="bi bi-check-lg"></i> <span>Bulk Order Advantage</span></div>
+                    <div><i className="bi bi-check-lg"></i> <span>Bulk Order Pricing Advantage</span></div>
                   </li>
                   <li>
-                    <div><i className="bi bi-check-lg"></i> <span>Dedicated Support</span></div>
+                    <div><i className="bi bi-check-lg"></i> <span>Dedicated B2B Account Support</span></div>
                   </li>
 
                 </ul>
@@ -244,7 +248,8 @@ export default function Home() {
             <div className='col-lg-9'>
               <div className='heading-center p-b-40'>
                 <h2 className='m-b-30'>Timeless <span>Craftsmanship Across</span> Borders</h2>
-                <p>Whether you’re a high-volume buyer or expanding your product line, our team is here to support your growth. We understand the B2B dynamics of the memorial industry and deliver not just products—but trust, consistency, and partnership.</p>
+                <p>We export granite headstone monuments to international markets, meeting region-specific standards and preferences. With active exports across the UK, USA, Europe, Australia, and New Zealand, we deliver consistent quality worldwide.
+</p>
               </div>
             </div>
           </div>
@@ -263,8 +268,8 @@ export default function Home() {
           <div className='row justify-content-center'>
             <div className='col-lg-9'>
               <div className='heading-center p-b-40'>
-                <h2 className='m-b-30'>Join Hands with a Reliable <span>Tombstone Supplier</span></h2>
-                <p>Whether you’re a high-volume buyer or expanding your product line, our team is here to support your growth. We understand the B2B dynamics of the memorial industry and deliver not just products—but trust, consistency, and partnership.</p>
+                <h2 className='m-b-30'>Partner with a Trusted <span>Granite Monuments Exporter</span></h2>
+                <p>Whether you are sourcing in bulk or expanding your memorial range, Stone Discover supports your business with reliable granite headstones supply, consistent quality, and export expertise. We work closely with memorial dealers and agents worldwide to ensure long-term supply partnerships built on trust and performance.</p>
               </div>
               <div className='button-center-new text-center'>
                 <a href='/get-quote-now/' className='btn btn-three'>Request a Quote</a>

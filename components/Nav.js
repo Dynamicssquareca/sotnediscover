@@ -123,7 +123,7 @@ const Nav = () => {
               <li><a href="/tombstones-monuments/upright/">Upright Headstones</a></li>
               <li><a href="/tombstones-monuments/columbarium/">Columbarium</a></li>
               <li><a href="/tombstones-monuments/flat/">Flat Marker</a></li>
-              <li><a href="/tombstones-monuments/headstones/">Granite Headstones</a></li>
+              <li><a href="/tombstones-monuments/headstones/">Headstones</a></li>
               <li><a href="/tombstones-monuments/vases/">Headstone Vases</a></li>
               <li><a href="/tombstones-monuments/kerb-sets/">Kerb Sets</a></li>
               <li><a href="/tombstones-monuments/bench/">Memorial Bench</a></li>

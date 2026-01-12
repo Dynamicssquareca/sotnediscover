@@ -63,7 +63,8 @@ const Footer = ({ faq }) => {
                                     <Image src="/stone-logo.png" alt="stone-logo" width={200} height={30} />
                                     {/* <span>FlexStart</span> */}
                                 </a>
-                                <p>Stone Discover – Largest manufacturer & supplier of Tombstone & Natural stone since 1984. We offer a wide range of Monuments such as Headstone, Angel Memorial, Plaques, Bench, Vases, Urns, Columbarium in various stones and natural stone in Granite, Marble from India. We also include sandstone and limestone in our offerings.</p>
+                                <p>Stone Discover is a leading Indian exporter and manufacturer of premium granite memorial monuments, serving memorial dealers and retailers worldwide since 1984. We specialize exclusively in granite headstones, including upright monuments, angel memorials, vases, bench memorials, columbariums, and custom-designed memorial products.
+</p>
                                 <div className="social-links mt-3">
                                     <a href="https://www.linkedin.com/company/stonediscover/" className="linkedin" target='_blank'><i className="bi bi-linkedin"></i></a>
                                     <a href="https://in.pinterest.com/stone_discover_india/" className="facebook" target='_blank'><i className="bi bi-pinterest"></i></a>
