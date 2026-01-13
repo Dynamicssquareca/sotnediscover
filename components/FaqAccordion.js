@@ -16,28 +16,40 @@ const FaqAccordion = ({ faqList = [] }) => {
 
   const defaultFaqs = [
     {
-      title: "What types of memorials do you provide?",
-      description: "We offer a wide range of memorial headstone designs such as Ogee Memorials, Angel Memorials Bench Memorials, Children Memorials, Heart shaped memorials, Kerb sets,  Cremation Urns, and Vases. All our products are made from the finest quality Indian granite and are available in different colors and finishes to choose from.",
+      title: "Are you a granite headstone manufacturer or trader?",
+      description: "Stone Discover India is a direct granite headstone manufacturer in India. We operate our own granite processing facilities and export factory-made granite headstones directly to international B2B buyers and retailers.",
     },
     {
-      title: "Where are your memorials manufactured?",
-      description: "All our memorial tombstones are expertly designed and crafted by our skilled professionals in India. The raw granite is first sourced from trusted quarries and then cut, designed, and engraved in our factories. We use both traditional and modern machinery for custom design and development.",
+      title: "Do you supply granite headstones on a wholesale basis?",
+      description: "We specialize exclusively in wholesale granite headstone supply for cemeteries, monument dealers, funeral homes, memorial parks, and granite distributors. We mostly prefer bulk orders and long-term supply contracts.",
     },
     {
-      title: "Who can buy from Us?",
-      description: "We mostly sell headstone grave markers and bespoke memorial plaques to wholesalers, dealers, and importers. We do bulk orders at competitive prices, all over the UK. However, we also serve end customers or retailers, depending on the location and order quantity.",
+      title: "Which countries do you export granite headstones to?",
+      description: "We export granite headstones worldwide. Speaking specifically, we are currently serving  USA, Canada, UK, Germany, France, Australia & New Zealand, with other parts of the world as well.",
     },
     {
-      title: "What materials do you use for your memorial stone?",
-      description: "We use premium quality Granite, sourced from the finest quarries of India for the industrial production of memorial tombstones and headstones grave markers. However, we can also accommodate special requests for other materials like marble, sandstone, and limestone, based on availability and order size.",
+      title: "Do you manufacture black granite headstones?",
+      description: "Yes, we manufacture and export premium black granite headstones along with other Indian granite varieties. Our black granite headstones are widely supplied to overseas cemetery dealers and monument markets.",
     },
     {
-      title: "Can you customize memorials according to our specifications?",
-      description: "Absolutely! We offer customization options, including sizes, shapes, engravings, and finishes. Please contact us with your detailed requirements, and we’ll work closely with you to meet your preferences.",
+      title: "What different varieties of Headstones do you offer?",
+      description: "We specialize exclusively in granite headstones, including upright monuments, angel memorials, vases, bench memorials, columbariums, and custom-designed memorial products.",
     },
     {
-      title: "What is the minimum order quantity (MOQ)?",
-      description: "Our minimum order quantity varies depending on the type of memorial stone and customization required. We’ll provide free delivery on ordering a minimum of 5 Sets of Ogees, Mapples, and Kerbsets. Please contact us with your specific needs, for a detailed quote and MOQ.",
+      title: "Can you supply granite blank headstones for local engraving?",
+      description: "Yes, we supply granite blank headstones in bulk, allowing overseas buyers to perform local engraving while benefiting from cost-effective manufacturing and consistent quality from India.",
+    },
+    {
+      title: "What is your minimum order quantity (MOQ)?",
+      description: "Minimum order quantity depends on the product type, size, and customization requirements. We primarily handle container-based wholesale orders and want buyers to contact us for MOQ details.",
+    },
+    {
+      title: "How are granite headstones packed for export?",
+      description: "Granite headstones are securely packed in fumigated wooden crates with internal protective materials like bubble wrapping to prevent damage during ocean transit and ensure safe international delivery.",
+    },
+    {
+      title: "How can I request wholesale pricing or a product catalog?",
+      description: "You can contact us directly through our website to request wholesale pricing, product catalogs, or to discuss custom granite headstone manufacturing and bulk supply requirements.",
     },
 
   ];

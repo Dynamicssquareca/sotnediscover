@@ -202,57 +202,57 @@ export default function About() {
 
 
             <section className='p-b-30 p-t-60 m-p-07'>
-                <div className='container'>
-                    <div className='row justify-content-center'>
-                        <div className='col-lg-9'>
-                            <div className='heading-center p-b-40'>
-                                <h2 className='m-b-30'>Pillars of Strength</h2>
-
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div className='row'>
-                        <div className='col-lg-12'>
-                            <div className='card-05'>
-                                <div className='card-05-item'>
-                                    <Image src='/img/icons/about-pi-01.png' alt='About Us' className='img-fluid' width={48} height={48} />
-                                    <span>Finest Quality Stones</span>
-                                    <p>We ensure that each tombstone is crafted with great attention to detail</p>
-                                </div>
-                                <div className='card-05-item'>
-                                    <Image src='/img/icons/about-pi-02.png' alt='About Us' className='img-fluid' width={48} height={48} />
-                                    <span>Competitive Prices</span>
-                                    <p>Get Quality Tombstones at the Best Rates!</p>
-                                </div>
-                                <div className='card-05-item'>
-                                    <Image src='/img/icons/about-pi-03.png' alt='About Us' className='img-fluid' width={48} height={48} />
-                                    <span>On-time Delivery</span>
-                                    <p>Ensuring Your Tombstones Arrive When You Need Them!</p>
-                                </div>
-                                <div className='card-05-item'>
-                                    <Image src='/img/icons/about-pi-04.png' alt='About Us' className='img-fluid' width={48} height={48} />
-                                    <span>Bulk Order</span>
-                                    <p>Streamline Your Business with Our Premium Tombstones!</p>
-                                </div>
-                                <div className='card-05-item'>
-                                    <Image src='/img/icons/about-pi-05.png' alt='About Us' className='img-fluid' width={48} height={48} />
-                                    <span>Shipping Worldwide</span>
-                                    <p>Delivering Quality Tombstones Everywhere!</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <div className='container  p-t-80'>
+                                      <div className='row justify-content-center'>
+                                        <div className='col-lg-9'>
+                                          <div className='heading-center p-b-40'>
+                                            <h2 className='m-b-30'>Pillars of Strength</h2>
+                                            <p>Whether you’re a high-volume buyer or expanding your product line, our team is here to support your growth. We understand the B2B dynamics of the memorial industry and deliver not just products—but trust, consistency, and partnership.</p>
+                                          </div>
+                            
+                                        </div>
+                                      </div>
+                            
+                                      <div className='row'>
+                                        <div className='col-lg-12'>
+                                          <div className='card-05'>
+                                            <div className='card-05-item'>
+                                              <Image src='/img/icons/about-pi-01.png' alt='About Us' className='img-fluid' width={48} height={48} />
+                                              <span>Finest Quality Stones</span>
+                                              <p>We ensure that each headstone is crafted with great attention to detail</p>
+                                            </div>
+                                            <div className='card-05-item'>
+                                              <Image src='/img/icons/about-pi-02.png' alt='About Us' className='img-fluid' width={48} height={48} />
+                                              <span>Competitive Prices</span>
+                                              <p>Get Quality headstones at the Best Rates!</p>
+                                            </div>
+                                            <div className='card-05-item'>
+                                              <Image src='/img/icons/about-pi-03.png' alt='About Us' className='img-fluid' width={48} height={48} />
+                                              <span>On-time Delivery</span>
+                                              <p>Ensuring Your tombstones Arrive When You Need Them!</p>
+                                            </div>
+                                            <div className='card-05-item'>
+                                              <Image src='/img/icons/about-pi-04.png' alt='About Us' className='img-fluid' width={48} height={48} />
+                                              <span>Bulk Order</span>
+                                              <p>Streamline Your Business with Our Premium tombstones!</p>
+                                            </div>
+                                            <div className='card-05-item'>
+                                              <Image src='/img/icons/about-pi-05.png' alt='About Us' className='img-fluid' width={48} height={48} />
+                                              <span>Shipping Worldwide</span>
+                                              <p>Delivering Quality tombstones Everywhere!</p>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
             </section>
             <section className='p-t-80 m-p-07'>
                 <div className='container'>
                     <div className='row justify-content-center'>
                         <div className='col-lg-9'>
                             <div className='heading-center p-b-40'>
-                                <h2 className='m-b-30'>Join Hands with a Reliable <span>Tombstone Supplier</span></h2>
-                                <p>Whether you’re a high-volume buyer or expanding your product line, our team is here to support your growth. We understand the B2B dynamics of the memorial industry and deliver not just products—but trust, consistency, and partnership.</p>
+                                <h2 className='m-b-30'>Partner with a Trusted <span>Granite Monuments Exporter</span></h2>
+                <p>Whether you are sourcing in bulk or expanding your memorial range, Stone Discover supports your business with reliable granite headstones supply, consistent quality, and export expertise. We work closely with memorial dealers and retailers worldwide to ensure long-term supply partnerships built on trust and performance.</p>
                             </div>
                             <div className='button-center-new text-center'>
                                 <a href='/get-quote-now' className='btn btn-three'>Request a Quote</a>
