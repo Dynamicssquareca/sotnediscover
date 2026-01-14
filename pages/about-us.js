@@ -85,8 +85,9 @@ export default function About() {
                     <div className='row justify-content-center'>
                         <div className='col-lg-9'>
                             <div className='heading-center p-b-40'>
-                                <h2 className='m-b-30'><span>Journey of Natural Stone</span> from Mines to your Doorstep!</h2>
-                                <p>At Stone Discover India, the journey of natural stones begins deep within the earth, where skilled miners extract high-quality stones from mines located in various parts of India. These raw stones are then transported to quarries, where they are carefully extracted in large blocks, ensuring their integrity and quality.</p>
+                                <h2 className='m-b-30'><span>The Journey of Granite Monuments</span>, from Selection to Global Supply!</h2>
+                                
+                                <p>At Stone Discover India, the journey of every granite monument begins with the careful selection of premium granite blocks sourced from trusted quarries across India. These blocks are then transported to our dedicated manufacturing units, where they are processed, shaped, and crafted into durable memorial products designed for long-lasting remembrance.</p>
                             </div>
 
                         </div>

@@ -9,22 +9,22 @@ export default function Home() {
     <>
       <Head>
         <title>
-          Wholesale Granite Headstone Monuments | Stone Discover India
+          Granite Headstones Manufacturer & Exporter | Stone Discover
         </title>
         <meta
           name="description"
-          content="Trusted granite headstones & monuments supplier from India. Order in bulk and save 20% on wholesale memorials with worldwide delivery. Contact us Today!"
+          content="Stone Discover India is a trusted granite headstone manufacturer and exporter, supplying custom headstone monuments to the USA, Canada, Europe, and global markets. Today 20% off"
         />
         <link rel="canonical" href="https://www.stonediscover.com/" />
         <meta property="og:locale" content="US" />
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
-          content=" Wholesale Granite Headstone Monuments | Stone Discover India "
+          content=" Granite Headstones Manufacturer & Exporter | Stone Discover "
         />
         <meta
           property="og:description"
-          content=" Trusted granite headstones & monuments supplier from India. Order in bulk and save 20% on wholesale memorials with worldwide delivery. Contact us Today!"
+          content=" Stone Discover India is a trusted granite headstone manufacturer and exporter, supplying custom headstone monuments to the USA, Canada, Europe, and global markets. Today 20% off"
         />
         <meta property="og:url" content="https://www.stonediscover.com/" />
         <meta property="og:site_name" content="Stone Discover" />
@@ -39,11 +39,11 @@ export default function Home() {
         <meta name="twitter:site" content="@Stone Discover" />
         <meta
           name="twitter:title"
-          content=" Wholesale Granite Headstone Monuments | Stone Discover India "
+          content="Granite Headstones Manufacturer & Exporter | Stone Discover "
         />
         <meta
           name="twitter:description"
-          content=" Trusted granite headstones & monuments supplier from India. Order in bulk and save 20% on wholesale memorials with worldwide delivery. Contact us Today!"
+          content=" Stone Discover India is a trusted granite headstone manufacturer and exporter, supplying custom headstone monuments to the USA, Canada, Europe, and global markets. Today 20% off"
         />
         <meta
           name="twitter:image"
@@ -84,10 +84,7 @@ export default function Home() {
             <div className="col-lg-12 text-center">
               <div className="hero-banner-content">
                 <h1>Granite Headstone Monuments Manufacturer & Exporter</h1>
-                <p>
-                  Trusted wholesale granite headstone monuments manufacturer and
-                  exporter supplying global B2B markets from India.
-                </p>
+                <p>Supplying premium granite headstone monuments from India to the USA, Canada, Europe, and global B2B markets.</p>
                 <div className="hero-banner-btn">
                   <ModelBox
                     className="btn-three"
@@ -294,11 +291,11 @@ export default function Home() {
             <div className="col-lg-6 align-items-center">
               <div className="left-card-01-img">
                 <Image
-                  src="/img/webpages/pic-06.png"
-                  alt="About Us"
+                  src="/img/webpages/headstones-side-pic.png"
+                  alt="headstones"
                   className="img-fluid"
-                  width={553}
-                  height={545}
+                  width={555}
+                  height={546}
                 />
               </div>
             </div>
