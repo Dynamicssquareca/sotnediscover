@@ -29,11 +29,11 @@ const FaqAccordionComon = ({ faqList = [], categoryData = null }) => {
     },
     {
       title: "Do you manufacture black granite headstones?",
-      description: "Yes, we manufacture and export premium black granite headstones along with other Indian granite varieties. Our black granite headstones are widely supplied to overseas cemetery dealers and monument markets.",
+      description: "Yes, we manufacture and export premium <a href=\"/tombstones-monuments/headstones/\">black granite headstones</a> along with other Indian granite varieties. Our black granite headstones are widely supplied to overseas cemetery dealers and monument markets.",
     },
     {
       title: "What different varieties of Headstones do you offer?",
-      description: "We specialize exclusively in granite headstones, including upright monuments, angel memorials, vases, bench memorials, columbariums, and custom-designed memorial products.",
+      description: "We specialize exclusively in granite headstones, including <a href=\"/tombstones-monuments/upright/\">upright headstones</a>, angel memorials, vases, bench memorials, columbarium, and custom-designed memorial products.",
     },
     {
       title: "Can you supply granite blank headstones for local engraving?",
@@ -86,7 +86,7 @@ const FaqAccordionComon = ({ faqList = [], categoryData = null }) => {
                 </div>
               </AccordionHeader>
               <AccordionBody accordionId={`${index + 1}`}>
-                <p>{item.description}</p>
+                <p dangerouslySetInnerHTML={{ __html: item.description }} />
               </AccordionBody>
             </AccordionItem>
           ))}

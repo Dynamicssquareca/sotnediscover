@@ -9,22 +9,22 @@ export default function Home() {
     <>
       <Head>
         <title>
-          Granite Headstones Manufacturer & Exporter | Stone Discover
+          Headstones, Tombstones & Gravestones Manufacturer | Stone Discover
         </title>
         <meta
           name="description"
-          content="Stone Discover India is a trusted granite headstone manufacturer and exporter, supplying custom headstone monuments to the USA, Canada, Europe, and global markets. Today 20% off"
+          content="Stone Discover India is a trusted manufacturer and exporter of headstones, tombstones & gravestones, supplying custom memorial monuments worldwide."
         />
         <link rel="canonical" href="https://www.stonediscover.com/" />
         <meta property="og:locale" content="US" />
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
-          content=" Granite Headstones Manufacturer & Exporter | Stone Discover "
+          content=" Headstones, Tombstones & Gravestones Manufacturer | Stone Discover"
         />
         <meta
           property="og:description"
-          content=" Stone Discover India is a trusted granite headstone manufacturer and exporter, supplying custom headstone monuments to the USA, Canada, Europe, and global markets. Today 20% off"
+          content=" Stone Discover India is a trusted manufacturer and exporter of headstones, tombstones & gravestones, supplying custom memorial monuments worldwide."
         />
         <meta property="og:url" content="https://www.stonediscover.com/" />
         <meta property="og:site_name" content="Stone Discover" />
@@ -39,11 +39,11 @@ export default function Home() {
         <meta name="twitter:site" content="@Stone Discover" />
         <meta
           name="twitter:title"
-          content="Granite Headstones Manufacturer & Exporter | Stone Discover "
+          content="Headstones, Tombstones & Gravestones Manufacturer | Stone Discover"
         />
         <meta
           name="twitter:description"
-          content=" Stone Discover India is a trusted granite headstone manufacturer and exporter, supplying custom headstone monuments to the USA, Canada, Europe, and global markets. Today 20% off"
+          content=" Stone Discover India is a trusted manufacturer and exporter of headstones, tombstones & gravestones, supplying custom memorial monuments worldwide."
         />
         <meta
           name="twitter:image"
@@ -83,8 +83,8 @@ export default function Home() {
           <div className="row align-items-center justify-content-center">
             <div className="col-lg-12 text-center">
               <div className="hero-banner-content">
-                <h1>Granite Headstone Monuments Manufacturer & Exporter</h1>
-                <p>Supplying premium granite headstone monuments from India to the USA, Canada, Europe, and global B2B markets.</p>
+                <h1>Headstones, Tombstones & Gravestones Manufacturer Exporter</h1>
+                <p>Supplying premium granite headstones, tombstones & gravestones from India to the USA, Canada, Europe, and global B2B markets.</p>
                 <div className="hero-banner-btn">
                   <ModelBox
                     className="btn-three"
@@ -125,21 +125,10 @@ export default function Home() {
                   The legacy of <span>Stone Discover</span>
                 </h2>
                 <p>
-                  Stone Discover is a leading Indian exporter and manufacturer
-                  of premium granite memorial monuments, serving memorial
-                  dealers and retailers worldwide since 1984. We specialize
-                  exclusively in granite headstones, including upright
-                  monuments, angel memorials, vases, bench memorials,
-                  columbariums, and custom-designed memorial products.
+                  Stone Discover is a leading Indian exporter and manufacturer of premium granite headstones, tombstones & gravestones, monuments, serving memorial dealers, cemeteries and retailers worldwide since 1984. We specialize exclusively in granite headstones, including upright headstones, angel headstones, vases, bench memorials, columbarium, and custom-designed memorial products.
                 </p>
-                <p>
-                  All our granite monuments are carefully selected, expertly
-                  crafted, and manufactured at our own facilities in India,
-                  ensuring consistent quality and durability. With a strong
-                  focus on bulk supply, timely global delivery, and competitive
-                  B2B pricing, we are committed to building long-term
-                  partnerships across international memorial markets.
-                </p>
+                <p>All our granite monuments are carefully selected, expertly crafted, and manufactured at our own facilities in India, ensuring consistent quality and durability. With a strong focus on bulk supply, timely global delivery, and competitive B2B pricing, we are committed to building long-term partnerships across international memorial markets.
+</p>
                 <div className="d-flex-grd">
                   <div className="grif-list">
                     <span>38+</span>
@@ -184,14 +173,7 @@ export default function Home() {
                   The Journey of<span> Granite Memorials,</span> From Selection
                   to Global Supply!
                 </h2>
-                <p>
-                  At Stone Discover India, the journey of every granite monument
-                  begins with the careful selection of premium granite blocks
-                  sourced from trusted quarries across India. These blocks are
-                  then transported to our dedicated manufacturing units, where
-                  they are processed, shaped, and crafted into durable memorial
-                  products designed for long-lasting remembrance.
-                </p>
+                <p>At Stone Discover India, the journey of every headstone begins with the careful selection of premium granite blocks sourced from trusted quarries across India. These blocks are processed at our dedicated manufacturing units, where skilled craftsmen shape, finish, and polish each monument with precision. With a strong focus on bulk manufacturing, export-ready packaging, and timely international delivery, we support long-term B2B supply requirements for memorial markets worldwide.</p>
               </div>
             </div>
           </div>
@@ -302,13 +284,8 @@ export default function Home() {
             <div className="col-lg-6 align-self-center">
               <div className="about-us-content">
                 <h2>Why Choose Stone Discover</h2>
-                <p>
-                  Stone Discover is a trusted manufacturer and global exporter
-                  of premium granite monuments since 1984. We specialize
-                  exclusively in granite headstones and memorial products,
-                  including tombstones, monuments, gravestones, grave markers,
-                  and custom headstones designs for international B2B markets.
-                </p>
+                <p>Stone Discover is a trusted manufacturer and global exporter of premium granite headstones since 1984. We specialize exclusively in granite headstones and memorial products, including tombstones, monuments, gravestones, grave markers, and custom headstones designs for international B2B markets.
+</p>
                 <ul className="my-flex-item">
                   <li>
                     <div>
@@ -325,13 +302,31 @@ export default function Home() {
                   <li>
                     <div>
                       <i className="bi bi-check-lg"></i>{" "}
-                      <span>Bulk Order Pricing Advantage</span>
+                      <span>Manufacturer-direct pricing advantage</span>
                     </div>
                   </li>
                   <li>
                     <div>
                       <i className="bi bi-check-lg"></i>{" "}
-                      <span>Dedicated B2B Account Support</span>
+                      <span>Exclusive focus on granite memorial products</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <i className="bi bi-check-lg"></i>{" "}
+                      <span>Bulk order and container supply capability</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <i className="bi bi-check-lg"></i>{" "}
+                      <span>Dedicated B2B account support</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <i className="bi bi-check-lg"></i>{" "}
+                      <span>Proven export experience since 1984</span>
                     </div>
                   </li>
                 </ul>

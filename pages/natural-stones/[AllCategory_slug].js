@@ -210,13 +210,13 @@ const CategoryPage = ({ category, subcategory, products = [], faq, error }) => {
       {/* Full Description target */}
       <section className="p-t-20 p-b-40" ref={descRef}>
         <div className="container">
-          <div className="row">
+          {/* <div className="row">
             <div className="col-lg-12">
               <div className="heading-left p-b-20">
                 <h2 className="m-b-30">Full Description</h2>
               </div>
             </div>
-          </div>
+          </div> */}
 
           <div className="row">
             <div className="col-lg-12">
