@@ -116,7 +116,7 @@ const Footer = ({ faq }) => {
                 </div>
                 <div className='bottom-footer'>
                     <div className="container">
-                        <div className="copyright">© Copyright 2025 Stonediscover UK, Inc. All rights reserved. Various trademarks held by their respective owners.</div>
+                        <div className="copyright">© Copyright 2026 Stonediscover UK, Inc. All rights reserved. Various trademarks held by their respective owners.</div>
                     </div>
                 </div>
             </footer>
