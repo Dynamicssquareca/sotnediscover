@@ -293,7 +293,7 @@ const Index = ({ categories = [], categoryData = {} }) => {
 
                     <div className='row'>
                         <div className='col-lg-12'>
-                            <div className='accordion-one accordion-one-product'>
+                            <div className='accordion-one accordion-one-product accordion-one-product-new'>
                                 {/* This accordion uses the same open/toggle logic you already have */}
                                 <Accordion open={open} toggle={toggle}>
                                     <AccordionItem>
@@ -304,9 +304,9 @@ const Index = ({ categories = [], categoryData = {} }) => {
                                         </AccordionHeader> */}
                                         <AccordionBody accordionId="desc">
                                             {/* show extdesc then description */}
-                                            {categoryData.extdesc && (
+                                            {/* {categoryData.extdesc && (
                                                 <div dangerouslySetInnerHTML={{ __html: categoryData.extdesc }} />
-                                            )}
+                                            )} */}
                                             {categoryData.description && (
                                                 <div dangerouslySetInnerHTML={{ __html: categoryData.description }} />
                                             )}

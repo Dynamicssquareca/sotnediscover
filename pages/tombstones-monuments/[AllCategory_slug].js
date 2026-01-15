@@ -219,7 +219,7 @@ const CategoryPage = ({ category, subcategory, products = [], faq, error }) => {
 
           <div className="row">
             <div className="col-lg-12">
-              <div className="accordion-one accordion-one-product">
+              <div className="accordion-one accordion-one-product accordion-one-product-new">
                 <Accordion open={open} toggle={toggle}>
                   <AccordionItem>
                     

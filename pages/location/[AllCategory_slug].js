@@ -46,13 +46,19 @@ const CategoryPage = ({ category, subcategory, products = [], faq, error, siblin
   // Prefer subcategory content if subcategory exists, otherwise fall back to category
   const primary = subcategory || category || {};
 
-  const displayDescription =
-    (primary.description && primary.description.trim() && primary.description) ||
-    (primary.extdescription && primary.extdescription.trim() && primary.extdescription) ||
-    (primary.extdesc && primary.extdesc.trim() && primary.extdesc) ||
-    '';
+  // const displayDescription =
+  //   (primary.description && primary.description.trim() && primary.description) ||
+  //   (primary.extdescription && primary.extdescription.trim() && primary.extdescription) ||
+  //   (primary.extdesc && primary.extdesc.trim() && primary.extdesc) ||
+  //   '';
 
+
+
+ const displayDescription =
+    (primary.description && primary.description.trim() && primary.description) || '';
+  const displayExtaDesc = (primary.extdescription && primary.extdescription) || '';
   const displayShortDesc = (primary.shortdescription && primary.shortdescription) || '';
+
 
   const displayHeroImage = primary.image || primary.featuredimage || '';
 
@@ -154,8 +160,8 @@ const CategoryPage = ({ category, subcategory, products = [], faq, error, siblin
               <div className="about-us-content">
                 <h2>About {primary.title || category?.title}</h2>
 
-                {displayDescription ? (
-                  <div dangerouslySetInnerHTML={{ __html: displayDescription }} />
+                {displayExtaDesc ? (
+                  <div dangerouslySetInnerHTML={{ __html: displayExtaDesc }} />
                 ) : null}
 
                 <button onClick={handleReadMore} className="btn btn-four m-t-30">
@@ -186,14 +192,14 @@ const CategoryPage = ({ category, subcategory, products = [], faq, error, siblin
 
           <div className="row">
             <div className="col-lg-12">
-              <div className="accordion-one accordion-one-product">
+              <div className="accordion-one accordion-one-product accordion-one-product-new">
                 <Accordion open={open} toggle={toggle}>
                   <AccordionItem>
-                    <AccordionHeader targetId="desc">
+                    {/* <AccordionHeader targetId="desc">
                       <div className="d-flex justify-content-between align-items-center w-100">
                         <h3>About {primary.title || category?.title} — Details</h3>
                       </div>
-                    </AccordionHeader>
+                    </AccordionHeader> */}
                     <AccordionBody accordionId="desc">
                       {displayDescription ? (
                         <div dangerouslySetInnerHTML={{ __html: displayDescription }} />
