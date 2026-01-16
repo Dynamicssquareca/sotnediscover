@@ -552,6 +552,51 @@
     "source": "/blog/do-to-help-people-who-are-grieving/",
     "destination": "/",
     "statusCode": 301
+  },
+  {
+    "source": "/blog/7-inspiring-headstone-designs-for-cherished-couples/",
+    "destination": "/blog/headstone-designs-to-honor-couples/",
+    "statusCode": 301
+  },
+  {
+    "source": "/memorials/plaques/red-granite-memorial-plaque/",
+    "destination": "/product/red-granite-memorial-plaque/",
+    "statusCode": 301
+  },
+  {
+    "source": "/product/calacatta-casade-quartz/",
+    "destination": "/product/calacatta-cascade-quartz/",
+    "statusCode": 301
+  },
+  {
+    "source": "/blog/11-trendy-and-attractive-light-colored-granite/",
+    "destination": "/blog/white-granite-colors/",
+    "statusCode": 301
+  },
+  {
+    "source": "/monuments/",
+    "destination": "/",
+    "statusCode": 301
+  },
+  {
+    "source": "/monuments/page/1/",
+    "destination": "/",
+    "statusCode": 301
+  },
+  {
+    "source": "/monuments/page/2/",
+    "destination": "/",
+    "statusCode": 301
+  },
+  {
+    "source": "/monuments/page/3/",
+    "destination": "/",
+    "statusCode": 301
+  },
+  {
+    "source": "/monuments/page/4/",
+    "destination": "/",
+    "statusCode": 301
   }
   ]
 }
