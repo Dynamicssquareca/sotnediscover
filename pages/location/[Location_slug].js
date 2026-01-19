@@ -12,7 +12,7 @@ const getImageUrl = (img) =>
 const getImageUrlBanner = (img) =>
   img ? `${process.env.NEXT_PUBLIC_IMAGE}/${img}` : '/img/webpages/product-01.jpg';
 
-const CategoryPage = ({ category, subcategory, products = [], faq, error, siblingsProducts = [] }) => {
+const LocationPage = ({ category, subcategory, products = [], faq, error, siblingsProducts = [] }) => {
   if (error) {
     return <p className="text-danger">{error}</p>;
   }
@@ -41,7 +41,7 @@ const CategoryPage = ({ category, subcategory, products = [], faq, error, siblin
   };
 
   const router = useRouter();
-  const { AllCategory_slug } = router.query;
+  const { Location_slug } = router.query;
 
   // Prefer subcategory content if subcategory exists, otherwise fall back to category
   const primary = subcategory || category || {};
@@ -391,7 +391,7 @@ export const getStaticPaths = async () => {
 
     const paths = Array.isArray(data)
       ? data.map((cat) => ({
-        params: { AllCategory_slug: cat.slug },
+        params: { Location_slug: cat.slug },
       }))
       : [];
 
@@ -414,7 +414,7 @@ export const getStaticProps = async ({ params }) => {
       process.env.NEXT_PUBLIC_CATEGORY_CHILD_API_URL ||
       'https://stonediscoverusaapi.onrender.com/api/frontend/productscategory';
 
-    const slug = encodeURIComponent(params.AllCategory_slug || '');
+    const slug = encodeURIComponent(params.Location_slug || '');
     const url = `${detailsBase.replace(/\/$/, '')}/${slug}`;
 
     const res = await fetch(url);
@@ -492,4 +492,4 @@ export const getStaticProps = async ({ params }) => {
   }
 };
 
-export default CategoryPage;
+export default LocationPage;
