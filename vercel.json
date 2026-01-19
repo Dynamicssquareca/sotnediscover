@@ -2,52 +2,57 @@
   "redirects": [
     {
       "source": "/headstones-in-edmonton/",
-      "destination": "/location/headstones-in-edmonton/",
+      "destination": "/location/edmonton/",
       "statusCode": 301
     },
     {
       "source": "/headstone-in-quebec/",
-      "destination": "/location/headstone-in-quebec/",
+      "destination": "/location/quebec/",
       "statusCode": 301
     },
     {
       "source": "/headstone-in-winnipeg/",
-      "destination": "/location/headstone-in-winnipeg/",
+      "destination": "/location/winnipeg/",
       "statusCode": 301
     },
     {
       "source": "/headstone-in-hamilton/",
-      "destination": "/location/headstone-in-hamilton/",
+      "destination": "/location/hamilton/",
       "statusCode": 301
     },
     {
       "source": "/headstone-in-mississauga/",
-      "destination": "/location/headstone-in-mississauga/",
+      "destination": "/location/mississauga/",
       "statusCode": 301
     },
     {
       "source": "/headstones-in-vancouver/",
-      "destination": "/location/headstones-in-vancouver/",
+      "destination": "/location/vancouver/",
       "statusCode": 301
     },
     {
       "source": "/headstones-in-toronto/",
-      "destination": "/location/headstones-in-toronto/",
+      "destination": "/location/toronto/",
       "statusCode": 301
     },
     {
       "source": "/headstones-in-ottawa/",
-      "destination": "/location/headstones-in-ottawa/",
+      "destination": "/location/ottawa/",
       "statusCode": 301
     },
     {
       "source": "/headstones-in-montreal/",
-      "destination": "/location/headstones-in-montreal/",
+      "destination": "/location/montreal/",
+      "statusCode": 301
+    },
+    {
+      "source": "/product/green-spider-marble/",
+      "destination": "/product/spider-green-marble/",
       "statusCode": 301
     },
     {
       "source": "/headstones-in-calgary/",
-      "destination": "/location/headstones-in-calgary/",
+      "destination": "/location/calgary/",
       "statusCode": 301
     },
 
