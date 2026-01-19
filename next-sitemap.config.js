@@ -14,7 +14,7 @@ module.exports = {
     '/blog/category*',
     '/blog/author*',
     '/thank-you',
-    "/natural-stones", 
+    "/natural-stones",
     "/natural-stones*",
   ],
 
@@ -28,7 +28,9 @@ module.exports = {
 
     for (const cat of categories) {
       // 🚫 SKIP natural-stones COMPLETELY
-    if (cat.slug === 'natural-stones') continue;
+      const excludedSlugs = ['natural-stones', 'information'];
+
+      if (excludedSlugs.includes(cat.slug)) continue;
 
       // ✅ category page
       urls.push(`/${cat.slug}/`);
