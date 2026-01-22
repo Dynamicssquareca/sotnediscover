@@ -80,6 +80,26 @@ const ProductPage = ({ product, relatedProducts, specifications, error }) => {
 
   const metaImageType = getImageMimeType(metaImage);
 
+  /* ✅ SCHEMA VALIDATOR */
+  const getSafeSchema = (schemaString) => {
+    if (!schemaString || typeof schemaString !== 'string') return null;
+
+    try {
+      const parsed = JSON.parse(schemaString);
+      const forbidden = ['srcset', 'imagesrcset', '_next', '<link', '<script'];
+      const text = JSON.stringify(parsed).toLowerCase();
+      if (forbidden.some((f) => text.includes(f))) return null;
+
+      if (parsed.image && typeof parsed.image !== 'string') {
+        parsed.image = getImageUrl(product.images?.[0]);
+      }
+
+      return JSON.stringify(parsed);
+    } catch {
+      return null;
+    }
+  };
+
 
   // FAQs: prefer subcategory -> category -> passed faq prop -> []
   const displayFaqs =
@@ -121,14 +141,29 @@ const ProductPage = ({ product, relatedProducts, specifications, error }) => {
         <meta name="twitter:image" content={metaImage} />
 
         {/* Schema */}
-        {product.schema &&
+        {/* {product.schema &&
           product.schema.map((scriptContent, index) => (
             <script
               key={index}
               type="application/ld+json"
               dangerouslySetInnerHTML={{ __html: scriptContent }}
             />
-          ))}
+          ))} */}
+
+          {/* ✅ SAFE SCHEMA */}
+        {product?.schema &&
+          product.schema.map((schemaItem, index) => {
+            const safeSchema = getSafeSchema(schemaItem);
+            if (!safeSchema) return null;
+
+            return (
+              <script
+                key={index}
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: safeSchema }}
+              />
+            );
+          })}
       </Head>
       <div className='container m-t-40'>
         <div className='row'>
