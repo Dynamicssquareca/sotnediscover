@@ -135,11 +135,26 @@ const BlogPost = ({ post, relatedPosts, relatedHeading, categories, error }) => 
               : `${process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, '') || ''}/img/banner/home-main-banner.png`
           }
         />
-        {post.schema &&
+        {/* {post.schema &&
           Array.isArray(post.schema) &&
           post.schema.map((scriptContent, index) => (
             <script key={index} type="application/ld+json" dangerouslySetInnerHTML={{ __html: scriptContent }} />
-          ))}
+          ))} */}
+        {Array.isArray(post?.schema) &&
+          post.schema.map((schemaItem, index) => {
+            try {
+              JSON.parse(schemaItem); // validate JSON
+              return (
+                <script
+                  key={index}
+                  type="application/ld+json"
+                  dangerouslySetInnerHTML={{ __html: schemaItem }}
+                />
+              );
+            } catch {
+              return null; // hide invalid schema
+            }
+          })}
       </Head>
 
       <section className="bg--bb">
