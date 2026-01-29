@@ -192,7 +192,7 @@ export default function AuthorPage({ author, posts = [] }) {
 
                             <div className="av-date-b">
                               {formatDateSafe(
-                                post.createdAt ||
+                                post.publishedAt ||
                                   dateFromObjectId(post?._id)
                               )}
                               <span> | </span>
@@ -286,8 +286,8 @@ export async function getStaticProps({ params }) {
         slug: p.slug,
         title: p.title,
         banner: p.banner,
-        createdAt:
-          p.createdAt ||
+        publishedAt:
+          p.publishedAt ||
           p.updatedAt ||
           dateFromObjectId(p._id)?.toISOString() ||
           null,

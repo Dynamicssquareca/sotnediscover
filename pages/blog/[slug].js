@@ -49,7 +49,7 @@ function trimPostForList(p) {
       (p.content ? (p.content.replace(/<[^>]+>/g, '').slice(0, 120) + '...') : ''),
     banner: p.banner, // small thumb field is ideal — adjust if available
     readtimes: p.readtimes,
-    createdAt: p.createdAt || p.updatedAt || (p._id ? dateFromObjectId(p._id)?.toISOString() : undefined),
+    publishedAt: p.publishedAt || p.updatedAt || (p._id ? dateFromObjectId(p._id)?.toISOString() : undefined),
     author: p.author ? { name: p.author.name, slug: p.author.slug || p.author._id } : null,
     category: p.category ? { _id: p.category._id, title: p.category.title, slug: p.category.slug } : null,
   };
@@ -112,10 +112,10 @@ const BlogPost = ({ post, relatedPosts, relatedHeading, categories, error }) => 
   //   // Helpful debug logs for build/dev
   //   // console.log('--- post object (render) ---', post);
   //   // console.log('post keys:', Object.keys(post || {}));
-  //   // console.log('createdAt raw:', post?.createdAt, 'typeof:', typeof post?.createdAt);
+  //   // console.log('publishedAt raw:', post?.publishedAt, 'typeof:', typeof post?.publishedAt);
   //   // console.log('updatedAt raw:', post?.updatedAt, 'typeof:', typeof post?.updatedAt);
   //   // console.log('_id raw:', post?._id, 'typeof:', typeof post?._id);
-  //   // console.log('new Date(createdAt):', new Date(post?.createdAt).toString());
+  //   // console.log('new Date(publishedAt):', new Date(post?.publishedAt).toString());
   // }, [post]);
 
   return (
@@ -196,7 +196,7 @@ const BlogPost = ({ post, relatedPosts, relatedHeading, categories, error }) => 
                         </Link>
                       </span>
                       <span className="mx-2">|</span>
-                      <span>{formatDateSafe(post?.createdAt || post?.updatedAt || dateFromObjectId(post?._id))}</span>
+                      <span>{formatDateSafe(post?.publishedAt || post?.updatedAt || dateFromObjectId(post?._id))}</span>
                     </div>
                     <div className="mb-4 post-sharing">
                       <span>Share: </span>
@@ -345,7 +345,7 @@ const BlogPost = ({ post, relatedPosts, relatedHeading, categories, error }) => 
                           <Link href={`/blog/author/${rp.author?.slug || rp.author?._id}`}>{rp.author?.name}</Link>
                         </span>
                         <span className="mx-2">|</span>
-                        <span>{formatDateSafe(rp?.createdAt || rp?.updatedAt || dateFromObjectId(rp?._id))}</span>
+                        <span>{formatDateSafe(rp?.publishedAt || rp?.updatedAt || dateFromObjectId(rp?._id))}</span>
                         <span className="mx-2">|</span>
                         <span>{rp.readtimes || ' '} min</span>
                       </div>
@@ -465,9 +465,9 @@ export async function getStaticProps({ params }) {
       return { notFound: true };
     }
 
-    // ✅ add here (kept your original idea): ensure createdAt exists
-    if (!post.createdAt) {
-      post.createdAt = post.updatedAt || (post._id ? dateFromObjectId(post._id)?.toISOString() : undefined);
+    // ✅ add here (kept your original idea): ensure publishedAt exists
+    if (!post.publishedAt) {
+      post.publishedAt = post.updatedAt || (post._id ? dateFromObjectId(post._id)?.toISOString() : undefined);
     }
 
     // Fetch all posts only to compute related posts — but trim them immediately

@@ -133,7 +133,7 @@ const CategoryPage = ({ category, posts }) => {
                           </div>
                           <div className="av-date-b">
                             {formatDateSafe(
-                              post?.createdAt ||
+                              post?.publishedAt ||
                                 post?.updatedAt ||
                                 dateFromObjectId(post?._id)
                             )}
@@ -214,7 +214,7 @@ export async function getStaticProps({ params }) {
       title: p.title,
       banner: p.banner || "",
       readtimes: p.readtimes || "",
-      createdAt: p.createdAt || p.updatedAt || null,
+      publishedAt: p.publishedAt || p.updatedAt || null,
       author: {
         name: p.author?.name || "",
         slug: p.author?.slug || "",

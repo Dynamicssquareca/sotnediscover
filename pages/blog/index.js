@@ -41,7 +41,7 @@ function summarizePost(p) {
       slug: p.author?.slug,
       profilePic: p.author?.profilePic || null,
     },
-    createdAt: p.createdAt || p.updatedAt || (p._id ? dateFromObjectId(p._id)?.toISOString() : undefined),
+    publishedAt: p.publishedAt || p.createdAt || (p._id ? dateFromObjectId(p._id)?.toISOString() : undefined),
     readtimes: p.readtimes || '',
   };
 }
@@ -195,7 +195,7 @@ const BlogIndex = ({ posts: initialPosts, categories }) => {
                         <a href={`/blog/author/${latestPost.author?.slug || latestPost.author?._id}`}>{getAuthorName(latestPost)}</a>
                       </div>
                       <div className="av-date">
-                        {formatDateSafe(latestPost?.createdAt || latestPost?.updatedAt || dateFromObjectId(latestPost?._id))}{' '}
+                        {formatDateSafe(latestPost?.publishedAt || latestPost?.createdAt || dateFromObjectId(latestPost?._id))}{' '}
                         <span className="m-22">|</span> {latestPost.readtimes || 'read time'} min
                       </div>
                     </div>
@@ -261,7 +261,7 @@ const BlogIndex = ({ posts: initialPosts, categories }) => {
                         <div className="av-info">
                           <div className="av-name-a">{post.author && post.author.name ? post.author.name : 'Unknown'}</div>
                           <div className="av-date-b">
-                            {formatDateSafe(post?.createdAt || post?.updatedAt || dateFromObjectId(post?._id))} <span>|</span>{' '}
+                            {formatDateSafe(post?.publishedAt || post?.createdAt || dateFromObjectId(post?._id))} <span>|</span>{' '}
                             {post.readtimes || ''} min
                           </div>
                         </div>
@@ -281,7 +281,7 @@ const BlogIndex = ({ posts: initialPosts, categories }) => {
 
             {!allLoaded ? (
               <button
-                className="btn btn-primary"
+                className="btn btn-three"
                 onClick={() => {
                   // If we still have more posts in the currently-loaded list, just increase visible count
                   if (filteredPosts.length > visiblePostsCount) {
@@ -320,8 +320,8 @@ export async function getStaticProps() {
 
     // Sort posts by createdAt (newest first).
     postsSummarized.sort((a, b) => {
-      const aDate = new Date(a.createdAt || a.updatedAt || (a._id ? dateFromObjectId(a._id) : null));
-      const bDate = new Date(b.createdAt || b.updatedAt || (b._id ? dateFromObjectId(b._id) : null));
+      const aDate = new Date(a.publishedAt || a.createdAt || (a._id ? dateFromObjectId(a._id) : null));
+      const bDate = new Date(b.publishedAt || b.createdAt || (b._id ? dateFromObjectId(b._id) : null));
       return bDate - aDate;
     });
 
