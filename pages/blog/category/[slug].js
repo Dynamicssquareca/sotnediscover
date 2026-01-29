@@ -153,7 +153,7 @@ const CategoryPage = ({ category, posts }) => {
                 {loading ? (
                   <div className="spinner-border" role="status"></div>
                 ) : (
-                  <button className="btn btn-primary" onClick={handleLoadMore}>
+                  <button className="btn btn-three" onClick={handleLoadMore}>
                     Load More
                   </button>
                 )}

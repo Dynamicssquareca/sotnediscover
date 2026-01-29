@@ -217,7 +217,7 @@ export default function AuthorPage({ author, posts = [] }) {
                 ) : (
                   <button
                     onClick={handleLoadMore}
-                    className="btn btn-primary px-4 py-2"
+                    className="btn btn-three px-4 py-2"
                   >
                     Load More
                   </button>
