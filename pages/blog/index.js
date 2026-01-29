@@ -27,6 +27,10 @@ function formatDateSafe(dateOrString, { fallback = 'Date unknown' } = {}) {
 
 // --- New: lightweight summarizer to keep page-data small ---
 function summarizePost(p) {
+  // normalize publishedAt to an ISO string when possible
+  let publishedAt = p.publishedAt || p.createdAt || (p._id ? dateFromObjectId(p._id)?.toISOString() : undefined);
+  if (publishedAt instanceof Date) publishedAt = publishedAt.toISOString();
+
   return {
     _id: p._id,
     slug: p.slug,
@@ -41,7 +45,7 @@ function summarizePost(p) {
       slug: p.author?.slug,
       profilePic: p.author?.profilePic || null,
     },
-    publishedAt: p.publishedAt || p.createdAt || (p._id ? dateFromObjectId(p._id)?.toISOString() : undefined),
+    publishedAt,
     readtimes: p.readtimes || '',
   };
 }
@@ -88,6 +92,12 @@ const BlogIndex = ({ posts: initialPosts, categories }) => {
 
   const canonicalUrl = `${process.env.NEXT_PUBLIC_SITE_URL || ''}blog/`;
 
+  // helper to get comparable date value from a post
+  const postDateValue = (p) => {
+    const d = p.publishedAt || p.createdAt || (p._id ? dateFromObjectId(p._id)?.toISOString() : null);
+    return d ? new Date(d).getTime() : 0;
+  };
+
   // ---- Load more handler (client-side) ----
   async function handleLoadMore() {
     if (loadingMore || allLoaded) return;
@@ -118,7 +128,18 @@ const BlogIndex = ({ posts: initialPosts, categories }) => {
         if (newSumm.length === 0) {
           setAllLoaded(true);
         } else {
-          setPosts((prev) => [...prev, ...newSumm]);
+          // merge + sort (newest-first)
+          setPosts((prev) => {
+            const merged = [...prev, ...newSumm];
+            merged.sort((a, b) => postDateValue(b) - postDateValue(a)); // newest first
+            const seen = new Set();
+            return merged.filter((x) => {
+              const id = x._id || x.slug;
+              if (seen.has(id)) return false;
+              seen.add(id);
+              return true;
+            });
+          });
         }
       } else {
         // response ok: expect either complete objects or summarized objects
@@ -133,13 +154,23 @@ const BlogIndex = ({ posts: initialPosts, categories }) => {
         if (summarized.length === 0) {
           setAllLoaded(true);
         } else {
-          // avoid duplicates
+          // avoid duplicates and merge + sort
           const existingIds = new Set(posts.map((p) => p._id || p.slug));
           const uniqueNew = summarized.filter((p) => !existingIds.has(p._id || p.slug));
           if (uniqueNew.length === 0) {
             setAllLoaded(true);
           } else {
-            setPosts((prev) => [...prev, ...uniqueNew]);
+            setPosts((prev) => {
+              const merged = [...prev, ...uniqueNew];
+              merged.sort((a, b) => postDateValue(b) - postDateValue(a)); // newest first
+              const seen = new Set();
+              return merged.filter((x) => {
+                const id = x._id || x.slug;
+                if (seen.has(id)) return false;
+                seen.add(id);
+                return true;
+              });
+            });
           }
         }
       }
@@ -296,7 +327,7 @@ const BlogIndex = ({ posts: initialPosts, categories }) => {
                 {loadingMore ? 'Loading...' : 'Load More'}
               </button>
             ) : (
-              <div>All posts loaded</div>
+              <div>No More Posts</div>
             )}
           </div>
         </div>
@@ -318,7 +349,7 @@ export async function getStaticProps() {
     // Summarize posts server-side to reduce page-data size
     const postsSummarized = postsRaw.map((p) => summarizePost(p));
 
-    // Sort posts by createdAt (newest first).
+    // Sort posts by publishedAt (newest first).
     postsSummarized.sort((a, b) => {
       const aDate = new Date(a.publishedAt || a.createdAt || (a._id ? dateFromObjectId(a._id) : null));
       const bDate = new Date(b.publishedAt || b.createdAt || (b._id ? dateFromObjectId(b._id) : null));
