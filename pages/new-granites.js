@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import ModelBox from '@/components/ModelBox';
 import Image from 'next/image';
-const CookiePolicy = () => {
+const VarietyGr = () => {
   return (
     <>
       <Head>
@@ -496,4 +496,4 @@ const CookiePolicy = () => {
   );
 }
 
-export default CookiePolicy;
+export default VarietyGr;
