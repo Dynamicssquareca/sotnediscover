@@ -26,15 +26,9 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",  
-        hostname: "stonediscover.com",
-        port: "",
-       pathname: '/**',
-      },
-      {
-        protocol: "https",  
         hostname: "stonediscoverusaapi.onrender.com",
         port: "",
-       pathname: '/**',
+      pathname: '/uploads/**',
       },
     ],
     // domains: ['stonediscoveruk-apibackend.onrender.com'],
