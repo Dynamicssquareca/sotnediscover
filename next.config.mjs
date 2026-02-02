@@ -28,13 +28,13 @@ const nextConfig = {
         protocol: "https",  
         hostname: "stonediscover.com",
         port: "",
-        pathname: "/uploads/**"
+       pathname: '/**',
       },
       {
         protocol: "https",  
         hostname: "stonediscoverusaapi.onrender.com",
         port: "",
-        pathname: "/uploads/**"
+       pathname: '/**',
       },
     ],
     // domains: ['stonediscoveruk-apibackend.onrender.com'],
