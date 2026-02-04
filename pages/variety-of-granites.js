@@ -41,7 +41,7 @@ const VarietyGr = () => {
             </div>
           </div>
           <div className='row g-2 sliding-row'>
-            <div className='col-lg-3 col-md-4 sliding-col'>
+            <div className='col-lg-2 col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
                   <a href="/contact-us/">
@@ -51,7 +51,7 @@ const VarietyGr = () => {
                 </div>
               </div>
             </div>
-            <div className='col-lg-3 col-md-4 sliding-col'>
+            <div className='col-lg-2 col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
                   <a href="/contact-us/">
@@ -61,7 +61,7 @@ const VarietyGr = () => {
                 </div>
               </div>
             </div>
-            <div className='col-lg-3 col-md-4 sliding-col'>
+            <div className='col-lg-2 col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
                   <a href="/contact-us/">
@@ -71,7 +71,7 @@ const VarietyGr = () => {
                 </div>
               </div>
             </div>
-            <div className='col-lg-3 col-md-4 sliding-col'>
+            <div className='col-lg-2 col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
                   <a href="/contact-us/">
@@ -81,7 +81,7 @@ const VarietyGr = () => {
                 </div>
               </div>
             </div>
-            <div className='col-lg-3 col-md-4 sliding-col'>
+            <div className='col-lg-2 col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
                   <a href="/contact-us/">
@@ -91,7 +91,7 @@ const VarietyGr = () => {
                 </div>
               </div>
             </div>
-            <div className='col-lg-3 col-md-4 sliding-col'>
+            <div className='col-lg-2 col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
                   <a href="/contact-us/">
@@ -101,7 +101,7 @@ const VarietyGr = () => {
                 </div>
               </div>
             </div>
-            <div className='col-lg-3 col-md-4 sliding-col'>
+            <div className='col-lg-2 col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
                   <a href="/contact-us/">
@@ -111,7 +111,7 @@ const VarietyGr = () => {
                 </div>
               </div>
             </div>
-            <div className='col-lg-3 col-md-4 sliding-col'>
+            <div className='col-lg-2 col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
                   <a href="/contact-us/">
@@ -121,7 +121,7 @@ const VarietyGr = () => {
                 </div>
               </div>
             </div>
-            <div className='col-lg-3 col-md-4 sliding-col'>
+            <div className='col-lg-2 col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
                   <a href="/contact-us/">
@@ -131,7 +131,7 @@ const VarietyGr = () => {
                 </div>
               </div>
             </div>
-            <div className='col-lg-3 col-md-4 sliding-col'>
+            <div className='col-lg-2 col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
                   <a href="/contact-us/">
@@ -141,7 +141,7 @@ const VarietyGr = () => {
                 </div>
               </div>
             </div>
-            <div className='col-lg-3 col-md-4 sliding-col'>
+            <div className='col-lg-2 col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
                   <a href="/contact-us/">
@@ -151,7 +151,7 @@ const VarietyGr = () => {
                 </div>
               </div>
             </div>
-            <div className='col-lg-3 col-md-4 sliding-col'>
+            <div className='col-lg-2 col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
                   <a href="/contact-us/">
@@ -161,7 +161,7 @@ const VarietyGr = () => {
                 </div>
               </div>
             </div>
-            <div className='col-lg-3 col-md-4 sliding-col'>
+            <div className='col-lg-2 col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
                   <a href="/contact-us/">
@@ -171,7 +171,7 @@ const VarietyGr = () => {
                 </div>
               </div>
             </div>
-            <div className='col-lg-3 col-md-4 sliding-col'>
+            <div className='col-lg-2 col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
                   <a href="/contact-us/">
@@ -181,7 +181,7 @@ const VarietyGr = () => {
                 </div>
               </div>
             </div>
-            <div className='col-lg-3 col-md-4 sliding-col'>
+            <div className='col-lg-2 col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
                   <a href="/contact-us/">
@@ -191,7 +191,7 @@ const VarietyGr = () => {
                 </div>
               </div>
             </div>
-            <div className='col-lg-3 col-md-4 sliding-col'>
+            <div className='col-lg-2 col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
                   <a href="/contact-us/">
@@ -201,7 +201,7 @@ const VarietyGr = () => {
                 </div>
               </div>
             </div>
-            <div className='col-lg-3 col-md-4 sliding-col'>
+            <div className='col-lg-2 col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
                   <a href="/contact-us/">
@@ -211,7 +211,7 @@ const VarietyGr = () => {
                 </div>
               </div>
             </div>
-            <div className='col-lg-3 col-md-4 sliding-col'>
+            <div className='col-lg-2 col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
                   <a href="/contact-us/">
@@ -221,7 +221,7 @@ const VarietyGr = () => {
                 </div>
               </div>
             </div>
-            <div className='col-lg-3 col-md-4 sliding-col'>
+            <div className='col-lg-2 col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
                   <a href="/contact-us/">
@@ -231,7 +231,7 @@ const VarietyGr = () => {
                 </div>
               </div>
             </div>
-            <div className='col-lg-3 col-md-4 sliding-col'>
+            <div className='col-lg-2 col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
                   <a href="/contact-us/">
@@ -241,7 +241,7 @@ const VarietyGr = () => {
                 </div>
               </div>
             </div>
-            <div className='col-lg-3 col-md-4 sliding-col'>
+            <div className='col-lg-2 col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
                   <a href="/contact-us/">
@@ -251,7 +251,7 @@ const VarietyGr = () => {
                 </div>
               </div>
             </div>
-            <div className='col-lg-3 col-md-4 sliding-col'>
+            <div className='col-lg-2 col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
                   <a href="/contact-us/">
@@ -261,7 +261,7 @@ const VarietyGr = () => {
                 </div>
               </div>
             </div>
-            <div className='col-lg-3 col-md-4 sliding-col'>
+            <div className='col-lg-2 col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
                   <a href="/contact-us/">
@@ -271,7 +271,7 @@ const VarietyGr = () => {
                 </div>
               </div>
             </div>
-            <div className='col-lg-3 col-md-4 sliding-col'>
+            <div className='col-lg-2 col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
                   <a href="/contact-us/">
@@ -281,7 +281,7 @@ const VarietyGr = () => {
                 </div>
               </div>
             </div>
-            <div className='col-lg-3 col-md-4 sliding-col'>
+            <div className='col-lg-2 col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
                   <a href="/contact-us/">
@@ -291,7 +291,7 @@ const VarietyGr = () => {
                 </div>
               </div>
             </div>
-            <div className='col-lg-3 col-md-4 sliding-col'>
+            <div className='col-lg-2 col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
                   <a href="/contact-us/">
@@ -301,7 +301,7 @@ const VarietyGr = () => {
                 </div>
               </div>
             </div>
-            <div className='col-lg-3 col-md-4 sliding-col'>
+            <div className='col-lg-2 col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
                   <a href="/contact-us/">
@@ -311,7 +311,7 @@ const VarietyGr = () => {
                 </div>
               </div>
             </div>
-            <div className='col-lg-3 col-md-4 sliding-col'>
+            <div className='col-lg-2 col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
                   <a href="/contact-us/">
@@ -321,7 +321,7 @@ const VarietyGr = () => {
                 </div>
               </div>
             </div>
-            <div className='col-lg-3 col-md-4 sliding-col'>
+            <div className='col-lg-2 col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
                   <a href="/contact-us/">
@@ -331,7 +331,7 @@ const VarietyGr = () => {
                 </div>
               </div>
             </div>
-            <div className='col-lg-3 col-md-4 sliding-col'>
+            <div className='col-lg-2 col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
                   <a href="/contact-us/">
@@ -341,7 +341,7 @@ const VarietyGr = () => {
                 </div>
               </div>
             </div>
-            <div className='col-lg-3 col-md-4 sliding-col'>
+            <div className='col-lg-2 col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
                   <a href="/contact-us/">
@@ -351,7 +351,7 @@ const VarietyGr = () => {
                 </div>
               </div>
             </div>
-            <div className='col-lg-3 col-md-4 sliding-col'>
+            <div className='col-lg-2 col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
                   <a href="/contact-us/">
@@ -361,7 +361,7 @@ const VarietyGr = () => {
                 </div>
               </div>
             </div>
-            <div className='col-lg-3 col-md-4 sliding-col'>
+            <div className='col-lg-2 col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
                   <a href="/contact-us/">
@@ -371,7 +371,7 @@ const VarietyGr = () => {
                 </div>
               </div>
             </div>
-            <div className='col-lg-3 col-md-4 sliding-col'>
+            <div className='col-lg-2 col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
                   <a href="/contact-us/">
@@ -381,7 +381,7 @@ const VarietyGr = () => {
                 </div>
               </div>
             </div>
-            <div className='col-lg-3 col-md-4 sliding-col'>
+            <div className='col-lg-2 col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
                   <a href="/contact-us/">
@@ -391,7 +391,7 @@ const VarietyGr = () => {
                 </div>
               </div>
             </div>
-            <div className='col-lg-3 col-md-4 sliding-col'>
+            <div className='col-lg-2 col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
                   <a href="/contact-us/">
@@ -401,7 +401,7 @@ const VarietyGr = () => {
                 </div>
               </div>
             </div>
-            <div className='col-lg-3 col-md-4 sliding-col'>
+            <div className='col-lg-2 col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
                   <a href="/contact-us/">
@@ -411,7 +411,7 @@ const VarietyGr = () => {
                 </div>
               </div>
             </div>
-            <div className='col-lg-3 col-md-4 sliding-col'>
+            <div className='col-lg-2 col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
                   <a href="/contact-us/">
@@ -421,7 +421,7 @@ const VarietyGr = () => {
                 </div>
               </div>
             </div>
-            <div className='col-lg-3 col-md-4 sliding-col'>
+            <div className='col-lg-2 col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
                   <a href="/contact-us/">
@@ -431,7 +431,7 @@ const VarietyGr = () => {
                 </div>
               </div>
             </div>
-            <div className='col-lg-3 col-md-4 sliding-col'>
+            <div className='col-lg-2 col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
                   <a href="/contact-us/">
@@ -441,7 +441,7 @@ const VarietyGr = () => {
                 </div>
               </div>
             </div>
-            <div className='col-lg-3 col-md-4 sliding-col'>
+            <div className='col-lg-2 col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
                   <a href="/contact-us/">
@@ -451,7 +451,7 @@ const VarietyGr = () => {
                 </div>
               </div>
             </div>
-            <div className='col-lg-3 col-md-4 sliding-col'>
+            <div className='col-lg-2 col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
                   <a href="/contact-us/">
@@ -461,7 +461,7 @@ const VarietyGr = () => {
                 </div>
               </div>
             </div>
-            <div className='col-lg-3 col-md-4 sliding-col'>
+            <div className='col-lg-2 col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
                   <a href="/contact-us/">
