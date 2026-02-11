@@ -6,7 +6,6 @@ const VarietyGr = () => {
   return (
     <>
       <Head>
-        <meta name="robots" content="noindex, nofollow" />
         <title>40+ Granite Varieties for Crafting Headstones | Stone Discover</title>
         <meta
           name="description"
