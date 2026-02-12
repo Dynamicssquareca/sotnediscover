@@ -1,18 +1,13 @@
 import React, { useRef, useState } from 'react';
 // Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
 import Head from 'next/head';
-import 'swiper/css';
-import 'swiper/css/free-mode';
-import 'swiper/css/navigation';
 import Image from 'next/image';
-import 'swiper/css/thumbs';
 import ImageMagnifier from '@/components/ImageMagnifier';
 import { Accordion, AccordionBody, AccordionHeader, AccordionItem, } from 'reactstrap';
-// import required modules
-import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
+
 import ModelBox from '@/components/ModelBox';
 import FooterContactFormHome from '@/components/FooterContactFormHome';
+import ProductGallery from '@/components/ProductGallery';
 
 
 const getImageUrl = (img) =>
@@ -192,16 +187,20 @@ const ProductPage = ({ product, relatedProducts, specifications, error }) => {
 
 
             <div className='col-lg-5'>
+              <ProductGallery
+                images={product.images?.map(img => getImageUrl(img))}
+                title={product.title}
+              />
               {/* <div className='product-pic' ref={sliderRef}>
                 <ImageMagnifier src={getImageUrl(product.images?.[0])} alt={product.title}
                   zoomScale={2} sliderRef={sliderRef} />
 
               </div> */}
-              <div className='product-pic' style={{position:'sticky',top:'100px'}}>
+              {/* <div className='product-pic' style={{position:'sticky',top:'100px'}}>
                  <Image src={getImageUrl(product.images?.[0])} alt={product.title}
                  width={600} height={600} priority
                   />
-              </div>
+              </div> */}
             </div>
             <div className='col-lg-7'>
               <div className='single-product-details'>
