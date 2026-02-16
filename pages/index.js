@@ -9,22 +9,22 @@ export default function Home() {
     <>
       <Head>
         <title>
-          Headstones, Tombstones & Gravestones Manufacturer | Stone Discover
+          Granite Headstones & Gravestones Manufacturer | Stone Discover
         </title>
         <meta
           name="description"
-          content="Stone Discover India is a trusted manufacturer and exporter of headstones, tombstones & gravestones, supplying custom memorial monuments worldwide."
+          content="Stone Discover is a leading Indian manufacturer and exporter of premium granite headstones and monuments, serving memorial dealers worldwide since 1984."
         />
         <link rel="canonical" href="https://www.stonediscover.com/" />
         <meta property="og:locale" content="US" />
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
-          content=" Headstones, Tombstones & Gravestones Manufacturer | Stone Discover"
+          content="Granite Headstones & Gravestones Manufacturer | Stone Discover"
         />
         <meta
           property="og:description"
-          content=" Stone Discover India is a trusted manufacturer and exporter of headstones, tombstones & gravestones, supplying custom memorial monuments worldwide."
+          content=" Stone Discover is a leading Indian manufacturer and exporter of premium granite headstones and monuments, serving memorial dealers worldwide since 1984."
         />
         <meta property="og:url" content="https://www.stonediscover.com/" />
         <meta property="og:site_name" content="Stone Discover" />
@@ -39,11 +39,11 @@ export default function Home() {
         <meta name="twitter:site" content="@Stone Discover" />
         <meta
           name="twitter:title"
-          content="Headstones, Tombstones & Gravestones Manufacturer | Stone Discover"
+          content="Granite Headstones & Gravestones Manufacturer | Stone Discover"
         />
         <meta
           name="twitter:description"
-          content=" Stone Discover India is a trusted manufacturer and exporter of headstones, tombstones & gravestones, supplying custom memorial monuments worldwide."
+          content=" Stone Discover is a leading Indian manufacturer and exporter of premium granite headstones and monuments, serving memorial dealers worldwide since 1984."
         />
         <meta
           name="twitter:image"
@@ -83,7 +83,7 @@ export default function Home() {
           <div className="row align-items-center justify-content-center">
             <div className="col-lg-12 text-center">
               <div className="hero-banner-content">
-                <h1>Headstones, Tombstones & Gravestones Manufacturer Exporter</h1>
+                <h1>Granite Headstones & Monuments Manufacturer & Exporter</h1>
                 <p>Supplying premium granite headstones, tombstones & gravestones from India to the USA, Canada, Europe, and global B2B markets.</p>
                 <div className="hero-banner-btn">
                   <ModelBox
