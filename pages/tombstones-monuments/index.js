@@ -6,6 +6,7 @@ import Image from 'next/image';
 import sanitizeHtml from 'sanitize-html';
 import FooterContactFormHome from '@/components/FooterContactFormHome';
 import FaqAccordionComon from '@/components/FaqAccordionComon';
+import CommonSlider from "@/components/CommonSlider";
 
 export const getStaticProps = async () => {
     try {
@@ -405,13 +406,13 @@ const Index = ({ categories = [], categoryData = {} }) => {
                 </div>
             </section>
 
-            <section className='p-t-60'>
+            <section className='p-t-60 p-b-60'>
                 <div className='container'>
                     <div className='row justify-content-center'>
                         <div className='col-lg-9'>
                             <div className='heading-center p-b-40'>
                                 <h2 className='m-b-30'>Partner with a Trusted <span>Granite Monuments Exporter</span></h2>
-                <p>Whether you are sourcing in bulk or expanding your memorial range, Stone Discover supports your business with reliable granite headstones supply, consistent quality, and export expertise. We work closely with memorial dealers and retailers worldwide to ensure long-term supply partnerships built on trust and performance.</p>
+                                <p>Whether you are sourcing in bulk or expanding your memorial range, Stone Discover supports your business with reliable granite headstones supply, consistent quality, and export expertise. We work closely with memorial dealers and retailers worldwide to ensure long-term supply partnerships built on trust and performance.</p>
                             </div>
                             <div className='button-center-new text-center'>
                                 <ModelBox className='btn-three' headerText="Scale Your Store! " buttonText="Request a Quote" />
@@ -422,51 +423,109 @@ const Index = ({ categories = [], categoryData = {} }) => {
                 </div>
             </section>
 
-           <section>
-             <div className='container  p-t-80'>
-                      <div className='row justify-content-center'>
-                        <div className='col-lg-9'>
-                          <div className='heading-center p-b-40'>
-                            <h2 className='m-b-30'>Pillars of Strength</h2>
-                            <p>Whether you’re a high-volume buyer or expanding your product line, our team is here to support your growth. We understand the B2B dynamics of the memorial industry and deliver not just products—but trust, consistency, and partnership.</p>
-                          </div>
-            
+
+
+            <section className="products-section-one m-p-02">
+                <div className="container">
+                    <div className="row justify-content-center">
+                        <div className="col-lg-10 text-center">
+                            <div className="heading-center p-b-40">
+                                <h2 className="m-b-20"><span>Granite Tombstone Manufacturing Process</span>, From Selection to Global Supply!</h2>
+                                <p>At Stone Discover, every granite tombstone begins with careful block selection followed by precision shaping and expert hand carving for accurate memorial designs.
+                                    Each monument undergoes professional surface polishing and finishing to ensure durability, consistency, and premium appearance for international cemetery markets.
+                                    Finally, all products are securely packed using export-grade protection to support safe global shipping and reliable B2B supply worldwide.</p>
+                            </div>
                         </div>
-                      </div>
-            
-                      <div className='row'>
-                        <div className='col-lg-12'>
-                          <div className='card-05'>
-                            <div className='card-05-item'>
-                              <Image src='/img/icons/about-pi-01.png' alt='About Us' className='img-fluid' width={48} height={48} />
-                              <span>Finest Quality Stones</span>
-                              <p>We ensure that each headstone is crafted with great attention to detail</p>
-                            </div>
-                            <div className='card-05-item'>
-                              <Image src='/img/icons/about-pi-02.png' alt='About Us' className='img-fluid' width={48} height={48} />
-                              <span>Competitive Prices</span>
-                              <p>Get Quality headstones at the Best Rates!</p>
-                            </div>
-                            <div className='card-05-item'>
-                              <Image src='/img/icons/about-pi-03.png' alt='About Us' className='img-fluid' width={48} height={48} />
-                              <span>On-time Delivery</span>
-                              <p>Ensuring Your tombstones Arrive When You Need Them!</p>
-                            </div>
-                            <div className='card-05-item'>
-                              <Image src='/img/icons/about-pi-04.png' alt='About Us' className='img-fluid' width={48} height={48} />
-                              <span>Bulk Order</span>
-                              <p>Streamline Your Business with Our Premium tombstones!</p>
-                            </div>
-                            <div className='card-05-item'>
-                              <Image src='/img/icons/about-pi-05.png' alt='About Us' className='img-fluid' width={48} height={48} />
-                              <span>Shipping Worldwide</span>
-                              <p>Delivering Quality tombstones Everywhere!</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
                     </div>
-           </section>
+                    <div className="row">
+                        <div className="col-lg-12">
+                            <div className="card-02a">
+                                <CommonSlider />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="container  p-t-80">
+                    <div className="row justify-content-center">
+                        <div className="col-lg-9">
+                            <div className="heading-center p-b-40">
+                                <h2 className="m-b-30">Pillars of Strength</h2>
+                                <p>
+                                    Whether you’re a high-volume buyer or expanding your product
+                                    line, our team is here to support your growth. We understand
+                                    the B2B dynamics of the memorial industry and deliver not just
+                                    products—but trust, consistency, and partnership.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="row">
+                        <div className="col-lg-12">
+                            <div className="card-05">
+                                <div className="card-05-item">
+                                    <Image
+                                        src="/img/icons/about-pi-01.png"
+                                        alt="About Us"
+                                        className="img-fluid"
+                                        width={48}
+                                        height={48}
+                                    />
+                                    <span>Finest Quality Stones</span>
+                                    <p>
+                                        We ensure that each headstone is crafted with great
+                                        attention to detail
+                                    </p>
+                                </div>
+                                <div className="card-05-item">
+                                    <Image
+                                        src="/img/icons/about-pi-02.png"
+                                        alt="About Us"
+                                        className="img-fluid"
+                                        width={48}
+                                        height={48}
+                                    />
+                                    <span>Competitive Prices</span>
+                                    <p>Get Quality headstones at the Best Rates!</p>
+                                </div>
+                                <div className="card-05-item">
+                                    <Image
+                                        src="/img/icons/about-pi-03.png"
+                                        alt="About Us"
+                                        className="img-fluid"
+                                        width={48}
+                                        height={48}
+                                    />
+                                    <span>On-time Delivery</span>
+                                    <p>Ensuring Your tombstones Arrive When You Need Them!</p>
+                                </div>
+                                <div className="card-05-item">
+                                    <Image
+                                        src="/img/icons/about-pi-04.png"
+                                        alt="About Us"
+                                        className="img-fluid"
+                                        width={48}
+                                        height={48}
+                                    />
+                                    <span>Bulk Order</span>
+                                    <p>Streamline Your Business with Our Premium tombstones!</p>
+                                </div>
+                                <div className="card-05-item">
+                                    <Image
+                                        src="/img/icons/about-pi-05.png"
+                                        alt="About Us"
+                                        className="img-fluid"
+                                        width={48}
+                                        height={48}
+                                    />
+                                    <span>Shipping Worldwide</span>
+                                    <p>Delivering Quality tombstones Everywhere!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             <FooterContactFormHome faqList={categoryData.faqs} />
 
