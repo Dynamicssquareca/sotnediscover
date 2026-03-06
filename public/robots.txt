@@ -5,8 +5,7 @@ Allow: /
 Disallow: /blog/tag/
 Disallow: /blog/category/
 Disallow: /blog/preview/
-Disallow: /natural-stones/
-Disallow: /natural-stones*
+
 
 
 
