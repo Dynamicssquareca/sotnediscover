@@ -204,23 +204,28 @@ export async function getStaticProps({ params }) {
     const category = categories.find((c) => c.slug === slug) || null;
     if (!category) return { notFound: true };
 
-    const resPosts = await fetch(filteredPostsApi);
-    const postsRaw = resPosts.ok ? await resPosts.json() : [];
+    const resPosts = await fetch(process.env.NEXT_PUBLIC_BLOG_API_URL);
+const postsRaw = resPosts.ok ? await resPosts.json() : [];
 
-    // ⭐ STRIP HEAVY FIELDS HERE
-    const posts = postsRaw.map((p) => ({
-      _id: p._id,
-      slug: p.slug,
-      title: p.title,
-      banner: p.banner || "",
-      readtimes: p.readtimes || "",
-      publishedAt: p.publishedAt || p.updatedAt || null,
-      author: {
-        name: p.author?.name || "",
-        slug: p.author?.slug || "",
-        profilePic: p.author?.profilePic || "",
-      },
-    }));
+// Filter posts by selected category
+const filteredPosts = postsRaw.filter(
+  (p) => p.category?.slug === slug
+);
+
+// ⭐ STRIP HEAVY FIELDS HERE
+const posts = filteredPosts.map((p) => ({
+  _id: p._id,
+  slug: p.slug,
+  title: p.title,
+  banner: p.banner || "",
+  readtimes: p.readtimes || "",
+  publishedAt: p.publishedAt || p.updatedAt || null,
+  author: {
+    name: p.author?.name || "",
+    slug: p.author?.slug || "",
+    profilePic: p.author?.profilePic || "",
+  },
+}));
 
     return {
       props: { category, posts },
