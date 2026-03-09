@@ -77,6 +77,7 @@ const Footer = ({ faq }) => {
                                 <ul>
                                     <li><i className="bi bi-chevron-right"></i> <a href="/about-us/">About us</a></li>
                                     <li><i className="bi bi-chevron-right"></i> <a href="/tombstones-monuments/">Tombstones</a></li>
+                                    <li><i className="bi bi-chevron-right"></i> <a href="/natural-stones/">Natural Stones</a></li>
                                     <li><i className="bi bi-chevron-right"></i> <a href="/blog/">Blogs</a></li>
                                     <li><i className="bi bi-chevron-right"></i> <a href="/contact-us/">Contact Us</a></li>
                                     <li><i className="bi bi-chevron-right"></i> <a href="/terms-of-use/">Terms of service</a></li>

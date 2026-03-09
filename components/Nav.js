@@ -129,6 +129,7 @@ const Nav = () => {
               <li><a href="/tombstones-monuments/bench/">Memorial Bench</a></li>
             </ul>
           </li>
+          <li><a className="nav-link scrollto" href="/variety-of-granites/">Granite varieties</a></li>
           <li><a className="nav-link scrollto" href="/about-us/">About Us</a></li>
 
           <li><a style={{ color: '#a44400', fontWeight: 'bold' }} className="nav-link scrollto" href="/catalog-download/">Catalog</a></li>
