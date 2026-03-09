@@ -26,7 +26,7 @@ module.exports = {
 
     for (const cat of categories) {
       // 🚫 SKIP natural-stones COMPLETELY
-      const excludedSlugs = ['natural-stones', 'information'];
+      const excludedSlugs = ['information'];
 
       if (excludedSlugs.includes(cat.slug)) continue;
 
