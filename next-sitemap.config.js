@@ -13,9 +13,7 @@ module.exports = {
     '/blog/tag*',
     '/blog/category*',
     '/blog/author*',
-    '/thank-you',
-    "/natural-stones",
-    "/natural-stones*",
+    '/thank-you'
   ],
 
   additionalPaths: async (config) => {
