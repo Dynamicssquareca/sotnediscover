@@ -103,7 +103,7 @@ const LocationPage = ({ category, subcategory, products = [], faq, error, siblin
         className="hero-banner-twso">
         <div className="container">
           <div className="row">
-            <div className="col-lg-6 align-self-end">
+            <div className="col-lg-8 align-self-end">
               <div className="hero-banner-two-head-cust">
                 <h1>
                   <span>{primary.title || category?.title}</span>
@@ -362,6 +362,81 @@ const LocationPage = ({ category, subcategory, products = [], faq, error, siblin
                   <span>Shipping Worldwide</span>
                   <p>Delivering Quality Tombstones Everywhere!</p>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+       <section>
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-lg-9">
+              <div className="heading-center p-b-40">
+                <h2 className="m-b-30">
+                  Recent <span>Export</span>
+                </h2>
+              </div>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="grid">
+                <figure className="card-001">
+                  <img
+                    loading="lazy"
+                    src="/img/webpages/p-1.jpg"
+                    alt="Polished headstones batch"
+                  />
+                </figure>
+                <figure className="card-001">
+                  <img
+                    loading="lazy"
+                    src="/img/webpages/p-2.jpg"
+                    alt="Cross monument on base"
+                  />
+                </figure>
+                <figure className="card-001">
+                  <img
+                    loading="lazy"
+                    src="/img/webpages/p-3.jpg"
+                    alt="Black granite memorials"
+                  />
+                </figure>
+                <figure className="card-001">
+                  <img
+                    loading="lazy"
+                    src="/img/webpages/p-4.jpg"
+                    alt="Granite tomb covers"
+                  />
+                </figure>
+                <figure className="card-001">
+                  <img
+                    loading="lazy"
+                    src="/img/webpages/p-5.jpg"
+                    alt="Shield shaped memorial wrapped"
+                  />
+                </figure>
+                <figure className="card-001">
+                  <img
+                    loading="lazy"
+                    src="/img/webpages/p-6.jpg"
+                    alt="Pallets wrapped for shipping"
+                  />
+                </figure>
+                <figure className="card-001">
+                  <img
+                    loading="lazy"
+                    src="/img/webpages/p-7.png"
+                    alt="Crated slabs ready to export"
+                  />
+                </figure>
+                <figure className="card-001">
+                  <img
+                    loading="lazy"
+                    src="/img/webpages/p-8.png"
+                    alt="Cartons prepared for dispatch"
+                  />
+                </figure>
               </div>
             </div>
           </div>
