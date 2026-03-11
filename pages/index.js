@@ -466,6 +466,97 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <section className="p-b-80">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-lg-9">
+              <div className="heading-center p-b-40">
+                <h2 className="m-b-30">
+                  Custom Engraving on <span>Granite Headstones</span>
+                </h2>
+              </div>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="grid">
+                <figure className="card-001">
+                  <Image
+                    loading="lazy"
+                    src="/img/webpages/Granite-Headstones-289.png"
+                    alt="granite engraved headstone"
+                    width={329}
+                    height={288}
+                  />
+                </figure>
+                <figure className="card-001">
+                  <Image
+                    loading="lazy"
+                    src="/img/webpages/Granite-Headstones-290.png"
+                    alt="granite engraved headstone"
+                    width={329}
+                    height={288}
+                  />
+                </figure>
+                <figure className="card-001">
+                  <Image
+                    loading="lazy"
+                    src="/img/webpages/Granite-Headstones-291.png"
+                    alt="granite engraved headstone"
+                    width={329}
+                    height={288}
+                  />
+                </figure>
+                <figure className="card-001">
+                  <Image
+                    loading="lazy"
+                    src="/img/webpages/Granite-Headstones-292.png"
+                    alt="granite engraved headstone"
+                    width={329}
+                    height={288}
+                  />
+                </figure>
+                <figure className="card-001">
+                  <Image
+                    loading="lazy"
+                    src="/img/webpages/Granite-Headstones-293.png"
+                    alt="granite engraved headstone"
+                    width={329}
+                    height={288}
+                  />
+                </figure>
+                <figure className="card-001">
+                  <Image
+                    loading="lazy"
+                    src="/img/webpages/Granite-Headstones-294.png"
+                    alt="granite engraved headstone"
+                    width={329}
+                    height={288}
+                  />
+                </figure>
+                <figure className="card-001">
+                  <Image
+                    loading="lazy"
+                    src="/img/webpages/Granite-Headstones-295.png"
+                    alt="granite engraved headstone"
+                    width={329}
+                    height={288}
+                  />
+                </figure>
+                <figure className="card-001">
+                  <Image
+                    loading="lazy"
+                    src="/img/webpages/Granite-Headstones-296.png"
+                    alt="granite engraved headstone"
+                    width={329}
+                    height={288}
+                  />
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <section>
         <div className="container">
           <div className="row justify-content-center">
@@ -483,7 +574,7 @@ export default function Home() {
                 <figure className="card-001">
                   <img
                     loading="lazy"
-                    src="/img/webpages/p-1.jpg"
+                    src="/img/webpages/Granite-Headstones-305.png"
                     alt="Polished headstones batch"
                   />
                 </figure>
@@ -518,7 +609,7 @@ export default function Home() {
                 <figure className="card-001">
                   <img
                     loading="lazy"
-                    src="/img/webpages/p-6.jpg"
+                    src="/img/webpages/Granite-Headstones-306.png"
                     alt="Pallets wrapped for shipping"
                   />
                 </figure>
