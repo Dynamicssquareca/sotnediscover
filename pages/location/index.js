@@ -100,15 +100,26 @@ const getImageUrl = (img) =>
 
 const Index = ({ categories = [], categoryData = {} }) => {
 
-    /*accordion code*/
-    const [open, setOpen] = useState('1');
-    const toggle = (id) => {
-        if (open === id) {
-            setOpen();
-        } else {
-            setOpen(id);
-        }
-    };
+    /*accordian code for description*/
+  const [openDesc, setOpenDesc] = useState('');
+  const toggleDesc = (id) => {
+    if (openDesc === id) {
+      setOpenDesc('');
+    } else {
+      setOpenDesc(id);
+    }
+  };
+
+  /*accordian code for partner section*/
+  const [openPartner, setOpenPartner] = useState('1');
+  const togglePartner = (id) => {
+    if (openPartner === id) {
+      setOpenPartner('');
+    } else {
+      setOpenPartner(id);
+    }
+  };
+
 
     // ref to the accordion we will scroll to & open
     const descRef = useRef(null);
@@ -117,7 +128,7 @@ const Index = ({ categories = [], categoryData = {} }) => {
     const handleReadMore = (e) => {
         e.preventDefault();
         // open the accordion item with id 'desc'
-        setOpen('desc');
+        setOpenDesc('desc');
 
         // scroll to the element
         if (descRef.current) {
@@ -294,7 +305,7 @@ const Index = ({ categories = [], categoryData = {} }) => {
                         <div className='col-lg-12'>
                             <div className='accordion-one accordion-one-product accordion-one-product-new'>
                                 {/* This accordion uses the same open/toggle logic you already have */}
-                                <Accordion open={open} toggle={toggle}>
+                                <Accordion open={openDesc} toggle={toggleDesc}>
                                     <AccordionItem>
                                         {/* <AccordionHeader targetId="desc">
                                             <div className="d-flex justify-content-between align-items-center w-100">
@@ -336,7 +347,7 @@ const Index = ({ categories = [], categoryData = {} }) => {
                         <div className='col-lg-6 align-self-center'>
                             <div className='form-left'>
                                 <div className='accordion-one accordion-one-product'>
-                                    <Accordion open={open} toggle={toggle}>
+                                    <Accordion open={openPartner} toggle={togglePartner}>
                                         <AccordionItem>
                                             <AccordionHeader targetId="1">
                                                 <div className="d-flex justify-content-between align-items-center w-100">
