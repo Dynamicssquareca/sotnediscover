@@ -22,7 +22,7 @@ const CategoryPage = ({ category, subcategory, products = [], faq, error }) => {
   }
 
 
- /*accordian code for description*/
+  /*accordian code for description*/
   const [openDesc, setOpenDesc] = useState('');
   const toggleDesc = (id) => {
     if (openDesc === id) {
@@ -237,7 +237,7 @@ const CategoryPage = ({ category, subcategory, products = [], faq, error }) => {
               <div className="accordion-one accordion-one-product accordion-one-product-new">
                 <Accordion open={openDesc} toggle={toggleDesc}>
                   <AccordionItem>
-                    
+
                     <AccordionBody accordionId="desc">
                       {displayDescription ? (
                         <div dangerouslySetInnerHTML={{ __html: displayDescription }} />
@@ -264,7 +264,7 @@ const CategoryPage = ({ category, subcategory, products = [], faq, error }) => {
           <div className='row'>
             <div className='col-lg-12'>
               <div className='heading-left p-b-20'>
-                <h2 className='m-b-30'>Why Partner with Us?</h2>
+                <h2 className='m-b-30'>Why Partner With Stone Discover?</h2>
               </div>
             </div>
           </div>
@@ -285,12 +285,15 @@ const CategoryPage = ({ category, subcategory, products = [], faq, error }) => {
                         </div>
                       </AccordionHeader>
                       <AccordionBody accordionId="1">
-                        <p>We manage our own production facilities in India, allowing us to offer:</p>
+                        <p>No middlemen. No markups. Just direct supply from our own facilities in India.</p>
+                        <p>We own and operate our full production chain — from granite sourcing at Khammam quarry in Telangana to manufacturing at our Chennai factory. This means:</p>
                         <ul>
-                          <li>Competitive B2B pricing</li>
-                          <li>Flexible customization options</li>
-                          <li>Faster Deliveries with smooth logistics</li>
+                          <li>Competitive wholesale & B2B export pricing on every order</li>
+                          <li>Consistent supply with no third-party dependency</li>
+                          <li>Flexible production for both standard and custom designs</li>
+                          <li>Export-ready packaging for seamless US import</li>
                         </ul>
+                        <p>Since 1984, we have been exporting premium granite memorials to dealers, cemeteries, and monument retailers across the USA and 70+ countries worldwide.</p>
                       </AccordionBody>
                     </AccordionItem>
                     <AccordionItem>
@@ -300,45 +303,60 @@ const CategoryPage = ({ category, subcategory, products = [], faq, error }) => {
                         </div>
                       </AccordionHeader>
                       <AccordionBody accordionId="2">
-                        <p>Our tombstones are crafted from premium-grade Indian granite, renowned for its durability and timeless appeal. Every piece is quality-checked to ensure consistent finishing, accurate dimensions, and enduring aesthetics.</p>
-
+                        <p>Every piece that ships from our facility is built to last — outdoors, for decades.</p>
+                        <p>Our memorials are crafted from premium Indian granite, quarry-sourced directly from Telangana and processed at our Chennai plant. Each product goes through a strict multi-stage quality check covering:</p>
+                        <ul>
+                          <li>Surface finishing and polish consistency</li>
+                          <li>Dimensional accuracy to US cemetery specifications</li>
+                          <li>Structural integrity for all-weather outdoor durability</li>
+                          <li>Engraving-ready panel preparation</li>
+                        </ul>
+                        <p>When your customers receive a Stone Discover product, it reflects the standard your business stands for.</p>
                       </AccordionBody>
                     </AccordionItem>
                     <AccordionItem>
                       <AccordionHeader targetId="3">
                         <div className="d-flex justify-content-between align-items-center w-100">
-                          <h3><img src='/img/icons/faq-icon-03.png' alt='faq-icon' />Bespoke Designs</h3>
+                          <h3><img src='/img/icons/faq-icon-03.png' alt='faq-icon' />Custom Designs</h3>
                         </div>
                       </AccordionHeader>
                       <AccordionBody accordionId="3">
-                        <p>We support customizations including:</p>
+                        <p>Your customers have unique needs. We make sure you can meet every one of them.</p>
+                        <p>We support full customisation across our entire product range, including:</p>
                         <ul>
-                          <li>Headstones</li>
-                          <li>Kerbsets</li>
-                          <li>Vases and Urns</li>
-                          <li>Angel Memorials</li>
-                          <li>Children Memorials</li>
-                          <li>All with engraving-ready finishes</li>
+                          <li>Upright Headstones</li>
+                          <li>Flat Markers</li>
+                          <li>Slant Markers</li>
+                          <li>Bevel Markers</li>
+                          <li>Angel Headstones</li>
+                          <li>Memorial Benches</li>
+                          <li>Full Length Kerb Sets</li>
+                          <li>Ledger Grave Markers</li>
+                          <li>Columbarium</li>
                         </ul>
+                        <p>All designs are engraving-ready, and we accept custom shapes, sizes, granite colours, and sculpted details, whether it's a single bespoke piece or a large bulk order.</p>
                       </AccordionBody>
                     </AccordionItem>
                     <AccordionItem>
                       <AccordionHeader targetId="4">
                         <div className="d-flex justify-content-between align-items-center w-100">
-                          <h3><img src='/img/icons/faq-icon-04.png' alt='faq-icon' />Seamless Logistics & Delivery</h3>
+                          <h3><img src='/img/icons/faq-icon-04.png' alt='faq-icon' />Seamless Export & Delivery to the USA</h3>
                         </div>
                       </AccordionHeader>
                       <AccordionBody accordionId="4">
-                        <p>With our warehouses located in Liverpool and Southampton, we guarantee:</p>
+                        <p>From our production floor in Chennai to your warehouse — reliable, trackable, and hassle-free.</p>
+                        <p>Stone Discover exports granite memorials directly to the USA with full logistics support:</p>
                         <ul>
-                          <li>On-time delivery</li>
-                          <li>Proper transport coordination</li>
-                          <li>Hassle-free customs handling</li>
+                          <li>Export-ready crating and packaging</li>
+                          <li>Proper freight coordination (sea & air)</li>
+                          <li>Hassle-free customs documentation handling</li>
+                          <li>Bulk order dispatch with flexible lead times</li>
+                          <li>Dedicated export support team for US buyers</li>
+                          <p>Whether you are a monument dealer, cemetery supplier, or wholesale distributor — our export network is built to keep your business moving.
+                          </p>
                         </ul>
                       </AccordionBody>
                     </AccordionItem>
-
-
                   </Accordion>
                 </div>
               </div>
@@ -367,48 +385,48 @@ const CategoryPage = ({ category, subcategory, products = [], faq, error }) => {
 
       <section className='p-b-30 p-t-60 m-p-07'>
         <div className='container  p-t-80'>
-                              <div className='row justify-content-center'>
-                                <div className='col-lg-9'>
-                                  <div className='heading-center p-b-40'>
-                                    <h2 className='m-b-30'>Pillars of Strength</h2>
-                                    <p>Whether you’re a high-volume buyer or expanding your product line, our team is here to support your growth. We understand the B2B dynamics of the memorial industry and deliver not just products—but trust, consistency, and partnership.</p>
-                                  </div>
-                    
-                                </div>
-                              </div>
-                    
-                              <div className='row'>
-                                <div className='col-lg-12'>
-                                  <div className='card-05'>
-                                    <div className='card-05-item'>
-                                      <Image src='/img/icons/about-pi-01.png' alt='About Us' className='img-fluid' width={48} height={48} />
-                                      <span>Finest Quality Stones</span>
-                                      <p>We ensure that each headstone is crafted with great attention to detail</p>
-                                    </div>
-                                    <div className='card-05-item'>
-                                      <Image src='/img/icons/about-pi-02.png' alt='About Us' className='img-fluid' width={48} height={48} />
-                                      <span>Competitive Prices</span>
-                                      <p>Get Quality headstones at the Best Rates!</p>
-                                    </div>
-                                    <div className='card-05-item'>
-                                      <Image src='/img/icons/about-pi-03.png' alt='About Us' className='img-fluid' width={48} height={48} />
-                                      <span>On-time Delivery</span>
-                                      <p>Ensuring Your tombstones Arrive When You Need Them!</p>
-                                    </div>
-                                    <div className='card-05-item'>
-                                      <Image src='/img/icons/about-pi-04.png' alt='About Us' className='img-fluid' width={48} height={48} />
-                                      <span>Bulk Order</span>
-                                      <p>Streamline Your Business with Our Premium tombstones!</p>
-                                    </div>
-                                    <div className='card-05-item'>
-                                      <Image src='/img/icons/about-pi-05.png' alt='About Us' className='img-fluid' width={48} height={48} />
-                                      <span>Shipping Worldwide</span>
-                                      <p>Delivering Quality tombstones Everywhere!</p>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
+          <div className='row justify-content-center'>
+            <div className='col-lg-9'>
+              <div className='heading-center p-b-40'>
+                <h2 className='m-b-30'>Pillars of Strength</h2>
+                <p>Whether you’re a high-volume buyer or expanding your product line, our team is here to support your growth. We understand the B2B dynamics of the memorial industry and deliver not just products—but trust, consistency, and partnership.</p>
+              </div>
+
+            </div>
+          </div>
+
+          <div className='row'>
+            <div className='col-lg-12'>
+              <div className='card-05'>
+                <div className='card-05-item'>
+                  <Image src='/img/icons/about-pi-01.png' alt='About Us' className='img-fluid' width={48} height={48} />
+                  <span>Finest Quality Stones</span>
+                  <p>We ensure that each headstone is crafted with great attention to detail</p>
+                </div>
+                <div className='card-05-item'>
+                  <Image src='/img/icons/about-pi-02.png' alt='About Us' className='img-fluid' width={48} height={48} />
+                  <span>Competitive Prices</span>
+                  <p>Get Quality headstones at the Best Rates!</p>
+                </div>
+                <div className='card-05-item'>
+                  <Image src='/img/icons/about-pi-03.png' alt='About Us' className='img-fluid' width={48} height={48} />
+                  <span>On-time Delivery</span>
+                  <p>Ensuring Your tombstones Arrive When You Need Them!</p>
+                </div>
+                <div className='card-05-item'>
+                  <Image src='/img/icons/about-pi-04.png' alt='About Us' className='img-fluid' width={48} height={48} />
+                  <span>Bulk Order</span>
+                  <p>Streamline Your Business with Our Premium tombstones!</p>
+                </div>
+                <div className='card-05-item'>
+                  <Image src='/img/icons/about-pi-05.png' alt='About Us' className='img-fluid' width={48} height={48} />
+                  <span>Shipping Worldwide</span>
+                  <p>Delivering Quality tombstones Everywhere!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* pass computed displayFaqs to FooterContactFormHome */}

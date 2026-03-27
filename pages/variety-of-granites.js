@@ -35,7 +35,7 @@ const VarietyGr = () => {
           <div className='row justify-content-center'>
             <div className='col-lg-9'>
               <div className='heading-center p-b-40'>
-                <h2 className='m-b-30'>Popular Granite <span>Varieties</span> We Offer</h2>
+                <h1 className='m-b-30 cc-text'>Popular Granite <span>Varieties</span> We Offer</h1>
               </div>
             </div>
           </div>

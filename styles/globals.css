@@ -464,7 +464,7 @@ ul li {
 .heading-center {
   text-align: center;
 }
-.heading-center h2 {
+.heading-center h2,.heading-center .cc-text {
   font-size: 40px;
   font-weight: bold;
 }
@@ -982,6 +982,10 @@ ul li {
 .accordion-one .accordion-header .accordion-button {
   padding: 1.3rem 1.5rem;
   border-radius: 0 !important;
+}
+.accordion-one  ul li{
+  color: var(--secondary);
+  margin-bottom:5px
 }
 .accordion-one .accordion-header h3 {
   font-size: 16px;
