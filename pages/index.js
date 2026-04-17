@@ -9,22 +9,22 @@ export default function Home() {
     <>
       <Head>
         <title>
-          Granite Headstones & Gravestones Manufacturer | Stone Discover
+          Granite Monuments Manufacturer & Exporter from India | Stone Discover
         </title>
         <meta
           name="description"
-          content="Stone Discover is a leading Indian manufacturer and exporter of premium granite headstones and monuments, serving memorial dealers worldwide since 1984."
+          content="Stone Discover is a leading Indian manufacturer and exporter of premium granite monuments and headstones, serving memorial dealers worldwide since 1984."
         />
         <link rel="canonical" href="https://www.stonediscover.com/" />
         <meta property="og:locale" content="US" />
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
-          content="Granite Headstones & Gravestones Manufacturer | Stone Discover"
+          content="Granite Monuments Manufacturer & Exporter from India | Stone Discover"
         />
         <meta
           property="og:description"
-          content=" Stone Discover is a leading Indian manufacturer and exporter of premium granite headstones and monuments, serving memorial dealers worldwide since 1984."
+          content="Stone Discover is a leading Indian manufacturer and exporter of premium granite monuments and headstones, serving memorial dealers worldwide since 1984."
         />
         <meta property="og:url" content="https://www.stonediscover.com/" />
         <meta property="og:site_name" content="Stone Discover" />
@@ -39,11 +39,11 @@ export default function Home() {
         <meta name="twitter:site" content="@Stone Discover" />
         <meta
           name="twitter:title"
-          content="Granite Headstones & Gravestones Manufacturer | Stone Discover"
+          content="Granite Monuments Manufacturer & Exporter from India | Stone Discover"
         />
         <meta
           name="twitter:description"
-          content=" Stone Discover is a leading Indian manufacturer and exporter of premium granite headstones and monuments, serving memorial dealers worldwide since 1984."
+          content="Stone Discover is a leading Indian manufacturer and exporter of premium granite monuments and headstones, serving memorial dealers worldwide since 1984."
         />
         <meta
           name="twitter:image"
@@ -83,8 +83,8 @@ export default function Home() {
           <div className="row align-items-center justify-content-center">
             <div className="col-lg-12 text-center">
               <div className="hero-banner-content">
-                <h1>Granite Headstones & Monuments Manufacturer & Exporter</h1>
-                <p>Supplying premium granite headstones, tombstones & gravestones from India to the USA, Canada, Europe, and global B2B markets.</p>
+                <h1>Granite Monuments Manufacturer, Supplier & Exporter </h1>
+                <p>Supplying premium granite headstones, tombstones & gravestones from India to the USA, Canada, Europe, and Global B2B markets.</p>
                 <div className="hero-banner-btn">
                   <ModelBox
                     className="btn-three"
@@ -392,81 +392,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="p-t-80">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-9">
-              <div className="heading-center p-b-40">
-                <h2 className="m-b-30">
-                  Delivering <span>Excellence Across</span> Borders
-                </h2>
-              </div>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-lg-12">
-              <div className="map-container grow">
-                <span>
-                  <img
-                    decoding="async"
-                    src="img/webpages/world-01.png"
-                    alt="world-map"
-                  />
-                </span>
-                <div
-                  className="point canada tippy"
-                  title="Canada"
-                  hover-tooltip="Canada"
-                  tooltip-position="top"
-                ></div>
-                <div
-                  className="point usa tippy"
-                  title="USA"
-                  hover-tooltip="USA"
-                  tooltip-position="top"
-                ></div>
-                <div
-                  className="point uk tippy"
-                  title="UK"
-                  hover-tooltip="UK"
-                  tooltip-position="top"
-                ></div>
-                <div
-                  className="point france tippy"
-                  title="France"
-                  hover-tooltip="France"
-                  tooltip-position="top"
-                ></div>
-                <div
-                  className="point germany tippy"
-                  title="Germany"
-                  hover-tooltip="Germany"
-                  tooltip-position="top"
-                ></div>
-                <div
-                  className="point netherlands tippy"
-                  title="Netherlands"
-                  hover-tooltip="Netherlands"
-                  tooltip-position="top"
-                ></div>
-                <div
-                  className="point india tippy"
-                  title="India"
-                  hover-tooltip="India"
-                  tooltip-position="top"
-                ></div>
-                <div
-                  className="point australia tippy"
-                  title="Australia"
-                  hover-tooltip="Australia"
-                  tooltip-position="top"
-                ></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="p-b-80">
+      
+      <section className="p-b-80 p-t-60">
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-9">
@@ -557,6 +484,80 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <section className="p-t-80">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-lg-9">
+              <div className="heading-center p-b-40">
+                <h2 className="m-b-30">
+                  Delivering <span>Excellence Across</span> Borders
+                </h2>
+              </div>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="map-container grow">
+                <span>
+                  <img
+                    decoding="async"
+                    src="img/webpages/world-01.png"
+                    alt="world-map"
+                  />
+                </span>
+                <div
+                  className="point canada tippy"
+                  title="Canada"
+                  hover-tooltip="Canada"
+                  tooltip-position="top"
+                ></div>
+                <div
+                  className="point usa tippy"
+                  title="USA"
+                  hover-tooltip="USA"
+                  tooltip-position="top"
+                ></div>
+                <div
+                  className="point uk tippy"
+                  title="UK"
+                  hover-tooltip="UK"
+                  tooltip-position="top"
+                ></div>
+                <div
+                  className="point france tippy"
+                  title="France"
+                  hover-tooltip="France"
+                  tooltip-position="top"
+                ></div>
+                <div
+                  className="point germany tippy"
+                  title="Germany"
+                  hover-tooltip="Germany"
+                  tooltip-position="top"
+                ></div>
+                <div
+                  className="point netherlands tippy"
+                  title="Netherlands"
+                  hover-tooltip="Netherlands"
+                  tooltip-position="top"
+                ></div>
+                <div
+                  className="point india tippy"
+                  title="India"
+                  hover-tooltip="India"
+                  tooltip-position="top"
+                ></div>
+                <div
+                  className="point australia tippy"
+                  title="Australia"
+                  hover-tooltip="Australia"
+                  tooltip-position="top"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <section>
         <div className="container">
           <div className="row justify-content-center">
@@ -632,6 +633,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      
     </>
   );
 }
